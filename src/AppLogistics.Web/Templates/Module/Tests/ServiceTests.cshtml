@@ -1,11 +1,10 @@
 ﻿@model ModuleModel
+using AppLogistics.Data.Core;
+using AppLogistics.Objects;
+using AppLogistics.Tests;
 using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using Microsoft.EntityFrameworkCore;
-using AppLogistics.Data.Core;
-using AppLogistics.Objects;
-using AppLogistics.Services;
-using AppLogistics.Tests;
 using System;
 using System.Linq;
 using Xunit;
@@ -26,6 +25,7 @@ namespace AppLogistics.Services.Tests
             context.Set<@Model.Model>().Add(@Model.ModelVarName = ObjectsFactory.Create@(Model.Model)());
             context.SaveChanges();
         }
+
         public void Dispose()
         {
             service.Dispose();
@@ -69,10 +69,10 @@ namespace AppLogistics.Services.Tests
 
             for (Int32 i = 0; i < expected.Length || i < actual.Length; i++)
             {
-@foreach (PropertyInfo property in Model.AllProperties.OrderByDescending(prop => prop.Name.Length).ThenBy(prop => prop.Name))
-{
+                @foreach (PropertyInfo property in Model.AllProperties.OrderByDescending(prop => prop.Name.Length).ThenBy(prop => prop.Name))
+                {
                 @:Assert.Equal(expected[i].@property.Name, actual[i].@property.Name);
-}
+                }
             }
             @if (Model.Properties.Length == 0)
             {

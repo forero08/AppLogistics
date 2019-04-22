@@ -12,11 +12,12 @@ namespace AppLogistics.Validators
         {
         }
 
-        public Boolean CanCreate(@Model.View view)
+        public bool CanCreate(@Model.View view)
         {
             return ModelState.IsValid;
         }
-        public Boolean CanEdit(@Model.View view)
+
+        public bool CanEdit(@Model.View view)
         {
             return ModelState.IsValid;
         }

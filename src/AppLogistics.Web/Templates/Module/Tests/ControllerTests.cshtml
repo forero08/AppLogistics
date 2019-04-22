@@ -1,13 +1,13 @@
 ﻿@model ModuleModel
+using AppLogistics.Controllers.Tests;
+using AppLogistics.Objects;
+using AppLogistics.Services;
+using AppLogistics.Tests;
+using AppLogistics.Validators;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.AspNetCore.Routing;
-using @Model.ControllerNamespace;
-using AppLogistics.Objects;
-using AppLogistics.Services;
-using AppLogistics.Validators;
 using NSubstitute;
-using System;
 using System.Linq;
 using Xunit;
 
@@ -38,8 +38,8 @@ namespace @Model.ControllerTestsNamespace
         {
             service.GetViews().Returns(new @(Model.View)[0].AsQueryable());
 
-            Object actual = controller.Index().ViewData.Model;
-            Object expected = service.GetViews();
+            object actual = controller.Index().ViewData.Model;
+            object expected = service.GetViews();
 
             Assert.Same(expected, actual);
         }
@@ -71,8 +71,8 @@ namespace @Model.ControllerTestsNamespace
         {
             validator.CanCreate(@Model.ModelVarName).Returns(false);
 
-            Object actual = (controller.Create(@Model.ModelVarName) as ViewResult).ViewData.Model;
-            Object expected = @Model.ModelVarName;
+            object actual = (controller.Create(@Model.ModelVarName) as ViewResult).ViewData.Model;
+            object expected = @Model.ModelVarName;
 
             Assert.Same(expected, actual);
         }
@@ -92,8 +92,8 @@ namespace @Model.ControllerTestsNamespace
         {
             validator.CanCreate(@Model.ModelVarName).Returns(true);
 
-            Object expected = RedirectToAction(controller, "Index");
-            Object actual = controller.Create(@Model.ModelVarName);
+            object expected = RedirectToAction(controller, "Index");
+            object actual = controller.Create(@Model.ModelVarName);
 
             Assert.Same(expected, actual);
         }
@@ -107,8 +107,8 @@ namespace @Model.ControllerTestsNamespace
         {
             service.Get<@Model.View>(@(Model.ModelVarName).Id).Returns(@Model.ModelVarName);
 
-            Object expected = NotEmptyView(controller, @Model.ModelVarName);
-            Object actual = controller.Details(@(Model.ModelVarName).Id);
+            object expected = NotEmptyView(controller, @Model.ModelVarName);
+            object actual = controller.Details(@(Model.ModelVarName).Id);
 
             Assert.Same(expected, actual);
         }
@@ -122,8 +122,8 @@ namespace @Model.ControllerTestsNamespace
         {
             service.Get<@Model.View>(@(Model.ModelVarName).Id).Returns(@Model.ModelVarName);
 
-            Object expected = NotEmptyView(controller, @Model.ModelVarName);
-            Object actual = controller.Edit(@(Model.ModelVarName).Id);
+            object expected = NotEmptyView(controller, @Model.ModelVarName);
+            object actual = controller.Edit(@(Model.ModelVarName).Id);
 
             Assert.Same(expected, actual);
         }
@@ -137,8 +137,8 @@ namespace @Model.ControllerTestsNamespace
         {
             validator.CanEdit(@Model.ModelVarName).Returns(false);
 
-            Object actual = (controller.Edit(@Model.ModelVarName) as ViewResult).ViewData.Model;
-            Object expected = @Model.ModelVarName;
+            object actual = (controller.Edit(@Model.ModelVarName) as ViewResult).ViewData.Model;
+            object expected = @Model.ModelVarName;
 
             Assert.Same(expected, actual);
         }
@@ -158,8 +158,8 @@ namespace @Model.ControllerTestsNamespace
         {
             validator.CanEdit(@Model.ModelVarName).Returns(true);
 
-            Object expected = RedirectToAction(controller, "Index");
-            Object actual = controller.Edit(@Model.ModelVarName);
+            object expected = RedirectToAction(controller, "Index");
+            object actual = controller.Edit(@Model.ModelVarName);
 
             Assert.Same(expected, actual);
         }
@@ -173,8 +173,8 @@ namespace @Model.ControllerTestsNamespace
         {
             service.Get<@Model.View>(@(Model.ModelVarName).Id).Returns(@Model.ModelVarName);
 
-            Object expected = NotEmptyView(controller, @Model.ModelVarName);
-            Object actual = controller.Delete(@(Model.ModelVarName).Id);
+            object expected = NotEmptyView(controller, @Model.ModelVarName);
+            object actual = controller.Delete(@(Model.ModelVarName).Id);
 
             Assert.Same(expected, actual);
         }
@@ -194,8 +194,8 @@ namespace @Model.ControllerTestsNamespace
         [Fact]
         public void Delete_RedirectsToIndex()
         {
-            Object expected = RedirectToAction(controller, "Index");
-            Object actual = controller.DeleteConfirmed(@(Model.ModelVarName).Id);
+            object expected = RedirectToAction(controller, "Index");
+            object actual = controller.DeleteConfirmed(@(Model.ModelVarName).Id);
 
             Assert.Same(expected, actual);
         }

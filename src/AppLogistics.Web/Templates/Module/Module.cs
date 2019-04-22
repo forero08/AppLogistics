@@ -5,6 +5,7 @@ using System.Linq;
 
 namespace AppLogistics.Web.Templates
 {
+    [GennyAlias("AppLogistics")]
     [GennyModuleDescriptor("Default system module template")]
     public class Module : GennyModule
     {
@@ -28,6 +29,7 @@ namespace AppLogistics.Web.Templates
             Dictionary<string, GennyScaffoldingResult> results = new Dictionary<string, GennyScaffoldingResult>();
 
             results.Add($"../AppLogistics.Resources/Resources/Views/{path}/{Model}View.json", Scaffold("Resources/View"));
+            results.Add($"../AppLogistics.Resources/Resources/Views/{path}/{Model}View.es.json", Scaffold("Resources/ViewEs"));
 
             results.Add($"../AppLogistics.Controllers/{path}/{Controller}Controller.cs", Scaffold("Controllers/Controller"));
             results.Add($"../../test/AppLogistics.Tests/Unit/Controllers/{path}/{Controller}ControllerTests.cs", Scaffold("Tests/ControllerTests"));
