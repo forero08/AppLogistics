@@ -1,0 +1,12 @@
+﻿@model ModuleModel
+using AppLogistics.Objects;
+using System;
+
+namespace AppLogistics.Validators
+{
+    public interface @Model.IValidator : IValidator
+    {
+        Boolean CanCreate(@Model.View view);
+        Boolean CanEdit(@Model.View view);
+    }
+}
