@@ -15,8 +15,13 @@
   },
 
   "Languages": {
-    "Default": "en",
+    "Default": "es",
     "Supported": [
+      {
+        "name": "Español",
+        "culture": "es-ES",
+        "abbreviation": "es"
+      },
       {
         "name": "English",
         "culture": "en-GB",

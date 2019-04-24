@@ -1,0 +1,23 @@
+﻿{
+    "Validations": {
+        "AcceptFiles": "El campo '{0}' solo acepta el formato ({1}).",
+        "Date": "El campo '{0}' debe ser una fecha.",
+        "Digits": "El campo '{0}' solo debe contener dígitos.",
+        "Email": "El campo '{0}' no es una dirección de correo válida.",
+        "EqualTo": "El campo '{0}' debe ser igual a '{1}'.",
+        "FileSize": "El tamaño de '{0}' no debe exceder {1} MB.",
+        "GreaterThan": "El campo '{0}' debe ser mayor que {1}.",
+        "Integer": "El campo '{0}' debe ser un entero.",
+        "InvalidField": "El valor del campo '{0}' es inválido.",
+        "InvalidValue": "El valor '{0}' es inválido.",
+        "MaxValue": "El campo '{0}' debe ser menor o igual a {1}.",
+        "MinLength": "El campo '{0}' debe tener al menos {1} caracteres de longitud.",
+        "MinValue": "El campo '{0}' debe ser mayor o igual a {1}.",
+        "Numeric": "El campo '{0}' debe ser numérico.",
+        "Range": "El campo '{0}' debe estar entre {1} y {2}.",
+        "Required": "El campo '{0}' es requerido.",
+        "RequiredValue": "El valor es requerido.",
+        "StringLength": "El campo '{0}' no debe exceder una longitud máxima de {1}.",
+        "StringLengthRange": "El campo '{0}' debe contener entre {2} y {1} símbolos."
+    }
+}

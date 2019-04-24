@@ -1,0 +1,26 @@
+﻿{
+    "Actions": {
+        "Copy": "Copiar",
+        "Create": "Crear",
+        "Delete": "Eliminar",
+        "Details": "Detalles",
+        "Edit": "Editar",
+        "Home":  "Inicio",
+        "Language": "Idioma",
+        "Login": "Iniciar sesión",
+        "Logout": "Cerrar sesión",
+        "Profile": "Perfil",
+        "Recover": "Recuperar",
+        "Search": "Buscar",
+        "Submit": "Aceptar"
+    },
+    "Strings": {
+        "All": "Todos",
+        "LostPassword": "Contraseña olvidada?",
+        "No": "No",
+        "NoDataFound": "No se encontraron datos",
+        "PageNotFound": "La página que está buscando no existe",
+        "SystemError": "Su petición generó un error inesperado en el sistema",
+        "Yes": "Si"
+    }
+}
