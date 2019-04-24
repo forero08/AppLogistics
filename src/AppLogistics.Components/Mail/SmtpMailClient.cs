@@ -22,10 +22,12 @@ namespace AppLogistics.Components.Mail
                 client.Credentials = new NetworkCredential(Config["Sender"], Config["Password"]);
                 client.EnableSsl = bool.Parse(Config["EnableSsl"]);
 
-                MailMessage mail = new MailMessage(Config["Sender"], email, subject, body);
-                mail.SubjectEncoding = Encoding.UTF8;
-                mail.BodyEncoding = Encoding.UTF8;
-                mail.IsBodyHtml = true;
+                MailMessage mail = new MailMessage(Config["Sender"], email, subject, body)
+                {
+                    SubjectEncoding = Encoding.UTF8,
+                    BodyEncoding = Encoding.UTF8,
+                    IsBodyHtml = true
+                };
 
                 await client.SendMailAsync(mail);
             }

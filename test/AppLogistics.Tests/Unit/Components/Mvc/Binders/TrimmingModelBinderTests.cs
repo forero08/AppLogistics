@@ -15,9 +15,11 @@ namespace AppLogistics.Components.Mvc.Tests
         public TrimmingModelBinderTests()
         {
             binder = new TrimmingModelBinder();
-            context = new DefaultModelBindingContext();
-            context.ModelState = new ModelStateDictionary();
-            context.ValueProvider = Substitute.For<IValueProvider>();
+            context = new DefaultModelBindingContext
+            {
+                ModelState = new ModelStateDictionary(),
+                ValueProvider = Substitute.For<IValueProvider>()
+            };
         }
 
         #region BindModelAsync(ModelBindingContext context)

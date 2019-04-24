@@ -150,7 +150,7 @@ namespace AppLogistics.Data.Migrations
             UnitOfWork.Commit();
         }
 
-        #endregion
+        #endregion Administration
 
         public void Dispose()
         {

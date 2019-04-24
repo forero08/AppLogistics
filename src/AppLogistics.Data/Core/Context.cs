@@ -17,13 +17,13 @@ namespace AppLogistics.Data.Core
         protected DbSet<Permission> Permission { get; set; }
         protected DbSet<RolePermission> RolePermission { get; set; }
 
-        #endregion
+        #endregion Administration
 
         #region System
 
         protected DbSet<AuditLog> AuditLog { get; set; }
 
-        #endregion
+        #endregion System
 
         static Context()
         {

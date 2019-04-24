@@ -106,7 +106,6 @@ namespace AppLogistics.Tests
 
                 Password = "Password" + id,
                 NewPassword = "NewPassword" + id
-
             };
         }
 

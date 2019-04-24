@@ -8,10 +8,13 @@ namespace AppLogistics.Services
         void SeedPermissions(RoleView view);
 
         IQueryable<RoleView> GetViews();
+
         RoleView GetView(int id);
 
         void Create(RoleView view);
+
         void Edit(RoleView view);
+
         void Delete(int id);
     }
 }

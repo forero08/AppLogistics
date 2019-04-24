@@ -36,6 +36,6 @@ namespace AppLogistics.Data.Mapping
                 .ForMember(role => role.Permissions, member => member.MapFrom(role => new List<RolePermission>()));
         }
 
-        #endregion
+        #endregion Administration
     }
 }
