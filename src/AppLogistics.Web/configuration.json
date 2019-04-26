@@ -18,14 +18,14 @@
     "Default": "es",
     "Supported": [
       {
-        "name": "Español",
-        "culture": "es-ES",
-        "abbreviation": "es"
-      },
-      {
         "name": "English",
         "culture": "en-GB",
         "abbreviation": "en"
+      },
+      {
+        "name": "Español",
+        "culture": "es-CO",
+        "abbreviation": "es"
       },
       {
         "name": "Lietuvių",

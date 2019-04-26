@@ -2,8 +2,8 @@ window.cultures = window.cultures || {};
 window.cultures.globalize = window.cultures.globalize || {};
 window.cultures.globalize['es'] = {
     name: "es",
-    englishName: "Spanish (España)",
-    nativeName: "Español (España)",
+    englishName: "Spanish (Colombia)",
+    nativeName: "Español (Colombia)",
     language: "es",
     numberFormat: {
         ",": ".",
