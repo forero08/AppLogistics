@@ -9,35 +9,35 @@ namespace AppLogistics.Data.Core
 {
     public class Query<TModel> : IQuery<TModel>
     {
-        public Type ElementType => Set.ElementType;
-        public Expression Expression => Set.Expression;
-        public IQueryProvider Provider => Set.Provider;
+        public Type ElementType => _set.ElementType;
+        public Expression Expression => _set.Expression;
+        public IQueryProvider Provider => _set.Provider;
 
-        private IQueryable<TModel> Set { get; }
+        private readonly IQueryable<TModel> _set;
 
         public Query(IQueryable<TModel> set)
         {
-            Set = set;
+            _set = set;
         }
 
         public IQuery<TResult> Select<TResult>(Expression<Func<TModel, TResult>> selector)
         {
-            return new Query<TResult>(Set.Select(selector));
+            return new Query<TResult>(_set.Select(selector));
         }
 
         public IQuery<TModel> Where(Expression<Func<TModel, bool>> predicate)
         {
-            return new Query<TModel>(Set.Where(predicate));
+            return new Query<TModel>(_set.Where(predicate));
         }
 
         public IQueryable<TView> To<TView>()
         {
-            return Set.ProjectTo<TView>();
+            return _set.ProjectTo<TView>();
         }
 
         public IEnumerator<TModel> GetEnumerator()
         {
-            return Set.GetEnumerator();
+            return _set.GetEnumerator();
         }
 
         IEnumerator IEnumerable.GetEnumerator()

@@ -18,8 +18,9 @@ namespace AppLogistics.Validators
 
         protected BaseValidator(IUnitOfWork unitOfWork)
         {
-            ModelState = new ModelStateDictionary();
             UnitOfWork = unitOfWork;
+
+            ModelState = new ModelStateDictionary();
             Alerts = new Alerts();
         }
 

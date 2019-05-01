@@ -20,7 +20,7 @@ namespace AppLogistics.Components.Mvc
         [HtmlAttributeNotBound]
         public ViewContext ViewContext { get; set; }
 
-        private IHostingEnvironment Environment { get; }
+        private readonly IHostingEnvironment _environment;
 
         private static ConcurrentDictionary<string, string> Scripts { get; }
 
@@ -31,7 +31,7 @@ namespace AppLogistics.Components.Mvc
 
         public AppScriptTagHelper(IHostingEnvironment environment)
         {
-            Environment = environment;
+            _environment = environment;
         }
 
         public override void Process(TagHelperContext context, TagHelperOutput output)
@@ -60,13 +60,13 @@ namespace AppLogistics.Components.Mvc
 
         private bool ScriptsAvailable(string path)
         {
-            return File.Exists(Path.Combine(Environment.WebRootPath, "scripts/application/" + path));
+            return File.Exists(Path.Combine(_environment.WebRootPath, "scripts/application/" + path));
         }
 
         private string FormPath()
         {
             RouteValueDictionary route = ViewContext.RouteData.Values;
-            string extension = Environment.IsDevelopment() ? ".js" : ".min.js";
+            string extension = _environment.IsDevelopment() ? ".js" : ".min.js";
 
             return ((route["Area"] == null ? null : route["Area"] + "/") + route["controller"] + "/" + Action + extension).ToLower();
         }

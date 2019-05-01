@@ -17,11 +17,11 @@ namespace AppLogistics.Components.Mvc
         [HtmlAttributeNotBound]
         public ViewContext ViewContext { get; set; }
 
-        private IAuthorization Authorization { get; }
+        private readonly IAuthorization _authorization;
 
         public AuthorizeTagHelper(IAuthorization authorization)
         {
-            Authorization = authorization;
+            _authorization = authorization;
         }
 
         public override void Process(TagHelperContext context, TagHelperOutput output)
@@ -33,7 +33,7 @@ namespace AppLogistics.Components.Mvc
             string action = Action ?? ViewContext.RouteData.Values["action"] as string;
             string controller = Controller ?? ViewContext.RouteData.Values["controller"] as string;
 
-            if (Authorization?.IsGrantedFor(accountId, area, controller, action) == false)
+            if (_authorization?.IsGrantedFor(accountId, area, controller, action) == false)
             {
                 output.SuppressOutput();
             }
