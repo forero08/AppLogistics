@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using AppLogistics.Components.Mvc;
+using System.ComponentModel.DataAnnotations;
 
 namespace AppLogistics.Objects
 {
@@ -6,6 +7,7 @@ namespace AppLogistics.Objects
     {
         [Required]
         [StringLength(32)]
+        [LettersNumbers]
         public string Username { get; set; }
 
         [Required]

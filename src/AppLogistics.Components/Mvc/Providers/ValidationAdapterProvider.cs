@@ -7,7 +7,7 @@ namespace AppLogistics.Components.Mvc
 {
     public class ValidationAdapterProvider : IValidationAttributeAdapterProvider
     {
-        public IAttributeAdapter GetAttributeAdapter(ValidationAttribute attribute, IStringLocalizer localizer)
+        public IAttributeAdapter GetAttributeAdapter(ValidationAttribute attribute, IStringLocalizer stringLocalizer)
         {
             Type type = attribute.GetType();
             if (type == typeof(RequiredAttribute))
@@ -73,6 +73,11 @@ namespace AppLogistics.Components.Mvc
             if (type == typeof(RangeAttribute))
             {
                 return new RangeAdapter((RangeAttribute)attribute);
+            }
+
+            if (type == typeof(LettersNumbersAttribute))
+            {
+                return new LettersNumbersAdapter((LettersNumbersAttribute)attribute);
             }
 
             return null;

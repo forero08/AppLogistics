@@ -10,6 +10,7 @@
         "Integer": "'{0}' field must be an integer.",
         "InvalidField": "'{0}' field value is invalid.",
         "InvalidValue": "Value '{0}' is not valid.",
+        "LettersNumbers": "{0} field must contain only letters and numbers.",
         "MaxValue": "'{0}' field must be less or equal to {1}.",
         "MinLength": "'{0}' field must be at least {1} characters long.",
         "MinValue": "'{0}' field must be greater or equal to {1}.",

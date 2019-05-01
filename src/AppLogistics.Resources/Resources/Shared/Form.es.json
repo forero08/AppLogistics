@@ -10,6 +10,7 @@
         "Integer": "El campo '{0}' debe ser un entero.",
         "InvalidField": "El valor del campo '{0}' es inválido.",
         "InvalidValue": "El valor '{0}' es inválido.",
+        "LettersNumbers": "El campo {0} debe contener solo letras y números.",
         "MaxValue": "El campo '{0}' debe ser menor o igual a {1}.",
         "MinLength": "El campo '{0}' debe tener al menos {1} caracteres de longitud.",
         "MinValue": "El campo '{0}' debe ser mayor o igual a {1}.",
