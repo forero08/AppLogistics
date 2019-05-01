@@ -79,19 +79,38 @@ namespace AppLogistics.Resources.Tests
 
         #endregion
 
-        #region ForPage(String header)
+        #region ForHeader(String model)
 
         [Fact]
-        public void ForPage_Header_IsCaseInsensitive()
+        public void ForHeader_IsCaseInsensitive()
         {
-            string actual = Resource.ForPage("account");
+            string actual = Resource.ForHeader("account");
             string expected = "Account";
 
             Assert.Equal(expected, actual);
         }
 
         [Fact]
-        public void ForPage_NotFoundHeader_ReturnsNull()
+        public void ForHeader_NotFound_ReturnsNull()
+        {
+            Assert.Null(Resource.ForHeader("Test"));
+        }
+
+        #endregion
+
+        #region ForPage(String path)
+
+        [Fact]
+        public void ForPage_Path_IsCaseInsensitive()
+        {
+            string actual = Resource.ForPage("administrationrolesdetails");
+            string expected = "Role details";
+
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void ForPage_PathNotFound_ReturnsNull()
         {
             Assert.Null(Resource.ForPage("Test"));
         }

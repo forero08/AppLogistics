@@ -1,4 +1,6 @@
-﻿using AppLogistics.Components.Security;
+﻿using AppLogistics.Components.Notifications;
+using AppLogistics.Components.Security;
+using AppLogistics.Resources;
 using AppLogistics.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -27,8 +29,22 @@ namespace AppLogistics.Controllers
 
         [HttpGet]
         [AllowAnonymous]
-        public ViewResult Error()
+        public ActionResult Error()
         {
+            Response.StatusCode = StatusCodes.Status500InternalServerError;
+
+            if (Request.Headers["X-Requested-With"] == "XMLHttpRequest")
+            {
+                Alerts.Add(new Alert
+                {
+                    Id = "SystemError",
+                    Type = AlertType.Danger,
+                    Message = Resource.ForString("SystemError")
+                });
+
+                return Json(new { alerts = Alerts });
+            }
+
             return View();
         }
 

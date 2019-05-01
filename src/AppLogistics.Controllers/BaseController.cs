@@ -2,6 +2,7 @@
 using AppLogistics.Components.Notifications;
 using AppLogistics.Components.Security;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
@@ -24,11 +25,18 @@ namespace AppLogistics.Controllers
             Alerts = new Alerts();
         }
 
-        public virtual ActionResult NotEmptyView(object model)
+        public virtual ViewResult NotFoundView()
+        {
+            Response.StatusCode = StatusCodes.Status404NotFound;
+
+            return View("~/Views/Home/NotFound.cshtml");
+        }
+
+        public virtual ViewResult NotEmptyView(object model)
         {
             if (model == null)
             {
-                return RedirectToNotFound();
+                return NotFoundView();
             }
 
             return View(model);
@@ -47,11 +55,6 @@ namespace AppLogistics.Controllers
         public virtual RedirectToActionResult RedirectToDefault()
         {
             return base.RedirectToAction("Index", "Home", new { area = "" });
-        }
-
-        public virtual RedirectToActionResult RedirectToNotFound()
-        {
-            return base.RedirectToAction("NotFound", "Home", new { area = "" });
         }
 
         public override RedirectToActionResult RedirectToAction(string actionName, string controllerName, object routeValues)

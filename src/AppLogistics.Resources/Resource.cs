@@ -54,18 +54,23 @@ namespace AppLogistics.Resources
             return Localized("Shared", "Strings", value);
         }
 
-        public static string ForPage(string header)
+        public static string ForHeader(string model)
         {
-            return Localized("Page", "Headers", header);
+            return Localized("Page", "Headers", model);
         }
 
-        public static string ForPage(IDictionary<string, object> values)
+        public static string ForPage(string path)
         {
-            string area = values["area"] as string;
-            string action = values["action"] as string;
-            string controller = values["controller"] as string;
+            return Localized("Page", "Titles", path);
+        }
 
-            return Localized("Page", "Titles", area + controller + action);
+        public static string ForPage(IDictionary<string, object> path)
+        {
+            string area = path["area"] as string;
+            string action = path["action"] as string;
+            string controller = path["controller"] as string;
+
+            return ForPage(area + controller + action);
         }
 
         public static string ForSiteMap(string area, string controller, string action)
