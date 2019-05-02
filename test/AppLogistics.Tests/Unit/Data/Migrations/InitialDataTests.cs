@@ -73,7 +73,7 @@ namespace AppLogistics.Data.Migrations.Tests
         public void PermissionsTable_HasExactNumberOfPermissions()
         {
             int actual = context.Set<Permission>().Count();
-            int expected = 9;
+            int expected = 14;
 
             Assert.Equal(expected, actual);
         }

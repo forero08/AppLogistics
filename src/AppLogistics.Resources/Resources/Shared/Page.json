@@ -4,7 +4,10 @@
         "Accounts": "Accounts",
         "Profile": "Profile",
         "Role": "Role",
-        "Roles": "Roles"
+        "Roles": "Roles",
+
+        "Afp": "Afp",
+        "Afps": "Afps"
     },
     "Titles": {
         "AdministrationAccountsCreate": "Account creation",
@@ -23,6 +26,12 @@
         "HomeIndex": "Home",
         "HomeNotFound": "Not Found",
         "ProfileDelete": "Profile deletion",
-        "ProfileEdit": "Profile edit"
+        "ProfileEdit": "Profile edit",
+
+        "ConfigurationAfpsCreate": "Afp creation",
+        "ConfigurationAfpsDelete": "Afp deletion",
+        "ConfigurationAfpsDetails": "Afp details",
+        "ConfigurationAfpsEdit": "Afp edit",
+        "ConfigurationAfpsIndex": "Afps"
     }
 }

@@ -26,6 +26,8 @@ namespace AppLogistics.Tests
             };
         }
 
+
+
         public static AccountView CreateAccountView(int id = 0)
         {
             return new AccountView
@@ -161,6 +163,30 @@ namespace AppLogistics.Tests
 
                 PermissionId = id,
                 Permission = CreatePermission(id)
+            };
+        }
+
+        #endregion
+
+        #region Configuration
+
+        public static AfpView CreateAfpView(int id = 0)
+        {
+            return new AfpView
+            {
+                Id = id,
+                Name = "Name" + id,
+                Nit = "Nit" + id
+            };
+        }
+
+        public static Afp CreateAfp(int id = 0)
+        {
+            return new Afp
+            {
+                Id = id,
+                Name = "Name" + id,
+                Nit = "Nit" + id
             };
         }
 

@@ -4,15 +4,18 @@
         "Accounts": "Cuentas",
         "Profile": "Perfil",
         "Role": "Rol",
-        "Roles": "Roles"
+        "Roles": "Roles",
+
+        "Afp": "Afp",
+        "Afps": "Afps"
     },
     "Titles": {
-        "AdministrationAccountsCreate": "Creación de cuentas",
+        "AdministrationAccountsCreate": "Creación de cuenta",
         "AdministrationAccountsDetails": "Detalles de cuenta",
         "AdministrationAccountsEdit": "Editar cuenta",
         "AdministrationAccountsIndex": "Cuentas",
-        "AdministrationRolesCreate": "Creación de roles",
-        "AdministrationRolesDelete": "Eliminación de roles",
+        "AdministrationRolesCreate": "Creación de rol",
+        "AdministrationRolesDelete": "Eliminación de rol",
         "AdministrationRolesDetails": "Detalles de rol",
         "AdministrationRolesEdit": "Editar rol",
         "AdministrationRolesIndex": "Roles",
@@ -23,6 +26,12 @@
         "HomeIndex": "Inicio",
         "HomeNotFound": "No encontrado",
         "ProfileDelete": "Eliminación de perfil",
-        "ProfileEdit": "Editar perfil"
+        "ProfileEdit": "Editar perfil",
+
+        "ConfigurationAfpsCreate": "Creación de Afp",
+        "ConfigurationAfpsDelete": "Eliminación de Afp",
+        "ConfigurationAfpsDetails": "Detalles de Afp",
+        "ConfigurationAfpsEdit": "Editar Afp",
+        "ConfigurationAfpsIndex": "Afps"
     }
 }

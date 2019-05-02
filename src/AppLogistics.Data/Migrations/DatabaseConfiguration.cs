@@ -41,8 +41,6 @@ namespace AppLogistics.Data.Migrations
             SeedAccounts();
         }
 
-        #region Administration
-
         private void SeedPermissions()
         {
             Permission[] permissions =
@@ -56,7 +54,13 @@ namespace AppLogistics.Data.Migrations
                 new Permission { Id = 6, Area = "Administration", Controller = "Roles", Action = "Create" },
                 new Permission { Id = 7, Area = "Administration", Controller = "Roles", Action = "Details" },
                 new Permission { Id = 8, Area = "Administration", Controller = "Roles", Action = "Edit" },
-                new Permission { Id = 9, Area = "Administration", Controller = "Roles", Action = "Delete" }
+                new Permission { Id = 9, Area = "Administration", Controller = "Roles", Action = "Delete" },
+
+                new Permission { Id = 10, Area = "Configuration", Controller = "Afps", Action = "Index" },
+                new Permission { Id = 11, Area = "Configuration", Controller = "Afps", Action = "Create" },
+                new Permission { Id = 12, Area = "Configuration", Controller = "Afps", Action = "Details" },
+                new Permission { Id = 13, Area = "Configuration", Controller = "Afps", Action = "Edit" },
+                new Permission { Id = 14, Area = "Configuration", Controller = "Afps", Action = "Delete" },
             };
 
             Permission[] currentPermissions = UnitOfWork.Select<Permission>().ToArray();
@@ -149,8 +153,6 @@ namespace AppLogistics.Data.Migrations
 
             UnitOfWork.Commit();
         }
-
-        #endregion Administration
 
         public void Dispose()
         {

@@ -1,10 +1,13 @@
 ﻿{
     "Areas": {
-        "Administration": "Administration"
+        "Administration": "Administration",
+        "Configuration": "Configuration"
     },
     "Controllers": {
         "AdministrationAccounts": "Accounts",
-        "AdministrationRoles": "Roles"
+        "AdministrationRoles": "Roles",
+
+        "ConfigurationAfps": "Afps"
     },
     "Actions": {
         "AdministrationAccountsCreate": "Create",
@@ -15,6 +18,12 @@
         "AdministrationRolesDelete": "Delete",
         "AdministrationRolesDetails": "Details",
         "AdministrationRolesEdit": "Edit",
-        "AdministrationRolesIndex": "Index"
+        "AdministrationRolesIndex": "Index",
+
+        "ConfigurationAfpsCreate": "Create",
+        "ConfigurationAfpsDelete": "Delete",
+        "ConfigurationAfpsDetails": "Details",
+        "ConfigurationAfpsEdit": "Edit",
+        "ConfigurationAfpsIndex": "Index"
     }
 }

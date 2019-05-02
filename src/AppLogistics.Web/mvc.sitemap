@@ -7,7 +7,7 @@
         <siteMapNode icon="fa fa-user-circle" controller="Profile" action="Edit" />
         <siteMapNode icon="fa fa-user-times" controller="Profile" action="Delete" />
 
-        <siteMapNode menu="true" icon="fa fa-cogs" area="Administration">
+        <siteMapNode menu="true" icon="fa fa-users-cog" area="Administration">
             <siteMapNode menu="true" icon="fa fa-user" area="Administration" controller="Accounts" action="Index">
                 <siteMapNode icon="far fa-file" area="Administration" controller="Accounts" action="Create" />
                 <siteMapNode icon="fa fa-info" area="Administration" controller="Accounts" action="Details" />
@@ -20,5 +20,15 @@
                 <siteMapNode icon="fa fa-times" area="Administration" controller="Roles" action="Delete" />
             </siteMapNode>
         </siteMapNode>
+
+        <siteMapNode menu="true" icon="fa fa-wrench" area="Configuration">
+            <siteMapNode menu="true" icon="fa fa-user-injured" area="Configuration" controller="Afps" action="Index">
+                <siteMapNode icon="far fa-file" area="Configuration" controller="Afps" action="Create" />
+                <siteMapNode icon="fa fa-info" area="Configuration" controller="Afps" action="Details" />
+                <siteMapNode icon="fa fa-pencil-alt" area="Configuration" controller="Afps" action="Edit" />
+                <siteMapNode icon="fa fa-times" area="Configuration" controller="Afps" action="Delete" />
+            </siteMapNode>
+        </siteMapNode>
+
     </siteMapNode>
 </siteMap>

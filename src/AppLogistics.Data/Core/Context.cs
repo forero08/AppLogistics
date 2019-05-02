@@ -19,6 +19,12 @@ namespace AppLogistics.Data.Core
 
         #endregion Administration
 
+        #region Configuration
+
+        protected DbSet<Afp> Afp { get; set; }
+
+        #endregion
+
         #region System
 
         protected DbSet<AuditLog> AuditLog { get; set; }
