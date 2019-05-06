@@ -7,7 +7,9 @@
         "Roles": "Roles",
 
         "Afp": "Afp",
-        "Afps": "Afps"
+        "Afps": "Afps",
+        "Eps": "Eps",
+        "Epss": "Eps's"
     },
     "Titles": {
         "AdministrationAccountsCreate": "Creación de cuenta",
@@ -32,6 +34,11 @@
         "ConfigurationAfpsDelete": "Eliminación de Afp",
         "ConfigurationAfpsDetails": "Detalles de Afp",
         "ConfigurationAfpsEdit": "Editar Afp",
-        "ConfigurationAfpsIndex": "Afps"
+        "ConfigurationAfpsIndex": "Afps",
+        "ConfigurationEpssCreate": "Creación de Eps",
+        "ConfigurationEpssDelete": "Eliminación de Eps",
+        "ConfigurationEpssDetails": "Detalles de Eps",
+        "ConfigurationEpssEdit": "Editar Eps",
+        "ConfigurationEpssIndex": "Eps's"
     }
 }

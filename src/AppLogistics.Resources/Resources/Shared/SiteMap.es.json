@@ -21,6 +21,11 @@
         "ConfigurationAfpsDelete": "Eliminar",
         "ConfigurationAfpsDetails": "Detalles",
         "ConfigurationAfpsEdit": "Editar",
-        "ConfigurationAfpsIndex": "Afps"
+        "ConfigurationAfpsIndex": "Afps",
+        "ConfigurationEpssCreate": "Crear",
+        "ConfigurationEpssDelete": "Eliminar",
+        "ConfigurationEpssDetails": "Detalles",
+        "ConfigurationEpssEdit": "Editar",
+        "ConfigurationEpssIndex": "Eps's"
     }
 }

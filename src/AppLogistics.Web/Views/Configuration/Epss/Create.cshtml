@@ -1,22 +1,10 @@
-@model AfpView
+@model EpsView
 
 <div class="col">
     <div class="widget-box">
         <div class="widget-header">
             <span class="icon fa fa-th-list"></span>
-            <h5>@Resource.ForHeader("Afp")</h5>
-            <div class="widget-header-buttons">
-                <authorize action="Details">
-                    <a asp-action="Details" asp-route-id="@Model.Id" class="btn">
-                        <span class="fa fa-info"></span><span class="text">@Resource.ForAction("Details")</span>
-                    </a>
-                </authorize>
-                <authorize action="Delete">
-                    <a asp-action="Delete" asp-route-id="@Model.Id" class="btn">
-                        <span class="fa fa-times"></span><span class="text">@Resource.ForAction("Delete")</span>
-                    </a>
-                </authorize>
-            </div>
+            <h5>@Resource.ForHeader("Eps")</h5>
         </div>
         <div class="widget-content">
             <form asp-antiforgery="true">

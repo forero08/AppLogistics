@@ -7,7 +7,8 @@
         "AdministrationAccounts": "Accounts",
         "AdministrationRoles": "Roles",
 
-        "ConfigurationAfps": "Afps"
+        "ConfigurationAfps": "Afps",
+        "ConfigurationEpss": "Eps's"
     },
     "Actions": {
         "AdministrationAccountsCreate": "Create",
@@ -24,6 +25,11 @@
         "ConfigurationAfpsDelete": "Delete",
         "ConfigurationAfpsDetails": "Details",
         "ConfigurationAfpsEdit": "Edit",
-        "ConfigurationAfpsIndex": "Index"
+        "ConfigurationAfpsIndex": "Index",
+        "ConfigurationEpssCreate": "Create",
+        "ConfigurationEpssDelete": "Delete",
+        "ConfigurationEpssDetails": "Details",
+        "ConfigurationEpssEdit": "Edit",
+        "ConfigurationEpssIndex": "Index"
     }
 }

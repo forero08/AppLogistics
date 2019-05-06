@@ -170,6 +170,16 @@ namespace AppLogistics.Tests
 
         #region Configuration
 
+        public static Afp CreateAfp(int id = 0)
+        {
+            return new Afp
+            {
+                Id = id,
+                Name = "Name" + id,
+                Nit = "Nit" + id
+            };
+        }
+
         public static AfpView CreateAfpView(int id = 0)
         {
             return new AfpView
@@ -180,9 +190,19 @@ namespace AppLogistics.Tests
             };
         }
 
-        public static Afp CreateAfp(int id = 0)
+        public static Eps CreateEps(int id = 0)
         {
-            return new Afp
+            return new Eps
+            {
+                Id = id,
+                Name = "Name" + id,
+                Nit = "Nit" + id
+            };
+        }
+
+        public static EpsView CreateEpsView(int id = 0)
+        {
+            return new EpsView
             {
                 Id = id,
                 Name = "Name" + id,
