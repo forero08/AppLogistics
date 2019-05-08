@@ -38,8 +38,9 @@ namespace AppLogistics.Web.Templates
 
         public ModuleModel(string model, string controller, string area)
         {
-            ModelShortName = Regex.Split(model, "(?=[A-Z])").Last();
-            ModelVarName = ModelShortName.ToLower();
+            //ModelShortName = Regex.Split(model, "(?=[A-Z])").Last();
+            ModelShortName = model;
+            ModelVarName = model[0].ToString().ToLower() + model.Substring(1);
             Models = model.Pluralize(false);
             Model = model;
 

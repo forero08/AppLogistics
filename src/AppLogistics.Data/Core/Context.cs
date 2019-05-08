@@ -22,6 +22,7 @@ namespace AppLogistics.Data.Core
         #region Configuration
 
         protected DbSet<Afp> Afp { get; set; }
+        protected DbSet<DocumentType> DocumentType { get; set; }
         protected DbSet<Eps> Eps{ get; set; }
 
         #endregion

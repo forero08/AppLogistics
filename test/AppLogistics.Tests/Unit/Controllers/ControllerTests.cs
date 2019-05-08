@@ -36,7 +36,7 @@ namespace AppLogistics.Controllers.Tests
             return controller.NotFoundView();
         }
 
-        protected ViewResult NotEmptyView(BaseController controller, Object model)
+        protected ViewResult NotEmptyView(BaseController controller, object model)
         {
             controller.When(sub => sub.NotEmptyView(model)).DoNotCallBase();
             controller.NotEmptyView(model).Returns(new ViewResult());

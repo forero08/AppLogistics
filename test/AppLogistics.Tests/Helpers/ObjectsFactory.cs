@@ -26,8 +26,6 @@ namespace AppLogistics.Tests
             };
         }
 
-
-
         public static AccountView CreateAccountView(int id = 0)
         {
             return new AccountView
@@ -187,6 +185,26 @@ namespace AppLogistics.Tests
                 Id = id,
                 Name = "Name" + id,
                 Nit = "Nit" + id
+            };
+        }
+
+        public static DocumentType CreateDocumentType(int id = 0)
+        {
+            return new DocumentType
+            {
+                Id = id,
+                Name = "Name" + id,
+                ShortName = "ShortName" + id
+            };
+        }
+
+        public static DocumentTypeView CreateDocumentTypeView(int id = 0)
+        {
+            return new DocumentTypeView
+            {
+                Id = id,
+                Name = "Name" + id,
+                ShortName = "ShortName" + id
             };
         }
 

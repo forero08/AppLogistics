@@ -8,6 +8,7 @@
         "AdministrationRoles": "Roles",
 
         "ConfigurationAfps": "Afps",
+        "ConfigurationDocumentTypes": "Document Types",
         "ConfigurationEpss": "Eps's"
     },
     "Actions": {
@@ -26,6 +27,11 @@
         "ConfigurationAfpsDetails": "Details",
         "ConfigurationAfpsEdit": "Edit",
         "ConfigurationAfpsIndex": "Index",
+        "ConfigurationDocumentTypesCreate": "Create",
+        "ConfigurationDocumentTypesDelete": "Delete",
+        "ConfigurationDocumentTypesDetails": "Details",
+        "ConfigurationDocumentTypesEdit": "Edit",
+        "ConfigurationDocumentTypesIndex": "Index",
         "ConfigurationEpssCreate": "Create",
         "ConfigurationEpssDelete": "Delete",
         "ConfigurationEpssDetails": "Details",

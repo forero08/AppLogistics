@@ -8,6 +8,8 @@
 
         "Afp": "Afp",
         "Afps": "Afps",
+        "DocumentType": "Document type",
+        "DocumentTypes": "Document types",
         "Eps": "Eps",
         "Epss": "Eps's"
     },
@@ -35,6 +37,11 @@
         "ConfigurationAfpsDetails": "Afp details",
         "ConfigurationAfpsEdit": "Afp edit",
         "ConfigurationAfpsIndex": "Afps",
+        "ConfigurationDocumentTypesCreate": "Document type creation",
+        "ConfigurationDocumentTypesDelete": "Document type deletion",
+        "ConfigurationDocumentTypesDetails": "Document type details",
+        "ConfigurationDocumentTypesEdit": "Document type edit",
+        "ConfigurationDocumentTypesIndex": "Document types",
         "ConfigurationEpssCreate": "Eps creation",
         "ConfigurationEpssDelete": "Eps deletion",
         "ConfigurationEpssDetails": "Eps details",

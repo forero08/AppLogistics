@@ -61,6 +61,24 @@ namespace AppLogistics.Data.Migrations.Tests
         [InlineData("Administration", "Roles", "Details")]
         [InlineData("Administration", "Roles", "Edit")]
         [InlineData("Administration", "Roles", "Delete")]
+
+        [InlineData("Configuration", "Afps", "Index")]
+        [InlineData("Configuration", "Afps", "Create")]
+        [InlineData("Configuration", "Afps", "Details")]
+        [InlineData("Configuration", "Afps", "Edit")]
+        [InlineData("Configuration", "Afps", "Delete")]
+
+        [InlineData("Configuration", "DocumentTypes", "Index")]
+        [InlineData("Configuration", "DocumentTypes", "Create")]
+        [InlineData("Configuration", "DocumentTypes", "Details")]
+        [InlineData("Configuration", "DocumentTypes", "Edit")]
+        [InlineData("Configuration", "DocumentTypes", "Delete")]
+
+        [InlineData("Configuration", "Epss", "Index")]
+        [InlineData("Configuration", "Epss", "Create")]
+        [InlineData("Configuration", "Epss", "Details")]
+        [InlineData("Configuration", "Epss", "Edit")]
+        [InlineData("Configuration", "Epss", "Delete")]
         public void PermissionsTable_HasPermission(string area, string controller, string action)
         {
             Assert.Single(context.Set<Permission>(), permission =>
@@ -73,7 +91,7 @@ namespace AppLogistics.Data.Migrations.Tests
         public void PermissionsTable_HasExactNumberOfPermissions()
         {
             int actual = context.Set<Permission>().Count();
-            int expected = 19;
+            int expected = 24;
 
             Assert.Equal(expected, actual);
         }

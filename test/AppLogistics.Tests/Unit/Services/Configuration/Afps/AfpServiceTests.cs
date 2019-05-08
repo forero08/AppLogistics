@@ -59,7 +59,7 @@ namespace AppLogistics.Services.Tests
                 .OrderByDescending(view => view.CreationDate)
                 .ToArray();
 
-            for (Int32 i = 0; i < expected.Length || i < actual.Length; i++)
+            for (int i = 0; i < expected.Length || i < actual.Length; i++)
             {
                                 Assert.Equal(expected[i].CreationDate, actual[i].CreationDate);
                 Assert.Equal(expected[i].Name, actual[i].Name);

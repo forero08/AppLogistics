@@ -62,11 +62,17 @@ namespace AppLogistics.Data.Migrations
                 new Permission { Id = 13, Area = "Configuration", Controller = "Afps", Action = "Edit" },
                 new Permission { Id = 14, Area = "Configuration", Controller = "Afps", Action = "Delete" },
 
-                new Permission { Id = 15, Area = "Configuration", Controller = "Epss", Action = "Index" },
-                new Permission { Id = 16, Area = "Configuration", Controller = "Epss", Action = "Create" },
-                new Permission { Id = 17, Area = "Configuration", Controller = "Epss", Action = "Details" },
-                new Permission { Id = 18, Area = "Configuration", Controller = "Epss", Action = "Edit" },
-                new Permission { Id = 19, Area = "Configuration", Controller = "Epss", Action = "Delete" },
+                new Permission { Id = 15, Area = "Configuration", Controller = "DocumentTypes", Action = "Index" },
+                new Permission { Id = 16, Area = "Configuration", Controller = "DocumentTypes", Action = "Create" },
+                new Permission { Id = 17, Area = "Configuration", Controller = "DocumentTypes", Action = "Details" },
+                new Permission { Id = 18, Area = "Configuration", Controller = "DocumentTypes", Action = "Edit" },
+                new Permission { Id = 19, Area = "Configuration", Controller = "DocumentTypes", Action = "Delete" },
+
+                new Permission { Id = 20, Area = "Configuration", Controller = "Epss", Action = "Index" },
+                new Permission { Id = 21, Area = "Configuration", Controller = "Epss", Action = "Create" },
+                new Permission { Id = 22, Area = "Configuration", Controller = "Epss", Action = "Details" },
+                new Permission { Id = 23, Area = "Configuration", Controller = "Epss", Action = "Edit" },
+                new Permission { Id = 24, Area = "Configuration", Controller = "Epss", Action = "Delete" },
             };
 
             Permission[] currentPermissions = UnitOfWork.Select<Permission>().ToArray();
