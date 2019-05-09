@@ -21,6 +21,7 @@ namespace AppLogistics.Data.Core
 
         #region Configuration
 
+        protected DbSet<Activity> Activity { get; set; }
         protected DbSet<Afp> Afp { get; set; }
         protected DbSet<DocumentType> DocumentType { get; set; }
         protected DbSet<Eps> Eps{ get; set; }

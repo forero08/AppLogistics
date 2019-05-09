@@ -22,13 +22,19 @@
         </siteMapNode>
 
         <siteMapNode menu="true" icon="fa fa-wrench" area="Configuration">
+            <siteMapNode menu="true" icon="fa fa-people-carry" area="Configuration" controller="Activities" action="Index">
+                <siteMapNode icon="far fa-file" area="Configuration" controller="Activities" action="Create" />
+                <siteMapNode icon="fa fa-info" area="Configuration" controller="Activities" action="Details" />
+                <siteMapNode icon="fa fa-pencil-alt" area="Configuration" controller="Activities" action="Edit" />
+                <siteMapNode icon="fa fa-times" area="Configuration" controller="Activities" action="Delete" />
+            </siteMapNode>
             <siteMapNode menu="true" icon="fa fa-user-injured" area="Configuration" controller="Afps" action="Index">
                 <siteMapNode icon="far fa-file" area="Configuration" controller="Afps" action="Create" />
                 <siteMapNode icon="fa fa-info" area="Configuration" controller="Afps" action="Details" />
                 <siteMapNode icon="fa fa-pencil-alt" area="Configuration" controller="Afps" action="Edit" />
                 <siteMapNode icon="fa fa-times" area="Configuration" controller="Afps" action="Delete" />
             </siteMapNode>
-            <siteMapNode menu="true" icon="fa fa-passport" area="Configuration" controller="DocumentTypes" action="Index">
+            <siteMapNode menu="true" icon="fa fa-flag" area="Configuration" controller="DocumentTypes" action="Index">
                 <siteMapNode icon="far fa-file" area="Configuration" controller="DocumentTypes" action="Create" />
                 <siteMapNode icon="fa fa-info" area="Configuration" controller="DocumentTypes" action="Details" />
                 <siteMapNode icon="fa fa-pencil-alt" area="Configuration" controller="DocumentTypes" action="Edit" />

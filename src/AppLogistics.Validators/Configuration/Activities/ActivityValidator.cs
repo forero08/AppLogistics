@@ -1,22 +1,21 @@
-﻿@model ModuleModel
 using AppLogistics.Data.Core;
 using AppLogistics.Objects;
 
 namespace AppLogistics.Validators
 {
-    public class @Model.Validator : BaseValidator, @Model.IValidator
+    public class ActivityValidator : BaseValidator, IActivityValidator
     {
-        public @(Model.Validator)(IUnitOfWork unitOfWork)
+        public ActivityValidator(IUnitOfWork unitOfWork)
             : base(unitOfWork)
         {
         }
 
-        public bool CanCreate(@Model.View view)
+        public bool CanCreate(ActivityView view)
         {
             return ModelState.IsValid;
         }
 
-        public bool CanEdit(@Model.View view)
+        public bool CanEdit(ActivityView view)
         {
             return ModelState.IsValid;
         }

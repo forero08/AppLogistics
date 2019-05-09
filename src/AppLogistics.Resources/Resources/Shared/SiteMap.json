@@ -17,6 +17,11 @@
         "ProfileEdit": "Profile",
 
         "Configuration": "Configuration",
+        "ConfigurationActivitiesCreate": "Create",
+        "ConfigurationActivitiesDelete": "Delete",
+        "ConfigurationActivitiesDetails": "Details",
+        "ConfigurationActivitiesEdit": "Edit",
+        "ConfigurationActivitiesIndex": "Activities",
         "ConfigurationAfpsCreate": "Create",
         "ConfigurationAfpsDelete": "Delete",
         "ConfigurationAfpsDetails": "Details",

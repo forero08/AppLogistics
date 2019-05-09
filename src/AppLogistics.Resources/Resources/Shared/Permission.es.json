@@ -7,6 +7,7 @@
         "AdministrationAccounts": "Cuentas",
         "AdministrationRoles": "Roles",
 
+        "ConfigurationActivities": "Actividades",
         "ConfigurationAfps": "Afps",
         "ConfigurationDocumentTypes": "Tipos de documento",
         "ConfigurationEpss": "Eps's"
@@ -22,6 +23,11 @@
         "AdministrationRolesEdit": "Editar",
         "AdministrationRolesIndex": "Índice",
 
+        "ConfigurationActivitiesCreate": "Crear",
+        "ConfigurationActivitiesDelete": "Eliminar",
+        "ConfigurationActivitiesDetails": "Detalles",
+        "ConfigurationActivitiesEdit": "Editar",
+        "ConfigurationActivitiesIndex": "Índice",
         "ConfigurationAfpsCreate": "Crear",
         "ConfigurationAfpsDelete": "Eliminar",
         "ConfigurationAfpsDetails": "Detalles",

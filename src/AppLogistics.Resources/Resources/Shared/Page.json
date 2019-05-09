@@ -6,6 +6,8 @@
         "Role": "Role",
         "Roles": "Roles",
 
+        "Activity": "Activity",
+        "Activities": "Activities",
         "Afp": "Afp",
         "Afps": "Afps",
         "DocumentType": "Document type",
@@ -32,6 +34,11 @@
         "ProfileDelete": "Profile deletion",
         "ProfileEdit": "Profile edit",
 
+        "ConfigurationActivitiesCreate": "Activity creation",
+        "ConfigurationActivitiesDelete": "Activity deletion",
+        "ConfigurationActivitiesDetails": "Activity details",
+        "ConfigurationActivitiesEdit": "Activity edit",
+        "ConfigurationActivitiesIndex": "Activities",
         "ConfigurationAfpsCreate": "Afp creation",
         "ConfigurationAfpsDelete": "Afp deletion",
         "ConfigurationAfpsDetails": "Afp details",

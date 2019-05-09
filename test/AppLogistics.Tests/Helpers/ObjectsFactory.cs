@@ -168,6 +168,24 @@ namespace AppLogistics.Tests
 
         #region Configuration
 
+        public static Activity CreateActivity(int id = 0)
+        {
+            return new Activity
+            {
+                Id = id,
+                Name = "Name" + id
+            };
+        }
+
+        public static ActivityView CreateActivityView(int id = 0)
+        {
+            return new ActivityView
+            {
+                Id = id,
+                Name = "Name" + id
+            };
+        }
+
         public static Afp CreateAfp(int id = 0)
         {
             return new Afp
