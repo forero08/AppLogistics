@@ -206,6 +206,24 @@ namespace AppLogistics.Tests
             };
         }
 
+        public static BranchOffice CreateBranchOffice(int id = 0)
+        {
+            return new BranchOffice
+            {
+                Id = id,
+                Name = "Name" + id
+            };
+        }
+
+        public static BranchOfficeView CreateBranchOfficeView(int id = 0)
+        {
+            return new BranchOfficeView
+            {
+                Id = id,
+                Name = "Name" + id
+            };
+        }
+
         public static DocumentType CreateDocumentType(int id = 0)
         {
             return new DocumentType

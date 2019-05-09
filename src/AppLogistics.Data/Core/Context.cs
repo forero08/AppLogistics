@@ -23,6 +23,7 @@ namespace AppLogistics.Data.Core
 
         protected DbSet<Activity> Activity { get; set; }
         protected DbSet<Afp> Afp { get; set; }
+        protected DbSet<BranchOffice> BranchOffice { get; set; }
         protected DbSet<DocumentType> DocumentType { get; set; }
         protected DbSet<Eps> Eps{ get; set; }
 

@@ -34,17 +34,23 @@
                 <siteMapNode icon="fa fa-pencil-alt" area="Configuration" controller="Afps" action="Edit" />
                 <siteMapNode icon="fa fa-times" area="Configuration" controller="Afps" action="Delete" />
             </siteMapNode>
-            <siteMapNode menu="true" icon="fa fa-flag" area="Configuration" controller="DocumentTypes" action="Index">
-                <siteMapNode icon="far fa-file" area="Configuration" controller="DocumentTypes" action="Create" />
-                <siteMapNode icon="fa fa-info" area="Configuration" controller="DocumentTypes" action="Details" />
-                <siteMapNode icon="fa fa-pencil-alt" area="Configuration" controller="DocumentTypes" action="Edit" />
-                <siteMapNode icon="fa fa-times" area="Configuration" controller="DocumentTypes" action="Delete" />
-            </siteMapNode>
             <siteMapNode menu="true" icon="fa fa-heartbeat" area="Configuration" controller="Epss" action="Index">
                 <siteMapNode icon="far fa-file" area="Configuration" controller="Epss" action="Create" />
                 <siteMapNode icon="fa fa-info" area="Configuration" controller="Epss" action="Details" />
                 <siteMapNode icon="fa fa-pencil-alt" area="Configuration" controller="Epss" action="Edit" />
                 <siteMapNode icon="fa fa-times" area="Configuration" controller="Epss" action="Delete" />
+            </siteMapNode>
+            <siteMapNode menu="true" icon="fa fa-map-marked-alt" area="Configuration" controller="BranchOffices" action="Index">
+                <siteMapNode icon="far fa-file" area="Configuration" controller="BranchOffices" action="Create" />
+                <siteMapNode icon="fa fa-info" area="Configuration" controller="BranchOffices" action="Details" />
+                <siteMapNode icon="fa fa-pencil-alt" area="Configuration" controller="BranchOffices" action="Edit" />
+                <siteMapNode icon="fa fa-times" area="Configuration" controller="BranchOffices" action="Delete" />
+            </siteMapNode>
+            <siteMapNode menu="true" icon="fa fa-id-card" area="Configuration" controller="DocumentTypes" action="Index">
+                <siteMapNode icon="far fa-file" area="Configuration" controller="DocumentTypes" action="Create" />
+                <siteMapNode icon="fa fa-info" area="Configuration" controller="DocumentTypes" action="Details" />
+                <siteMapNode icon="fa fa-pencil-alt" area="Configuration" controller="DocumentTypes" action="Edit" />
+                <siteMapNode icon="fa fa-times" area="Configuration" controller="DocumentTypes" action="Delete" />
             </siteMapNode>
         </siteMapNode>
 

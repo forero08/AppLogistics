@@ -68,17 +68,23 @@ namespace AppLogistics.Data.Migrations
                 new Permission { Id = 18, Area = "Configuration", Controller = "Afps", Action = "Edit" },
                 new Permission { Id = 19, Area = "Configuration", Controller = "Afps", Action = "Delete" },
 
-                new Permission { Id = 20, Area = "Configuration", Controller = "DocumentTypes", Action = "Index" },
-                new Permission { Id = 21, Area = "Configuration", Controller = "DocumentTypes", Action = "Create" },
-                new Permission { Id = 22, Area = "Configuration", Controller = "DocumentTypes", Action = "Details" },
-                new Permission { Id = 23, Area = "Configuration", Controller = "DocumentTypes", Action = "Edit" },
-                new Permission { Id = 24, Area = "Configuration", Controller = "DocumentTypes", Action = "Delete" },
+                new Permission { Id = 20, Area = "Configuration", Controller = "BranchOffices", Action = "Index" },
+                new Permission { Id = 21, Area = "Configuration", Controller = "BranchOffices", Action = "Create" },
+                new Permission { Id = 22, Area = "Configuration", Controller = "BranchOffices", Action = "Details" },
+                new Permission { Id = 23, Area = "Configuration", Controller = "BranchOffices", Action = "Edit" },
+                new Permission { Id = 24, Area = "Configuration", Controller = "BranchOffices", Action = "Delete" },
 
-                new Permission { Id = 25, Area = "Configuration", Controller = "Epss", Action = "Index" },
-                new Permission { Id = 26, Area = "Configuration", Controller = "Epss", Action = "Create" },
-                new Permission { Id = 27, Area = "Configuration", Controller = "Epss", Action = "Details" },
-                new Permission { Id = 28, Area = "Configuration", Controller = "Epss", Action = "Edit" },
-                new Permission { Id = 29, Area = "Configuration", Controller = "Epss", Action = "Delete" },
+                new Permission { Id = 25, Area = "Configuration", Controller = "DocumentTypes", Action = "Index" },
+                new Permission { Id = 26, Area = "Configuration", Controller = "DocumentTypes", Action = "Create" },
+                new Permission { Id = 27, Area = "Configuration", Controller = "DocumentTypes", Action = "Details" },
+                new Permission { Id = 28, Area = "Configuration", Controller = "DocumentTypes", Action = "Edit" },
+                new Permission { Id = 29, Area = "Configuration", Controller = "DocumentTypes", Action = "Delete" },
+
+                new Permission { Id = 30, Area = "Configuration", Controller = "Epss", Action = "Index" },
+                new Permission { Id = 31, Area = "Configuration", Controller = "Epss", Action = "Create" },
+                new Permission { Id = 32, Area = "Configuration", Controller = "Epss", Action = "Details" },
+                new Permission { Id = 33, Area = "Configuration", Controller = "Epss", Action = "Edit" },
+                new Permission { Id = 34, Area = "Configuration", Controller = "Epss", Action = "Delete" },
             };
 
             Permission[] currentPermissions = UnitOfWork.Select<Permission>().ToArray();

@@ -9,6 +9,7 @@
 
         "ConfigurationActivities": "Actividades",
         "ConfigurationAfps": "Afps",
+        "ConfigurationBranchOffices": "Sucursales",
         "ConfigurationDocumentTypes": "Tipos de documento",
         "ConfigurationEpss": "Eps's"
     },
@@ -33,6 +34,11 @@
         "ConfigurationAfpsDetails": "Detalles",
         "ConfigurationAfpsEdit": "Editar",
         "ConfigurationAfpsIndex": "Índice",
+        "ConfigurationBranchOfficesCreate": "Crear",
+        "ConfigurationBranchOfficesDelete": "Eliminar",
+        "ConfigurationBranchOfficesDetails": "Detalles",
+        "ConfigurationBranchOfficesEdit": "Editar",
+        "ConfigurationBranchOfficesIndex": "Índice",
         "ConfigurationDocumentTypesCreate": "Crear",
         "ConfigurationDocumentTypesDelete": "Eliminar",
         "ConfigurationDocumentTypesDetails": "Detalles",
