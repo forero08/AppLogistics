@@ -52,6 +52,12 @@
                 <siteMapNode icon="fa fa-pencil-alt" area="Configuration" controller="DocumentTypes" action="Edit" />
                 <siteMapNode icon="fa fa-times" area="Configuration" controller="DocumentTypes" action="Delete" />
             </siteMapNode>
+            <siteMapNode menu="true" icon="fa fa-truck-moving" area="Configuration" controller="Carriers" action="Index">
+                <siteMapNode icon="far fa-file" area="Configuration" controller="Carriers" action="Create" />
+                <siteMapNode icon="fa fa-info" area="Configuration" controller="Carriers" action="Details" />
+                <siteMapNode icon="fa fa-pencil-alt" area="Configuration" controller="Carriers" action="Edit" />
+                <siteMapNode icon="fa fa-times" area="Configuration" controller="Carriers" action="Delete" />
+            </siteMapNode>
         </siteMapNode>
 
     </siteMapNode>

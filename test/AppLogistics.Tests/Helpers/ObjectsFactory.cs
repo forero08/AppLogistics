@@ -224,6 +224,26 @@ namespace AppLogistics.Tests
             };
         }
 
+        public static Carrier CreateCarrier(int id = 0)
+        {
+            return new Carrier
+            {
+                Id = id,
+                Name = "Name" + id,
+                Nit = "Nit" + id
+            };
+        }
+
+        public static CarrierView CreateCarrierView(int id = 0)
+        {
+            return new CarrierView
+            {
+                Id = id,
+                Name = "Name" + id,
+                Nit = "Nit" + id
+            };
+        }
+
         public static DocumentType CreateDocumentType(int id = 0)
         {
             return new DocumentType
