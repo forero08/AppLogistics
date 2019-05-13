@@ -27,6 +27,7 @@ namespace AppLogistics.Data.Core
         protected DbSet<Carrier> Carrier { get; set; }
         protected DbSet<DocumentType> DocumentType { get; set; }
         protected DbSet<Eps> Eps{ get; set; }
+        protected DbSet<MaritalStatus> MaritalStatus { get; set; }
 
         #endregion
 

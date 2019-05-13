@@ -17,7 +17,9 @@
         "DocumentType": "Document type",
         "DocumentTypes": "Document types",
         "Eps": "Eps",
-        "Epss": "Eps's"
+        "Epss": "Eps's",
+        "MaritalStatus": "Marital status",
+        "MaritalStatuses": "MaritalStatuses"
     },
     "Titles": {
         "AdministrationAccountsCreate": "Account creation",
@@ -67,6 +69,11 @@
         "ConfigurationEpssDelete": "Eps deletion",
         "ConfigurationEpssDetails": "Eps details",
         "ConfigurationEpssEdit": "Eps Edit",
-        "ConfigurationEpssIndex": "Eps's"
+        "ConfigurationEpssIndex": "Eps's",
+        "ConfigurationMaritalStatusesCreate": "Marital status creation",
+        "ConfigurationMaritalStatusesDelete": "Marital status deletion",
+        "ConfigurationMaritalStatusesDetails": "Marital status details",
+        "ConfigurationMaritalStatusesEdit": "Marital status Edit",
+        "ConfigurationMaritalStatusesIndex": "Marital statuses"
     }
 }

@@ -284,6 +284,24 @@ namespace AppLogistics.Tests
             };
         }
 
+        public static MaritalStatus CreateMaritalStatus(int id = 0)
+        {
+            return new MaritalStatus
+            {
+                Id = id,
+                Name = "Name" + id
+            };
+        }
+
+        public static MaritalStatusView CreateMaritalStatusView(int id = 0)
+        {
+            return new MaritalStatusView
+            {
+                Id = id,
+                Name = "Name" + id
+            };
+        }
+
         #endregion
 
         #region Tests

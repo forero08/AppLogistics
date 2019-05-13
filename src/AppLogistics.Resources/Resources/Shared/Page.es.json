@@ -17,7 +17,9 @@
         "DocumentType": "Tipo de documento",
         "DocumentTypes": "Tipos de documento",
         "Eps": "Eps",
-        "Epss": "Eps's"
+        "Epss": "Eps's",
+        "MaritalStatus": "Estado civil",
+        "MaritalStatuses": "Estados civiles"
     },
     "Titles": {
         "AdministrationAccountsCreate": "Creación de cuenta",
@@ -67,6 +69,11 @@
         "ConfigurationEpssDelete": "Eliminación de Eps",
         "ConfigurationEpssDetails": "Detalles de Eps",
         "ConfigurationEpssEdit": "Editar Eps",
-        "ConfigurationEpssIndex": "Eps's"
+        "ConfigurationEpssIndex": "Eps's",
+        "ConfigurationMaritalStatusesCreate": "Creación de Estado civil",
+        "ConfigurationMaritalStatusesDelete": "Eliminación de Estado civil",
+        "ConfigurationMaritalStatusesDetails": "Detalles de Estado civil",
+        "ConfigurationMaritalStatusesEdit": "Editar Estado civil",
+        "ConfigurationMaritalStatusesIndex": "Estados civiles"
     }
 }

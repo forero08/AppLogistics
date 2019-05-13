@@ -12,7 +12,8 @@
         "ConfigurationBranchOffices": "Sucursales",
         "ConfigurationCarriers": "Transportadoras",
         "ConfigurationDocumentTypes": "Tipos de documento",
-        "ConfigurationEpss": "Eps's"
+        "ConfigurationEpss": "Eps's",
+        "ConfigurationMaritalStatuses": "Estados Civiles"
     },
     "Actions": {
         "AdministrationAccountsCreate": "Crear",
@@ -54,6 +55,11 @@
         "ConfigurationEpssDelete": "Eliminar",
         "ConfigurationEpssDetails": "Detalles",
         "ConfigurationEpssEdit": "Editar",
-        "ConfigurationEpssIndex": "Índice"
+        "ConfigurationEpssIndex": "Índice",
+        "ConfigurationMaritalStatusesCreate": "Crear",
+        "ConfigurationMaritalStatusesDelete": "Eliminar",
+        "ConfigurationMaritalStatusesDetails": "Detalles",
+        "ConfigurationMaritalStatusesEdit": "Editar",
+        "ConfigurationMaritalStatusesIndex": "Índice"
     }
 }

@@ -46,6 +46,11 @@
         "ConfigurationEpssDelete": "Eliminar",
         "ConfigurationEpssDetails": "Detalles",
         "ConfigurationEpssEdit": "Editar",
-        "ConfigurationEpssIndex": "Eps's"
+        "ConfigurationEpssIndex": "Eps's",
+        "ConfigurationMaritalStatusesCreate": "Crear",
+        "ConfigurationMaritalStatusesDelete": "Eliminar",
+        "ConfigurationMaritalStatusesDetails": "Detalles",
+        "ConfigurationMaritalStatusesEdit": "Editar",
+        "ConfigurationMaritalStatusesIndex": "Estados Civiles"
     }
 }

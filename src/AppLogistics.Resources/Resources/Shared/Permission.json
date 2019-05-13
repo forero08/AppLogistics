@@ -12,7 +12,8 @@
         "ConfigurationBranchOffices": "Branch Offices",
         "ConfigurationCarriers": "Carriers",
         "ConfigurationDocumentTypes": "Document Types",
-        "ConfigurationEpss": "Eps's"
+        "ConfigurationEpss": "Eps's",
+        "ConfigurationMaritalStatuses": "Marital Statuses"
     },
     "Actions": {
         "AdministrationAccountsCreate": "Create",
@@ -54,6 +55,11 @@
         "ConfigurationEpssDelete": "Delete",
         "ConfigurationEpssDetails": "Details",
         "ConfigurationEpssEdit": "Edit",
-        "ConfigurationEpssIndex": "Index"
+        "ConfigurationEpssIndex": "Index",
+        "ConfigurationMaritalStatusesCreate": "Create",
+        "ConfigurationMaritalStatusesDelete": "Delete",
+        "ConfigurationMaritalStatusesDetails": "Details",
+        "ConfigurationMaritalStatusesEdit": "Edit",
+        "ConfigurationMaritalStatusesIndex": "Index"
     }
 }
