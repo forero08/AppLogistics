@@ -17,9 +17,9 @@ namespace AppLogistics.Components.Mvc
             context.Attributes["data-val-acceptfiles-extensions"] = Attribute.Extensions;
         }
 
-        public override string GetErrorMessage(ModelValidationContextBase context)
+        public override string GetErrorMessage(ModelValidationContextBase validationContext)
         {
-            return GetErrorMessage(context.ModelMetadata);
+            return GetErrorMessage(validationContext.ModelMetadata);
         }
     }
 }

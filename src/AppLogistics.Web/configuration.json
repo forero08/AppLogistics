@@ -15,17 +15,17 @@
   },
 
   "Languages": {
-    "Default": "en",
+    "Default": "es",
     "Supported": [
       {
         "name": "English",
-        "culture": "en-GB",
+        "culture": "en-US",
         "abbreviation": "en"
       },
       {
-        "name": "Lietuvių",
-        "culture": "lt-LT",
-        "abbreviation": "lt"
+        "name": "Español",
+        "culture": "es-CO",
+        "abbreviation": "es"
       }
     ]
   },

@@ -1,10 +1,9 @@
 ﻿@model ModuleModel
-using Microsoft.AspNetCore.Mvc;
 using AppLogistics.Components.Mvc;
 using AppLogistics.Objects;
 using AppLogistics.Services;
 using AppLogistics.Validators;
-using System;
+using Microsoft.AspNetCore.Mvc;
 
 namespace @Model.ControllerNamespace
 {
@@ -43,13 +42,13 @@ namespace @Model.ControllerNamespace
         }
 
         [HttpGet]
-        public ActionResult Details(Int32 id)
+        public ActionResult Details(int id)
         {
             return NotEmptyView(Service.Get<@Model.View>(id));
         }
 
         [HttpGet]
-        public ActionResult Edit(Int32 id)
+        public ActionResult Edit(int id)
         {
             return NotEmptyView(Service.Get<@Model.View>(id));
         }
@@ -66,14 +65,14 @@ namespace @Model.ControllerNamespace
         }
 
         [HttpGet]
-        public ActionResult Delete(Int32 id)
+        public ActionResult Delete(int id)
         {
             return NotEmptyView(Service.Get<@Model.View>(id));
         }
 
         [HttpPost]
         [ActionName("Delete")]
-        public RedirectToActionResult DeleteConfirmed(Int32 id)
+        public RedirectToActionResult DeleteConfirmed(int id)
         {
             Service.Delete(id);
 

@@ -106,7 +106,6 @@ namespace AppLogistics.Tests
 
                 Password = "Password" + id,
                 NewPassword = "NewPassword" + id
-
             };
         }
 
@@ -162,6 +161,180 @@ namespace AppLogistics.Tests
 
                 PermissionId = id,
                 Permission = CreatePermission(id)
+            };
+        }
+
+        #endregion
+
+        #region Configuration
+
+        public static Activity CreateActivity(int id = 0)
+        {
+            return new Activity
+            {
+                Id = id,
+                Name = "Name" + id
+            };
+        }
+
+        public static ActivityView CreateActivityView(int id = 0)
+        {
+            return new ActivityView
+            {
+                Id = id,
+                Name = "Name" + id
+            };
+        }
+
+        public static Afp CreateAfp(int id = 0)
+        {
+            return new Afp
+            {
+                Id = id,
+                Name = "Name" + id,
+                Nit = "Nit" + id
+            };
+        }
+
+        public static AfpView CreateAfpView(int id = 0)
+        {
+            return new AfpView
+            {
+                Id = id,
+                Name = "Name" + id,
+                Nit = "Nit" + id
+            };
+        }
+
+        public static BranchOffice CreateBranchOffice(int id = 0)
+        {
+            return new BranchOffice
+            {
+                Id = id,
+                Name = "Name" + id
+            };
+        }
+
+        public static BranchOfficeView CreateBranchOfficeView(int id = 0)
+        {
+            return new BranchOfficeView
+            {
+                Id = id,
+                Name = "Name" + id
+            };
+        }
+
+        public static Carrier CreateCarrier(int id = 0)
+        {
+            return new Carrier
+            {
+                Id = id,
+                Name = "Name" + id,
+                Nit = "Nit" + id
+            };
+        }
+
+        public static CarrierView CreateCarrierView(int id = 0)
+        {
+            return new CarrierView
+            {
+                Id = id,
+                Name = "Name" + id,
+                Nit = "Nit" + id
+            };
+        }
+
+        public static DocumentType CreateDocumentType(int id = 0)
+        {
+            return new DocumentType
+            {
+                Id = id,
+                Name = "Name" + id,
+                ShortName = "ShortName" + id
+            };
+        }
+
+        public static DocumentTypeView CreateDocumentTypeView(int id = 0)
+        {
+            return new DocumentTypeView
+            {
+                Id = id,
+                Name = "Name" + id,
+                ShortName = "ShortName" + id
+            };
+        }
+
+        public static Eps CreateEps(int id = 0)
+        {
+            return new Eps
+            {
+                Id = id,
+                Name = "Name" + id,
+                Nit = "Nit" + id
+            };
+        }
+
+        public static EpsView CreateEpsView(int id = 0)
+        {
+            return new EpsView
+            {
+                Id = id,
+                Name = "Name" + id,
+                Nit = "Nit" + id
+            };
+        }
+
+        public static MaritalStatus CreateMaritalStatus(int id = 0)
+        {
+            return new MaritalStatus
+            {
+                Id = id,
+                Name = "Name" + id
+            };
+        }
+
+        public static MaritalStatusView CreateMaritalStatusView(int id = 0)
+        {
+            return new MaritalStatusView
+            {
+                Id = id,
+                Name = "Name" + id
+            };
+        }
+
+        public static Product CreateProduct(int id = 0)
+        {
+            return new Product
+            {
+                Id = id,
+                Name = "Name" + id
+            };
+        }
+
+        public static ProductView CreateProductView(int id = 0)
+        {
+            return new ProductView
+            {
+                Id = id,
+                Name = "Name" + id
+            };
+        }
+
+        public static VehicleType CreateVehicleType(int id = 0)
+        {
+            return new VehicleType
+            {
+                Id = id,
+                Name = "Name" + id
+            };
+        }
+
+        public static VehicleTypeView CreateVehicleTypeView(int id = 0)
+        {
+            return new VehicleTypeView
+            {
+                Id = id,
+                Name = "Name" + id
             };
         }
 

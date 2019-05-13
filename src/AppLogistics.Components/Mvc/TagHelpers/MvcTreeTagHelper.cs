@@ -43,8 +43,10 @@ namespace AppLogistics.Components.Mvc
 
             foreach (int id in model.SelectedIds)
             {
-                TagBuilder input = new TagBuilder("input");
-                input.TagRenderMode = TagRenderMode.SelfClosing;
+                TagBuilder input = new TagBuilder("input")
+                {
+                    TagRenderMode = TagRenderMode.SelfClosing
+                };
                 input.Attributes["value"] = id.ToString();
                 input.Attributes["type"] = "hidden";
                 input.Attributes["name"] = name;
@@ -70,7 +72,8 @@ namespace AppLogistics.Components.Mvc
                 TagBuilder item = new TagBuilder("li");
                 item.InnerHtml.AppendHtml("<i></i>");
 
-                if (node.Id is int id) {
+                if (node.Id is int id)
+                {
                     if (model.SelectedIds.Contains(id))
                     {
                         item.AddCssClass("mvc-tree-checked");

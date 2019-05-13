@@ -52,12 +52,14 @@ namespace AppLogistics.Data.Logging
 
                 foreach (LoggableEntity entity in Entities)
                 {
-                    AuditLog log = new AuditLog();
-                    log.Changes = entity.ToString();
-                    log.EntityName = entity.Name;
-                    log.Action = entity.Action;
-                    log.EntityId = entity.Id();
-                    log.AccountId = AccountId;
+                    AuditLog log = new AuditLog
+                    {
+                        Changes = entity.ToString(),
+                        EntityName = entity.Name,
+                        Action = entity.Action,
+                        EntityId = entity.Id(),
+                        AccountId = AccountId
+                    };
 
                     Context.Add(log);
                 }

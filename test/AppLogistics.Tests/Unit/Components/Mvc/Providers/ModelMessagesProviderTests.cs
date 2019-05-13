@@ -43,7 +43,6 @@ namespace AppLogistics.Components.Mvc.Tests
             Assert.Equal(expected, actual);
         }
 
-
         [Fact]
         public void ModelMessagesProvider_SetsValueMustNotBeNullAccessor()
         {

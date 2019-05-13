@@ -1,26 +1,22 @@
-﻿using AppLogistics.Components.Notifications;
-using AppLogistics.Resources;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Abstractions;
-using Microsoft.AspNetCore.Mvc.Routing;
-using Microsoft.AspNetCore.Routing;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
 using System;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace AppLogistics.Components.Mvc
 {
     public class ErrorPagesMiddleware
     {
-        private ILogger Logger { get; }
         private RequestDelegate Next { get; }
+        private readonly ILogger _logger;
+        private readonly ILanguages _languages;
 
-        public ErrorPagesMiddleware(RequestDelegate next, ILogger<ErrorPagesMiddleware> logger)
+        public ErrorPagesMiddleware(RequestDelegate next, ILogger<ErrorPagesMiddleware> logger, ILanguages languages)
         {
             Next = next;
-            Logger = logger;
+            _logger = logger;
+            _languages = languages;
         }
 
         public async Task Invoke(HttpContext context)
@@ -28,42 +24,44 @@ namespace AppLogistics.Components.Mvc
             try
             {
                 await Next(context);
+
+                if (!context.Response.HasStarted && context.Response.StatusCode == StatusCodes.Status404NotFound)
+                    View(context, "/home/not-found");
             }
             catch (Exception exception)
             {
-                Logger.LogError(exception, "An unhandled exception has occurred while executing the request.");
+                _logger.LogError(exception, "An unhandled exception has occurred while executing the request.");
 
-                if (context.Request.Headers["X-Requested-With"] == "XMLHttpRequest")
-                {
-                    context.Response.StatusCode = 500;
-                    context.Response.ContentType = "application/json; charset=utf-8";
-
-                    await context.Response.WriteAsync(JsonConvert.SerializeObject(new
-                    {
-                        alerts = new[]
-                        {
-                            new Alert
-                            {
-                                Id = "SystemError",
-                                Type = AlertType.Danger,
-                                Message = Resource.ForString("SystemError")
-                            }
-                        }
-                    }));
-                }
-                else
-                {
-                    Redirect(context, "Error", "Home", new { area = "" });
-                }
+                View(context, "/home/error");
             }
         }
 
-        private void Redirect(HttpContext context, string action, string controller, object values)
+        private async void View(HttpContext context, string path)
         {
-            RouteData route = (context.Features[typeof(IRoutingFeature)] as IRoutingFeature)?.RouteData;
-            IUrlHelper url = new UrlHelper(new ActionContext(context, route, new ActionDescriptor()));
+            string originalPath = context.Request.Path;
+            Match abbreviation = Regex.Match(originalPath, "^/(\\w{2})(/|$)");
 
-            context.Response.Redirect(url.Action(action, controller, values));
+            try
+            {
+                if (abbreviation.Success)
+                {
+                    Language language = _languages[abbreviation.Groups[1].Value];
+                    if (language != _languages.Default)
+                    {
+                        context.Request.Path = $"/{language.Abbreviation}{path}";
+                    }
+                }
+                else
+                {
+                    context.Request.Path = path;
+                }
+
+                await Next(context);
+            }
+            finally
+            {
+                context.Request.Path = originalPath;
+            }
         }
     }
 }

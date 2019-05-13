@@ -23,8 +23,10 @@ namespace AppLogistics.Components.Mvc.Tests
             EmptyModelMetadataProvider provider = new EmptyModelMetadataProvider();
             ModelExplorer explorer = new ModelExplorer(provider, provider.GetMetadataForProperty(typeof(MvcTreeView), "MvcTree"), tree);
 
-            helper = new MvcTreeTagHelper();
-            helper.For = new ModelExpression("MvcTree", explorer);
+            helper = new MvcTreeTagHelper
+            {
+                For = new ModelExpression("MvcTree", explorer)
+            };
             output = new TagHelperOutput("div", new TagHelperAttributeList(), (useCachedResult, encoder) => null);
         }
 

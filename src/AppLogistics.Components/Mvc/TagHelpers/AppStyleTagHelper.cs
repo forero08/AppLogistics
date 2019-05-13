@@ -20,7 +20,7 @@ namespace AppLogistics.Components.Mvc
         [HtmlAttributeNotBound]
         public ViewContext ViewContext { get; set; }
 
-        private IHostingEnvironment Environment { get; }
+        private readonly IHostingEnvironment _environment;
 
         private static ConcurrentDictionary<string, string> Styles { get; }
 
@@ -31,7 +31,7 @@ namespace AppLogistics.Components.Mvc
 
         public AppStyleTagHelper(IHostingEnvironment environment)
         {
-            Environment = environment;
+            _environment = environment;
         }
 
         public override void Process(TagHelperContext context, TagHelperOutput output)
@@ -60,13 +60,13 @@ namespace AppLogistics.Components.Mvc
 
         private bool ScriptsAvailable(string path)
         {
-            return File.Exists(Path.Combine(Environment.WebRootPath, "content/application/" + path));
+            return File.Exists(Path.Combine(_environment.WebRootPath, "content/application/" + path));
         }
 
         private string FormPath()
         {
             RouteValueDictionary route = ViewContext.RouteData.Values;
-            string extension = Environment.IsDevelopment() ? ".css" : ".min.css";
+            string extension = _environment.IsDevelopment() ? ".css" : ".min.css";
 
             return ((route["Area"] == null ? null : route["Area"] + "/") + route["controller"] + "/" + Action + extension).ToLower();
         }

@@ -7,6 +7,7 @@ namespace AppLogistics.Objects
     {
         [Required]
         [StringLength(32)]
+        [LettersNumbers]
         public string Username { get; set; }
 
         [Required]

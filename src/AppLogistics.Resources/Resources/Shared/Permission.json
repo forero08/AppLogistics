@@ -1,10 +1,21 @@
 ﻿{
     "Areas": {
-        "Administration": "Administration"
+        "Administration": "Administration",
+        "Configuration": "Configuration"
     },
     "Controllers": {
         "AdministrationAccounts": "Accounts",
-        "AdministrationRoles": "Roles"
+        "AdministrationRoles": "Roles",
+
+        "ConfigurationActivities": "Activities",
+        "ConfigurationAfps": "Afps",
+        "ConfigurationBranchOffices": "Branch Offices",
+        "ConfigurationCarriers": "Carriers",
+        "ConfigurationDocumentTypes": "Document Types",
+        "ConfigurationEpss": "Eps's",
+        "ConfigurationMaritalStatuses": "Marital Statuses",
+        "ConfigurationProducts": "Products",
+        "ConfigurationVehicleTypes": "Vehicle Types"
     },
     "Actions": {
         "AdministrationAccountsCreate": "Create",
@@ -15,6 +26,52 @@
         "AdministrationRolesDelete": "Delete",
         "AdministrationRolesDetails": "Details",
         "AdministrationRolesEdit": "Edit",
-        "AdministrationRolesIndex": "Index"
+        "AdministrationRolesIndex": "Index",
+
+        "ConfigurationActivitiesCreate": "Create",
+        "ConfigurationActivitiesDelete": "Delete",
+        "ConfigurationActivitiesDetails": "Details",
+        "ConfigurationActivitiesEdit": "Edit",
+        "ConfigurationActivitiesIndex": "Index",
+        "ConfigurationAfpsCreate": "Create",
+        "ConfigurationAfpsDelete": "Delete",
+        "ConfigurationAfpsDetails": "Details",
+        "ConfigurationAfpsEdit": "Edit",
+        "ConfigurationAfpsIndex": "Index",
+        "ConfigurationBranchOfficesCreate": "Create",
+        "ConfigurationBranchOfficesDelete": "Delete",
+        "ConfigurationBranchOfficesDetails": "Details",
+        "ConfigurationBranchOfficesEdit": "Edit",
+        "ConfigurationBranchOfficesIndex": "Index",
+        "ConfigurationCarriersCreate": "Create",
+        "ConfigurationCarriersDelete": "Delete",
+        "ConfigurationCarriersDetails": "Details",
+        "ConfigurationCarriersEdit": "Edit",
+        "ConfigurationCarriersIndex": "Index",
+        "ConfigurationDocumentTypesCreate": "Create",
+        "ConfigurationDocumentTypesDelete": "Delete",
+        "ConfigurationDocumentTypesDetails": "Details",
+        "ConfigurationDocumentTypesEdit": "Edit",
+        "ConfigurationDocumentTypesIndex": "Index",
+        "ConfigurationEpssCreate": "Create",
+        "ConfigurationEpssDelete": "Delete",
+        "ConfigurationEpssDetails": "Details",
+        "ConfigurationEpssEdit": "Edit",
+        "ConfigurationEpssIndex": "Index",
+        "ConfigurationMaritalStatusesCreate": "Create",
+        "ConfigurationMaritalStatusesDelete": "Delete",
+        "ConfigurationMaritalStatusesDetails": "Details",
+        "ConfigurationMaritalStatusesEdit": "Edit",
+        "ConfigurationMaritalStatusesIndex": "Index",
+        "ConfigurationProductsCreate": "Create",
+        "ConfigurationProductsDelete": "Delete",
+        "ConfigurationProductsDetails": "Details",
+        "ConfigurationProductsEdit": "Edit",
+        "ConfigurationProductsIndex": "Index",
+        "ConfigurationVehicleTypesCreate": "Create",
+        "ConfigurationVehicleTypesDelete": "Delete",
+        "ConfigurationVehicleTypesDetails": "Details",
+        "ConfigurationVehicleTypesEdit": "Edit",
+        "ConfigurationVehicleTypesIndex": "Index"
     }
 }

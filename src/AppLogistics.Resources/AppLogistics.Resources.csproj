@@ -14,6 +14,25 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Shared\Form.es.json" />
+    <None Remove="Resources\Shared\Lookup.es.json" />
+    <None Remove="Resources\Shared\Page.es.json" />
+    <None Remove="Resources\Shared\Permission.es.json" />
+    <None Remove="Resources\Shared\Shared.es.json" />
+    <None Remove="Resources\Shared\SiteMap.es.json" />
+    <None Remove="Resources\Views\Administration\Accounts\AccountCreateView.es.json" />
+    <None Remove="Resources\Views\Administration\Accounts\AccountEditView.es.json" />
+    <None Remove="Resources\Views\Administration\Accounts\AccountView.es.json" />
+    <None Remove="Resources\Views\Administration\Roles\RoleView.es.json" />
+    <None Remove="Resources\Views\Auth\AccountLoginView.es.json" />
+    <None Remove="Resources\Views\Auth\AccountRecoveryView.es.json" />
+    <None Remove="Resources\Views\Auth\AccountResetView.es.json" />
+    <None Remove="Resources\Views\BaseView.es.json" />
+    <None Remove="Resources\Views\Profile\ProfileDeleteView.es.json" />
+    <None Remove="Resources\Views\Profile\ProfileEditView.es.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
   </ItemGroup>
 

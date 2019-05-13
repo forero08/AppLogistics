@@ -16,8 +16,10 @@ namespace AppLogistics.Components.Mvc.Tests
         public AuthorizeTagHelperTests()
         {
             output = new TagHelperOutput("authorize", new TagHelperAttributeList(), (useCachedResult, encoder) => null);
-            helper = new AuthorizeTagHelper(authorization = Substitute.For<IAuthorization>());
-            helper.ViewContext = HtmlHelperFactory.CreateHtmlHelper().ViewContext;
+            helper = new AuthorizeTagHelper(authorization = Substitute.For<IAuthorization>())
+            {
+                ViewContext = HtmlHelperFactory.CreateHtmlHelper().ViewContext
+            };
         }
 
         #region Process(TagHelperContext context, TagHelperOutput output)
@@ -25,8 +27,10 @@ namespace AppLogistics.Components.Mvc.Tests
         [Fact]
         public void Process_NoAuthorization_RemovedWrappingTag()
         {
-            helper = new AuthorizeTagHelper(null);
-            helper.ViewContext = HtmlHelperFactory.CreateHtmlHelper().ViewContext;
+            helper = new AuthorizeTagHelper(null)
+            {
+                ViewContext = HtmlHelperFactory.CreateHtmlHelper().ViewContext
+            };
 
             output.PostContent.SetContent("PostContent");
             output.PostElement.SetContent("PostElement");

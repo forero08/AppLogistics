@@ -6,19 +6,19 @@ namespace AppLogistics.Data.Mapping
 {
     public class ObjectMapper
     {
+        private readonly IMapperConfigurationExpression _configuration;
+
+        private ObjectMapper(IMapperConfigurationExpression configuration)
+        {
+            configuration.ValidateInlineMaps = false;
+            _configuration = configuration;
+            _configuration.AddConditionalObjectMapper().Conventions.Add(pair => pair.SourceType.Namespace != "Castle.Proxies");
+        }
+
         public static void MapObjects()
         {
             Mapper.Reset();
             Mapper.Initialize(configuration => new ObjectMapper(configuration).Map());
-        }
-
-        private IMapperConfigurationExpression Configuration { get; }
-
-        private ObjectMapper(IMapperConfigurationExpression configuration)
-        {
-            Configuration = configuration;
-            configuration.ValidateInlineMaps = false;
-            Configuration.AddConditionalObjectMapper().Conventions.Add(pair => pair.SourceType.Namespace != "Castle.Proxies");
         }
 
         private void Map()
@@ -30,12 +30,12 @@ namespace AppLogistics.Data.Mapping
 
         private void MapRoles()
         {
-            Configuration.CreateMap<Role, RoleView>()
+            _configuration.CreateMap<Role, RoleView>()
                 .ForMember(role => role.Permissions, member => member.Ignore());
-            Configuration.CreateMap<RoleView, Role>()
+            _configuration.CreateMap<RoleView, Role>()
                 .ForMember(role => role.Permissions, member => member.MapFrom(role => new List<RolePermission>()));
         }
 
-        #endregion
+        #endregion Administration
     }
 }

@@ -35,6 +35,11 @@ Validator = {
         });
         $.validator.unobtrusive.adapters.addBool('integer');
 
+        $.validator.addMethod('lettersnumbers', function (value, element) {
+            return this.optional(element) || /^[a-zA-Z0-9]+$/.test(value);
+        });
+        $.validator.unobtrusive.adapters.addBool('lettersnumbers');
+
         $.validator.addMethod('filesize', function (value, element, param) {
             if (this.optional(element) || !element.files)
                 return true;

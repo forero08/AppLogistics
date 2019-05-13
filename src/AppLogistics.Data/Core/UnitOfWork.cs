@@ -11,25 +11,25 @@ namespace AppLogistics.Data.Core
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private IAuditLogger Logger { get; }
-        private DbContext Context { get; }
+        private readonly DbContext _context;
+        private readonly IAuditLogger _logger;
 
         public UnitOfWork(DbContext context, IAuditLogger logger = null)
         {
-            Context = context;
-            Logger = logger;
+            _context = context;
+            _logger = logger;
         }
 
         public TDestination GetAs<TModel, TDestination>(int? id) where TModel : BaseModel
         {
             return id == null
                 ? default(TDestination)
-                : Context.Set<TModel>().Where(model => model.Id == id).ProjectTo<TDestination>().FirstOrDefault();
+                : _context.Set<TModel>().Where(model => model.Id == id).ProjectTo<TDestination>().FirstOrDefault();
         }
 
         public TModel Get<TModel>(int? id) where TModel : BaseModel
         {
-            return id == null ? null : Context.Find<TModel>(id);
+            return id == null ? null : _context.Find<TModel>(id);
         }
 
         public TDestination To<TDestination>(object source)
@@ -39,22 +39,22 @@ namespace AppLogistics.Data.Core
 
         public IQuery<TModel> Select<TModel>() where TModel : BaseModel
         {
-            return new Query<TModel>(Context.Set<TModel>());
+            return new Query<TModel>(_context.Set<TModel>());
         }
 
         public void InsertRange<TModel>(IEnumerable<TModel> models) where TModel : BaseModel
         {
-            Context.AddRange(models);
+            _context.AddRange(models);
         }
 
         public void Insert<TModel>(TModel model) where TModel : BaseModel
         {
-            Context.Add(model);
+            _context.Add(model);
         }
 
         public void Update<TModel>(TModel model) where TModel : BaseModel
         {
-            EntityEntry<TModel> entry = Context.Entry(model);
+            EntityEntry<TModel> entry = _context.Entry(model);
             if (entry.State != EntityState.Modified && entry.State != EntityState.Unchanged)
             {
                 entry.State = EntityState.Modified;
@@ -65,32 +65,32 @@ namespace AppLogistics.Data.Core
 
         public void DeleteRange<TModel>(IEnumerable<TModel> models) where TModel : BaseModel
         {
-            Context.RemoveRange(models);
+            _context.RemoveRange(models);
         }
 
         public void Delete<TModel>(TModel model) where TModel : BaseModel
         {
-            Context.Remove(model);
+            _context.Remove(model);
         }
 
         public void Delete<TModel>(int id) where TModel : BaseModel
         {
-            Delete(Context.Find<TModel>(id));
+            Delete(_context.Find<TModel>(id));
         }
 
         public void Commit()
         {
-            Logger?.Log(Context.ChangeTracker.Entries<BaseModel>());
+            _logger?.Log(_context.ChangeTracker.Entries<BaseModel>());
 
-            Context.SaveChanges();
+            _context.SaveChanges();
 
-            Logger?.Save();
+            _logger?.Save();
         }
 
         public void Dispose()
         {
-            Logger?.Dispose();
-            Context.Dispose();
+            _logger?.Dispose();
+            _context.Dispose();
         }
     }
 }

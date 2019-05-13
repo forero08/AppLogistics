@@ -1,7 +1,6 @@
 ﻿@model ModuleModel
 using AppLogistics.Data.Core;
 using AppLogistics.Objects;
-using System;
 using System.Linq;
 
 namespace AppLogistics.Services
@@ -13,10 +12,11 @@ namespace AppLogistics.Services
         {
         }
 
-        public TView Get<TView>(Int32 id) where TView : BaseView
+        public TView Get<TView>(int id) where TView : BaseView
         {
             return UnitOfWork.GetAs<@Model.Model, TView>(id);
         }
+
         public IQueryable<@Model.View> GetViews()
         {
             return UnitOfWork
@@ -32,6 +32,7 @@ namespace AppLogistics.Services
             UnitOfWork.Insert(@Model.ModelVarName);
             UnitOfWork.Commit();
         }
+
         public void Edit(@Model.View view)
         {
             @Model.Model @Model.ModelVarName = UnitOfWork.To<@Model.Model>(view);
@@ -39,7 +40,8 @@ namespace AppLogistics.Services
             UnitOfWork.Update(@Model.ModelVarName);
             UnitOfWork.Commit();
         }
-        public void Delete(Int32 id)
+
+        public void Delete(int id)
         {
             UnitOfWork.Delete<@Model.Model>(id);
             UnitOfWork.Commit();

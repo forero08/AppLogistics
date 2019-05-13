@@ -7,7 +7,7 @@
         <siteMapNode icon="fa fa-user-circle" controller="Profile" action="Edit" />
         <siteMapNode icon="fa fa-user-times" controller="Profile" action="Delete" />
 
-        <siteMapNode menu="true" icon="fa fa-cogs" area="Administration">
+        <siteMapNode menu="true" icon="fa fa-users-cog" area="Administration">
             <siteMapNode menu="true" icon="fa fa-user" area="Administration" controller="Accounts" action="Index">
                 <siteMapNode icon="far fa-file" area="Administration" controller="Accounts" action="Create" />
                 <siteMapNode icon="fa fa-info" area="Administration" controller="Accounts" action="Details" />
@@ -20,5 +20,63 @@
                 <siteMapNode icon="fa fa-times" area="Administration" controller="Roles" action="Delete" />
             </siteMapNode>
         </siteMapNode>
+
+        <siteMapNode menu="true" icon="fa fa-wrench" area="Configuration">
+            <siteMapNode menu="true" icon="fa fa-people-carry" area="Configuration" controller="Activities" action="Index">
+                <siteMapNode icon="far fa-file" area="Configuration" controller="Activities" action="Create" />
+                <siteMapNode icon="fa fa-info" area="Configuration" controller="Activities" action="Details" />
+                <siteMapNode icon="fa fa-pencil-alt" area="Configuration" controller="Activities" action="Edit" />
+                <siteMapNode icon="fa fa-times" area="Configuration" controller="Activities" action="Delete" />
+            </siteMapNode>
+            <siteMapNode menu="true" icon="fa fa-user-injured" area="Configuration" controller="Afps" action="Index">
+                <siteMapNode icon="far fa-file" area="Configuration" controller="Afps" action="Create" />
+                <siteMapNode icon="fa fa-info" area="Configuration" controller="Afps" action="Details" />
+                <siteMapNode icon="fa fa-pencil-alt" area="Configuration" controller="Afps" action="Edit" />
+                <siteMapNode icon="fa fa-times" area="Configuration" controller="Afps" action="Delete" />
+            </siteMapNode>
+            <siteMapNode menu="true" icon="fa fa-heartbeat" area="Configuration" controller="Epss" action="Index">
+                <siteMapNode icon="far fa-file" area="Configuration" controller="Epss" action="Create" />
+                <siteMapNode icon="fa fa-info" area="Configuration" controller="Epss" action="Details" />
+                <siteMapNode icon="fa fa-pencil-alt" area="Configuration" controller="Epss" action="Edit" />
+                <siteMapNode icon="fa fa-times" area="Configuration" controller="Epss" action="Delete" />
+            </siteMapNode>
+            <siteMapNode menu="true" icon="fa fa-cross" area="Configuration" controller="MaritalStatuses" action="Index">
+                <siteMapNode icon="far fa-file" area="Configuration" controller="MaritalStatuses" action="Create" />
+                <siteMapNode icon="fa fa-info" area="Configuration" controller="MaritalStatuses" action="Details" />
+                <siteMapNode icon="fa fa-pencil-alt" area="Configuration" controller="MaritalStatuses" action="Edit" />
+                <siteMapNode icon="fa fa-times" area="Configuration" controller="MaritalStatuses" action="Delete" />
+            </siteMapNode>
+            <siteMapNode menu="true" icon="fa fa-gift" area="Configuration" controller="Products" action="Index">
+                <siteMapNode icon="far fa-file" area="Configuration" controller="Products" action="Create" />
+                <siteMapNode icon="fa fa-info" area="Configuration" controller="Products" action="Details" />
+                <siteMapNode icon="fa fa-pencil-alt" area="Configuration" controller="Products" action="Edit" />
+                <siteMapNode icon="fa fa-times" area="Configuration" controller="Products" action="Delete" />
+            </siteMapNode>
+            <siteMapNode menu="true" icon="fa fa-map-marked-alt" area="Configuration" controller="BranchOffices" action="Index">
+                <siteMapNode icon="far fa-file" area="Configuration" controller="BranchOffices" action="Create" />
+                <siteMapNode icon="fa fa-info" area="Configuration" controller="BranchOffices" action="Details" />
+                <siteMapNode icon="fa fa-pencil-alt" area="Configuration" controller="BranchOffices" action="Edit" />
+                <siteMapNode icon="fa fa-times" area="Configuration" controller="BranchOffices" action="Delete" />
+            </siteMapNode>
+            <siteMapNode menu="true" icon="fa fa-id-card" area="Configuration" controller="DocumentTypes" action="Index">
+                <siteMapNode icon="far fa-file" area="Configuration" controller="DocumentTypes" action="Create" />
+                <siteMapNode icon="fa fa-info" area="Configuration" controller="DocumentTypes" action="Details" />
+                <siteMapNode icon="fa fa-pencil-alt" area="Configuration" controller="DocumentTypes" action="Edit" />
+                <siteMapNode icon="fa fa-times" area="Configuration" controller="DocumentTypes" action="Delete" />
+            </siteMapNode>
+            <siteMapNode menu="true" icon="fa fa-car" area="Configuration" controller="VehicleTypes" action="Index">
+                <siteMapNode icon="far fa-file" area="Configuration" controller="VehicleTypes" action="Create" />
+                <siteMapNode icon="fa fa-info" area="Configuration" controller="VehicleTypes" action="Details" />
+                <siteMapNode icon="fa fa-pencil-alt" area="Configuration" controller="VehicleTypes" action="Edit" />
+                <siteMapNode icon="fa fa-times" area="Configuration" controller="VehicleTypes" action="Delete" />
+            </siteMapNode>
+            <siteMapNode menu="true" icon="fa fa-truck-moving" area="Configuration" controller="Carriers" action="Index">
+                <siteMapNode icon="far fa-file" area="Configuration" controller="Carriers" action="Create" />
+                <siteMapNode icon="fa fa-info" area="Configuration" controller="Carriers" action="Details" />
+                <siteMapNode icon="fa fa-pencil-alt" area="Configuration" controller="Carriers" action="Edit" />
+                <siteMapNode icon="fa fa-times" area="Configuration" controller="Carriers" action="Delete" />
+            </siteMapNode>
+        </siteMapNode>
+
     </siteMapNode>
 </siteMap>

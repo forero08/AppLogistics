@@ -68,15 +68,17 @@ namespace AppLogistics.Components.Mvc
             List<SiteMapNode> copies = new List<SiteMapNode>();
             foreach (SiteMapNode node in nodes)
             {
-                SiteMapNode copy = new SiteMapNode();
-                copy.IconClass = node.IconClass;
-                copy.IsMenu = node.IsMenu;
+                SiteMapNode copy = new SiteMapNode
+                {
+                    IconClass = node.IconClass,
+                    IsMenu = node.IsMenu,
 
-                copy.Controller = node.Controller;
-                copy.Action = node.Action;
-                copy.Area = node.Area;
+                    Controller = node.Controller,
+                    Action = node.Action,
+                    Area = node.Area,
 
-                copy.Children = SetState(node.Children, area, controller, action);
+                    Children = SetState(node.Children, area, controller, action)
+                };
                 copy.HasActiveChildren = copy.Children.Any(child => child.IsActive || child.HasActiveChildren);
                 copy.IsActive =
                     copy.Children.Any(child => child.IsActive && !child.IsMenu)
@@ -120,13 +122,14 @@ namespace AppLogistics.Components.Mvc
             List<SiteMapNode> nodes = new List<SiteMapNode>();
             foreach (XElement element in root.Elements("siteMapNode"))
             {
-                SiteMapNode node = new SiteMapNode();
-
-                node.IsMenu = (bool?)element.Attribute("menu") == true;
-                node.Controller = (string)element.Attribute("controller");
-                node.IconClass = (string)element.Attribute("icon");
-                node.Action = (string)element.Attribute("action");
-                node.Area = (string)element.Attribute("area");
+                SiteMapNode node = new SiteMapNode
+                {
+                    IsMenu = (bool?)element.Attribute("menu") == true,
+                    Controller = (string)element.Attribute("controller"),
+                    IconClass = (string)element.Attribute("icon"),
+                    Action = (string)element.Attribute("action"),
+                    Area = (string)element.Attribute("area")
+                };
                 node.Children = Parse(element, node);
                 node.Parent = parent;
 

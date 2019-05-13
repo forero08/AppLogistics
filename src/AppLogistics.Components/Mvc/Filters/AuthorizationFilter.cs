@@ -1,8 +1,8 @@
 ﻿using AppLogistics.Components.Extensions;
 using AppLogistics.Components.Security;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-using Microsoft.AspNetCore.Routing;
 
 namespace AppLogistics.Components.Mvc
 {
@@ -29,23 +29,16 @@ namespace AppLogistics.Components.Mvc
 
             if (_authorization?.IsGrantedFor(accountId, area, controller, action) == false)
             {
-                context.Result = RedirectToNotFound(context);
+                context.Result = new ViewResult
+                {
+                    StatusCode = StatusCodes.Status404NotFound,
+                    ViewName = "~/Views/Home/NotFound.cshtml"
+                };
             }
         }
 
         public void OnResourceExecuted(ResourceExecutedContext context)
         {
-        }
-
-        private IActionResult RedirectToNotFound(ActionContext context)
-        {
-            RouteValueDictionary route = new RouteValueDictionary();
-            route["language"] = context.RouteData.Values["language"];
-            route["action"] = "NotFound";
-            route["controller"] = "Home";
-            route["area"] = "";
-
-            return new RedirectToRouteResult(route);
         }
     }
 }

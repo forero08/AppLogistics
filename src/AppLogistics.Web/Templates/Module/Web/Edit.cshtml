@@ -5,10 +5,10 @@
     <div class="widget-box">
         <div class="widget-header">
             <span class="icon fa fa-th-list"></span>
-            <h5>@@Resource.ForPage("@(Model.Model)")</h5>
+            <h5>@@Resource.ForHeader("@(Model.Model)")</h5>
             <div class="widget-header-buttons">
                 <authorize action="Details">
-                    <a asp-action="Details" asp-route-id="@Model.Area" class="btn">
+                    <a asp-action="Details" asp-route-id="@@Model.Id" class="btn">
                         <span class="fa fa-info"></span><span class="text">@@Resource.ForAction("Details")</span>
                     </a>
                 </authorize>

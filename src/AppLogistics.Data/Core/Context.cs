@@ -17,13 +17,27 @@ namespace AppLogistics.Data.Core
         protected DbSet<Permission> Permission { get; set; }
         protected DbSet<RolePermission> RolePermission { get; set; }
 
+        #endregion Administration
+
+        #region Configuration
+
+        protected DbSet<Activity> Activity { get; set; }
+        protected DbSet<Afp> Afp { get; set; }
+        protected DbSet<BranchOffice> BranchOffice { get; set; }
+        protected DbSet<Carrier> Carrier { get; set; }
+        protected DbSet<DocumentType> DocumentType { get; set; }
+        protected DbSet<Eps> Eps{ get; set; }
+        protected DbSet<MaritalStatus> MaritalStatus { get; set; }
+        protected DbSet<Product> Product { get; set; }
+        protected DbSet<VehicleType> VehicleType { get; set; }
+
         #endregion
 
         #region System
 
         protected DbSet<AuditLog> AuditLog { get; set; }
 
-        #endregion
+        #endregion System
 
         static Context()
         {

@@ -19,10 +19,12 @@ namespace AppLogistics.Components.Mvc.Tests
         public TruncatedAttributeTests()
         {
             attribute = new TruncatedAttribute();
-            context = new DefaultModelBindingContext();
-            context.ActionContext = new ActionContext();
-            context.ModelState = new ModelStateDictionary();
-            context.ValueProvider = Substitute.For<IValueProvider>();
+            context = new DefaultModelBindingContext
+            {
+                ActionContext = new ActionContext(),
+                ModelState = new ModelStateDictionary(),
+                ValueProvider = Substitute.For<IValueProvider>()
+            };
             context.ActionContext.HttpContext = new DefaultHttpContext();
             context.HttpContext.RequestServices = Substitute.For<IServiceProvider>();
             context.HttpContext.RequestServices.GetService(typeof(ILoggerFactory)).Returns(Substitute.For<ILoggerFactory>());

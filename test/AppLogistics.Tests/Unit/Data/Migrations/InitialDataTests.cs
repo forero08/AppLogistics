@@ -61,6 +61,60 @@ namespace AppLogistics.Data.Migrations.Tests
         [InlineData("Administration", "Roles", "Details")]
         [InlineData("Administration", "Roles", "Edit")]
         [InlineData("Administration", "Roles", "Delete")]
+
+        [InlineData("Configuration", "Activities", "Index")]
+        [InlineData("Configuration", "Activities", "Create")]
+        [InlineData("Configuration", "Activities", "Details")]
+        [InlineData("Configuration", "Activities", "Edit")]
+        [InlineData("Configuration", "Activities", "Delete")]
+
+        [InlineData("Configuration", "Afps", "Index")]
+        [InlineData("Configuration", "Afps", "Create")]
+        [InlineData("Configuration", "Afps", "Details")]
+        [InlineData("Configuration", "Afps", "Edit")]
+        [InlineData("Configuration", "Afps", "Delete")]
+
+        [InlineData("Configuration", "BranchOffices", "Index")]
+        [InlineData("Configuration", "BranchOffices", "Create")]
+        [InlineData("Configuration", "BranchOffices", "Details")]
+        [InlineData("Configuration", "BranchOffices", "Edit")]
+        [InlineData("Configuration", "BranchOffices", "Delete")]
+
+        [InlineData("Configuration", "Carriers", "Index")]
+        [InlineData("Configuration", "Carriers", "Create")]
+        [InlineData("Configuration", "Carriers", "Details")]
+        [InlineData("Configuration", "Carriers", "Edit")]
+        [InlineData("Configuration", "Carriers", "Delete")]
+
+        [InlineData("Configuration", "DocumentTypes", "Index")]
+        [InlineData("Configuration", "DocumentTypes", "Create")]
+        [InlineData("Configuration", "DocumentTypes", "Details")]
+        [InlineData("Configuration", "DocumentTypes", "Edit")]
+        [InlineData("Configuration", "DocumentTypes", "Delete")]
+
+        [InlineData("Configuration", "Epss", "Index")]
+        [InlineData("Configuration", "Epss", "Create")]
+        [InlineData("Configuration", "Epss", "Details")]
+        [InlineData("Configuration", "Epss", "Edit")]
+        [InlineData("Configuration", "Epss", "Delete")]
+
+        [InlineData("Configuration", "MaritalStatuses", "Index")]
+        [InlineData("Configuration", "MaritalStatuses", "Create")]
+        [InlineData("Configuration", "MaritalStatuses", "Details")]
+        [InlineData("Configuration", "MaritalStatuses", "Edit")]
+        [InlineData("Configuration", "MaritalStatuses", "Delete")]
+
+        [InlineData("Configuration", "Products", "Index")]
+        [InlineData("Configuration", "Products", "Create")]
+        [InlineData("Configuration", "Products", "Details")]
+        [InlineData("Configuration", "Products", "Edit")]
+        [InlineData("Configuration", "Products", "Delete")]
+
+        [InlineData("Configuration", "VehicleTypes", "Index")]
+        [InlineData("Configuration", "VehicleTypes", "Create")]
+        [InlineData("Configuration", "VehicleTypes", "Details")]
+        [InlineData("Configuration", "VehicleTypes", "Edit")]
+        [InlineData("Configuration", "VehicleTypes", "Delete")]
         public void PermissionsTable_HasPermission(string area, string controller, string action)
         {
             Assert.Single(context.Set<Permission>(), permission =>
@@ -73,7 +127,7 @@ namespace AppLogistics.Data.Migrations.Tests
         public void PermissionsTable_HasExactNumberOfPermissions()
         {
             int actual = context.Set<Permission>().Count();
-            int expected = 9;
+            int expected = 54;
 
             Assert.Equal(expected, actual);
         }

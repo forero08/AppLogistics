@@ -6,6 +6,7 @@ namespace AppLogistics.Components.Mvc
     public interface ISiteMap
     {
         IEnumerable<SiteMapNode> For(ViewContext context);
+
         IEnumerable<SiteMapNode> BreadcrumbFor(ViewContext context);
     }
 }

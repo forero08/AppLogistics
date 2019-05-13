@@ -2,7 +2,6 @@
 using AppLogistics.Data.Core;
 using AppLogistics.Objects;
 using AppLogistics.Tests;
-using AppLogistics.Validators;
 using System;
 using Xunit;
 
@@ -22,6 +21,7 @@ namespace AppLogistics.Validators.Tests
             context.Set<@Model.Model>().Add(@Model.ModelVarName = ObjectsFactory.Create@(Model.Model)());
             context.SaveChanges();
         }
+
         public void Dispose()
         {
             context.Dispose();
