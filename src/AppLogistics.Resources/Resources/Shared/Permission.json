@@ -14,7 +14,8 @@
         "ConfigurationDocumentTypes": "Document Types",
         "ConfigurationEpss": "Eps's",
         "ConfigurationMaritalStatuses": "Marital Statuses",
-        "ConfigurationProducts": "Products"
+        "ConfigurationProducts": "Products",
+        "ConfigurationVehicleTypes": "Vehicle Types"
     },
     "Actions": {
         "AdministrationAccountsCreate": "Create",
@@ -66,6 +67,11 @@
         "ConfigurationProductsDelete": "Delete",
         "ConfigurationProductsDetails": "Details",
         "ConfigurationProductsEdit": "Edit",
-        "ConfigurationProductsIndex": "Index"
+        "ConfigurationProductsIndex": "Index",
+        "ConfigurationVehicleTypesCreate": "Create",
+        "ConfigurationVehicleTypesDelete": "Delete",
+        "ConfigurationVehicleTypesDetails": "Details",
+        "ConfigurationVehicleTypesEdit": "Edit",
+        "ConfigurationVehicleTypesIndex": "Index"
     }
 }

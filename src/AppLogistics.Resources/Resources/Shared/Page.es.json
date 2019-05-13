@@ -21,7 +21,9 @@
         "MaritalStatus": "Estado civil",
         "MaritalStatuses": "Estados civiles",
         "Product": "Producto",
-        "Products": "Productos"
+        "Products": "Productos",
+        "VehicleType": "Tipo de vehículo",
+        "VehicleTypes": "Tipos de vehículo"
     },
     "Titles": {
         "AdministrationAccountsCreate": "Creación de cuenta",
@@ -81,6 +83,11 @@
         "ConfigurationProductsDelete": "Eliminación de Producto",
         "ConfigurationProductsDetails": "Detalles de Producto",
         "ConfigurationProductsEdit": "Editar Producto",
-        "ConfigurationProductsIndex": "Productos"
+        "ConfigurationProductsIndex": "Productos",
+        "ConfigurationVehicleTypesCreate": "Creación de Tipo de vehículo",
+        "ConfigurationVehicleTypesDelete": "Eliminación de Tipo de vehículo",
+        "ConfigurationVehicleTypesDetails": "Detalles de Tipo de vehículo",
+        "ConfigurationVehicleTypesEdit": "Editar Tipo de vehículo",
+        "ConfigurationVehicleTypesIndex": "Tipos de vehículo"
     }
 }

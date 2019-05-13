@@ -203,6 +203,12 @@ namespace AppLogistics.Data.Migrations
                 new Permission { Id = 47, Area = "Configuration", Controller = "Products", Action = "Details" },
                 new Permission { Id = 48, Area = "Configuration", Controller = "Products", Action = "Edit" },
                 new Permission { Id = 49, Area = "Configuration", Controller = "Products", Action = "Delete" },
+
+                new Permission { Id = 50, Area = "Configuration", Controller = "VehicleTypes", Action = "Index" },
+                new Permission { Id = 51, Area = "Configuration", Controller = "VehicleTypes", Action = "Create" },
+                new Permission { Id = 52, Area = "Configuration", Controller = "VehicleTypes", Action = "Details" },
+                new Permission { Id = 53, Area = "Configuration", Controller = "VehicleTypes", Action = "Edit" },
+                new Permission { Id = 54, Area = "Configuration", Controller = "VehicleTypes", Action = "Delete" },
             };
         }
     }

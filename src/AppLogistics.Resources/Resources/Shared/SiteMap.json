@@ -56,6 +56,11 @@
         "ConfigurationProductsDelete": "Delete",
         "ConfigurationProductsDetails": "Details",
         "ConfigurationProductsEdit": "Edit",
-        "ConfigurationProductsIndex": "Products"
+        "ConfigurationProductsIndex": "Products",
+        "ConfigurationVehicleTypesCreate": "Create",
+        "ConfigurationVehicleTypesDelete": "Delete",
+        "ConfigurationVehicleTypesDetails": "Details",
+        "ConfigurationVehicleTypesEdit": "Edit",
+        "ConfigurationVehicleTypesIndex": "Vehicle Types"
     }
 }

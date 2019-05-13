@@ -320,6 +320,24 @@ namespace AppLogistics.Tests
             };
         }
 
+        public static VehicleType CreateVehicleType(int id = 0)
+        {
+            return new VehicleType
+            {
+                Id = id,
+                Name = "Name" + id
+            };
+        }
+
+        public static VehicleTypeView CreateVehicleTypeView(int id = 0)
+        {
+            return new VehicleTypeView
+            {
+                Id = id,
+                Name = "Name" + id
+            };
+        }
+
         #endregion
 
         #region Tests

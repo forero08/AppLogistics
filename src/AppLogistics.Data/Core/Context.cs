@@ -29,6 +29,7 @@ namespace AppLogistics.Data.Core
         protected DbSet<Eps> Eps{ get; set; }
         protected DbSet<MaritalStatus> MaritalStatus { get; set; }
         protected DbSet<Product> Product { get; set; }
+        protected DbSet<VehicleType> VehicleType { get; set; }
 
         #endregion
 

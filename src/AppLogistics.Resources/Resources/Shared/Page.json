@@ -21,7 +21,9 @@
         "MaritalStatus": "Marital status",
         "MaritalStatuses": "MaritalStatuses",
         "Product": "Product",
-        "Products": "Products"
+        "Products": "Products",
+        "VehicleType": "Vehicle Type",
+        "VehicleTypes": "Vehicle Types"
     },
     "Titles": {
         "AdministrationAccountsCreate": "Account creation",
@@ -81,6 +83,11 @@
         "ConfigurationProductsDelete": "Product deletion",
         "ConfigurationProductsDetails": "Product details",
         "ConfigurationProductsEdit": "Product Edit",
-        "ConfigurationProductsIndex": "Products"
+        "ConfigurationProductsIndex": "Products",
+        "ConfigurationVehicleTypesCreate": "Vehicle Type creation",
+        "ConfigurationVehicleTypesDelete": "Vehicle Type deletion",
+        "ConfigurationVehicleTypesDetails": "Vehicle Type details",
+        "ConfigurationVehicleTypesEdit": "Vehicle Type Edit",
+        "ConfigurationVehicleTypesIndex": "Vehicle Types"
     }
 }

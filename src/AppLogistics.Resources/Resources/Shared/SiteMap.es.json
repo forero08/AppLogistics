@@ -41,7 +41,7 @@
         "ConfigurationDocumentTypesDelete": "Eliminar",
         "ConfigurationDocumentTypesDetails": "Detalles",
         "ConfigurationDocumentTypesEdit": "Editar",
-        "ConfigurationDocumentTypesIndex": "Tipos de Documento",
+        "ConfigurationDocumentTypesIndex": "Tipos de documento",
         "ConfigurationEpssCreate": "Crear",
         "ConfigurationEpssDelete": "Eliminar",
         "ConfigurationEpssDetails": "Detalles",
@@ -51,11 +51,16 @@
         "ConfigurationMaritalStatusesDelete": "Eliminar",
         "ConfigurationMaritalStatusesDetails": "Detalles",
         "ConfigurationMaritalStatusesEdit": "Editar",
-        "ConfigurationMaritalStatusesIndex": "Estados Civiles",
+        "ConfigurationMaritalStatusesIndex": "Estados civiles",
         "ConfigurationProductsCreate": "Crear",
         "ConfigurationProductsDelete": "Eliminar",
         "ConfigurationProductsDetails": "Detalles",
         "ConfigurationProductsEdit": "Editar",
-        "ConfigurationProductsIndex": "Productos"
+        "ConfigurationProductsIndex": "Productos",
+        "ConfigurationVehicleTypesCreate": "Crear",
+        "ConfigurationVehicleTypesDelete": "Eliminar",
+        "ConfigurationVehicleTypesDetails": "Detalles",
+        "ConfigurationVehicleTypesEdit": "Editar",
+        "ConfigurationVehicleTypesIndex": "Tipos de vehículo"
     }
 }
