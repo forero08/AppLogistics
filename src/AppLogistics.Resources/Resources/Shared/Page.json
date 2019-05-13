@@ -19,7 +19,9 @@
         "Eps": "Eps",
         "Epss": "Eps's",
         "MaritalStatus": "Marital status",
-        "MaritalStatuses": "MaritalStatuses"
+        "MaritalStatuses": "MaritalStatuses",
+        "Product": "Product",
+        "Products": "Products"
     },
     "Titles": {
         "AdministrationAccountsCreate": "Account creation",
@@ -74,6 +76,11 @@
         "ConfigurationMaritalStatusesDelete": "Marital status deletion",
         "ConfigurationMaritalStatusesDetails": "Marital status details",
         "ConfigurationMaritalStatusesEdit": "Marital status Edit",
-        "ConfigurationMaritalStatusesIndex": "Marital statuses"
+        "ConfigurationMaritalStatusesIndex": "Marital statuses",
+        "ConfigurationProductsCreate": "Product creation",
+        "ConfigurationProductsDelete": "Product deletion",
+        "ConfigurationProductsDetails": "Product details",
+        "ConfigurationProductsEdit": "Product Edit",
+        "ConfigurationProductsIndex": "Products"
     }
 }

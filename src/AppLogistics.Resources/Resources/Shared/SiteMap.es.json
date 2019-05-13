@@ -51,6 +51,11 @@
         "ConfigurationMaritalStatusesDelete": "Eliminar",
         "ConfigurationMaritalStatusesDetails": "Detalles",
         "ConfigurationMaritalStatusesEdit": "Editar",
-        "ConfigurationMaritalStatusesIndex": "Estados Civiles"
+        "ConfigurationMaritalStatusesIndex": "Estados Civiles",
+        "ConfigurationProductsCreate": "Crear",
+        "ConfigurationProductsDelete": "Eliminar",
+        "ConfigurationProductsDetails": "Detalles",
+        "ConfigurationProductsEdit": "Editar",
+        "ConfigurationProductsIndex": "Productos"
     }
 }

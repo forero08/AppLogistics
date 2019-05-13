@@ -302,6 +302,24 @@ namespace AppLogistics.Tests
             };
         }
 
+        public static Product CreateProduct(int id = 0)
+        {
+            return new Product
+            {
+                Id = id,
+                Name = "Name" + id
+            };
+        }
+
+        public static ProductView CreateProductView(int id = 0)
+        {
+            return new ProductView
+            {
+                Id = id,
+                Name = "Name" + id
+            };
+        }
+
         #endregion
 
         #region Tests

@@ -13,7 +13,8 @@
         "ConfigurationCarriers": "Carriers",
         "ConfigurationDocumentTypes": "Document Types",
         "ConfigurationEpss": "Eps's",
-        "ConfigurationMaritalStatuses": "Marital Statuses"
+        "ConfigurationMaritalStatuses": "Marital Statuses",
+        "ConfigurationProducts": "Products"
     },
     "Actions": {
         "AdministrationAccountsCreate": "Create",
@@ -60,6 +61,11 @@
         "ConfigurationMaritalStatusesDelete": "Delete",
         "ConfigurationMaritalStatusesDetails": "Details",
         "ConfigurationMaritalStatusesEdit": "Edit",
-        "ConfigurationMaritalStatusesIndex": "Index"
+        "ConfigurationMaritalStatusesIndex": "Index",
+        "ConfigurationProductsCreate": "Create",
+        "ConfigurationProductsDelete": "Delete",
+        "ConfigurationProductsDetails": "Details",
+        "ConfigurationProductsEdit": "Edit",
+        "ConfigurationProductsIndex": "Index"
     }
 }

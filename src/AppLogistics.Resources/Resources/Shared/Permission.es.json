@@ -13,7 +13,8 @@
         "ConfigurationCarriers": "Transportadoras",
         "ConfigurationDocumentTypes": "Tipos de documento",
         "ConfigurationEpss": "Eps's",
-        "ConfigurationMaritalStatuses": "Estados Civiles"
+        "ConfigurationMaritalStatuses": "Estados Civiles",
+        "ConfigurationProducts": "Productos"
     },
     "Actions": {
         "AdministrationAccountsCreate": "Crear",
@@ -60,6 +61,11 @@
         "ConfigurationMaritalStatusesDelete": "Eliminar",
         "ConfigurationMaritalStatusesDetails": "Detalles",
         "ConfigurationMaritalStatusesEdit": "Editar",
-        "ConfigurationMaritalStatusesIndex": "Índice"
+        "ConfigurationMaritalStatusesIndex": "Índice",
+        "ConfigurationProductsCreate": "Crear",
+        "ConfigurationProductsDelete": "Eliminar",
+        "ConfigurationProductsDetails": "Detalles",
+        "ConfigurationProductsEdit": "Editar",
+        "ConfigurationProductsIndex": "Índice"
     }
 }

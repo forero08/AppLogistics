@@ -97,6 +97,12 @@ namespace AppLogistics.Data.Migrations
                 new Permission { Id = 42, Area = "Configuration", Controller = "MaritalStatuses", Action = "Details" },
                 new Permission { Id = 43, Area = "Configuration", Controller = "MaritalStatuses", Action = "Edit" },
                 new Permission { Id = 44, Area = "Configuration", Controller = "MaritalStatuses", Action = "Delete" },
+
+                new Permission { Id = 45, Area = "Configuration", Controller = "Products", Action = "Index" },
+                new Permission { Id = 46, Area = "Configuration", Controller = "Products", Action = "Create" },
+                new Permission { Id = 47, Area = "Configuration", Controller = "Products", Action = "Details" },
+                new Permission { Id = 48, Area = "Configuration", Controller = "Products", Action = "Edit" },
+                new Permission { Id = 49, Area = "Configuration", Controller = "Products", Action = "Delete" },
             };
 
             Permission[] currentPermissions = UnitOfWork.Select<Permission>().ToArray();

@@ -19,7 +19,9 @@
         "Eps": "Eps",
         "Epss": "Eps's",
         "MaritalStatus": "Estado civil",
-        "MaritalStatuses": "Estados civiles"
+        "MaritalStatuses": "Estados civiles",
+        "Product": "Producto",
+        "Products": "Productos"
     },
     "Titles": {
         "AdministrationAccountsCreate": "Creación de cuenta",
@@ -74,6 +76,11 @@
         "ConfigurationMaritalStatusesDelete": "Eliminación de Estado civil",
         "ConfigurationMaritalStatusesDetails": "Detalles de Estado civil",
         "ConfigurationMaritalStatusesEdit": "Editar Estado civil",
-        "ConfigurationMaritalStatusesIndex": "Estados civiles"
+        "ConfigurationMaritalStatusesIndex": "Estados civiles",
+        "ConfigurationProductsCreate": "Creación de Producto",
+        "ConfigurationProductsDelete": "Eliminación de Producto",
+        "ConfigurationProductsDetails": "Detalles de Producto",
+        "ConfigurationProductsEdit": "Editar Producto",
+        "ConfigurationProductsIndex": "Productos"
     }
 }
