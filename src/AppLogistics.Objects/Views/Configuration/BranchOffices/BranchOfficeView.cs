@@ -1,4 +1,4 @@
-using System;
+using NonFactors.Mvc.Lookup;
 using System.ComponentModel.DataAnnotations;
 
 namespace AppLogistics.Objects
@@ -7,6 +7,7 @@ namespace AppLogistics.Objects
     {
         [Required]
         [StringLength(32)]
+        [LookupColumn]
         public string Name { get; set; }
     }
 }

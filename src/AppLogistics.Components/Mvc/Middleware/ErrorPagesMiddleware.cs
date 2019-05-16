@@ -26,7 +26,9 @@ namespace AppLogistics.Components.Mvc
                 await Next(context);
 
                 if (!context.Response.HasStarted && context.Response.StatusCode == StatusCodes.Status404NotFound)
+                {
                     View(context, "/home/not-found");
+                }
             }
             catch (Exception exception)
             {

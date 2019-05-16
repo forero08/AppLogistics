@@ -34,6 +34,12 @@
                 <siteMapNode icon="fa fa-pencil-alt" area="Configuration" controller="Afps" action="Edit" />
                 <siteMapNode icon="fa fa-times" area="Configuration" controller="Afps" action="Delete" />
             </siteMapNode>
+            <siteMapNode menu="true" icon="fa fa-industry" area="Configuration" controller="Clients" action="Index">
+                <siteMapNode icon="far fa-file" area="Configuration" controller="Clients" action="Create" />
+                <siteMapNode icon="fa fa-info" area="Configuration" controller="Clients" action="Details" />
+                <siteMapNode icon="fa fa-pencil-alt" area="Configuration" controller="Clients" action="Edit" />
+                <siteMapNode icon="fa fa-times" area="Configuration" controller="Clients" action="Delete" />
+            </siteMapNode>
             <siteMapNode menu="true" icon="fa fa-heartbeat" area="Configuration" controller="Epss" action="Index">
                 <siteMapNode icon="far fa-file" area="Configuration" controller="Epss" action="Create" />
                 <siteMapNode icon="fa fa-info" area="Configuration" controller="Epss" action="Details" />
@@ -46,7 +52,7 @@
                 <siteMapNode icon="fa fa-pencil-alt" area="Configuration" controller="MaritalStatuses" action="Edit" />
                 <siteMapNode icon="fa fa-times" area="Configuration" controller="MaritalStatuses" action="Delete" />
             </siteMapNode>
-            <siteMapNode menu="true" icon="fa fa-gift" area="Configuration" controller="Products" action="Index">
+            <siteMapNode menu="true" icon="fa fa-cubes" area="Configuration" controller="Products" action="Index">
                 <siteMapNode icon="far fa-file" area="Configuration" controller="Products" action="Create" />
                 <siteMapNode icon="fa fa-info" area="Configuration" controller="Products" action="Details" />
                 <siteMapNode icon="fa fa-pencil-alt" area="Configuration" controller="Products" action="Edit" />

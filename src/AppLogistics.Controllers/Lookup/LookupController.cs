@@ -32,6 +32,12 @@ namespace AppLogistics.Controllers
             return GetData(new MvcLookup<Role, RoleView>(_unitOfWork), filter);
         }
 
+        [AjaxOnly]
+        public JsonResult BranchOffice(LookupFilter filter)
+        {
+            return GetData(new MvcLookup<BranchOffice, BranchOfficeView>(_unitOfWork), filter);
+        }
+
         protected override void Dispose(bool disposing)
         {
             _unitOfWork.Dispose();

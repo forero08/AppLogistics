@@ -28,6 +28,8 @@
     <None Remove="Resources\Views\Auth\AccountRecoveryView.es.json" />
     <None Remove="Resources\Views\Auth\AccountResetView.es.json" />
     <None Remove="Resources\Views\BaseView.es.json" />
+    <None Remove="Resources\Views\Configuration\Clients\ClientCreateEditView.es.json" />
+    <None Remove="Resources\Views\Configuration\Clients\ClientCreateEditView.json" />
     <None Remove="Resources\Views\Profile\ProfileDeleteView.es.json" />
     <None Remove="Resources\Views\Profile\ProfileEditView.es.json" />
   </ItemGroup>

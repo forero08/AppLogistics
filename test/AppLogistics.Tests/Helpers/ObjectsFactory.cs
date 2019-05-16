@@ -244,6 +244,32 @@ namespace AppLogistics.Tests
             };
         }
 
+        public static Client CreateClient(int id = 0)
+        {
+            return new Client
+            {
+                Id = id,
+                Name = "Name" + id,
+                Nit = "Nit" + id,
+                Address = "Address" + id,
+                Phone = "Phone" + id,
+                Contact = "Contact" + id
+            };
+        }
+
+        public static ClientView CreateClientView(int id = 0)
+        {
+            return new ClientView
+            {
+                Id = id,
+                Name = "Name" + id,
+                Nit = "Nit" + id,
+                Address = "Address" + id,
+                Phone = "Phone" + id,
+                Contact = "Contact" + id
+            };
+        }
+
         public static DocumentType CreateDocumentType(int id = 0)
         {
             return new DocumentType

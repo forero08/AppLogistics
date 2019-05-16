@@ -165,6 +165,41 @@ namespace AppLogistics.Data.Migrations
                     b.ToTable("Carrier");
                 });
 
+            modelBuilder.Entity("AppLogistics.Objects.Client", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasMaxLength(64);
+
+                    b.Property<int>("BranchOfficeId");
+
+                    b.Property<string>("Contact")
+                        .HasMaxLength(32);
+
+                    b.Property<DateTime>("CreationDate");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(32);
+
+                    b.Property<string>("Nit")
+                        .IsRequired()
+                        .HasMaxLength(16);
+
+                    b.Property<string>("Phone")
+                        .HasMaxLength(16);
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BranchOfficeId");
+
+                    b.ToTable("Client");
+                });
+
             modelBuilder.Entity("AppLogistics.Objects.DocumentType", b =>
                 {
                     b.Property<int>("Id")
@@ -326,6 +361,14 @@ namespace AppLogistics.Data.Migrations
                     b.HasOne("AppLogistics.Objects.Role", "Role")
                         .WithMany("Accounts")
                         .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Restrict);
+                });
+
+            modelBuilder.Entity("AppLogistics.Objects.Client", b =>
+                {
+                    b.HasOne("AppLogistics.Objects.BranchOffice", "BranchOffice")
+                        .WithMany("Clients")
+                        .HasForeignKey("BranchOfficeId")
                         .OnDelete(DeleteBehavior.Restrict);
                 });
 

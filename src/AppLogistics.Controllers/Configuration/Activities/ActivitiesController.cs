@@ -30,7 +30,9 @@ namespace AppLogistics.Controllers.Configuration
         public ActionResult Create([BindExcludeId] ActivityView activity)
         {
             if (!Validator.CanCreate(activity))
+            {
                 return View(activity);
+            }
 
             Service.Create(activity);
 
@@ -53,7 +55,9 @@ namespace AppLogistics.Controllers.Configuration
         public ActionResult Edit(ActivityView activity)
         {
             if (!Validator.CanEdit(activity))
+            {
                 return View(activity);
+            }
 
             Service.Edit(activity);
 

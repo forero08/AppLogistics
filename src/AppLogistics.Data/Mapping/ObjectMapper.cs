@@ -26,8 +26,6 @@ namespace AppLogistics.Data.Mapping
             MapRoles();
         }
 
-        #region Administration
-
         private void MapRoles()
         {
             _configuration.CreateMap<Role, RoleView>()
@@ -35,7 +33,5 @@ namespace AppLogistics.Data.Mapping
             _configuration.CreateMap<RoleView, Role>()
                 .ForMember(role => role.Permissions, member => member.MapFrom(role => new List<RolePermission>()));
         }
-
-        #endregion Administration
     }
 }

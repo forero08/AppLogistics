@@ -30,7 +30,9 @@ namespace AppLogistics.Controllers.Configuration
         public ActionResult Create([BindExcludeId] EpsView eps)
         {
             if (!Validator.CanCreate(eps))
+            {
                 return View(eps);
+            }
 
             Service.Create(eps);
 
@@ -53,7 +55,9 @@ namespace AppLogistics.Controllers.Configuration
         public ActionResult Edit(EpsView eps)
         {
             if (!Validator.CanEdit(eps))
+            {
                 return View(eps);
+            }
 
             Service.Edit(eps);
 

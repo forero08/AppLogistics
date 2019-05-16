@@ -1,5 +1,8 @@
 {
     "Titles": {
         "Name": "Nombre"
+    },
+    "Validations": {
+        "AssociatedClients": "Existen clientes asociados a esta sucursal. Para elimiar esta sucursal, debe eliminar primero esos clientes o asociarles una sucursal diferente."
     }
 }
