@@ -1,5 +1,4 @@
 using AppLogistics.Objects;
-using System;
 
 namespace AppLogistics.Validators
 {
@@ -7,5 +6,6 @@ namespace AppLogistics.Validators
     {
         bool CanCreate(EpsView view);
         bool CanEdit(EpsView view);
+        bool CanDelete(int id);
     }
 }

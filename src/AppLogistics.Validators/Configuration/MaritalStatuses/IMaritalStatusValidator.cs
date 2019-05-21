@@ -6,5 +6,6 @@ namespace AppLogistics.Validators
     {
         bool CanCreate(MaritalStatusView view);
         bool CanEdit(MaritalStatusView view);
+        bool CanDelete(int id);
     }
 }

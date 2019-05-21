@@ -66,6 +66,13 @@
         "ConfigurationVehicleTypesDelete": "Delete",
         "ConfigurationVehicleTypesDetails": "Details",
         "ConfigurationVehicleTypesEdit": "Edit",
-        "ConfigurationVehicleTypesIndex": "Vehicle Types"
+        "ConfigurationVehicleTypesIndex": "Vehicle Types",
+
+        "Operation": "Operation",
+        "OperationEmployeesCreate": "Create",
+        "OperationEmployeesDelete": "Delete",
+        "OperationEmployeesDetails": "Details",
+        "OperationEmployeesEdit": "Edit",
+        "OperationEmployeesIndex": "Employees"
     }
 }

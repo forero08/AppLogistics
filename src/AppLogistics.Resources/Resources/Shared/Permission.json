@@ -1,7 +1,8 @@
 ﻿{
     "Areas": {
         "Administration": "Administration",
-        "Configuration": "Configuration"
+        "Configuration": "Configuration",
+        "Operation":  "Operation"
     },
     "Controllers": {
         "AdministrationAccounts": "Accounts",
@@ -16,7 +17,9 @@
         "ConfigurationEpss": "Eps's",
         "ConfigurationMaritalStatuses": "Marital Statuses",
         "ConfigurationProducts": "Products",
-        "ConfigurationVehicleTypes": "Vehicle Types"
+        "ConfigurationVehicleTypes": "Vehicle Types",
+
+        "OperationEmployees": "Employees"
     },
     "Actions": {
         "AdministrationAccountsCreate": "Create",
@@ -78,6 +81,12 @@
         "ConfigurationVehicleTypesDelete": "Delete",
         "ConfigurationVehicleTypesDetails": "Details",
         "ConfigurationVehicleTypesEdit": "Edit",
-        "ConfigurationVehicleTypesIndex": "Index"
+        "ConfigurationVehicleTypesIndex": "Index",
+
+        "OperationEmployeesCreate": "Create",
+        "OperationEmployeesDelete": "Delete",
+        "OperationEmployeesDetails": "Details",
+        "OperationEmployeesEdit": "Edit",
+        "OperationEmployeesIndex": "Index"
     }
 }

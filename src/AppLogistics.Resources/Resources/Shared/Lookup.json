@@ -1,6 +1,10 @@
 ﻿{
     "Titles": {
-        "Role": "Roles",
-        "BranchOffice": "Branch Offices"
+        "Afp": "Afps",
+        "BranchOffice": "Branch Offices",
+        "DocumentType": "Document types",
+        "Eps": "Eps's",
+        "MaritalStatus": "Marital statuses",
+        "Role": "Roles"
     }
 }

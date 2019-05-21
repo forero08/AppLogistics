@@ -34,6 +34,16 @@ namespace AppLogistics.Validators
                 return false;
             }
 
+            var hasReferencedEmployees = UnitOfWork.Select<Employee>()
+                .Where(c => c.BranchOfficeId.Equals(id))
+                .Any();
+
+            if (hasReferencedEmployees)
+            {
+                Alerts.AddError(Validation.For<BranchOfficeView>("AssociatedEmployees"));
+                return false;
+            }
+
             return ModelState.IsValid;
         }
     }

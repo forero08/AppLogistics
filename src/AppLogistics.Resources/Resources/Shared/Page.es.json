@@ -25,7 +25,10 @@
         "Product": "Producto",
         "Products": "Productos",
         "VehicleType": "Tipo de vehículo",
-        "VehicleTypes": "Tipos de vehículo"
+        "VehicleTypes": "Tipos de vehículo",
+
+        "Employee": "Empleado",
+        "Employees": "Empleados"
     },
     "Titles": {
         "AdministrationAccountsCreate": "Creación de cuenta",
@@ -37,7 +40,7 @@
         "AdministrationRolesDetails": "Detalles de rol",
         "AdministrationRolesEdit": "Editar rol",
         "AdministrationRolesIndex": "Roles",
-        "AuthLogin": "Iniciar sesión",
+        "AuthLogin": "AppLogistics",
         "AuthRecover": "Recuperar",
         "AuthReset": "Reiniciar",
         "HomeError": "Error",
@@ -95,6 +98,12 @@
         "ConfigurationVehicleTypesDelete": "Eliminación de Tipo de vehículo",
         "ConfigurationVehicleTypesDetails": "Detalles de Tipo de vehículo",
         "ConfigurationVehicleTypesEdit": "Editar Tipo de vehículo",
-        "ConfigurationVehicleTypesIndex": "Tipos de vehículo"
+        "ConfigurationVehicleTypesIndex": "Tipos de vehículo",
+
+        "OperationEmployeesCreate": "Creación de Empleado",
+        "OperationEmployeesDelete": "Eliminación de Empleado",
+        "OperationEmployeesDetails": "Detalles de Empleado",
+        "OperationEmployeesEdit": "Editar Empleado",
+        "OperationEmployeesIndex": "Empleados"
     }
 }

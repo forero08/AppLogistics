@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace AppLogistics.Objects
 {
@@ -11,5 +12,7 @@ namespace AppLogistics.Objects
         [Required]
         [StringLength(16)]
         public string Nit { get; set; }
+
+        public virtual ICollection<Employee> Employees { get; set; }
     }
 }

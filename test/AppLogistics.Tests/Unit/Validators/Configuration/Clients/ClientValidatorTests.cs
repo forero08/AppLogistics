@@ -34,13 +34,13 @@ namespace AppLogistics.Validators.Tests
         {
             validator.ModelState.AddModelError("Test", "Test");
 
-            Assert.False(validator.CanCreate(ObjectsFactory.CreateClientView(1)));
+            Assert.False(validator.CanCreate(ObjectsFactory.CreateClientCreateEditView(1)));
         }
 
         [Fact]
         public void CanCreate_ValidClient()
         {
-            Assert.True(validator.CanCreate(ObjectsFactory.CreateClientView(1)));
+            Assert.True(validator.CanCreate(ObjectsFactory.CreateClientCreateEditView(1)));
             Assert.Empty(validator.ModelState);
             Assert.Empty(validator.Alerts);
         }
@@ -54,13 +54,13 @@ namespace AppLogistics.Validators.Tests
         {
             validator.ModelState.AddModelError("Test", "Test");
 
-            Assert.False(validator.CanEdit(ObjectsFactory.CreateClientView(client.Id)));
+            Assert.False(validator.CanEdit(ObjectsFactory.CreateClientCreateEditView(client.Id)));
         }
 
         [Fact]
         public void CanEdit_ValidClient()
         {
-            Assert.True(validator.CanEdit(ObjectsFactory.CreateClientView(client.Id)));
+            Assert.True(validator.CanEdit(ObjectsFactory.CreateClientCreateEditView(client.Id)));
             Assert.Empty(validator.ModelState);
             Assert.Empty(validator.Alerts);
         }

@@ -2,5 +2,8 @@
     "Titles": {
         "Name": "Nombre",
         "ShortName": "Nombre corto"
+    },
+    "Validations": {
+        "AssociatedEmployees": "Existen empleados asociados a este tipo de documento. Para eliminar este tipo de documento, debe eliminar primero esos empleados o asociarles un tipo de documento diferente."
     }
 }

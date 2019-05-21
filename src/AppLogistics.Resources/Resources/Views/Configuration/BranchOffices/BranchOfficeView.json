@@ -3,6 +3,7 @@
         "Name": "Name"
     },
     "Validations": {
-        "AssociatedClients": "There are clients associated to this branch office. To delete this branch office, you should delete those clients first or associate them a different branch office."
+        "AssociatedClients": "There are clients associated to this branch office. To delete this branch office, you should delete those clients first or associate them a different branch office.",
+        "AssociatedEmployees": "There are employees associated to this branch office. To delete this branch office, you should delete those employees first or associate them a different branch office."
     }
 }

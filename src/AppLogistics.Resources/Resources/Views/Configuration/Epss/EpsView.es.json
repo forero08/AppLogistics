@@ -2,5 +2,8 @@
     "Titles": {
         "Name": "Nombre",
         "Nit": "Nit"
+    },
+    "Validations": {
+        "AssociatedEmployees": "Existen empleados asociados a esta Eps. Para eliminar esta Eps, debe eliminar primero esos empleados o asociarles una Eps diferente."
     }
 }

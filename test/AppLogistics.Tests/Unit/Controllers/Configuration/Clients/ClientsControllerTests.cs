@@ -17,14 +17,16 @@ namespace AppLogistics.Controllers.Configuration.Tests
         private ClientsController controller;
         private IClientValidator validator;
         private IClientService service;
-        private ClientView client;
+        private ClientView clientView;
+        private ClientCreateEditView clientCreateEditView;
 
         public ClientsControllerTests()
         {
             validator = Substitute.For<IClientValidator>();
             service = Substitute.For<IClientService>();
 
-            client = ObjectsFactory.CreateClientView();
+            clientView = ObjectsFactory.CreateClientView();
+            clientCreateEditView = ObjectsFactory.CreateClientCreateEditView();
 
             controller = Substitute.ForPartsOf<ClientsController>(validator, service);
             controller.ControllerContext.RouteData = new RouteData();
@@ -68,10 +70,10 @@ namespace AppLogistics.Controllers.Configuration.Tests
         [Fact]
         public void Create_CanNotCreate_ReturnsSameView()
         {
-            validator.CanCreate(client).Returns(false);
+            validator.CanCreate(clientCreateEditView).Returns(false);
 
-            object actual = (controller.Create(client) as ViewResult).ViewData.Model;
-            object expected = client;
+            object actual = (controller.Create(clientCreateEditView) as ViewResult).ViewData.Model;
+            object expected = clientCreateEditView;
 
             Assert.Same(expected, actual);
         }
@@ -79,20 +81,20 @@ namespace AppLogistics.Controllers.Configuration.Tests
         [Fact]
         public void Create_Client()
         {
-            validator.CanCreate(client).Returns(true);
+            validator.CanCreate(clientCreateEditView).Returns(true);
 
-            controller.Create(client);
+            controller.Create(clientCreateEditView);
 
-            service.Received().Create(client);
+            service.Received().Create(clientCreateEditView);
         }
 
         [Fact]
         public void Create_RedirectsToIndex()
         {
-            validator.CanCreate(client).Returns(true);
+            validator.CanCreate(clientCreateEditView).Returns(true);
 
             object expected = RedirectToAction(controller, "Index");
-            object actual = controller.Create(client);
+            object actual = controller.Create(clientCreateEditView);
 
             Assert.Same(expected, actual);
         }
@@ -104,10 +106,10 @@ namespace AppLogistics.Controllers.Configuration.Tests
         [Fact]
         public void Details_ReturnsNotEmptyView()
         {
-            service.Get<ClientView>(client.Id).Returns(client);
+            service.Get<ClientView>(clientView.Id).Returns(clientView);
 
-            object expected = NotEmptyView(controller, client);
-            object actual = controller.Details(client.Id);
+            object expected = NotEmptyView(controller, clientView);
+            object actual = controller.Details(clientView.Id);
 
             Assert.Same(expected, actual);
         }
@@ -119,10 +121,10 @@ namespace AppLogistics.Controllers.Configuration.Tests
         [Fact]
         public void Edit_ReturnsNotEmptyView()
         {
-            service.Get<ClientView>(client.Id).Returns(client);
+            service.Get<ClientCreateEditView>(clientCreateEditView.Id).Returns(clientCreateEditView);
 
-            object expected = NotEmptyView(controller, client);
-            object actual = controller.Edit(client.Id);
+            object expected = NotEmptyView(controller, clientCreateEditView);
+            object actual = controller.Edit(clientCreateEditView.Id);
 
             Assert.Same(expected, actual);
         }
@@ -134,10 +136,10 @@ namespace AppLogistics.Controllers.Configuration.Tests
         [Fact]
         public void Edit_CanNotEdit_ReturnsSameView()
         {
-            validator.CanEdit(client).Returns(false);
+            validator.CanEdit(clientCreateEditView).Returns(false);
 
-            object actual = (controller.Edit(client) as ViewResult).ViewData.Model;
-            object expected = client;
+            object actual = (controller.Edit(clientCreateEditView) as ViewResult).ViewData.Model;
+            object expected = clientCreateEditView;
 
             Assert.Same(expected, actual);
         }
@@ -145,20 +147,20 @@ namespace AppLogistics.Controllers.Configuration.Tests
         [Fact]
         public void Edit_Client()
         {
-            validator.CanEdit(client).Returns(true);
+            validator.CanEdit(clientCreateEditView).Returns(true);
 
-            controller.Edit(client);
+            controller.Edit(clientCreateEditView);
 
-            service.Received().Edit(client);
+            service.Received().Edit(clientCreateEditView);
         }
 
         [Fact]
         public void Edit_RedirectsToIndex()
         {
-            validator.CanEdit(client).Returns(true);
+            validator.CanEdit(clientCreateEditView).Returns(true);
 
             object expected = RedirectToAction(controller, "Index");
-            object actual = controller.Edit(client);
+            object actual = controller.Edit(clientCreateEditView);
 
             Assert.Same(expected, actual);
         }
@@ -170,10 +172,10 @@ namespace AppLogistics.Controllers.Configuration.Tests
         [Fact]
         public void Delete_ReturnsNotEmptyView()
         {
-            service.Get<ClientView>(client.Id).Returns(client);
+            service.Get<ClientView>(clientView.Id).Returns(clientView);
 
-            object expected = NotEmptyView(controller, client);
-            object actual = controller.Delete(client.Id);
+            object expected = NotEmptyView(controller, clientView);
+            object actual = controller.Delete(clientView.Id);
 
             Assert.Same(expected, actual);
         }
@@ -185,16 +187,16 @@ namespace AppLogistics.Controllers.Configuration.Tests
         [Fact]
         public void DeleteConfirmed_DeletesClient()
         {
-            controller.DeleteConfirmed(client.Id);
+            controller.DeleteConfirmed(clientView.Id);
 
-            service.Received().Delete(client.Id);
+            service.Received().Delete(clientView.Id);
         }
 
         [Fact]
         public void Delete_RedirectsToIndex()
         {
             object expected = RedirectToAction(controller, "Index");
-            object actual = controller.DeleteConfirmed(client.Id);
+            object actual = controller.DeleteConfirmed(clientView.Id);
 
             Assert.Same(expected, actual);
         }

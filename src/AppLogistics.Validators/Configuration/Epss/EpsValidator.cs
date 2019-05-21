@@ -1,6 +1,7 @@
 using AppLogistics.Data.Core;
 using AppLogistics.Objects;
-using System;
+using AppLogistics.Resources;
+using System.Linq;
 
 namespace AppLogistics.Validators
 {
@@ -18,6 +19,21 @@ namespace AppLogistics.Validators
 
         public bool CanEdit(EpsView view)
         {
+            return ModelState.IsValid;
+        }
+
+        public bool CanDelete(int id)
+        {
+            var hasReferencedEmployees = UnitOfWork.Select<Employee>()
+                .Where(c => c.EpsId.Equals(id))
+                .Any();
+
+            if (hasReferencedEmployees)
+            {
+                Alerts.AddError(Validation.For<EpsView>("AssociatedEmployees"));
+                return false;
+            }
+
             return ModelState.IsValid;
         }
     }

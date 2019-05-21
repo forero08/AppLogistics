@@ -25,7 +25,10 @@
         "Product": "Product",
         "Products": "Products",
         "VehicleType": "Vehicle Type",
-        "VehicleTypes": "Vehicle Types"
+        "VehicleTypes": "Vehicle Types",
+
+        "Employee": "Employee",
+        "Employees": "Employees"
     },
     "Titles": {
         "AdministrationAccountsCreate": "Account creation",
@@ -37,7 +40,7 @@
         "AdministrationRolesDetails": "Role details",
         "AdministrationRolesEdit": "Role edit",
         "AdministrationRolesIndex": "Roles",
-        "AuthLogin": "Login",
+        "AuthLogin": "AppLogistics",
         "AuthRecover": "Recover",
         "AuthReset": "Reset",
         "HomeError": "Error",
@@ -95,6 +98,12 @@
         "ConfigurationVehicleTypesDelete": "Vehicle Type deletion",
         "ConfigurationVehicleTypesDetails": "Vehicle Type details",
         "ConfigurationVehicleTypesEdit": "Vehicle Type Edit",
-        "ConfigurationVehicleTypesIndex": "Vehicle Types"
+        "ConfigurationVehicleTypesIndex": "Vehicle Types",
+
+        "OperationEmployeesCreate": "Employee creation",
+        "OperationEmployeesDelete": "Employee deletion",
+        "OperationEmployeesDetails": "Employee details",
+        "OperationEmployeesEdit": "Employee Edit",
+        "OperationEmployeesIndex": "Employees"
     }
 }

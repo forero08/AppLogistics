@@ -34,6 +34,12 @@ namespace AppLogistics.Data.Core
 
         #endregion
 
+        #region Operation
+
+        protected DbSet<Employee> Employee { get; set; }
+
+        #endregion
+
         #region System
 
         protected DbSet<AuditLog> AuditLog { get; set; }

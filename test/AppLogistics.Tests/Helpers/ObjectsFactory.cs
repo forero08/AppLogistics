@@ -253,13 +253,27 @@ namespace AppLogistics.Tests
                 Nit = "Nit" + id,
                 Address = "Address" + id,
                 Phone = "Phone" + id,
-                Contact = "Contact" + id
+                Contact = "Contact" + id,
+                BranchOffice = CreateBranchOffice(id)
             };
         }
 
         public static ClientView CreateClientView(int id = 0)
         {
             return new ClientView
+            {
+                Id = id,
+                Name = "Name" + id,
+                Nit = "Nit" + id,
+                Address = "Address" + id,
+                Phone = "Phone" + id,
+                Contact = "Contact" + id
+            };
+        }
+
+        public static ClientCreateEditView CreateClientCreateEditView(int id = 0)
+        {
+            return new ClientCreateEditView
             {
                 Id = id,
                 Name = "Name" + id,
@@ -364,7 +378,135 @@ namespace AppLogistics.Tests
             };
         }
 
-        #endregion
+        #endregion Configuration
+
+        #region Operation
+
+        public static Employee CreateEmployee(int id = 0)
+        {
+            return new Employee
+            {
+                Id = id,
+                Name = "Name" + id,
+                Address = "Address" + id,
+                BornDate = DateTime.Today,
+                Comments = "Comments" + id,
+                DocumentNumber = "DocumentNumber" + id,
+                Email = "Email" + id,
+                EmergencyContact = "EmergencyContact" + id,
+                EmergencyContactPhone = "EmergencyContactPhone" + id,
+                HasAdmissionTest = true,
+                HasContract = true,
+                HasCurriculumVitae = true,
+                HasDisciplinaryBackground = true,
+                HasDocumentCopy = true,
+                HasEndownmentLetter = true,
+                HasInternalRegulations = true,
+                HasKnowledgeTest = true,
+                HasLaborCertification = true,
+                HasMilitaryIdCopy = true,
+                HasPersonalReference = true,
+                HasPhotos = true,
+                HireDate = DateTime.Today,
+                HomePhone = "HomePhone" + id,
+                InternalCode = "InternalCode" + id,
+                IsCriticalPosition = true,
+                MobilePhone = "MobilePhone" + id,
+                ResidenceCity = "ResidenceCity" + id,
+                RetirementDate = DateTime.Today,
+                Surname = "Surname" + id,
+
+                Afp = CreateAfp(id),
+                BranchOffice = CreateBranchOffice(id),
+                DocumentType = CreateDocumentType(id),
+                Eps = CreateEps(id),
+                MaritalStatus = CreateMaritalStatus(id)
+            };
+        }
+
+        public static EmployeeView CreateEmployeeView(int id = 0)
+        {
+            return new EmployeeView
+            {
+                Id = id,
+                Name = "Name" + id,
+                Address = "Address" + id,
+                AfpName = "AfpName" + id,
+                BornDate = DateTime.Now,
+                BranchOfficeName = "BranchOfficeName" +id,
+                Comments = "Comments" + id,
+                DocumentNumber = "DocumentNumber" + id,
+                DocumentTypeName = "DocumentTypeName" + id,
+                Email = "Email" + id,
+                EmergencyContact = "EmergencyContact" + id,
+                EmergencyContactPhone = "EmergencyContactPhone" + id,
+                EpsName = "EpsName" + id,
+                HasAdmissionTest = true,
+                HasContract = true,
+                HasCurriculumVitae = true,
+                HasDisciplinaryBackground = true,
+                HasDocumentCopy = true,
+                HasEndownmentLetter = true,
+                HasInternalRegulations = true,
+                HasKnowledgeTest = true,
+                HasLaborCertification = true,
+                HasMilitaryIdCopy = true,
+                HasPersonalReference = true,
+                HasPhotos = true,
+                HireDate = DateTime.Now,
+                HomePhone = "HomePhone" + id,
+                InternalCode = "InternalCode" + id,
+                IsCriticalPosition = true,
+                MaritalStatusName = "MaritalStatusName" + id,
+                MobilePhone = "MobilePhone" + id,
+                ResidenceCity = "ResidenceCity" + id,
+                RetirementDate = DateTime.Now,
+                Surname = "Surname" + id
+            };
+        }
+
+        public static EmployeeCreateEditView CreateEmployeeCreateEditView(int id = 0)
+        {
+            return new EmployeeCreateEditView
+            {
+                Id = id,
+                Name = "Name" + id,
+                Address = "Address" + id,
+                AfpId = id,
+                BornDate = DateTime.Now,
+                BranchOfficeId = id,
+                Comments = "Comments" + id,
+                DocumentNumber = "DocumentNumber" + id,
+                DocumentTypeId = id,
+                Email = "Email" + id,
+                EmergencyContact = "EmergencyContact" + id,
+                EmergencyContactPhone = "EmergencyContactPhone" + id,
+                EpsId = id,
+                HasAdmissionTest = true,
+                HasContract = true,
+                HasCurriculumVitae = true,
+                HasDisciplinaryBackground = true,
+                HasDocumentCopy = true,
+                HasEndownmentLetter = true,
+                HasInternalRegulations = true,
+                HasKnowledgeTest = true,
+                HasLaborCertification = true,
+                HasMilitaryIdCopy = true,
+                HasPersonalReference = true,
+                HasPhotos = true,
+                HireDate = DateTime.Now,
+                HomePhone = "HomePhone" + id,
+                InternalCode = "InternalCode" + id,
+                IsCriticalPosition = true,
+                MaritalStatusId = id,
+                MobilePhone = "MobilePhone" + id,
+                ResidenceCity = "ResidenceCity" + id,
+                RetirementDate = DateTime.Now,
+                Surname = "Surname" + id
+            };
+        }
+
+        #endregion Operation
 
         #region Tests
 

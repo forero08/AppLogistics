@@ -1,0 +1,288 @@
+@model EmployeeView
+
+<div class="col">
+    <div class="widget-box readonly">
+        <div class="widget-header">
+            <span class="icon fa fa-th-list"></span>
+            <h5>@Resource.ForHeader("Employee")</h5>
+            <div class="widget-header-buttons">
+                <authorize action="Edit">
+                    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn">
+                        <span class="fa fa-pencil-alt"></span><span class="text">@Resource.ForAction("Edit")</span>
+                    </a>
+                </authorize>
+                <authorize action="Delete">
+                    <a asp-action="Delete" asp-route-id="@Model.Id" class="btn">
+                        <span class="fa fa-times"></span><span class="text">@Resource.ForAction("Delete")</span>
+                    </a>
+                </authorize>
+            </div>
+        </div>
+        <div class="widget-content">
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="InternalCode"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="InternalCode" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="BranchOfficeName"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="BranchOfficeName" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="DocumentTypeName"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="DocumentTypeName" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="DocumentNumber"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="DocumentNumber" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="Name"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="Name" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="Surname"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="Surname" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="BornDate"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="BornDate" asp-format="{0:d}" class="datepicker" type="text" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="HireDate"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="HireDate" asp-format="{0:d}" class="datepicker" type="text" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="RetirementDate"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="RetirementDate" asp-format="{0:d}" class="datepicker" type="text" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="ResidenceCity"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="ResidenceCity" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="Address"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="Address" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="MobilePhone"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="MobilePhone" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="HomePhone"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="HomePhone" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="Email"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="Email" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="MaritalStatusName"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="MaritalStatusName" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="EmergencyContact"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="EmergencyContact" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="EmergencyContactPhone"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="EmergencyContactPhone" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="AfpName"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="AfpName" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="EpsName"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="EpsName" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="HasCurriculumVitae"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="HasCurriculumVitae" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="HasDocumentCopy"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="HasDocumentCopy" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="HasPhotos"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="HasPhotos" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="HasMilitaryIdCopy"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="HasMilitaryIdCopy" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="HasLaborCertification"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="HasLaborCertification" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="HasPersonalReference"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="HasPersonalReference" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="HasDisciplinaryBackground"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="HasDisciplinaryBackground" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="HasKnowledgeTest"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="HasKnowledgeTest" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="HasAdmissionTest"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="HasAdmissionTest" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="HasContract"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="HasContract" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="HasInternalRegulations"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="HasInternalRegulations" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="HasEndownmentLetter"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="HasEndownmentLetter" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="IsCriticalPosition"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="IsCriticalPosition" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="Comments"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="Comments" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

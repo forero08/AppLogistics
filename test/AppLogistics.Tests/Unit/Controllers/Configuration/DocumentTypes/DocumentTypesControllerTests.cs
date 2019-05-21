@@ -22,6 +22,7 @@ namespace AppLogistics.Controllers.Configuration.Tests
         public DocumentTypesControllerTests()
         {
             validator = Substitute.For<IDocumentTypeValidator>();
+            validator.CanDelete(Arg.Any<int>()).Returns(true);
             service = Substitute.For<IDocumentTypeService>();
 
             documentType = ObjectsFactory.CreateDocumentTypeView();
