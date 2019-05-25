@@ -48,7 +48,7 @@ namespace AppLogistics.Controllers
             {
                 string url = Url.Action("Reset", "Auth", new { token }, Request.Scheme);
 
-                await _mailClient.SendAsync(account.Email,
+                await _mailClient.SendFromAdmin(account.Email, "",
                     Message.For<AccountView>("RecoveryEmailSubject"),
                     Message.For<AccountView>("RecoveryEmailBody", url));
             }

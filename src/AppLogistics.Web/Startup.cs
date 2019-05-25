@@ -155,6 +155,7 @@ namespace AppLogistics.Web
 
             services.AddSingleton<IHasher, Hasher>();
             services.AddSingleton<IMailClient, SmtpMailClient>();
+            services.AddSingleton<IMessagebuilder, MessageBuilder>();
 
             services.AddTransient<IHttpContextAccessor, HttpContextAccessor>();
             services.AddSingleton<IValidationAttributeAdapterProvider, ValidationAdapterProvider>();

@@ -1,36 +1,28 @@
 ﻿using Microsoft.Extensions.Configuration;
-using System.Net;
-using System.Net.Mail;
-using System.Text;
+using SendGrid;
 using System.Threading.Tasks;
 
 namespace AppLogistics.Components.Mail
 {
     public class SmtpMailClient : IMailClient
     {
-        private IConfiguration Config { get; }
+        private readonly IConfiguration _config;
+        private readonly IMessagebuilder _messagebuilder;
 
-        public SmtpMailClient(IConfiguration config)
+        public SmtpMailClient(IConfiguration config, IMessagebuilder messagebuilder)
         {
-            Config = config.GetSection("Mail");
+            _config = config;
+            _messagebuilder = messagebuilder;
         }
 
-        public async Task SendAsync(string email, string subject, string body)
+        public async Task SendFromAdmin(string recipientEmail, string recipientName, string subject, string body)
         {
-            using (SmtpClient client = new SmtpClient(Config["Host"], int.Parse(Config["Port"])))
-            {
-                client.Credentials = new NetworkCredential(Config["Sender"], Config["Password"]);
-                client.EnableSsl = bool.Parse(Config["EnableSsl"]);
+            var apiKey = _config["Mail:SendGridApiKey"];
+            var client = new SendGridClient(apiKey);
 
-                MailMessage mail = new MailMessage(Config["Sender"], email, subject, body)
-                {
-                    SubjectEncoding = Encoding.UTF8,
-                    BodyEncoding = Encoding.UTF8,
-                    IsBodyHtml = true
-                };
+            var message = _messagebuilder.BuildMessageFromAdmin(recipientEmail, recipientName, subject, body, body);
 
-                await client.SendMailAsync(mail);
-            }
+            var response = await client.SendEmailAsync(message);
         }
     }
 }
