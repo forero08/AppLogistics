@@ -22,6 +22,7 @@ namespace AppLogistics.Controllers.Configuration.Tests
         public EpssControllerTests()
         {
             validator = Substitute.For<IEpsValidator>();
+            validator.CanDelete(Arg.Any<int>()).Returns(true);
             service = Substitute.For<IEpsService>();
 
             eps = ObjectsFactory.CreateEpsView();

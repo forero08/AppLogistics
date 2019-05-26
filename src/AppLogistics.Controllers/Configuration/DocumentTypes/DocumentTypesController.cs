@@ -30,7 +30,9 @@ namespace AppLogistics.Controllers.Configuration
         public ActionResult Create([BindExcludeId] DocumentTypeView documentType)
         {
             if (!Validator.CanCreate(documentType))
+            {
                 return View(documentType);
+            }
 
             Service.Create(documentType);
 
@@ -53,7 +55,9 @@ namespace AppLogistics.Controllers.Configuration
         public ActionResult Edit(DocumentTypeView documentType)
         {
             if (!Validator.CanEdit(documentType))
+            {
                 return View(documentType);
+            }
 
             Service.Edit(documentType);
 
@@ -70,6 +74,11 @@ namespace AppLogistics.Controllers.Configuration
         [ActionName("Delete")]
         public RedirectToActionResult DeleteConfirmed(int id)
         {
+            if (!Validator.CanDelete(id))
+            {
+                return RedirectToAction("Delete", new { id });
+            }
+
             Service.Delete(id);
 
             return RedirectToAction("Index");

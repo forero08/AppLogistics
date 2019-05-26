@@ -22,6 +22,7 @@ namespace AppLogistics.Controllers.Configuration.Tests
         public AfpsControllerTests()
         {
             validator = Substitute.For<IAfpValidator>();
+            validator.CanDelete(Arg.Any<int>()).Returns(true);
             service = Substitute.For<IAfpService>();
 
             afp = ObjectsFactory.CreateAfpView();

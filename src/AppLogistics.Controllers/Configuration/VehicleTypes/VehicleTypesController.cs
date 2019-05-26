@@ -30,7 +30,9 @@ namespace AppLogistics.Controllers.Configuration
         public ActionResult Create([BindExcludeId] VehicleTypeView vehicleType)
         {
             if (!Validator.CanCreate(vehicleType))
+            {
                 return View(vehicleType);
+            }
 
             Service.Create(vehicleType);
 
@@ -53,7 +55,9 @@ namespace AppLogistics.Controllers.Configuration
         public ActionResult Edit(VehicleTypeView vehicleType)
         {
             if (!Validator.CanEdit(vehicleType))
+            {
                 return View(vehicleType);
+            }
 
             Service.Edit(vehicleType);
 

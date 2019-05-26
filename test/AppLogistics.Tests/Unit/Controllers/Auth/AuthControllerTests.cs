@@ -119,7 +119,7 @@ namespace AppLogistics.Controllers.Tests
             string body = Message.For<AccountView>("RecoveryEmailBody", url);
             string email = accountRecovery.Email;
 
-            await mail.Received().SendAsync(email, subject, body);
+            await mail.Received().SendFromAdmin(email, "", subject, body);
         }
 
         [Fact]
@@ -131,7 +131,7 @@ namespace AppLogistics.Controllers.Tests
 
             await controller.Recover(accountRecovery);
 
-            await mail.DidNotReceive().SendAsync(Arg.Any<string>(), Arg.Any<string>(), Arg.Any<string>());
+            await mail.DidNotReceive().SendFromAdmin(Arg.Any<string>(), Arg.Any<string>(), Arg.Any<string>(), Arg.Any<string>());
         }
 
         [Fact]

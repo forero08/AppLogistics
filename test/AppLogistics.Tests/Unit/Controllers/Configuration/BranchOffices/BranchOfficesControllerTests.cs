@@ -22,6 +22,7 @@ namespace AppLogistics.Controllers.Configuration.Tests
         public BranchOfficesControllerTests()
         {
             validator = Substitute.For<IBranchOfficeValidator>();
+            validator.CanDelete(Arg.Any<int>()).Returns(true);
             service = Substitute.For<IBranchOfficeService>();
 
             branchOffice = ObjectsFactory.CreateBranchOfficeView();

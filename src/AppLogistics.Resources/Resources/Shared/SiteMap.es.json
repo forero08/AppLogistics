@@ -37,6 +37,11 @@
         "ConfigurationCarriersDetails": "Detalles",
         "ConfigurationCarriersEdit": "Editar",
         "ConfigurationCarriersIndex": "Transportadoras",
+        "ConfigurationClientsCreate": "Crear",
+        "ConfigurationClientsDelete": "Eliminar",
+        "ConfigurationClientsDetails": "Detalles",
+        "ConfigurationClientsEdit": "Editar",
+        "ConfigurationClientsIndex": "Clientes",
         "ConfigurationDocumentTypesCreate": "Crear",
         "ConfigurationDocumentTypesDelete": "Eliminar",
         "ConfigurationDocumentTypesDetails": "Detalles",
@@ -61,6 +66,13 @@
         "ConfigurationVehicleTypesDelete": "Eliminar",
         "ConfigurationVehicleTypesDetails": "Detalles",
         "ConfigurationVehicleTypesEdit": "Editar",
-        "ConfigurationVehicleTypesIndex": "Tipos de vehículo"
+        "ConfigurationVehicleTypesIndex": "Tipos de vehículo",
+
+        "Operation": "Operación",
+        "OperationEmployeesCreate": "Crear",
+        "OperationEmployeesDelete": "Eliminar",
+        "OperationEmployeesDetails": "Detalles",
+        "OperationEmployeesEdit": "Editar",
+        "OperationEmployeesIndex": "Empleados"
     }
 }

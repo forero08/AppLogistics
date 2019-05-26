@@ -46,11 +46,8 @@
   },
 
   "Mail": {
-    "Port": 587,
-    "EnableSsl": true,
-    "Host": "smtp.gmail.com",
-    "Sender": "MVC.Template@gmail.com",
-    "Password": "ChangeIt"
+      "AdminSenderEmail": "admin@applogistics.com",
+      "AdminSenderName": "Admin App Logistics"
   },
 
   "SiteMap": {

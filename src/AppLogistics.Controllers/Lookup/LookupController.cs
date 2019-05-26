@@ -27,6 +27,36 @@ namespace AppLogistics.Controllers
         }
 
         [AjaxOnly]
+        public JsonResult Afp(LookupFilter filter)
+        {
+            return GetData(new MvcLookup<Afp, AfpView>(_unitOfWork), filter);
+        }
+
+        [AjaxOnly]
+        public JsonResult BranchOffice(LookupFilter filter)
+        {
+            return GetData(new MvcLookup<BranchOffice, BranchOfficeView>(_unitOfWork), filter);
+        }
+
+        [AjaxOnly]
+        public JsonResult DocumentType(LookupFilter filter)
+        {
+            return GetData(new MvcLookup<DocumentType, DocumentTypeView>(_unitOfWork), filter);
+        }
+
+        [AjaxOnly]
+        public JsonResult Eps(LookupFilter filter)
+        {
+            return GetData(new MvcLookup<Eps, EpsView>(_unitOfWork), filter);
+        }
+
+        [AjaxOnly]
+        public JsonResult MaritalStatus(LookupFilter filter)
+        {
+            return GetData(new MvcLookup<MaritalStatus, MaritalStatusView>(_unitOfWork), filter);
+        }
+
+        [AjaxOnly]
         public JsonResult Role(LookupFilter filter)
         {
             return GetData(new MvcLookup<Role, RoleView>(_unitOfWork), filter);

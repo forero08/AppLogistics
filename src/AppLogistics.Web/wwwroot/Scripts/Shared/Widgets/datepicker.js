@@ -5,6 +5,8 @@ Datepicker = {
         if ($.fn.datepicker) {
             $.datepicker.setDefaults(window.cultures.datepicker[lang]);
             $('.datepicker').datepicker({
+                changeMonth: true,
+                changeYear: true,
                 beforeShow: function (element) {
                     return !element.readOnly;
                 },

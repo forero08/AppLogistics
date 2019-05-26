@@ -14,6 +14,8 @@
         "BranchOffices": "Sucursales",
         "Carrier": "Transportadora",
         "Carriers": "Transportadoras",
+        "Client": "Cliente",
+        "Clients": "Clientes",
         "DocumentType": "Tipo de documento",
         "DocumentTypes": "Tipos de documento",
         "Eps": "Eps",
@@ -23,7 +25,10 @@
         "Product": "Producto",
         "Products": "Productos",
         "VehicleType": "Tipo de vehículo",
-        "VehicleTypes": "Tipos de vehículo"
+        "VehicleTypes": "Tipos de vehículo",
+
+        "Employee": "Empleado",
+        "Employees": "Empleados"
     },
     "Titles": {
         "AdministrationAccountsCreate": "Creación de cuenta",
@@ -35,7 +40,7 @@
         "AdministrationRolesDetails": "Detalles de rol",
         "AdministrationRolesEdit": "Editar rol",
         "AdministrationRolesIndex": "Roles",
-        "AuthLogin": "Iniciar sesión",
+        "AuthLogin": "AppLogistics",
         "AuthRecover": "Recuperar",
         "AuthReset": "Reiniciar",
         "HomeError": "Error",
@@ -64,6 +69,11 @@
         "ConfigurationCarriersDetails": "Detalles de Transportadora",
         "ConfigurationCarriersEdit": "Editar Transportadora",
         "ConfigurationCarriersIndex": "Transportadoras",
+        "ConfigurationClientsCreate": "Creación de Cliente",
+        "ConfigurationClientsDelete": "Eliminación de Cliente",
+        "ConfigurationClientsDetails": "Detalles de Cliente",
+        "ConfigurationClientsEdit": "Editar Cliente",
+        "ConfigurationClientsIndex": "Clientes",
         "ConfigurationDocumentTypesCreate": "Creación de Tipo de documento",
         "ConfigurationDocumentTypesDelete": "Eliminación de Tipo de documento",
         "ConfigurationDocumentTypesDetails": "Detalles de Tipo de documento",
@@ -88,6 +98,12 @@
         "ConfigurationVehicleTypesDelete": "Eliminación de Tipo de vehículo",
         "ConfigurationVehicleTypesDetails": "Detalles de Tipo de vehículo",
         "ConfigurationVehicleTypesEdit": "Editar Tipo de vehículo",
-        "ConfigurationVehicleTypesIndex": "Tipos de vehículo"
+        "ConfigurationVehicleTypesIndex": "Tipos de vehículo",
+
+        "OperationEmployeesCreate": "Creación de Empleado",
+        "OperationEmployeesDelete": "Eliminación de Empleado",
+        "OperationEmployeesDetails": "Detalles de Empleado",
+        "OperationEmployeesEdit": "Editar Empleado",
+        "OperationEmployeesIndex": "Empleados"
     }
 }

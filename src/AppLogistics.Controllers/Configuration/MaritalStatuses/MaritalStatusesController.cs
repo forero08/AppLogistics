@@ -30,7 +30,9 @@ namespace AppLogistics.Controllers.Configuration
         public ActionResult Create([BindExcludeId] MaritalStatusView maritalStatus)
         {
             if (!Validator.CanCreate(maritalStatus))
+            {
                 return View(maritalStatus);
+            }
 
             Service.Create(maritalStatus);
 
@@ -53,7 +55,9 @@ namespace AppLogistics.Controllers.Configuration
         public ActionResult Edit(MaritalStatusView maritalStatus)
         {
             if (!Validator.CanEdit(maritalStatus))
+            {
                 return View(maritalStatus);
+            }
 
             Service.Edit(maritalStatus);
 
@@ -70,6 +74,11 @@ namespace AppLogistics.Controllers.Configuration
         [ActionName("Delete")]
         public RedirectToActionResult DeleteConfirmed(int id)
         {
+            if (!Validator.CanDelete(id))
+            {
+                return RedirectToAction("Delete", new { id });
+            }
+
             Service.Delete(id);
 
             return RedirectToAction("Index");

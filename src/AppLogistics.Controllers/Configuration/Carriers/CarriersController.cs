@@ -30,7 +30,9 @@ namespace AppLogistics.Controllers.Configuration
         public ActionResult Create([BindExcludeId] CarrierView carrier)
         {
             if (!Validator.CanCreate(carrier))
+            {
                 return View(carrier);
+            }
 
             Service.Create(carrier);
 
@@ -53,7 +55,9 @@ namespace AppLogistics.Controllers.Configuration
         public ActionResult Edit(CarrierView carrier)
         {
             if (!Validator.CanEdit(carrier))
+            {
                 return View(carrier);
+            }
 
             Service.Edit(carrier);
 

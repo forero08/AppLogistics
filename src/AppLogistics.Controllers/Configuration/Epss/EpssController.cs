@@ -30,7 +30,9 @@ namespace AppLogistics.Controllers.Configuration
         public ActionResult Create([BindExcludeId] EpsView eps)
         {
             if (!Validator.CanCreate(eps))
+            {
                 return View(eps);
+            }
 
             Service.Create(eps);
 
@@ -53,7 +55,9 @@ namespace AppLogistics.Controllers.Configuration
         public ActionResult Edit(EpsView eps)
         {
             if (!Validator.CanEdit(eps))
+            {
                 return View(eps);
+            }
 
             Service.Edit(eps);
 
@@ -70,6 +74,11 @@ namespace AppLogistics.Controllers.Configuration
         [ActionName("Delete")]
         public RedirectToActionResult DeleteConfirmed(int id)
         {
+            if (!Validator.CanDelete(id))
+            {
+                return RedirectToAction("Delete", new { id });
+            }
+
             Service.Delete(id);
 
             return RedirectToAction("Index");

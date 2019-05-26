@@ -15,10 +15,11 @@
         "MinLength": "El campo '{0}' debe tener al menos {1} caracteres de longitud.",
         "MinValue": "El campo '{0}' debe ser mayor o igual a {1}.",
         "Numeric": "El campo '{0}' debe ser numérico.",
+        "Phone": "El campo {0} no es un número de teléfono válido.",
         "Range": "El campo '{0}' debe estar entre {1} y {2}.",
         "Required": "El campo '{0}' es requerido.",
         "RequiredValue": "El valor es requerido.",
         "StringLength": "El campo '{0}' no debe exceder una longitud máxima de {1}.",
-        "StringLengthRange": "El campo '{0}' debe contener entre {2} y {1} símbolos."
+        "StringLengthRange": "El campo '{0}' debe contener entre {2} y {1} caracteres."
     }
 }

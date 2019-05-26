@@ -165,6 +165,41 @@ namespace AppLogistics.Data.Migrations
                     b.ToTable("Carrier");
                 });
 
+            modelBuilder.Entity("AppLogistics.Objects.Client", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasMaxLength(64);
+
+                    b.Property<int>("BranchOfficeId");
+
+                    b.Property<string>("Contact")
+                        .HasMaxLength(32);
+
+                    b.Property<DateTime>("CreationDate");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(32);
+
+                    b.Property<string>("Nit")
+                        .IsRequired()
+                        .HasMaxLength(16);
+
+                    b.Property<string>("Phone")
+                        .HasMaxLength(16);
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BranchOfficeId");
+
+                    b.ToTable("Client");
+                });
+
             modelBuilder.Entity("AppLogistics.Objects.DocumentType", b =>
                 {
                     b.Property<int>("Id")
@@ -184,6 +219,117 @@ namespace AppLogistics.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("DocumentType");
+                });
+
+            modelBuilder.Entity("AppLogistics.Objects.Employee", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasMaxLength(128);
+
+                    b.Property<int>("AfpId");
+
+                    b.Property<DateTime>("BornDate");
+
+                    b.Property<int>("BranchOfficeId");
+
+                    b.Property<string>("Comments")
+                        .HasMaxLength(512);
+
+                    b.Property<DateTime>("CreationDate");
+
+                    b.Property<string>("DocumentNumber")
+                        .IsRequired()
+                        .HasMaxLength(16);
+
+                    b.Property<int>("DocumentTypeId");
+
+                    b.Property<string>("Email")
+                        .HasMaxLength(128);
+
+                    b.Property<string>("EmergencyContact")
+                        .HasMaxLength(32);
+
+                    b.Property<string>("EmergencyContactPhone")
+                        .HasMaxLength(16);
+
+                    b.Property<int>("EpsId");
+
+                    b.Property<bool>("HasAdmissionTest");
+
+                    b.Property<bool>("HasContract");
+
+                    b.Property<bool>("HasCurriculumVitae");
+
+                    b.Property<bool>("HasDisciplinaryBackground");
+
+                    b.Property<bool>("HasDocumentCopy");
+
+                    b.Property<bool>("HasEndownmentLetter");
+
+                    b.Property<bool>("HasInternalRegulations");
+
+                    b.Property<bool>("HasKnowledgeTest");
+
+                    b.Property<bool>("HasLaborCertification");
+
+                    b.Property<bool>("HasMilitaryIdCopy");
+
+                    b.Property<bool>("HasPersonalReference");
+
+                    b.Property<bool>("HasPhotos");
+
+                    b.Property<DateTime>("HireDate");
+
+                    b.Property<string>("HomePhone")
+                        .HasMaxLength(16);
+
+                    b.Property<string>("InternalCode")
+                        .IsRequired()
+                        .HasMaxLength(16);
+
+                    b.Property<bool>("IsCriticalPosition");
+
+                    b.Property<int>("MaritalStatusId");
+
+                    b.Property<string>("MobilePhone")
+                        .IsRequired()
+                        .HasMaxLength(16);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(32);
+
+                    b.Property<string>("ResidenceCity")
+                        .IsRequired()
+                        .HasMaxLength(32);
+
+                    b.Property<DateTime?>("RetirementDate");
+
+                    b.Property<string>("Surname")
+                        .IsRequired()
+                        .HasMaxLength(32);
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AfpId");
+
+                    b.HasIndex("BranchOfficeId");
+
+                    b.HasIndex("DocumentTypeId");
+
+                    b.HasIndex("EpsId");
+
+                    b.HasIndex("InternalCode")
+                        .IsUnique();
+
+                    b.HasIndex("MaritalStatusId");
+
+                    b.ToTable("Employee");
                 });
 
             modelBuilder.Entity("AppLogistics.Objects.Eps", b =>
@@ -326,6 +472,42 @@ namespace AppLogistics.Data.Migrations
                     b.HasOne("AppLogistics.Objects.Role", "Role")
                         .WithMany("Accounts")
                         .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Restrict);
+                });
+
+            modelBuilder.Entity("AppLogistics.Objects.Client", b =>
+                {
+                    b.HasOne("AppLogistics.Objects.BranchOffice", "BranchOffice")
+                        .WithMany("Clients")
+                        .HasForeignKey("BranchOfficeId")
+                        .OnDelete(DeleteBehavior.Restrict);
+                });
+
+            modelBuilder.Entity("AppLogistics.Objects.Employee", b =>
+                {
+                    b.HasOne("AppLogistics.Objects.Afp", "Afp")
+                        .WithMany("Employees")
+                        .HasForeignKey("AfpId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("AppLogistics.Objects.BranchOffice", "BranchOffice")
+                        .WithMany("Employees")
+                        .HasForeignKey("BranchOfficeId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("AppLogistics.Objects.DocumentType", "DocumentType")
+                        .WithMany("Employees")
+                        .HasForeignKey("DocumentTypeId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("AppLogistics.Objects.Eps", "Eps")
+                        .WithMany("Employees")
+                        .HasForeignKey("EpsId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("AppLogistics.Objects.MaritalStatus", "MaritalStatus")
+                        .WithMany("Employees")
+                        .HasForeignKey("MaritalStatusId")
                         .OnDelete(DeleteBehavior.Restrict);
                 });
 

@@ -14,6 +14,8 @@
         "BranchOffices": "Branch Offices",
         "Carrier": "Carrier",
         "Carriers": "Carriers",
+        "Client": "Client",
+        "Clients": "Clients",
         "DocumentType": "Document type",
         "DocumentTypes": "Document types",
         "Eps": "Eps",
@@ -23,7 +25,10 @@
         "Product": "Product",
         "Products": "Products",
         "VehicleType": "Vehicle Type",
-        "VehicleTypes": "Vehicle Types"
+        "VehicleTypes": "Vehicle Types",
+
+        "Employee": "Employee",
+        "Employees": "Employees"
     },
     "Titles": {
         "AdministrationAccountsCreate": "Account creation",
@@ -35,7 +40,7 @@
         "AdministrationRolesDetails": "Role details",
         "AdministrationRolesEdit": "Role edit",
         "AdministrationRolesIndex": "Roles",
-        "AuthLogin": "Login",
+        "AuthLogin": "AppLogistics",
         "AuthRecover": "Recover",
         "AuthReset": "Reset",
         "HomeError": "Error",
@@ -64,6 +69,11 @@
         "ConfigurationCarriersDetails": "Carrier details",
         "ConfigurationCarriersEdit": "Carrier edit",
         "ConfigurationCarriersIndex": "Carriers",
+        "ConfigurationClientsCreate": "Client creation",
+        "ConfigurationClientsDelete": "Client deletion",
+        "ConfigurationClientsDetails": "Client details",
+        "ConfigurationClientsEdit": "Client edit",
+        "ConfigurationClientsIndex": "Clients",
         "ConfigurationDocumentTypesCreate": "Document type creation",
         "ConfigurationDocumentTypesDelete": "Document type deletion",
         "ConfigurationDocumentTypesDetails": "Document type details",
@@ -88,6 +98,12 @@
         "ConfigurationVehicleTypesDelete": "Vehicle Type deletion",
         "ConfigurationVehicleTypesDetails": "Vehicle Type details",
         "ConfigurationVehicleTypesEdit": "Vehicle Type Edit",
-        "ConfigurationVehicleTypesIndex": "Vehicle Types"
+        "ConfigurationVehicleTypesIndex": "Vehicle Types",
+
+        "OperationEmployeesCreate": "Employee creation",
+        "OperationEmployeesDelete": "Employee deletion",
+        "OperationEmployeesDetails": "Employee details",
+        "OperationEmployeesEdit": "Employee Edit",
+        "OperationEmployeesIndex": "Employees"
     }
 }

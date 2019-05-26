@@ -30,7 +30,9 @@ namespace AppLogistics.Controllers.Configuration
         public ActionResult Create([BindExcludeId] BranchOfficeView branchOffice)
         {
             if (!Validator.CanCreate(branchOffice))
+            {
                 return View(branchOffice);
+            }
 
             Service.Create(branchOffice);
 
@@ -53,7 +55,9 @@ namespace AppLogistics.Controllers.Configuration
         public ActionResult Edit(BranchOfficeView branchOffice)
         {
             if (!Validator.CanEdit(branchOffice))
+            {
                 return View(branchOffice);
+            }
 
             Service.Edit(branchOffice);
 
@@ -70,6 +74,11 @@ namespace AppLogistics.Controllers.Configuration
         [ActionName("Delete")]
         public RedirectToActionResult DeleteConfirmed(int id)
         {
+            if (!Validator.CanDelete(id))
+            {
+                return RedirectToAction("Delete", new { id });
+            }
+
             Service.Delete(id);
 
             return RedirectToAction("Index");

@@ -2,5 +2,8 @@
     "Titles": {
         "Name": "Nombre",
         "Nit": "Nit"
+    },
+    "Validations": {
+        "AssociatedEmployees": "Existen empleados asociados a esta Afp. Para eliminar esta Afp, debe eliminar primero esos empleados o asociarles una Afp diferente."
     }
 }

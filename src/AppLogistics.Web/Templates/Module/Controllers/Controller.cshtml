@@ -34,7 +34,9 @@ namespace @Model.ControllerNamespace
         public ActionResult Create([BindExcludeId] @Model.View @Model.ModelVarName)
         {
             if (!Validator.CanCreate(@Model.ModelVarName))
+            {
                 return View(@Model.ModelVarName);
+            }
 
             Service.Create(@Model.ModelVarName);
 
@@ -57,7 +59,9 @@ namespace @Model.ControllerNamespace
         public ActionResult Edit(@Model.View @Model.ModelVarName)
         {
             if (!Validator.CanEdit(@Model.ModelVarName))
+            {
                 return View(@Model.ModelVarName);
+            }
 
             Service.Edit(@Model.ModelVarName);
 

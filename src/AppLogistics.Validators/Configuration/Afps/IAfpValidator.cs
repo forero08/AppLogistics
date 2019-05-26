@@ -6,5 +6,6 @@ namespace AppLogistics.Validators
     {
         bool CanCreate(AfpView view);
         bool CanEdit(AfpView view);
+        bool CanDelete(int id);
     }
 }

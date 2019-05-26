@@ -1,7 +1,8 @@
 ﻿{
     "Areas": {
         "Administration": "Administración",
-        "Configuration": "Configuración"
+        "Configuration": "Configuración",
+        "Operation":  "Operación"
     },
     "Controllers": {
         "AdministrationAccounts": "Cuentas",
@@ -11,11 +12,14 @@
         "ConfigurationAfps": "Afps",
         "ConfigurationBranchOffices": "Sucursales",
         "ConfigurationCarriers": "Transportadoras",
+        "ConfigurationClients": "Clientes",
         "ConfigurationDocumentTypes": "Tipos de documento",
         "ConfigurationEpss": "Eps's",
         "ConfigurationMaritalStatuses": "Estados civiles",
         "ConfigurationProducts": "Productos",
-        "ConfigurationVehicleTypes": "Tipos de vehículo"
+        "ConfigurationVehicleTypes": "Tipos de vehículo",
+
+        "OperationEmployees": "Empleados"
     },
     "Actions": {
         "AdministrationAccountsCreate": "Crear",
@@ -48,6 +52,11 @@
         "ConfigurationCarriersDetails": "Detalles",
         "ConfigurationCarriersEdit": "Editar",
         "ConfigurationCarriersIndex": "Índice",
+        "ConfigurationClientsCreate": "Crear",
+        "ConfigurationClientsDelete": "Eliminar",
+        "ConfigurationClientsDetails": "Detalles",
+        "ConfigurationClientsEdit": "Editar",
+        "ConfigurationClientsIndex": "Índice",
         "ConfigurationDocumentTypesCreate": "Crear",
         "ConfigurationDocumentTypesDelete": "Eliminar",
         "ConfigurationDocumentTypesDetails": "Detalles",
@@ -72,6 +81,12 @@
         "ConfigurationVehicleTypesDelete": "Eliminar",
         "ConfigurationVehicleTypesDetails": "Detalles",
         "ConfigurationVehicleTypesEdit": "Editar",
-        "ConfigurationVehicleTypesIndex": "Índice"
+        "ConfigurationVehicleTypesIndex": "Índice",
+
+        "OperationEmployeesCreate": "Crear",
+        "OperationEmployeesDelete": "Eliminar",
+        "OperationEmployeesDetails": "Detalles",
+        "OperationEmployeesEdit": "Editar",
+        "OperationEmployeesIndex": "Índice"
     }
 }

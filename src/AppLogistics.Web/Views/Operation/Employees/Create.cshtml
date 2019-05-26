@@ -1,0 +1,382 @@
+@model EmployeeCreateEditView
+
+<div class="col">
+    <div class="widget-box">
+        <div class="widget-header">
+            <span class="icon fa fa-th-list"></span>
+            <h5>@Resource.ForHeader("Employee")</h5>
+        </div>
+        <div class="widget-content">
+            <form asp-antiforgery="true">
+                <div class="form-group">
+                    <div class="control-label col-md-3 col-lg-2">
+                        <label asp-for="InternalCode"></label>
+                    </div>
+                    <div class="control-content col-md-9 col-lg-5">
+                        <input asp-for="InternalCode" />
+                    </div>
+                    <div class="control-validation col">
+                        <span asp-validation-for="InternalCode"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-md-3 col-lg-2">
+                        <label asp-for="BranchOfficeId"></label>
+                    </div>
+                    <div class="control-content col-md-9 col-lg-5">
+                        <div mvc-lookup-for="BranchOfficeId" url="~/Lookup/BranchOffice" title="@Resource.ForLookup("BranchOffice")"></div>
+                    </div>
+                    <div class="control-validation col">
+                        <span asp-validation-for="BranchOfficeId"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-md-3 col-lg-2">
+                        <label asp-for="DocumentTypeId"></label>
+                    </div>
+                    <div class="control-content col-md-9 col-lg-5">
+                        <div mvc-lookup-for="DocumentTypeId" url="~/Lookup/DocumentType" title="@Resource.ForLookup("DocumentType")"></div>
+                    </div>
+                    <div class="control-validation col">
+                        <span asp-validation-for="DocumentTypeId"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-md-3 col-lg-2">
+                        <label asp-for="DocumentNumber"></label>
+                    </div>
+                    <div class="control-content col-md-9 col-lg-5">
+                        <input asp-for="DocumentNumber" />
+                    </div>
+                    <div class="control-validation col">
+                        <span asp-validation-for="DocumentNumber"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-md-3 col-lg-2">
+                        <label asp-for="Name"></label>
+                    </div>
+                    <div class="control-content col-md-9 col-lg-5">
+                        <input asp-for="Name" />
+                    </div>
+                    <div class="control-validation col">
+                        <span asp-validation-for="Name"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-md-3 col-lg-2">
+                        <label asp-for="Surname"></label>
+                    </div>
+                    <div class="control-content col-md-9 col-lg-5">
+                        <input asp-for="Surname" />
+                    </div>
+                    <div class="control-validation col">
+                        <span asp-validation-for="Surname"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-md-3 col-lg-2">
+                        <label asp-for="BornDate"></label>
+                    </div>
+                    <div class="control-content col-md-9 col-lg-5">
+                        <input asp-for="BornDate" asp-format="{0:d}" class="datepicker" type="text" />
+                    </div>
+                    <div class="control-validation col">
+                        <span asp-validation-for="BornDate"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-md-3 col-lg-2">
+                        <label asp-for="HireDate"></label>
+                    </div>
+                    <div class="control-content col-md-9 col-lg-5">
+                        <input asp-for="HireDate" asp-format="{0:d}" class="datepicker" type="text" />
+                    </div>
+                    <div class="control-validation col">
+                        <span asp-validation-for="HireDate"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-md-3 col-lg-2">
+                        <label asp-for="RetirementDate"></label>
+                    </div>
+                    <div class="control-content col-md-9 col-lg-5">
+                        <input asp-for="RetirementDate" asp-format="{0:d}" class="datepicker" type="text" />
+                    </div>
+                    <div class="control-validation col">
+                        <span asp-validation-for="RetirementDate"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-md-3 col-lg-2">
+                        <label asp-for="ResidenceCity"></label>
+                    </div>
+                    <div class="control-content col-md-9 col-lg-5">
+                        <input asp-for="ResidenceCity" />
+                    </div>
+                    <div class="control-validation col">
+                        <span asp-validation-for="ResidenceCity"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-md-3 col-lg-2">
+                        <label asp-for="Address"></label>
+                    </div>
+                    <div class="control-content col-md-9 col-lg-5">
+                        <input asp-for="Address" />
+                    </div>
+                    <div class="control-validation col">
+                        <span asp-validation-for="Address"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-md-3 col-lg-2">
+                        <label asp-for="MobilePhone"></label>
+                    </div>
+                    <div class="control-content col-md-9 col-lg-5">
+                        <input asp-for="MobilePhone" />
+                    </div>
+                    <div class="control-validation col">
+                        <span asp-validation-for="MobilePhone"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-md-3 col-lg-2">
+                        <label asp-for="HomePhone"></label>
+                    </div>
+                    <div class="control-content col-md-9 col-lg-5">
+                        <input asp-for="HomePhone" />
+                    </div>
+                    <div class="control-validation col">
+                        <span asp-validation-for="HomePhone"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-md-3 col-lg-2">
+                        <label asp-for="Email"></label>
+                    </div>
+                    <div class="control-content col-md-9 col-lg-5">
+                        <input asp-for="Email" />
+                    </div>
+                    <div class="control-validation col">
+                        <span asp-validation-for="Email"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-md-3 col-lg-2">
+                        <label asp-for="MaritalStatusId"></label>
+                    </div>
+                    <div class="control-content col-md-9 col-lg-5">
+                        <div mvc-lookup-for="MaritalStatusId" url="~/Lookup/MaritalStatus" title="@Resource.ForLookup("MaritalStatus")"></div>
+                    </div>
+                    <div class="control-validation col">
+                        <span asp-validation-for="MaritalStatusId"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-md-3 col-lg-2">
+                        <label asp-for="EmergencyContact"></label>
+                    </div>
+                    <div class="control-content col-md-9 col-lg-5">
+                        <input asp-for="EmergencyContact" />
+                    </div>
+                    <div class="control-validation col">
+                        <span asp-validation-for="EmergencyContact"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-md-3 col-lg-2">
+                        <label asp-for="EmergencyContactPhone"></label>
+                    </div>
+                    <div class="control-content col-md-9 col-lg-5">
+                        <input asp-for="EmergencyContactPhone" />
+                    </div>
+                    <div class="control-validation col">
+                        <span asp-validation-for="EmergencyContactPhone"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-md-3 col-lg-2">
+                        <label asp-for="AfpId"></label>
+                    </div>
+                    <div class="control-content col-md-9 col-lg-5">
+                        <div mvc-lookup-for="AfpId" url="~/Lookup/Afp" title="@Resource.ForLookup("Afp")"></div>
+                    </div>
+                    <div class="control-validation col">
+                        <span asp-validation-for="AfpId"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-md-3 col-lg-2">
+                        <label asp-for="EpsId"></label>
+                    </div>
+                    <div class="control-content col-md-9 col-lg-5">
+                        <div mvc-lookup-for="EpsId" url="~/Lookup/Eps" title="@Resource.ForLookup("Eps")"></div>
+                    </div>
+                    <div class="control-validation col">
+                        <span asp-validation-for="EpsId"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-md-3 col-lg-2">
+                        <label asp-for="HasCurriculumVitae"></label>
+                    </div>
+                    <div class="control-content col-md-9 col-lg-5">
+                        <input asp-for="HasCurriculumVitae" />
+                    </div>
+                    <div class="control-validation col">
+                        <span asp-validation-for="HasCurriculumVitae"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-md-3 col-lg-2">
+                        <label asp-for="HasDocumentCopy"></label>
+                    </div>
+                    <div class="control-content col-md-9 col-lg-5">
+                        <input asp-for="HasDocumentCopy" />
+                    </div>
+                    <div class="control-validation col">
+                        <span asp-validation-for="HasDocumentCopy"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-md-3 col-lg-2">
+                        <label asp-for="HasPhotos"></label>
+                    </div>
+                    <div class="control-content col-md-9 col-lg-5">
+                        <input asp-for="HasPhotos" />
+                    </div>
+                    <div class="control-validation col">
+                        <span asp-validation-for="HasPhotos"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-md-3 col-lg-2">
+                        <label asp-for="HasMilitaryIdCopy"></label>
+                    </div>
+                    <div class="control-content col-md-9 col-lg-5">
+                        <input asp-for="HasMilitaryIdCopy" />
+                    </div>
+                    <div class="control-validation col">
+                        <span asp-validation-for="HasMilitaryIdCopy"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-md-3 col-lg-2">
+                        <label asp-for="HasLaborCertification"></label>
+                    </div>
+                    <div class="control-content col-md-9 col-lg-5">
+                        <input asp-for="HasLaborCertification" />
+                    </div>
+                    <div class="control-validation col">
+                        <span asp-validation-for="HasLaborCertification"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-md-3 col-lg-2">
+                        <label asp-for="HasPersonalReference"></label>
+                    </div>
+                    <div class="control-content col-md-9 col-lg-5">
+                        <input asp-for="HasPersonalReference" />
+                    </div>
+                    <div class="control-validation col">
+                        <span asp-validation-for="HasPersonalReference"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-md-3 col-lg-2">
+                        <label asp-for="HasDisciplinaryBackground"></label>
+                    </div>
+                    <div class="control-content col-md-9 col-lg-5">
+                        <input asp-for="HasDisciplinaryBackground" />
+                    </div>
+                    <div class="control-validation col">
+                        <span asp-validation-for="HasDisciplinaryBackground"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-md-3 col-lg-2">
+                        <label asp-for="HasKnowledgeTest"></label>
+                    </div>
+                    <div class="control-content col-md-9 col-lg-5">
+                        <input asp-for="HasKnowledgeTest" />
+                    </div>
+                    <div class="control-validation col">
+                        <span asp-validation-for="HasKnowledgeTest"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-md-3 col-lg-2">
+                        <label asp-for="HasAdmissionTest"></label>
+                    </div>
+                    <div class="control-content col-md-9 col-lg-5">
+                        <input asp-for="HasAdmissionTest" />
+                    </div>
+                    <div class="control-validation col">
+                        <span asp-validation-for="HasAdmissionTest"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-md-3 col-lg-2">
+                        <label asp-for="HasContract"></label>
+                    </div>
+                    <div class="control-content col-md-9 col-lg-5">
+                        <input asp-for="HasContract" />
+                    </div>
+                    <div class="control-validation col">
+                        <span asp-validation-for="HasContract"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-md-3 col-lg-2">
+                        <label asp-for="HasInternalRegulations"></label>
+                    </div>
+                    <div class="control-content col-md-9 col-lg-5">
+                        <input asp-for="HasInternalRegulations" />
+                    </div>
+                    <div class="control-validation col">
+                        <span asp-validation-for="HasInternalRegulations"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-md-3 col-lg-2">
+                        <label asp-for="HasEndownmentLetter"></label>
+                    </div>
+                    <div class="control-content col-md-9 col-lg-5">
+                        <input asp-for="HasEndownmentLetter" />
+                    </div>
+                    <div class="control-validation col">
+                        <span asp-validation-for="HasEndownmentLetter"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-md-3 col-lg-2">
+                        <label asp-for="IsCriticalPosition"></label>
+                    </div>
+                    <div class="control-content col-md-9 col-lg-5">
+                        <input asp-for="IsCriticalPosition" />
+                    </div>
+                    <div class="control-validation col">
+                        <span asp-validation-for="IsCriticalPosition"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-md-3 col-lg-2">
+                        <label asp-for="Comments"></label>
+                    </div>
+                    <div class="control-content col-md-9 col-lg-5">
+                        <input asp-for="Comments" />
+                    </div>
+                    <div class="control-validation col">
+                        <span asp-validation-for="Comments"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-actions col-lg-7">
+                        <button class="btn btn-primary">@Resource.ForAction("Submit")</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

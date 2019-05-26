@@ -30,7 +30,9 @@ namespace AppLogistics.Controllers.Configuration
         public ActionResult Create([BindExcludeId] AfpView afp)
         {
             if (!Validator.CanCreate(afp))
+            {
                 return View(afp);
+            }
 
             Service.Create(afp);
 
@@ -53,7 +55,9 @@ namespace AppLogistics.Controllers.Configuration
         public ActionResult Edit(AfpView afp)
         {
             if (!Validator.CanEdit(afp))
+            {
                 return View(afp);
+            }
 
             Service.Edit(afp);
 
@@ -70,6 +74,11 @@ namespace AppLogistics.Controllers.Configuration
         [ActionName("Delete")]
         public RedirectToActionResult DeleteConfirmed(int id)
         {
+            if (!Validator.CanDelete(id))
+            {
+                return RedirectToAction("Delete", new { id });
+            }
+
             Service.Delete(id);
 
             return RedirectToAction("Index");

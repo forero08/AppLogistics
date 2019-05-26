@@ -80,6 +80,11 @@ namespace AppLogistics.Components.Mvc
                 return new LettersNumbersAdapter((LettersNumbersAttribute)attribute);
             }
 
+            if (type == typeof(PhoneAttribute))
+            {
+                return new PhoneAdapter((PhoneAttribute)attribute);
+            }
+
             return null;
         }
     }

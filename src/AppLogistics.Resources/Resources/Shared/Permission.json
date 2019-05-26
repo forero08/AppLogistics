@@ -1,7 +1,8 @@
 ﻿{
     "Areas": {
         "Administration": "Administration",
-        "Configuration": "Configuration"
+        "Configuration": "Configuration",
+        "Operation":  "Operation"
     },
     "Controllers": {
         "AdministrationAccounts": "Accounts",
@@ -11,11 +12,14 @@
         "ConfigurationAfps": "Afps",
         "ConfigurationBranchOffices": "Branch Offices",
         "ConfigurationCarriers": "Carriers",
+        "ConfigurationClients": "Clients",
         "ConfigurationDocumentTypes": "Document Types",
         "ConfigurationEpss": "Eps's",
         "ConfigurationMaritalStatuses": "Marital Statuses",
         "ConfigurationProducts": "Products",
-        "ConfigurationVehicleTypes": "Vehicle Types"
+        "ConfigurationVehicleTypes": "Vehicle Types",
+
+        "OperationEmployees": "Employees"
     },
     "Actions": {
         "AdministrationAccountsCreate": "Create",
@@ -48,6 +52,11 @@
         "ConfigurationCarriersDetails": "Details",
         "ConfigurationCarriersEdit": "Edit",
         "ConfigurationCarriersIndex": "Index",
+        "ConfigurationClientsCreate": "Create",
+        "ConfigurationClientsDelete": "Delete",
+        "ConfigurationClientsDetails": "Details",
+        "ConfigurationClientsEdit": "Edit",
+        "ConfigurationClientsIndex": "Index",
         "ConfigurationDocumentTypesCreate": "Create",
         "ConfigurationDocumentTypesDelete": "Delete",
         "ConfigurationDocumentTypesDetails": "Details",
@@ -72,6 +81,12 @@
         "ConfigurationVehicleTypesDelete": "Delete",
         "ConfigurationVehicleTypesDetails": "Details",
         "ConfigurationVehicleTypesEdit": "Edit",
-        "ConfigurationVehicleTypesIndex": "Index"
+        "ConfigurationVehicleTypesIndex": "Index",
+
+        "OperationEmployeesCreate": "Create",
+        "OperationEmployeesDelete": "Delete",
+        "OperationEmployeesDetails": "Details",
+        "OperationEmployeesEdit": "Edit",
+        "OperationEmployeesIndex": "Index"
     }
 }

@@ -22,6 +22,7 @@ namespace AppLogistics.Controllers.Configuration.Tests
         public MaritalStatusesControllerTests()
         {
             validator = Substitute.For<IMaritalStatusValidator>();
+            validator.CanDelete(Arg.Any<int>()).Returns(true);
             service = Substitute.For<IMaritalStatusService>();
 
             maritalStatus = ObjectsFactory.CreateMaritalStatusView();
