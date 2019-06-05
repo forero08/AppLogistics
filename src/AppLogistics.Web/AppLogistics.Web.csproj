@@ -60,7 +60,11 @@
     <PackageReference Include="Microsoft.AspNetCore.Server.IISIntegration" Version="2.2.1" />
   </ItemGroup>
 
-  <Target Name="PrePublishScript" BeforeTargets="PrepareForPublish">
+    <ItemGroup>
+        <Compile Remove="Templates/**" Condition="'$(Configuration)'=='Release'" />
+    </ItemGroup>
+
+    <Target Name="PrePublishScript" BeforeTargets="PrepareForPublish">
     <Exec Command="npm install" />
     <Exec Command="npm run gulp minify" />
   </Target>

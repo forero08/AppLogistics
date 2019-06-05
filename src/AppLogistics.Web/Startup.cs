@@ -129,14 +129,14 @@ namespace AppLogistics.Web
 
         public void RegisterLogging(IServiceCollection services)
         {
-            if (Config["Application:Env"] != EnvironmentName.Development)
-            {
-                services.AddLogging(builder => builder.AddProvider(new FileLoggerProvider(Config)));
-            }
-            else
-            {
-                services.AddLogging(builder => builder.AddConsole());
-            }
+            //if (Config["Application:Env"] != EnvironmentName.Development)
+            //{
+            //    services.AddLogging(builder => builder.AddProvider(new FileLoggerProvider(Config)));
+            //}
+            //else
+            //{
+            //    services.AddLogging(builder => builder.AddConsole());
+            //}
         }
 
         public void RegisterServices(IServiceCollection services)
@@ -191,16 +191,16 @@ namespace AppLogistics.Web
 
         public void RegisterMiddleware(IApplicationBuilder app)
         {
-            if (Config["Application:Env"] == EnvironmentName.Development)
-            {
-                app.UseMiddleware<DeveloperExceptionPageMiddleware>();
-            }
-            else
-            {
-                app.UseMiddleware<ErrorPagesMiddleware>();
-            }
+            //if (Config["Application:Env"] == EnvironmentName.Development)
+            //{
+            //    app.UseMiddleware<DeveloperExceptionPageMiddleware>();
+            //}
+            //else
+            //{
+            //    app.UseMiddleware<ErrorPagesMiddleware>();
+            //}
 
-            app.UseMiddleware<SecureHeadersMiddleware>();
+            //app.UseMiddleware<SecureHeadersMiddleware>();
 
             app.UseHttpsRedirection();
             app.UseAuthentication();
