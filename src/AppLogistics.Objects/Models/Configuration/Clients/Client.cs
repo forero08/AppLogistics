@@ -6,7 +6,7 @@ namespace AppLogistics.Objects
     public class Client : BaseModel
     {
         [Required]
-        [StringLength(32)]
+        [StringLength(128)]
         public string Name { get; set; }
 
         [Required]

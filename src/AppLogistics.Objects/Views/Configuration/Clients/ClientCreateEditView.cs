@@ -5,7 +5,7 @@ namespace AppLogistics.Objects
     public class ClientCreateEditView : BaseView
     {
         [Required]
-        [StringLength(32)]
+        [StringLength(128)]
         public string Name { get; set; }
 
         [Required]
