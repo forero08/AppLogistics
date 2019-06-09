@@ -1,0 +1,8 @@
+﻿{
+    "Titles": {
+        "Name": "Nombre"
+    },
+    "Validations": {
+        "AssociatedEmployees": "Existen empleados asociados a este Grupo étnico. Para eliminar este Grupo étnico, debe eliminar primero esos empleados o asociarles un Grupo étnico diferente."
+    }
+}

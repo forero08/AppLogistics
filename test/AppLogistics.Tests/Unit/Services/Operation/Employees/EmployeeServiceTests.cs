@@ -52,6 +52,7 @@ namespace AppLogistics.Services.Tests
             Assert.Equal(expected.HasAdmissionTest, actual.HasAdmissionTest);
             Assert.Equal(expected.HasKnowledgeTest, actual.HasKnowledgeTest);
             Assert.Equal(expected.HasDocumentCopy, actual.HasDocumentCopy);
+            Assert.Equal(expected.EthnicGroupName, actual.EthnicGroupName);
             Assert.Equal(expected.MaritalStatusName, actual.MaritalStatusName);
             Assert.Equal(expected.BranchOfficeName, actual.BranchOfficeName);
             Assert.Equal(expected.DocumentNumber, actual.DocumentNumber);
@@ -105,6 +106,7 @@ namespace AppLogistics.Services.Tests
                 Assert.Equal(expected[i].HasAdmissionTest, actual[i].HasAdmissionTest);
                 Assert.Equal(expected[i].HasKnowledgeTest, actual[i].HasKnowledgeTest);
                 Assert.Equal(expected[i].HasDocumentCopy, actual[i].HasDocumentCopy);
+                Assert.Equal(expected[i].EthnicGroupName, actual[i].EthnicGroupName);
                 Assert.Equal(expected[i].MaritalStatusName, actual[i].MaritalStatusName);
                 Assert.Equal(expected[i].BranchOfficeName, actual[i].BranchOfficeName);
                 Assert.Equal(expected[i].DocumentNumber, actual[i].DocumentNumber);
@@ -158,6 +160,7 @@ namespace AppLogistics.Services.Tests
             Assert.Equal(expected.HasAdmissionTest, actual.HasAdmissionTest);
             Assert.Equal(expected.HasKnowledgeTest, actual.HasKnowledgeTest);
             Assert.Equal(expected.HasDocumentCopy, actual.HasDocumentCopy);
+            Assert.Equal(expected.EthnicGroupId, actual.EthnicGroupId);
             Assert.Equal(expected.MaritalStatusId, actual.MaritalStatusId);
             Assert.Equal(expected.BranchOfficeId, actual.BranchOfficeId);
             Assert.Equal(expected.DocumentNumber, actual.DocumentNumber);
@@ -200,6 +203,7 @@ namespace AppLogistics.Services.Tests
             view.EmergencyContact = "EmergencyContact0";
             view.EmergencyContactPhone = "EmergencyContactPhone0";
             view.EpsId = 1;
+            view.EthnicGroupId = 1;
             view.HasAdmissionTest = true;
             view.HasContract = true;
             view.HasCurriculumVitae = true;
@@ -242,6 +246,7 @@ namespace AppLogistics.Services.Tests
             Assert.Equal(expected.HasAdmissionTest, actual.HasAdmissionTest);
             Assert.Equal(expected.HasKnowledgeTest, actual.HasKnowledgeTest);
             Assert.Equal(expected.HasDocumentCopy, actual.HasDocumentCopy);
+            Assert.Equal(expected.EthnicGroupId, actual.EthnicGroupId);
             Assert.Equal(expected.MaritalStatusId, actual.MaritalStatusId);
             Assert.Equal(expected.BranchOfficeId, actual.BranchOfficeId);
             Assert.Equal(expected.DocumentNumber, actual.DocumentNumber);
