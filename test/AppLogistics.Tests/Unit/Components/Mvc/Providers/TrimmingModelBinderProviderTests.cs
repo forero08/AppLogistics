@@ -43,6 +43,6 @@ namespace AppLogistics.Components.Mvc.Tests
             Assert.Null(new TrimmingModelBinderProvider().GetBinder(context));
         }
 
-        #endregion
+        #endregion GetBinder(ModelBinderProviderContext context)
     }
 }

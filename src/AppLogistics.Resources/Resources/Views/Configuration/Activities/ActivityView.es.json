@@ -1,5 +1,8 @@
 {
     "Titles": {
         "Name": "Nombre"
+    },
+    "Validations": {
+        "AssociatedRates": "Existen tarifas asociadas a esta Actividad. Para eliminar esta Actividad, debe eliminar primero esas tarifas o asociarles una Actividad diferente."
     }
 }

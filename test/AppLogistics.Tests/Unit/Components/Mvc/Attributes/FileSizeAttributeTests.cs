@@ -25,7 +25,7 @@ namespace AppLogistics.Components.Mvc.Tests
             Assert.Equal(expected, actual);
         }
 
-        #endregion
+        #endregion FileSizeAttribute(Double maximumMB)
 
         #region FormatErrorMessage(String name)
 
@@ -40,7 +40,7 @@ namespace AppLogistics.Components.Mvc.Tests
             Assert.Equal(expected, actual);
         }
 
-        #endregion
+        #endregion FormatErrorMessage(String name)
 
         #region IsValid(Object value)
 
@@ -98,6 +98,6 @@ namespace AppLogistics.Components.Mvc.Tests
             Assert.False(attribute.IsValid(files));
         }
 
-        #endregion
+        #endregion IsValid(Object value)
     }
 }

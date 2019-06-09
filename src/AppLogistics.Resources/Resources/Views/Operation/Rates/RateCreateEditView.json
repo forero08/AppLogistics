@@ -1,0 +1,11 @@
+﻿{
+    "Titles": {
+        "ActivityId": "Activity",
+        "ClientId": "Client",
+        "EmployeePercentage": "Percentage for employee",
+        "Name": "Name",
+        "Price": "Price",
+        "SplitFare": "Split fare",
+        "VehicleTypeId": "Vehicle type"
+    }
+}

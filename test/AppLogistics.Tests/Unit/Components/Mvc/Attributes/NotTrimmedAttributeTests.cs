@@ -22,7 +22,7 @@ namespace AppLogistics.Components.Mvc.Tests
             Assert.Equal(expected, actual);
         }
 
-        #endregion
+        #endregion NotTrimmedAttribute()
 
         #region BindModelAsync(ModelBindingContext context)
 
@@ -52,6 +52,6 @@ namespace AppLogistics.Components.Mvc.Tests
             Assert.Equal(expected, actual);
         }
 
-        #endregion
+        #endregion BindModelAsync(ModelBindingContext context)
     }
 }

@@ -45,7 +45,7 @@ namespace AppLogistics.Services.Tests
             Assert.Equal(expected.Id, actual.Id);
         }
 
-        #endregion
+        #endregion Get<TView>(String id)
 
         #region GetViews()
 
@@ -61,14 +61,14 @@ namespace AppLogistics.Services.Tests
 
             for (int i = 0; i < expected.Length || i < actual.Length; i++)
             {
-                                Assert.Equal(expected[i].CreationDate, actual[i].CreationDate);
+                Assert.Equal(expected[i].CreationDate, actual[i].CreationDate);
                 Assert.Equal(expected[i].Name, actual[i].Name);
                 Assert.Equal(expected[i].Nit, actual[i].Nit);
                 Assert.Equal(expected[i].Id, actual[i].Id);
             }
         }
 
-        #endregion
+        #endregion GetViews()
 
         #region Create(CarrierView view)
 
@@ -88,7 +88,7 @@ namespace AppLogistics.Services.Tests
             Assert.Equal(expected.Nit, actual.Nit);
         }
 
-        #endregion
+        #endregion Create(CarrierView view)
 
         #region Edit(CarrierView view)
 
@@ -110,7 +110,7 @@ namespace AppLogistics.Services.Tests
             Assert.Equal(expected.Id, actual.Id);
         }
 
-        #endregion
+        #endregion Edit(CarrierView view)
 
         #region Delete(String id)
 
@@ -122,6 +122,6 @@ namespace AppLogistics.Services.Tests
             Assert.Empty(context.Set<Carrier>());
         }
 
-        #endregion
+        #endregion Delete(String id)
     }
 }

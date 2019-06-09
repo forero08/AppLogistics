@@ -1,5 +1,8 @@
-{
+﻿{
     "Titles": {
         "Name": "Nombre"
+    },
+    "Validations": {
+        "AssociatedRates": "Existen tarifas asociadas a este Tipo de vehículo. Para eliminar este Tipo de vehículo, debe eliminar primero esas tarifas o asociarles un Tipo de vehículo diferente."
     }
 }

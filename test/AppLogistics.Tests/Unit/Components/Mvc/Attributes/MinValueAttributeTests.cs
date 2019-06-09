@@ -23,7 +23,7 @@ namespace AppLogistics.Components.Mvc.Tests
             Assert.Equal(expected, actual);
         }
 
-        #endregion
+        #endregion MinValueAttribute(Double minimum)
 
         #region FormatErrorMessage(String name)
 
@@ -38,7 +38,7 @@ namespace AppLogistics.Components.Mvc.Tests
             Assert.Equal(expected, actual);
         }
 
-        #endregion
+        #endregion FormatErrorMessage(String name)
 
         #region IsValid(Object value)
 
@@ -68,6 +68,6 @@ namespace AppLogistics.Components.Mvc.Tests
             Assert.False(attribute.IsValid("12.56M"));
         }
 
-        #endregion
+        #endregion IsValid(Object value)
     }
 }

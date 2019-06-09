@@ -45,7 +45,7 @@ namespace AppLogistics.Services.Tests
             Assert.Equal(expected.Id, actual.Id);
         }
 
-        #endregion
+        #endregion Get<TView>(String id)
 
         #region GetViews()
 
@@ -68,7 +68,7 @@ namespace AppLogistics.Services.Tests
             }
         }
 
-        #endregion
+        #endregion GetViews()
 
         #region Create(DocumentTypeView view)
 
@@ -88,7 +88,7 @@ namespace AppLogistics.Services.Tests
             Assert.Equal(expected.Name, actual.Name);
         }
 
-        #endregion
+        #endregion Create(DocumentTypeView view)
 
         #region Edit(DocumentTypeView view)
 
@@ -110,7 +110,7 @@ namespace AppLogistics.Services.Tests
             Assert.Equal(expected.Id, actual.Id);
         }
 
-        #endregion
+        #endregion Edit(DocumentTypeView view)
 
         #region Delete(String id)
 
@@ -122,6 +122,6 @@ namespace AppLogistics.Services.Tests
             Assert.Empty(context.Set<DocumentType>());
         }
 
-        #endregion
+        #endregion Delete(String id)
     }
 }

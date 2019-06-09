@@ -45,7 +45,7 @@ namespace AppLogistics.Validators.Tests
             Assert.Empty(validator.Alerts);
         }
 
-        #endregion
+        #endregion CanCreate(VehicleTypeView view)
 
         #region CanEdit(VehicleTypeView view)
 
@@ -65,6 +65,6 @@ namespace AppLogistics.Validators.Tests
             Assert.Empty(validator.Alerts);
         }
 
-        #endregion
+        #endregion CanEdit(VehicleTypeView view)
     }
 }

@@ -7,5 +7,6 @@ namespace AppLogistics.Validators
     {
         bool CanCreate(ActivityView view);
         bool CanEdit(ActivityView view);
+        bool CanDelete(int id);
     }
 }

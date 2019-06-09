@@ -23,6 +23,7 @@ namespace AppLogistics.Controllers.Configuration.Tests
         public ClientsControllerTests()
         {
             validator = Substitute.For<IClientValidator>();
+            validator.CanDelete(Arg.Any<int>()).Returns(true);
             service = Substitute.For<IClientService>();
 
             clientView = ObjectsFactory.CreateClientView();
@@ -45,7 +46,7 @@ namespace AppLogistics.Controllers.Configuration.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion Index()
 
         #region Create()
 
@@ -57,7 +58,7 @@ namespace AppLogistics.Controllers.Configuration.Tests
             Assert.Null(actual.Model);
         }
 
-        #endregion
+        #endregion Create()
 
         #region Create(ClientView client)
 
@@ -99,7 +100,7 @@ namespace AppLogistics.Controllers.Configuration.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion Create(ClientView client)
 
         #region Details(String id)
 
@@ -114,7 +115,7 @@ namespace AppLogistics.Controllers.Configuration.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion Details(String id)
 
         #region Edit(String id)
 
@@ -129,7 +130,7 @@ namespace AppLogistics.Controllers.Configuration.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion Edit(String id)
 
         #region Edit(ClientView client)
 
@@ -165,7 +166,7 @@ namespace AppLogistics.Controllers.Configuration.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion Edit(ClientView client)
 
         #region Delete(String id)
 
@@ -180,7 +181,7 @@ namespace AppLogistics.Controllers.Configuration.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion Delete(String id)
 
         #region DeleteConfirmed(String id)
 
@@ -201,6 +202,6 @@ namespace AppLogistics.Controllers.Configuration.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion DeleteConfirmed(String id)
     }
 }

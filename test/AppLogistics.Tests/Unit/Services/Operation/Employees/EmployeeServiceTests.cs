@@ -76,7 +76,7 @@ namespace AppLogistics.Services.Tests
             Assert.Equal(expected.Id, actual.Id);
         }
 
-        #endregion
+        #endregion Get<TView>(String id)
 
         #region GetViews()
 
@@ -130,7 +130,7 @@ namespace AppLogistics.Services.Tests
             }
         }
 
-        #endregion
+        #endregion GetViews()
 
         #region Create(EmployeeView view)
 
@@ -181,7 +181,7 @@ namespace AppLogistics.Services.Tests
             Assert.Equal(expected.Name, actual.Name);
         }
 
-        #endregion
+        #endregion Create(EmployeeView view)
 
         #region Edit(EmployeeView view)
 
@@ -266,7 +266,7 @@ namespace AppLogistics.Services.Tests
             Assert.Equal(expected.Id, actual.Id);
         }
 
-        #endregion
+        #endregion Edit(EmployeeView view)
 
         #region Delete(String id)
 
@@ -278,6 +278,6 @@ namespace AppLogistics.Services.Tests
             Assert.Empty(context.Set<Employee>());
         }
 
-        #endregion
+        #endregion Delete(String id)
     }
 }

@@ -39,6 +39,6 @@ namespace AppLogistics.Components.Mvc.Tests
             Assert.Null(context.DisplayMetadata.DisplayName);
         }
 
-        #endregion
+        #endregion CreateDisplayMetadata(DisplayMetadataProviderContext context)
     }
 }

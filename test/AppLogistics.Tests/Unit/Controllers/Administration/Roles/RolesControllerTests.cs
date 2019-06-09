@@ -48,7 +48,7 @@ namespace AppLogistics.Controllers.Administration.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion Index()
 
         #region Create()
 
@@ -69,7 +69,7 @@ namespace AppLogistics.Controllers.Administration.Tests
             service.Received().SeedPermissions(view);
         }
 
-        #endregion
+        #endregion Create()
 
         #region Create(RoleView role)
 
@@ -121,7 +121,7 @@ namespace AppLogistics.Controllers.Administration.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion Create(RoleView role)
 
         #region Details(Int32 id)
 
@@ -136,7 +136,7 @@ namespace AppLogistics.Controllers.Administration.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion Details(Int32 id)
 
         #region Edit(Int32 id)
 
@@ -151,7 +151,7 @@ namespace AppLogistics.Controllers.Administration.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion Edit(Int32 id)
 
         #region Edit(RoleView role)
 
@@ -209,7 +209,7 @@ namespace AppLogistics.Controllers.Administration.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion Edit(RoleView role)
 
         #region Delete(Int32 id)
 
@@ -224,7 +224,7 @@ namespace AppLogistics.Controllers.Administration.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion Delete(Int32 id)
 
         #region DeleteConfirmed(Int32 id)
 
@@ -256,6 +256,6 @@ namespace AppLogistics.Controllers.Administration.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion DeleteConfirmed(Int32 id)
     }
 }

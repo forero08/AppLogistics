@@ -45,7 +45,7 @@ namespace AppLogistics.Validators.Tests
             Assert.Empty(validator.Alerts);
         }
 
-        #endregion
+        #endregion CanCreate(MaritalStatusView view)
 
         #region CanEdit(MaritalStatusView view)
 
@@ -65,6 +65,6 @@ namespace AppLogistics.Validators.Tests
             Assert.Empty(validator.Alerts);
         }
 
-        #endregion
+        #endregion CanEdit(MaritalStatusView view)
     }
 }

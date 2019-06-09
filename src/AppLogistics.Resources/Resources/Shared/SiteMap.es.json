@@ -73,6 +73,11 @@
         "OperationEmployeesDelete": "Eliminar",
         "OperationEmployeesDetails": "Detalles",
         "OperationEmployeesEdit": "Editar",
-        "OperationEmployeesIndex": "Empleados"
+        "OperationEmployeesIndex": "Empleados",
+        "OperationRatesCreate": "Crear",
+        "OperationRatesDelete": "Eliminar",
+        "OperationRatesDetails": "Detalles",
+        "OperationRatesEdit": "Editar",
+        "OperationRatesIndex": "Tarifas"
     }
 }

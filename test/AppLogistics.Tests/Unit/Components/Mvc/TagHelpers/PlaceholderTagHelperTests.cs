@@ -27,6 +27,6 @@ namespace AppLogistics.Components.Mvc.Tests
             Assert.Equal("Test", output.Attributes["placeholder"].Value);
         }
 
-        #endregion
+        #endregion Process(TagHelperContext context, TagHelperOutput output)
     }
 }

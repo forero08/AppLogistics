@@ -91,6 +91,12 @@
                 <siteMapNode icon="fa fa-pencil-alt" area="Operation" controller="Employees" action="Edit" />
                 <siteMapNode icon="fa fa-times" area="Operation" controller="Employees" action="Delete" />
             </siteMapNode>
+            <siteMapNode menu="true" icon="fa fa-dollar-sign" area="Operation" controller="Rates" action="Index">
+                <siteMapNode icon="far fa-file" area="Operation" controller="Rates" action="Create" />
+                <siteMapNode icon="fa fa-info" area="Operation" controller="Rates" action="Details" />
+                <siteMapNode icon="fa fa-pencil-alt" area="Operation" controller="Rates" action="Edit" />
+                <siteMapNode icon="fa fa-times" area="Operation" controller="Rates" action="Delete" />
+            </siteMapNode>
         </siteMapNode>
         
     </siteMapNode>

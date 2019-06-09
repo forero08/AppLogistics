@@ -26,7 +26,7 @@ namespace AppLogistics.Components.Mvc.Tests
             Assert.Equal(expected, actual);
         }
 
-        #endregion
+        #endregion AcceptFilesAttribute(String extensions)
 
         #region FormatErrorMessage(String name)
 
@@ -41,7 +41,7 @@ namespace AppLogistics.Components.Mvc.Tests
             Assert.Equal(expected, actual);
         }
 
-        #endregion
+        #endregion FormatErrorMessage(String name)
 
         #region IsValid(Object value)
 
@@ -134,6 +134,6 @@ namespace AppLogistics.Components.Mvc.Tests
             Assert.True(attribute.IsValid(files));
         }
 
-        #endregion
+        #endregion IsValid(Object value)
     }
 }

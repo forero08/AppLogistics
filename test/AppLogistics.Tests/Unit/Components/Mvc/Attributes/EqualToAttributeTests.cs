@@ -33,7 +33,7 @@ namespace AppLogistics.Components.Mvc.Tests
             Assert.Equal(expected, actual);
         }
 
-        #endregion
+        #endregion EqualToAttribute(String otherPropertyName)
 
         #region FormatErrorMessage(String name)
 
@@ -48,7 +48,7 @@ namespace AppLogistics.Components.Mvc.Tests
             Assert.Equal(expected, actual);
         }
 
-        #endregion
+        #endregion FormatErrorMessage(String name)
 
         #region GetValidationResult(Object value, ValidationContext context)
 
@@ -83,6 +83,6 @@ namespace AppLogistics.Components.Mvc.Tests
             Assert.Equal(expected, actual);
         }
 
-        #endregion
+        #endregion GetValidationResult(Object value, ValidationContext context)
     }
 }

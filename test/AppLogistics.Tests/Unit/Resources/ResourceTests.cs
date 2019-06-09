@@ -20,7 +20,7 @@ namespace AppLogistics.Resources.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion Set(String type)
 
         #region ForAction(String name)
 
@@ -39,7 +39,7 @@ namespace AppLogistics.Resources.Tests
             Assert.Null(Resource.ForAction("Null"));
         }
 
-        #endregion
+        #endregion ForAction(String name)
 
         #region ForLookup(String type)
 
@@ -58,7 +58,7 @@ namespace AppLogistics.Resources.Tests
             Assert.Null(Resource.ForLookup("Test"));
         }
 
-        #endregion
+        #endregion ForLookup(String type)
 
         #region ForString(String value)
 
@@ -77,7 +77,7 @@ namespace AppLogistics.Resources.Tests
             Assert.Null(Resource.ForString("Null"));
         }
 
-        #endregion
+        #endregion ForString(String value)
 
         #region ForHeader(String model)
 
@@ -96,7 +96,7 @@ namespace AppLogistics.Resources.Tests
             Assert.Null(Resource.ForHeader("Test"));
         }
 
-        #endregion
+        #endregion ForHeader(String model)
 
         #region ForPage(String path)
 
@@ -115,7 +115,7 @@ namespace AppLogistics.Resources.Tests
             Assert.Null(Resource.ForPage("Test"));
         }
 
-        #endregion
+        #endregion ForPage(String path)
 
         #region ForPage(IDictionary<String, Object> values)
 
@@ -162,7 +162,7 @@ namespace AppLogistics.Resources.Tests
             Assert.Null(Resource.ForPage(values));
         }
 
-        #endregion
+        #endregion ForPage(IDictionary<String, Object> values)
 
         #region ForSiteMap(String area, String controller, String action)
 
@@ -190,7 +190,7 @@ namespace AppLogistics.Resources.Tests
             Assert.Null(Resource.ForSiteMap("Test", "Test", "Test"));
         }
 
-        #endregion
+        #endregion ForSiteMap(String area, String controller, String action)
 
         #region ForPermission(String area)
 
@@ -215,7 +215,7 @@ namespace AppLogistics.Resources.Tests
             Assert.Null(Resource.ForPermission(null));
         }
 
-        #endregion
+        #endregion ForPermission(String area)
 
         #region ForPermission(String area, String controller)
 
@@ -234,7 +234,7 @@ namespace AppLogistics.Resources.Tests
             Assert.Null(Resource.ForPermission("", ""));
         }
 
-        #endregion
+        #endregion ForPermission(String area, String controller)
 
         #region ForPermission(String area, String controller, String action)
 
@@ -253,7 +253,7 @@ namespace AppLogistics.Resources.Tests
             Assert.Null(Resource.ForPermission("", "", ""));
         }
 
-        #endregion
+        #endregion ForPermission(String area, String controller, String action)
 
         #region ForProperty<TModel, TProperty>(Expression<Func<TModel, TProperty>> expression)
 
@@ -293,7 +293,7 @@ namespace AppLogistics.Resources.Tests
             Assert.Null(Resource.ForProperty<TestView, string>(test => test.Title));
         }
 
-        #endregion
+        #endregion ForProperty<TModel, TProperty>(Expression<Func<TModel, TProperty>> expression)
 
         #region ForProperty(String view, String name)
 
@@ -306,7 +306,7 @@ namespace AppLogistics.Resources.Tests
             Assert.Equal(expected, actual);
         }
 
-        #endregion
+        #endregion ForProperty(String view, String name)
 
         #region ForProperty(Type view, String name)
 
@@ -355,7 +355,7 @@ namespace AppLogistics.Resources.Tests
             Assert.Null(Resource.ForProperty(typeof(RoleView), null));
         }
 
-        #endregion
+        #endregion ForProperty(Type view, String name)
 
         #region ForProperty(Expression expression)
 
@@ -405,6 +405,6 @@ namespace AppLogistics.Resources.Tests
             Assert.Null(Resource.ForProperty(lambda.Body));
         }
 
-        #endregion
+        #endregion ForProperty(Expression expression)
     }
 }

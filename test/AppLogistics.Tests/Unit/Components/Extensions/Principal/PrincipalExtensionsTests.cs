@@ -1,5 +1,4 @@
-﻿using System;
-using System.Security.Claims;
+﻿using System.Security.Claims;
 using Xunit;
 
 namespace AppLogistics.Components.Extensions.Tests
@@ -29,7 +28,7 @@ namespace AppLogistics.Components.Extensions.Tests
             Assert.Equal(expected, actual);
         }
 
-        #endregion
+        #endregion Id(this ClaimsPrincipal principal)
 
         #region Email(this ClaimsPrincipal principal)
 
@@ -52,7 +51,7 @@ namespace AppLogistics.Components.Extensions.Tests
             Assert.Equal(expected, actual);
         }
 
-        #endregion
+        #endregion Email(this ClaimsPrincipal principal)
 
         #region Username(this ClaimsPrincipal principal)
 
@@ -75,7 +74,7 @@ namespace AppLogistics.Components.Extensions.Tests
             Assert.Equal(expected, actual);
         }
 
-        #endregion
+        #endregion Username(this ClaimsPrincipal principal)
 
         #region UpdateClaim(this ClaimsPrincipal principal)
 
@@ -108,6 +107,6 @@ namespace AppLogistics.Components.Extensions.Tests
             Assert.Equal(expected, actual);
         }
 
-        #endregion
+        #endregion UpdateClaim(this ClaimsPrincipal principal)
     }
 }

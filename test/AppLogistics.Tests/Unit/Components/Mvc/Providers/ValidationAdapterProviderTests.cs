@@ -86,6 +86,6 @@ namespace AppLogistics.Components.Mvc.Providers.Tests
             Assert.IsType<RangeAdapter>(provider.GetAttributeAdapter(new RangeAttribute(4, 77), null));
         }
 
-        #endregion
+        #endregion GetAttributeAdapter(ValidationAttribute attribute, IStringLocalizer localizer)
     }
 }

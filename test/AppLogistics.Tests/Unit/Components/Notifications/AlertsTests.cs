@@ -43,7 +43,7 @@ namespace AppLogistics.Components.Notifications.Tests
             Assert.Equal(expected, actual);
         }
 
-        #endregion
+        #endregion Merge(Alerts alerts)
 
         #region AddInfo(String message, Int32 timeout = 0)
 
@@ -60,7 +60,7 @@ namespace AppLogistics.Components.Notifications.Tests
             Assert.Null(actual.Id);
         }
 
-        #endregion
+        #endregion AddInfo(String message, Int32 timeout = 0)
 
         #region AddError(String message, Int32 timeout = 0)
 
@@ -77,7 +77,7 @@ namespace AppLogistics.Components.Notifications.Tests
             Assert.Null(actual.Id);
         }
 
-        #endregion
+        #endregion AddError(String message, Int32 timeout = 0)
 
         #region AddSuccess(String message, Int32 timeout = 0)
 
@@ -94,7 +94,7 @@ namespace AppLogistics.Components.Notifications.Tests
             Assert.Null(actual.Id);
         }
 
-        #endregion
+        #endregion AddSuccess(String message, Int32 timeout = 0)
 
         #region AddWarning(String message, Int32 timeout = 0)
 
@@ -111,6 +111,6 @@ namespace AppLogistics.Components.Notifications.Tests
             Assert.Null(actual.Id);
         }
 
-        #endregion
+        #endregion AddWarning(String message, Int32 timeout = 0)
     }
 }

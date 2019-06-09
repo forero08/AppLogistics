@@ -44,7 +44,7 @@ namespace AppLogistics.Services.Tests
             Assert.Equal(expected.Id, actual.Id);
         }
 
-        #endregion
+        #endregion Get<TView>(String id)
 
         #region GetViews()
 
@@ -60,13 +60,13 @@ namespace AppLogistics.Services.Tests
 
             for (int i = 0; i < expected.Length || i < actual.Length; i++)
             {
-                                Assert.Equal(expected[i].CreationDate, actual[i].CreationDate);
+                Assert.Equal(expected[i].CreationDate, actual[i].CreationDate);
                 Assert.Equal(expected[i].Name, actual[i].Name);
                 Assert.Equal(expected[i].Id, actual[i].Id);
             }
         }
 
-        #endregion
+        #endregion GetViews()
 
         #region Create(ProductView view)
 
@@ -85,7 +85,7 @@ namespace AppLogistics.Services.Tests
             Assert.Equal(expected.Name, actual.Name);
         }
 
-        #endregion
+        #endregion Create(ProductView view)
 
         #region Edit(ProductView view)
 
@@ -105,7 +105,7 @@ namespace AppLogistics.Services.Tests
             Assert.Equal(expected.Id, actual.Id);
         }
 
-        #endregion
+        #endregion Edit(ProductView view)
 
         #region Delete(String id)
 
@@ -117,6 +117,6 @@ namespace AppLogistics.Services.Tests
             Assert.Empty(context.Set<Product>());
         }
 
-        #endregion
+        #endregion Delete(String id)
     }
 }

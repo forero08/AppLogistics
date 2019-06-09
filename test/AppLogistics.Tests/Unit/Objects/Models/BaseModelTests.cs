@@ -24,6 +24,6 @@ namespace AppLogistics.Objects.Tests
             Assert.Equal(expected, actual);
         }
 
-        #endregion
+        #endregion CreationDate
     }
 }

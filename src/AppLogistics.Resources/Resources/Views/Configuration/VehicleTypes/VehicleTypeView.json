@@ -1,5 +1,8 @@
-{
+﻿{
     "Titles": {
         "Name": "Name"
+    },
+    "Validations": {
+        "AssociatedRates": "There are rates associated to this Vehicle type. To delete this Vehicle type, you should delete those rates first or associate them a different Vehicle type."
     }
 }

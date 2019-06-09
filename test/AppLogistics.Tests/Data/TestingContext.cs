@@ -10,7 +10,7 @@ namespace AppLogistics.Tests
 
         protected DbSet<TestModel> TestModel { get; set; }
 
-        #endregion
+        #endregion Tests
 
         private string DatabaseName { get; }
 

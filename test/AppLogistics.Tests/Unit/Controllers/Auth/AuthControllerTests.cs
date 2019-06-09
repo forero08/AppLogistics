@@ -66,7 +66,7 @@ namespace AppLogistics.Controllers.Tests
             Assert.Null(actual.Model);
         }
 
-        #endregion
+        #endregion Recover()
 
         #region Recover(AccountRecoveryView account)
 
@@ -163,7 +163,7 @@ namespace AppLogistics.Controllers.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion Recover(AccountRecoveryView account)
 
         #region Reset(String token)
 
@@ -201,7 +201,7 @@ namespace AppLogistics.Controllers.Tests
             Assert.Null(actual.Model);
         }
 
-        #endregion
+        #endregion Reset(String token)
 
         #region Reset(AccountResetView account)
 
@@ -266,7 +266,7 @@ namespace AppLogistics.Controllers.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion Reset(AccountResetView account)
 
         #region Login(String returnUrl)
 
@@ -293,7 +293,7 @@ namespace AppLogistics.Controllers.Tests
             Assert.Null(actual.Model);
         }
 
-        #endregion
+        #endregion Login(String returnUrl)
 
         #region Login(AccountLoginView account, String returnUrl)
 
@@ -348,7 +348,7 @@ namespace AppLogistics.Controllers.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion Login(AccountLoginView account, String returnUrl)
 
         #region Logout()
 
@@ -369,6 +369,6 @@ namespace AppLogistics.Controllers.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion Logout()
     }
 }

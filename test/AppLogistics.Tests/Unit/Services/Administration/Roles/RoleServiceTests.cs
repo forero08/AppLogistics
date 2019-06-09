@@ -116,7 +116,7 @@ namespace AppLogistics.Services.Tests
             Assert.Empty(leafs.Where(leaf => leaf.Id == null));
         }
 
-        #endregion
+        #endregion SeedPermissions(RoleView view)
 
         #region GetViews()
 
@@ -140,7 +140,7 @@ namespace AppLogistics.Services.Tests
             }
         }
 
-        #endregion
+        #endregion GetViews()
 
         #region GetView(Int32 id)
 
@@ -185,7 +185,7 @@ namespace AppLogistics.Services.Tests
             service.Received().SeedPermissions(view);
         }
 
-        #endregion
+        #endregion GetView(Int32 id)
 
         #region Create(RoleView view)
 
@@ -222,7 +222,7 @@ namespace AppLogistics.Services.Tests
             Assert.Equal(expected, actual);
         }
 
-        #endregion
+        #endregion Create(RoleView view)
 
         #region Edit(RoleView view)
 
@@ -262,7 +262,7 @@ namespace AppLogistics.Services.Tests
             Assert.Equal(expected, actual);
         }
 
-        #endregion
+        #endregion Edit(RoleView view)
 
         #region Delete(Int32 id)
 
@@ -289,7 +289,7 @@ namespace AppLogistics.Services.Tests
             Assert.Empty(context.Set<Role>().AsNoTracking());
         }
 
-        #endregion
+        #endregion Delete(Int32 id)
 
         #region Test helpers
 
@@ -386,6 +386,6 @@ namespace AppLogistics.Services.Tests
             return branches;
         }
 
-        #endregion
+        #endregion Test helpers
     }
 }

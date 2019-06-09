@@ -39,7 +39,7 @@ namespace AppLogistics.Validators.Tests
             Assert.Empty(validator.Alerts);
         }
 
-        #endregion
+        #endregion BaseValidator(IUnitOfWork unitOfWork)
 
         #region IsSpecified<TView>(TView view, Expression<Func<TView, Object>> property)
 
@@ -79,7 +79,7 @@ namespace AppLogistics.Validators.Tests
             Assert.Empty(validator.Alerts);
         }
 
-        #endregion
+        #endregion IsSpecified<TView>(TView view, Expression<Func<TView, Object>> property)
 
         #region Dispose()
 
@@ -98,6 +98,6 @@ namespace AppLogistics.Validators.Tests
             validator.Dispose();
         }
 
-        #endregion
+        #endregion Dispose()
     }
 }

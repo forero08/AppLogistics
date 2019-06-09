@@ -125,6 +125,6 @@ namespace AppLogistics.Components.Mvc.Tests
             Assert.Null(output.TagName);
         }
 
-        #endregion
+        #endregion Process(TagHelperContext context, TagHelperOutput output)
     }
 }

@@ -45,7 +45,7 @@ namespace AppLogistics.Validators.Tests
             Assert.Empty(validator.Alerts);
         }
 
-        #endregion
+        #endregion CanCreate(EmployeeView view)
 
         #region CanEdit(EmployeeView view)
 
@@ -65,6 +65,6 @@ namespace AppLogistics.Validators.Tests
             Assert.Empty(validator.Alerts);
         }
 
-        #endregion
+        #endregion CanEdit(EmployeeView view)
     }
 }

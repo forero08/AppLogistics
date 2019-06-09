@@ -16,6 +16,6 @@ namespace AppLogistics.Objects.Tests
             Assert.Empty(actual.Nodes);
         }
 
-        #endregion
+        #endregion RoleView()
     }
 }

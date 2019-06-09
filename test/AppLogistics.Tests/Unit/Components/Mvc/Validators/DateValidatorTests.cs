@@ -27,6 +27,6 @@ namespace AppLogistics.Components.Mvc.Tests
             Assert.Equal(Validation.For("Date", "DateTime"), attributes["data-val-date"]);
         }
 
-        #endregion
+        #endregion AddValidation(ClientModelValidationContext context)
     }
 }

@@ -115,7 +115,7 @@ namespace AppLogistics.Data.Logging.Tests
             Assert.Equal(expected, actual);
         }
 
-        #endregion
+        #endregion LoggableEntity(EntityEntry<BaseModel> entry)
 
         #region ToString()
 
@@ -135,7 +135,7 @@ namespace AppLogistics.Data.Logging.Tests
             Assert.Equal(expected, actual);
         }
 
-        #endregion
+        #endregion ToString()
 
         #region Test helpers
 
@@ -152,6 +152,6 @@ namespace AppLogistics.Data.Logging.Tests
             }
         }
 
-        #endregion
+        #endregion Test helpers
     }
 }

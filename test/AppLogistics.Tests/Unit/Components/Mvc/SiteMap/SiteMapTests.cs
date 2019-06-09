@@ -205,7 +205,7 @@ namespace AppLogistics.Components.Mvc.Tests
             Assert.Equal("fa fa-user", actual[0].IconClass);
         }
 
-        #endregion
+        #endregion For(ViewContext context)
 
         #region BreadcrumbFor(ViewContext context)
 
@@ -246,7 +246,7 @@ namespace AppLogistics.Components.Mvc.Tests
             Assert.Empty(siteMap.BreadcrumbFor(context));
         }
 
-        #endregion
+        #endregion BreadcrumbFor(ViewContext context)
 
         #region Test helpers
 
@@ -272,6 +272,6 @@ namespace AppLogistics.Components.Mvc.Tests
             </siteMap>";
         }
 
-        #endregion
+        #endregion Test helpers
     }
 }

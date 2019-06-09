@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace AppLogistics.Objects
 {
@@ -25,5 +26,7 @@ namespace AppLogistics.Objects
 
         public int BranchOfficeId { get; set; }
         public virtual BranchOffice BranchOffice { get; set; }
+
+        public virtual ICollection<Rate> Rates { get; set; }
     }
 }

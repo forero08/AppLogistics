@@ -30,6 +30,6 @@ namespace AppLogistics.Components.Mvc.Tests
             Assert.Equal(expected, actual);
         }
 
-        #endregion
+        #endregion OnResourceExecuting(ResourceExecutingContext context)
     }
 }

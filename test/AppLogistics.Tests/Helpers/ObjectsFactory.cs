@@ -164,7 +164,7 @@ namespace AppLogistics.Tests
             };
         }
 
-        #endregion
+        #endregion Administration
 
         #region Configuration
 
@@ -433,7 +433,7 @@ namespace AppLogistics.Tests
                 Address = "Address" + id,
                 AfpName = "AfpName" + id,
                 BornDate = DateTime.Now,
-                BranchOfficeName = "BranchOfficeName" +id,
+                BranchOfficeName = "BranchOfficeName" + id,
                 Comments = "Comments" + id,
                 DocumentNumber = "DocumentNumber" + id,
                 DocumentTypeName = "DocumentTypeName" + id,
@@ -506,6 +506,52 @@ namespace AppLogistics.Tests
             };
         }
 
+        public static Rate CreateRate(int id = 0)
+        {
+            return new Rate
+            {
+                Id = id,
+                Name = "Name" + id,
+                Price = 1,
+                EmployeePercentage = 1,
+                SplitFare = true,
+
+                Client = CreateClient(id),
+                Activity = CreateActivity(id),
+                VehicleType = CreateVehicleType(id)
+            };
+        }
+
+        public static RateView CreateRateView(int id = 0)
+        {
+            return new RateView
+            {
+                Id = id,
+                Name = "Name" + id,
+                ActivityName = "Name" + id,
+                ClientName = "Name" + id,
+                Price = 1,
+                EmployeePercentage = 1,
+                SplitFare = true,
+                VehicleTypeName = "Name" + id
+            };
+        }
+
+        public static RateCreateEditView CreateRateCreateEditView(int id = 0)
+        {
+            return new RateCreateEditView
+            {
+                Id = id,
+                Name = "Name" + id,
+                ActivityId = id,
+                ClientId = id,
+                Price = 1,
+                EmployeePercentage = 1,
+                SplitFare = true,
+                VehicleTypeId = id
+            };
+        }
+
         #endregion Operation
 
         #region Tests
@@ -518,6 +564,6 @@ namespace AppLogistics.Tests
             };
         }
 
-        #endregion
+        #endregion Tests
     }
 }

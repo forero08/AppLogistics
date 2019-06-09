@@ -24,6 +24,6 @@ namespace AppLogistics.Components.Mvc.Tests
             Assert.Equal(expected, actual);
         }
 
-        #endregion
+        #endregion IsValidForRequest(RouteContext context, ActionDescriptor action)
     }
 }

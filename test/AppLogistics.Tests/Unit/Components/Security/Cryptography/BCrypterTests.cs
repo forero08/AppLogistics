@@ -22,7 +22,7 @@ namespace AppLogistics.Components.Security.Tests
             Assert.True(BCrypt.Net.BCrypt.Verify(value, hash));
         }
 
-        #endregion
+        #endregion Hash(String value)
 
         #region HashPassword(String value)
 
@@ -35,7 +35,7 @@ namespace AppLogistics.Components.Security.Tests
             Assert.True(BCrypt.Net.BCrypt.Verify(value, hash));
         }
 
-        #endregion
+        #endregion HashPassword(String value)
 
         #region Verify(String value, String hash)
 
@@ -57,7 +57,7 @@ namespace AppLogistics.Components.Security.Tests
             Assert.True(crypter.Verify("Test", "$2a$04$tXfDH9cZGOqFbCV8CF1ik.kW8R7.UKpEi5G7P4K842As1DI1bwDxm"));
         }
 
-        #endregion
+        #endregion Verify(String value, String hash)
 
         #region VerifyPassword(String value, String passhash)
 
@@ -79,6 +79,6 @@ namespace AppLogistics.Components.Security.Tests
             Assert.True(crypter.VerifyPassword("Test", "$2a$13$g7QgmyFicKkyI4kiHM8XQ.LfBdpdcLUbw1tkr9.owCN5qY9eCj8Lq"));
         }
 
-        #endregion
+        #endregion VerifyPassword(String value, String passhash)
     }
 }

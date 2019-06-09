@@ -38,6 +38,6 @@ namespace AppLogistics.Data.Mapping.Tests
             Assert.Empty(actual.Permissions);
         }
 
-        #endregion
+        #endregion MapRoles()
     }
 }

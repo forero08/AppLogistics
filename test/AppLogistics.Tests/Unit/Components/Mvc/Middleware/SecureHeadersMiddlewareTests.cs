@@ -24,6 +24,6 @@ namespace AppLogistics.Components.Mvc.Tests
             Assert.Equal(4, actual.Keys.Count);
         }
 
-        #endregion
+        #endregion Invoke(HttpContext context)
     }
 }

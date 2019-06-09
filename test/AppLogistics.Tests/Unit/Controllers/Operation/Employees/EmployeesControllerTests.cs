@@ -45,7 +45,7 @@ namespace AppLogistics.Controllers.Operation.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion Index()
 
         #region Create()
 
@@ -57,7 +57,7 @@ namespace AppLogistics.Controllers.Operation.Tests
             Assert.Null(actual.Model);
         }
 
-        #endregion
+        #endregion Create()
 
         #region Create(EmployeeView employee)
 
@@ -99,7 +99,7 @@ namespace AppLogistics.Controllers.Operation.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion Create(EmployeeView employee)
 
         #region Details(String id)
 
@@ -114,7 +114,7 @@ namespace AppLogistics.Controllers.Operation.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion Details(String id)
 
         #region Edit(String id)
 
@@ -129,7 +129,7 @@ namespace AppLogistics.Controllers.Operation.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion Edit(String id)
 
         #region Edit(EmployeeView employee)
 
@@ -165,7 +165,7 @@ namespace AppLogistics.Controllers.Operation.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion Edit(EmployeeView employee)
 
         #region Delete(String id)
 
@@ -180,7 +180,7 @@ namespace AppLogistics.Controllers.Operation.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion Delete(String id)
 
         #region DeleteConfirmed(String id)
 
@@ -201,6 +201,6 @@ namespace AppLogistics.Controllers.Operation.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion DeleteConfirmed(String id)
     }
 }

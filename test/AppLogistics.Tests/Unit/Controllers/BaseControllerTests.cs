@@ -46,7 +46,7 @@ namespace AppLogistics.Controllers.Tests
             Assert.Empty(controller.Alerts);
         }
 
-        #endregion
+        #endregion BaseController()
 
         #region NotFoundView()
 
@@ -59,7 +59,7 @@ namespace AppLogistics.Controllers.Tests
             Assert.Equal(StatusCodes.Status404NotFound, controller.Response.StatusCode);
         }
 
-        #endregion
+        #endregion NotFoundView()
 
         #region NotEmptyView(Object model)
 
@@ -81,7 +81,7 @@ namespace AppLogistics.Controllers.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion NotEmptyView(Object model)
 
         #region RedirectToLocal(String url)
 
@@ -107,7 +107,7 @@ namespace AppLogistics.Controllers.Tests
             Assert.Equal(expected, actual);
         }
 
-        #endregion
+        #endregion RedirectToLocal(String url)
 
         #region RedirectToDefault()
 
@@ -122,7 +122,7 @@ namespace AppLogistics.Controllers.Tests
             Assert.Single(actual.RouteValues);
         }
 
-        #endregion
+        #endregion RedirectToDefault()
 
         #region RedirectToAction(String action, String controller, Object route)
 
@@ -175,7 +175,7 @@ namespace AppLogistics.Controllers.Tests
             Assert.Equal(2, actual.RouteValues.Count);
         }
 
-        #endregion
+        #endregion RedirectToAction(String action, String controller, Object route)
 
         #region IsAuthorizedFor(String action, String controller, String area)
 
@@ -200,7 +200,7 @@ namespace AppLogistics.Controllers.Tests
             Assert.Same(authorization, controller.Authorization);
         }
 
-        #endregion
+        #endregion IsAuthorizedFor(String action, String controller, String area)
 
         #region OnActionExecuting(ActionExecutingContext context)
 
@@ -232,7 +232,7 @@ namespace AppLogistics.Controllers.Tests
             Assert.Equal(expected, actual);
         }
 
-        #endregion
+        #endregion OnActionExecuting(ActionExecutingContext context)
 
         #region OnActionExecuted(ActionExecutedContext context)
 
@@ -281,6 +281,6 @@ namespace AppLogistics.Controllers.Tests
             Assert.Equal(expected, actual);
         }
 
-        #endregion
+        #endregion OnActionExecuted(ActionExecutedContext context)
     }
 }

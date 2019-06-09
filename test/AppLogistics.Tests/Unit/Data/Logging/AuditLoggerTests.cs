@@ -1,7 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
-using AppLogistics.Objects;
+﻿using AppLogistics.Objects;
 using AppLogistics.Tests;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 using NSubstitute;
 using System;
 using System.Collections.Generic;
@@ -131,7 +131,7 @@ namespace AppLogistics.Data.Logging.Tests
             Assert.Empty(context.Set<AuditLog>());
         }
 
-        #endregion
+        #endregion Log(IEnumerable<EntityEntry<BaseModel>> entries)
 
         #region Log(LoggableEntity entity)
 
@@ -163,7 +163,7 @@ namespace AppLogistics.Data.Logging.Tests
             Assert.Empty(context.Set<AuditLog>());
         }
 
-        #endregion
+        #endregion Log(LoggableEntity entity)
 
         #region Save()
 
@@ -189,7 +189,7 @@ namespace AppLogistics.Data.Logging.Tests
             Assert.Equal(expected.Id(), actual.EntityId);
         }
 
-        #endregion
+        #endregion Save()
 
         #region Dispose()
 
@@ -211,6 +211,6 @@ namespace AppLogistics.Data.Logging.Tests
             logger.Dispose();
         }
 
-        #endregion
+        #endregion Dispose()
     }
 }

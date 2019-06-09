@@ -33,7 +33,7 @@ namespace AppLogistics.Controllers.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion ServicedController(TService service)
 
         #region OnActionExecuting(ActionExecutingContext context)
 
@@ -50,7 +50,7 @@ namespace AppLogistics.Controllers.Tests
             Assert.Equal(expected, actual);
         }
 
-        #endregion
+        #endregion OnActionExecuting(ActionExecutingContext context)
 
         #region Dispose()
 
@@ -69,6 +69,6 @@ namespace AppLogistics.Controllers.Tests
             controller.Dispose();
         }
 
-        #endregion
+        #endregion Dispose()
     }
 }
