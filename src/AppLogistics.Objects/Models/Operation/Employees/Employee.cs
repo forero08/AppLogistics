@@ -61,6 +61,9 @@ namespace AppLogistics.Objects
         public int MaritalStatusId { get; set; }
         public virtual MaritalStatus MaritalStatus { get; set; }
 
+        public int EthnicGroupId { get; set; }
+        public virtual EthnicGroup EthnicGroup { get; set; }
+
         [StringLength(32)]
         public string EmergencyContact { get; set; }
 

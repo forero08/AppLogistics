@@ -63,6 +63,12 @@ namespace AppLogistics.Controllers
         }
 
         [AjaxOnly]
+        public JsonResult EthnicGroup(LookupFilter filter)
+        {
+            return GetData(new MvcLookup<EthnicGroup, EthnicGroupView>(_unitOfWork), filter);
+        }
+
+        [AjaxOnly]
         public JsonResult MaritalStatus(LookupFilter filter)
         {
             return GetData(new MvcLookup<MaritalStatus, MaritalStatusView>(_unitOfWork), filter);

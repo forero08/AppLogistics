@@ -324,6 +324,24 @@ namespace AppLogistics.Tests
             };
         }
 
+        public static EthnicGroup CreateEthnicGroup(int id = 0)
+        {
+            return new EthnicGroup
+            {
+                Id = id,
+                Name = "Name" + id
+            };
+        }
+
+        public static EthnicGroupView CreateEthnicGroupView(int id = 0)
+        {
+            return new EthnicGroupView
+            {
+                Id = id,
+                Name = "Name" + id
+            };
+        }
+
         public static MaritalStatus CreateMaritalStatus(int id = 0)
         {
             return new MaritalStatus
@@ -420,6 +438,7 @@ namespace AppLogistics.Tests
                 BranchOffice = CreateBranchOffice(id),
                 DocumentType = CreateDocumentType(id),
                 Eps = CreateEps(id),
+                EthnicGroup = CreateEthnicGroup(id),
                 MaritalStatus = CreateMaritalStatus(id)
             };
         }
@@ -441,6 +460,7 @@ namespace AppLogistics.Tests
                 EmergencyContact = "EmergencyContact" + id,
                 EmergencyContactPhone = "EmergencyContactPhone" + id,
                 EpsName = "EpsName" + id,
+                EthnicGroupName = "EthnicGroupName" + id,
                 HasAdmissionTest = true,
                 HasContract = true,
                 HasCurriculumVitae = true,
@@ -482,6 +502,7 @@ namespace AppLogistics.Tests
                 EmergencyContact = "EmergencyContact" + id,
                 EmergencyContactPhone = "EmergencyContactPhone" + id,
                 EpsId = id,
+                EthnicGroupId = id,
                 HasAdmissionTest = true,
                 HasContract = true,
                 HasCurriculumVitae = true,

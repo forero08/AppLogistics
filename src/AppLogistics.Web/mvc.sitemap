@@ -52,6 +52,12 @@
                 <siteMapNode icon="fa fa-pencil-alt" area="Configuration" controller="MaritalStatuses" action="Edit" />
                 <siteMapNode icon="fa fa-times" area="Configuration" controller="MaritalStatuses" action="Delete" />
             </siteMapNode>
+            <siteMapNode menu="true" icon="fa fa-universal-access" area="Configuration" controller="EthnicGroups" action="Index">
+                <siteMapNode icon="far fa-file" area="Configuration" controller="EthnicGroups" action="Create" />
+                <siteMapNode icon="fa fa-info" area="Configuration" controller="EthnicGroups" action="Details" />
+                <siteMapNode icon="fa fa-pencil-alt" area="Configuration" controller="EthnicGroups" action="Edit" />
+                <siteMapNode icon="fa fa-times" area="Configuration" controller="EthnicGroups" action="Delete" />
+            </siteMapNode>
             <siteMapNode menu="true" icon="fa fa-cubes" area="Configuration" controller="Products" action="Index">
                 <siteMapNode icon="far fa-file" area="Configuration" controller="Products" action="Create" />
                 <siteMapNode icon="fa fa-info" area="Configuration" controller="Products" action="Details" />
