@@ -1,0 +1,11 @@
+﻿{
+    "Titles": {
+        "ActivityName": "Activity",
+        "ClientName": "Client",
+        "EmployeePercentage": "Percentage for employee",
+        "Name": "Name",
+        "Price": "Price",
+        "SplitFare": "Split fare",
+        "VehicleTypeName": "Vehicle type"
+    }
+}

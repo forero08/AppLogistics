@@ -28,7 +28,9 @@
         "VehicleTypes": "Vehicle Types",
 
         "Employee": "Employee",
-        "Employees": "Employees"
+        "Employees": "Employees",
+        "Rate": "Rate",
+        "Rates": "Rates"
     },
     "Titles": {
         "AdministrationAccountsCreate": "Account creation",
@@ -104,6 +106,11 @@
         "OperationEmployeesDelete": "Employee deletion",
         "OperationEmployeesDetails": "Employee details",
         "OperationEmployeesEdit": "Employee Edit",
-        "OperationEmployeesIndex": "Employees"
+        "OperationEmployeesIndex": "Employees",
+        "OperationRatesCreate": "Rate creation",
+        "OperationRatesDelete": "Rate deletion",
+        "OperationRatesDetails": "Rate details",
+        "OperationRatesEdit": "Rate Edit",
+        "OperationRatesIndex": "Rates"
     }
 }

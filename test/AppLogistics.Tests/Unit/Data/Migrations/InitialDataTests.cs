@@ -127,6 +127,12 @@ namespace AppLogistics.Data.Migrations.Tests
         [InlineData("Operation", "Employees", "Details")]
         [InlineData("Operation", "Employees", "Edit")]
         [InlineData("Operation", "Employees", "Delete")]
+
+        [InlineData("Operation", "Rates", "Index")]
+        [InlineData("Operation", "Rates", "Create")]
+        [InlineData("Operation", "Rates", "Details")]
+        [InlineData("Operation", "Rates", "Edit")]
+        [InlineData("Operation", "Rates", "Delete")]
         public void PermissionsTable_HasPermission(string area, string controller, string action)
         {
             Assert.Single(context.Set<Permission>(), permission =>
@@ -139,7 +145,7 @@ namespace AppLogistics.Data.Migrations.Tests
         public void PermissionsTable_HasExactNumberOfPermissions()
         {
             int actual = context.Set<Permission>().Count();
-            int expected = 64;
+            int expected = 69;
 
             Assert.Equal(expected, actual);
         }

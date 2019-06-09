@@ -27,6 +27,12 @@ namespace AppLogistics.Controllers
         }
 
         [AjaxOnly]
+        public JsonResult Activity(LookupFilter filter)
+        {
+            return GetData(new MvcLookup<Activity, ActivityView>(_unitOfWork), filter);
+        }
+
+        [AjaxOnly]
         public JsonResult Afp(LookupFilter filter)
         {
             return GetData(new MvcLookup<Afp, AfpView>(_unitOfWork), filter);
@@ -36,6 +42,12 @@ namespace AppLogistics.Controllers
         public JsonResult BranchOffice(LookupFilter filter)
         {
             return GetData(new MvcLookup<BranchOffice, BranchOfficeView>(_unitOfWork), filter);
+        }
+
+        [AjaxOnly]
+        public JsonResult Client(LookupFilter filter)
+        {
+            return GetData(new MvcLookup<Client, ClientView>(_unitOfWork), filter);
         }
 
         [AjaxOnly]
@@ -60,6 +72,12 @@ namespace AppLogistics.Controllers
         public JsonResult Role(LookupFilter filter)
         {
             return GetData(new MvcLookup<Role, RoleView>(_unitOfWork), filter);
+        }
+
+        [AjaxOnly]
+        public JsonResult VehicleType(LookupFilter filter)
+        {
+            return GetData(new MvcLookup<VehicleType, VehicleTypeView>(_unitOfWork), filter);
         }
 
         protected override void Dispose(bool disposing)

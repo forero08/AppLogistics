@@ -19,7 +19,8 @@
         "ConfigurationProducts": "Products",
         "ConfigurationVehicleTypes": "Vehicle Types",
 
-        "OperationEmployees": "Employees"
+        "OperationEmployees": "Employees",
+        "OperationRates": "Rate"
     },
     "Actions": {
         "AdministrationAccountsCreate": "Create",
@@ -87,6 +88,11 @@
         "OperationEmployeesDelete": "Delete",
         "OperationEmployeesDetails": "Details",
         "OperationEmployeesEdit": "Edit",
-        "OperationEmployeesIndex": "Index"
+        "OperationEmployeesIndex": "Index",
+        "OperationRatesCreate": "Create",
+        "OperationRatesDelete": "Delete",
+        "OperationRatesDetails": "Details",
+        "OperationRatesEdit": "Edit",
+        "OperationRatesIndex": "Index"
     }
 }

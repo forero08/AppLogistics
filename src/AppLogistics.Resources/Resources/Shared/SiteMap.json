@@ -73,6 +73,11 @@
         "OperationEmployeesDelete": "Delete",
         "OperationEmployeesDetails": "Details",
         "OperationEmployeesEdit": "Edit",
-        "OperationEmployeesIndex": "Employees"
+        "OperationEmployeesIndex": "Employees",
+        "OperationRatesCreate": "Create",
+        "OperationRatesDelete": "Delete",
+        "OperationRatesDetails": "Details",
+        "OperationRatesEdit": "Edit",
+        "OperationRatesIndex": "Rates"
     }
 }

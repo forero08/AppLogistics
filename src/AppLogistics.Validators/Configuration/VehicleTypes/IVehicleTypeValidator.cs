@@ -6,5 +6,6 @@ namespace AppLogistics.Validators
     {
         bool CanCreate(VehicleTypeView view);
         bool CanEdit(VehicleTypeView view);
+        bool CanDelete(int id);
     }
 }

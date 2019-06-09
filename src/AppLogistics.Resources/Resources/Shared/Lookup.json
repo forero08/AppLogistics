@@ -1,10 +1,13 @@
 ﻿{
     "Titles": {
+        "Activity": "Activities",
         "Afp": "Afps",
         "BranchOffice": "Branch Offices",
+        "Client": "Clients",
         "DocumentType": "Document types",
         "Eps": "Eps's",
         "MaritalStatus": "Marital statuses",
-        "Role": "Roles"
+        "Role": "Roles",
+        "VehicleType": "Vehicle types"
     }
 }

@@ -22,6 +22,7 @@ namespace AppLogistics.Controllers.Configuration.Tests
         public VehicleTypesControllerTests()
         {
             validator = Substitute.For<IVehicleTypeValidator>();
+            validator.CanDelete(Arg.Any<int>()).Returns(true);
             service = Substitute.For<IVehicleTypeService>();
 
             vehicleType = ObjectsFactory.CreateVehicleTypeView();

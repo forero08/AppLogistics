@@ -1,0 +1,11 @@
+﻿{
+    "Titles": {
+        "ActivityName": "Actividad",
+        "ClientName": "Cliente",
+        "EmployeePercentage": "Porcentaje para empleado",
+        "Name": "Nombre",
+        "Price": "Precio",
+        "SplitFare": "Dividir tarifa",
+        "VehicleTypeName": "Tipo de vehículo"
+    }
+}

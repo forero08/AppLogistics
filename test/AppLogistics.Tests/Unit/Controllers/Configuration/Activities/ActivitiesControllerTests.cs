@@ -22,6 +22,7 @@ namespace AppLogistics.Controllers.Configuration.Tests
         public ActivitiesControllerTests()
         {
             validator = Substitute.For<IActivityValidator>();
+            validator.CanDelete(Arg.Any<int>()).Returns(true);
             service = Substitute.For<IActivityService>();
 
             activity = ObjectsFactory.CreateActivityView();

@@ -37,6 +37,7 @@ namespace AppLogistics.Data.Core
         #region Operation
 
         protected DbSet<Employee> Employee { get; set; }
+        protected DbSet<Rate> Rate { get; set; }
 
         #endregion
 

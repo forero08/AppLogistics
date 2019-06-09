@@ -1,7 +1,10 @@
+using NonFactors.Mvc.Lookup;
+
 namespace AppLogistics.Objects
 {
     public class ClientView : BaseView
     {
+        [LookupColumn]
         public string Name { get; set; }
 
         public string Nit { get; set; }

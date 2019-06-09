@@ -23,6 +23,7 @@ namespace AppLogistics.Controllers.Configuration.Tests
         public ClientsControllerTests()
         {
             validator = Substitute.For<IClientValidator>();
+            validator.CanDelete(Arg.Any<int>()).Returns(true);
             service = Substitute.For<IClientService>();
 
             clientView = ObjectsFactory.CreateClientView();

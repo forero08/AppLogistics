@@ -28,7 +28,9 @@
         "VehicleTypes": "Tipos de vehículo",
 
         "Employee": "Empleado",
-        "Employees": "Empleados"
+        "Employees": "Empleados",
+        "Rate": "Tarifa",
+        "Rates": "Tarifas"
     },
     "Titles": {
         "AdministrationAccountsCreate": "Creación de cuenta",
@@ -104,6 +106,11 @@
         "OperationEmployeesDelete": "Eliminación de Empleado",
         "OperationEmployeesDetails": "Detalles de Empleado",
         "OperationEmployeesEdit": "Editar Empleado",
-        "OperationEmployeesIndex": "Empleados"
+        "OperationEmployeesIndex": "Empleados",
+        "OperationRatesCreate": "Creación de Tarifa",
+        "OperationRatesDelete": "Eliminación de Tarifa",
+        "OperationRatesDetails": "Detalles de Tarifa",
+        "OperationRatesEdit": "Editar Tarifa",
+        "OperationRatesIndex": "Tarifas"
     }
 }

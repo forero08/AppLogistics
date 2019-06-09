@@ -409,6 +409,41 @@ namespace AppLogistics.Data.Migrations
                     b.ToTable("Product");
                 });
 
+            modelBuilder.Entity("AppLogistics.Objects.Rate", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("ActivityId");
+
+                    b.Property<int>("ClientId");
+
+                    b.Property<DateTime>("CreationDate");
+
+                    b.Property<float>("EmployeePercentage");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(32);
+
+                    b.Property<decimal>("Price");
+
+                    b.Property<bool>("SplitFare");
+
+                    b.Property<int?>("VehicleTypeId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ActivityId");
+
+                    b.HasIndex("ClientId");
+
+                    b.HasIndex("VehicleTypeId");
+
+                    b.ToTable("Rate");
+                });
+
             modelBuilder.Entity("AppLogistics.Objects.Role", b =>
                 {
                     b.Property<int>("Id")
@@ -508,6 +543,24 @@ namespace AppLogistics.Data.Migrations
                     b.HasOne("AppLogistics.Objects.MaritalStatus", "MaritalStatus")
                         .WithMany("Employees")
                         .HasForeignKey("MaritalStatusId")
+                        .OnDelete(DeleteBehavior.Restrict);
+                });
+
+            modelBuilder.Entity("AppLogistics.Objects.Rate", b =>
+                {
+                    b.HasOne("AppLogistics.Objects.Activity", "Activity")
+                        .WithMany("Rates")
+                        .HasForeignKey("ActivityId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("AppLogistics.Objects.Client", "Client")
+                        .WithMany("Rates")
+                        .HasForeignKey("ClientId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("AppLogistics.Objects.VehicleType", "VehicleType")
+                        .WithMany("Rates")
+                        .HasForeignKey("VehicleTypeId")
                         .OnDelete(DeleteBehavior.Restrict);
                 });
 
