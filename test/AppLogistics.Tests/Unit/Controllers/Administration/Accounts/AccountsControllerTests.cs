@@ -52,7 +52,7 @@ namespace AppLogistics.Controllers.Administration.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion Index()
 
         #region Create()
 
@@ -64,7 +64,7 @@ namespace AppLogistics.Controllers.Administration.Tests
             Assert.Null(actual.Model);
         }
 
-        #endregion
+        #endregion Create()
 
         #region Create(AccountCreateView account)
 
@@ -118,7 +118,7 @@ namespace AppLogistics.Controllers.Administration.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion Create(AccountCreateView account)
 
         #region Details(Int32 id)
 
@@ -133,7 +133,7 @@ namespace AppLogistics.Controllers.Administration.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion Details(Int32 id)
 
         #region Edit(Int32 id)
 
@@ -148,7 +148,7 @@ namespace AppLogistics.Controllers.Administration.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion Edit(Int32 id)
 
         #region Edit(AccountEditView account)
 
@@ -196,6 +196,6 @@ namespace AppLogistics.Controllers.Administration.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion Edit(AccountEditView account)
     }
 }

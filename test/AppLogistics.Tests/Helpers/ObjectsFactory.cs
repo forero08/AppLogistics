@@ -164,7 +164,7 @@ namespace AppLogistics.Tests
             };
         }
 
-        #endregion
+        #endregion Administration
 
         #region Configuration
 
@@ -433,7 +433,7 @@ namespace AppLogistics.Tests
                 Address = "Address" + id,
                 AfpName = "AfpName" + id,
                 BornDate = DateTime.Now,
-                BranchOfficeName = "BranchOfficeName" +id,
+                BranchOfficeName = "BranchOfficeName" + id,
                 Comments = "Comments" + id,
                 DocumentNumber = "DocumentNumber" + id,
                 DocumentTypeName = "DocumentTypeName" + id,
@@ -564,6 +564,6 @@ namespace AppLogistics.Tests
             };
         }
 
-        #endregion
+        #endregion Tests
     }
 }

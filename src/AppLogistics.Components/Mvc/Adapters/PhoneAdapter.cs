@@ -7,7 +7,7 @@ namespace AppLogistics.Components.Mvc
 {
     public class PhoneAdapter : AttributeAdapterBase<PhoneAttribute>
     {
-        public PhoneAdapter(PhoneAttribute attribute) 
+        public PhoneAdapter(PhoneAttribute attribute)
             : base(attribute, null)
         {
         }

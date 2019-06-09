@@ -48,7 +48,7 @@ namespace AppLogistics.Controllers.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion GetData(MvcLookup lookup, LookupFilter filter)
 
         #region Role(LookupFilter filter)
 
@@ -61,7 +61,7 @@ namespace AppLogistics.Controllers.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion Role(LookupFilter filter)
 
         #region Dispose()
 
@@ -80,7 +80,7 @@ namespace AppLogistics.Controllers.Tests
             controller.Dispose();
         }
 
-        #endregion
+        #endregion Dispose()
 
         #region Test helpers
 
@@ -92,6 +92,6 @@ namespace AppLogistics.Controllers.Tests
             return lookupController.GetData(null, filter);
         }
 
-        #endregion
+        #endregion Test helpers
     }
 }

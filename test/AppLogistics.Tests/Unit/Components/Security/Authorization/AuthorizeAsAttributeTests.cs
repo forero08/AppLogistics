@@ -23,6 +23,6 @@ namespace AppLogistics.Components.Security.Tests
             Assert.Equal(expected, actual);
         }
 
-        #endregion
+        #endregion AuthorizeAsAttribute(String action)
     }
 }

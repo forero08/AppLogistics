@@ -27,19 +27,19 @@ namespace AppLogistics.Data.Core
         protected DbSet<Carrier> Carrier { get; set; }
         protected DbSet<Client> Client { get; set; }
         protected DbSet<DocumentType> DocumentType { get; set; }
-        protected DbSet<Eps> Eps{ get; set; }
+        protected DbSet<Eps> Eps { get; set; }
         protected DbSet<MaritalStatus> MaritalStatus { get; set; }
         protected DbSet<Product> Product { get; set; }
         protected DbSet<VehicleType> VehicleType { get; set; }
 
-        #endregion
+        #endregion Configuration
 
         #region Operation
 
         protected DbSet<Employee> Employee { get; set; }
         protected DbSet<Rate> Rate { get; set; }
 
-        #endregion
+        #endregion Operation
 
         #region System
 

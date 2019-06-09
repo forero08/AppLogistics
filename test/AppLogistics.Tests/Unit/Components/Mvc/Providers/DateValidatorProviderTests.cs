@@ -39,6 +39,6 @@ namespace AppLogistics.Components.Mvc.Tests
             Assert.Empty(context.Results);
         }
 
-        #endregion
+        #endregion CreateValidators(ClientValidatorProviderContext context)
     }
 }

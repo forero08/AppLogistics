@@ -47,7 +47,7 @@ namespace AppLogistics.Controllers.Tests
             Assert.Null(actual.Model);
         }
 
-        #endregion
+        #endregion Index()
 
         #region Error()
 
@@ -60,7 +60,7 @@ namespace AppLogistics.Controllers.Tests
             Assert.Null(actual.Model);
         }
 
-        #endregion
+        #endregion Error()
 
         #region NotFound()
 
@@ -91,6 +91,6 @@ namespace AppLogistics.Controllers.Tests
             Assert.Null(actual.Model);
         }
 
-        #endregion
+        #endregion NotFound()
     }
 }

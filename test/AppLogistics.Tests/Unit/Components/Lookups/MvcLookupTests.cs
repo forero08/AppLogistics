@@ -41,7 +41,7 @@ namespace AppLogistics.Components.Lookups.Tests
             Assert.Empty(actual);
         }
 
-        #endregion
+        #endregion GetColumnHeader(PropertyInfo property)
 
         #region GetColumnCssClass(PropertyInfo property)
 
@@ -60,7 +60,6 @@ namespace AppLogistics.Components.Lookups.Tests
         [InlineData("DecimalField", "text-right")]
         [InlineData("BooleanField", "text-center")]
         [InlineData("DateTimeField", "text-center")]
-
         [InlineData("NullableEnumField", "text-left")]
         [InlineData("NullableSByteField", "text-right")]
         [InlineData("NullableByteField", "text-right")]
@@ -75,7 +74,6 @@ namespace AppLogistics.Components.Lookups.Tests
         [InlineData("NullableDecimalField", "text-right")]
         [InlineData("NullableBooleanField", "text-center")]
         [InlineData("NullableDateTimeField", "text-center")]
-
         [InlineData("StringField", "text-left")]
         [InlineData("Child", "text-left")]
         public void GetColumnCssClass_ReturnsCssClassForPropertyType(string propertyName, string cssClass)
@@ -88,7 +86,7 @@ namespace AppLogistics.Components.Lookups.Tests
             Assert.Equal(expected, actual);
         }
 
-        #endregion
+        #endregion GetColumnCssClass(PropertyInfo property)
 
         #region GetModels()
 
@@ -103,6 +101,6 @@ namespace AppLogistics.Components.Lookups.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion GetModels()
     }
 }

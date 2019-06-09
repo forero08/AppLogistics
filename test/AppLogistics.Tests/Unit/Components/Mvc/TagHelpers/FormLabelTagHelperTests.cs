@@ -40,6 +40,6 @@ namespace AppLogistics.Components.Mvc.Tests
             Assert.Equal($"<span class=\"require\">{require}</span>", output.Content.GetContent());
         }
 
-        #endregion
+        #endregion Process(TagHelperContext context, TagHelperOutput output)
     }
 }

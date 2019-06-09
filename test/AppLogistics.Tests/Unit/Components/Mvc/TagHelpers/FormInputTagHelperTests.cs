@@ -80,6 +80,6 @@ namespace AppLogistics.Components.Mvc.Tests
             Assert.Equal("form-control", output.Attributes["class"].Value);
         }
 
-        #endregion
+        #endregion Process(TagHelperContext context, TagHelperOutput output)
     }
 }

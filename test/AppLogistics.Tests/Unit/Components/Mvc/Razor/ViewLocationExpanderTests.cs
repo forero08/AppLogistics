@@ -37,7 +37,7 @@ namespace AppLogistics.Components.Mvc.Tests
             Assert.Equal(expected, actual);
         }
 
-        #endregion
+        #endregion ExpandViewLocations(ViewLocationExpanderContext context, IEnumerable<String> locations)
 
         #region PopulateValues(ViewLocationExpanderContext context)
 
@@ -47,6 +47,6 @@ namespace AppLogistics.Components.Mvc.Tests
             new ViewLocationExpander().PopulateValues(null);
         }
 
-        #endregion
+        #endregion PopulateValues(ViewLocationExpanderContext context)
     }
 }

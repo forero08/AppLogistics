@@ -38,6 +38,6 @@ namespace AppLogistics.Services.Tests
             service.Dispose();
         }
 
-        #endregion
+        #endregion Dispose()
     }
 }

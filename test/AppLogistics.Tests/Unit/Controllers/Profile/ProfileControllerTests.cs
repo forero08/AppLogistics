@@ -64,7 +64,7 @@ namespace AppLogistics.Controllers.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion Edit()
 
         #region Edit(ProfileEditView profile)
 
@@ -135,7 +135,7 @@ namespace AppLogistics.Controllers.Tests
             Assert.Equal(expected, actual);
         }
 
-        #endregion
+        #endregion Edit(ProfileEditView profile)
 
         #region Delete()
 
@@ -174,7 +174,7 @@ namespace AppLogistics.Controllers.Tests
             Assert.Null(actual.Model);
         }
 
-        #endregion
+        #endregion Delete()
 
         #region DeleteConfirmed(ProfileDeleteView profile)
 
@@ -257,6 +257,6 @@ namespace AppLogistics.Controllers.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion DeleteConfirmed(ProfileDeleteView profile)
     }
 }

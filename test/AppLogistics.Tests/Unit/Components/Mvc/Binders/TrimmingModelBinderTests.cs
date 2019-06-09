@@ -95,6 +95,6 @@ namespace AppLogistics.Components.Mvc.Tests
             Assert.Equal(expected.Model, actual.Model);
         }
 
-        #endregion
+        #endregion BindModelAsync(ModelBindingContext context)
     }
 }

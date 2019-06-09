@@ -36,7 +36,7 @@ namespace AppLogistics.Components.Mvc.Tests
             Assert.Equal(Validation.For("Email", context.ModelMetadata.PropertyName), attributes["data-val-email"]);
         }
 
-        #endregion
+        #endregion AddValidation(ClientModelValidationContext context)
 
         #region GetErrorMessage(ModelValidationContextBase context)
 
@@ -49,6 +49,6 @@ namespace AppLogistics.Components.Mvc.Tests
             Assert.Equal(expected, actual);
         }
 
-        #endregion
+        #endregion GetErrorMessage(ModelValidationContextBase context)
     }
 }

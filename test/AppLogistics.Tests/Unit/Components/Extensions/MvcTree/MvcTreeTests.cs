@@ -15,6 +15,6 @@ namespace AppLogistics.Components.Extensions.Tests
             Assert.Empty(actual.SelectedIds);
         }
 
-        #endregion
+        #endregion MvcTree()
     }
 }

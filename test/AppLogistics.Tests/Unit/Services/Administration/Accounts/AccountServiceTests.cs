@@ -61,7 +61,7 @@ namespace AppLogistics.Services.Tests
             Assert.Equal(expected.Id, actual.Id);
         }
 
-        #endregion
+        #endregion Get<TView>(Int32 id)
 
         #region GetViews()
 
@@ -87,7 +87,7 @@ namespace AppLogistics.Services.Tests
             }
         }
 
-        #endregion
+        #endregion GetViews()
 
         #region IsLoggedIn(IPrincipal user)
 
@@ -105,7 +105,7 @@ namespace AppLogistics.Services.Tests
             Assert.Equal(expected, actual);
         }
 
-        #endregion
+        #endregion IsLoggedIn(IPrincipal user)
 
         #region IsActive(Int32 id)
 
@@ -130,7 +130,7 @@ namespace AppLogistics.Services.Tests
             Assert.False(service.IsActive(0));
         }
 
-        #endregion
+        #endregion IsActive(Int32 id)
 
         #region Recover(AccountRecoveryView view)
 
@@ -171,7 +171,7 @@ namespace AppLogistics.Services.Tests
             Assert.NotNull(actual.RecoveryToken);
         }
 
-        #endregion
+        #endregion Recover(AccountRecoveryView view)
 
         #region Reset(AccountResetView view)
 
@@ -196,7 +196,7 @@ namespace AppLogistics.Services.Tests
             Assert.Null(actual.RecoveryToken);
         }
 
-        #endregion
+        #endregion Reset(AccountResetView view)
 
         #region Create(AccountCreateView view)
 
@@ -222,7 +222,7 @@ namespace AppLogistics.Services.Tests
             Assert.False(actual.IsLocked);
         }
 
-        #endregion
+        #endregion Create(AccountCreateView view)
 
         #region Edit(AccountEditView view)
 
@@ -251,7 +251,7 @@ namespace AppLogistics.Services.Tests
             Assert.Equal(expected.Id, actual.Id);
         }
 
-        #endregion
+        #endregion Edit(AccountEditView view)
 
         #region Edit(ClaimsPrincipal user, ProfileEditView view)
 
@@ -318,7 +318,7 @@ namespace AppLogistics.Services.Tests
             Assert.Equal(expected.Email.ToLower(), actual.FindFirst(ClaimTypes.Email).Value);
         }
 
-        #endregion
+        #endregion Edit(ClaimsPrincipal user, ProfileEditView view)
 
         #region Delete(Int32 id)
 
@@ -330,7 +330,7 @@ namespace AppLogistics.Services.Tests
             Assert.Empty(context.Set<Account>().AsNoTracking());
         }
 
-        #endregion
+        #endregion Delete(Int32 id)
 
         #region Login(HttpContext context, String username)
 
@@ -350,7 +350,7 @@ namespace AppLogistics.Services.Tests
                 && principal.Identity.AuthenticationType == "Password"), null);
         }
 
-        #endregion
+        #endregion Login(HttpContext context, String username)
 
         #region Logout(HttpContext context)
 
@@ -366,7 +366,6 @@ namespace AppLogistics.Services.Tests
             await authentication.Received().SignOutAsync(httpContext, "Cookies", null);
         }
 
-        #endregion
+        #endregion Logout(HttpContext context)
     }
 }
-

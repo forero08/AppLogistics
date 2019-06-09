@@ -55,7 +55,7 @@ namespace AppLogistics.Data.Core.Tests
             Assert.Equal(expected.Id, actual.Id);
         }
 
-        #endregion
+        #endregion GetAs<TModel, TDestination>(Int32? id)
 
         #region Get<TModel>(Int32? id)
 
@@ -85,7 +85,7 @@ namespace AppLogistics.Data.Core.Tests
             Assert.Null(unitOfWork.Get<TestModel>(0));
         }
 
-        #endregion
+        #endregion Get<TModel>(Int32? id)
 
         #region To<TDestination>(Object source)
 
@@ -100,7 +100,7 @@ namespace AppLogistics.Data.Core.Tests
             Assert.Equal(expected.Id, actual.Id);
         }
 
-        #endregion
+        #endregion To<TDestination>(Object source)
 
         #region Select<TModel>()
 
@@ -116,7 +116,7 @@ namespace AppLogistics.Data.Core.Tests
             Assert.Equal(expected, actual);
         }
 
-        #endregion
+        #endregion Select<TModel>()
 
         #region InsertRange<TModel>(IEnumerable<TModel> models)
 
@@ -135,7 +135,7 @@ namespace AppLogistics.Data.Core.Tests
             testingContext.Received().AddRange(models);
         }
 
-        #endregion
+        #endregion InsertRange<TModel>(IEnumerable<TModel> models)
 
         #region Insert<TModel>(TModel model)
 
@@ -151,7 +151,7 @@ namespace AppLogistics.Data.Core.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion Insert<TModel>(TModel model)
 
         #region Update<TModel>(TModel model)
 
@@ -174,7 +174,7 @@ namespace AppLogistics.Data.Core.Tests
             Assert.False(actual.Property(prop => prop.CreationDate).IsModified);
         }
 
-        #endregion
+        #endregion Update<TModel>(TModel model)
 
         #region DeleteRange<TModel>(IEnumerable<TModel> models)
 
@@ -192,7 +192,7 @@ namespace AppLogistics.Data.Core.Tests
             Assert.Empty(context.Set<TestModel>());
         }
 
-        #endregion
+        #endregion DeleteRange<TModel>(IEnumerable<TModel> models)
 
         #region Delete<TModel>(TModel model)
 
@@ -208,7 +208,7 @@ namespace AppLogistics.Data.Core.Tests
             Assert.Empty(context.Set<TestModel>());
         }
 
-        #endregion
+        #endregion Delete<TModel>(TModel model)
 
         #region Delete<TModel>(Int32 id)
 
@@ -224,7 +224,7 @@ namespace AppLogistics.Data.Core.Tests
             Assert.Empty(context.Set<TestModel>());
         }
 
-        #endregion
+        #endregion Delete<TModel>(Int32 id)
 
         #region Commit()
 
@@ -258,7 +258,7 @@ namespace AppLogistics.Data.Core.Tests
             Assert.NotNull(exception);
         }
 
-        #endregion
+        #endregion Commit()
 
         #region Dispose()
 
@@ -287,6 +287,6 @@ namespace AppLogistics.Data.Core.Tests
             unitOfWork.Dispose();
         }
 
-        #endregion
+        #endregion Dispose()
     }
 }

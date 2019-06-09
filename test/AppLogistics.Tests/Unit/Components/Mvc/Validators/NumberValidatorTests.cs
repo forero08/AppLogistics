@@ -26,6 +26,6 @@ namespace AppLogistics.Components.Mvc.Tests
             Assert.Equal(Validation.For("Numeric", "Int32"), attributes["data-val-number"]);
         }
 
-        #endregion
+        #endregion AddValidation(ClientModelValidationContext context)
     }
 }

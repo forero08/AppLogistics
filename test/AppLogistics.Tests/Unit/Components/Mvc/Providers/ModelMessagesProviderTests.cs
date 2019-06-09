@@ -79,6 +79,6 @@ namespace AppLogistics.Components.Mvc.Tests
             Assert.Equal(expected, actual);
         }
 
-        #endregion
+        #endregion Set(ModelBindingMessageProvider messages)
     }
 }

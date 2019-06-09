@@ -11,7 +11,7 @@ namespace AppLogistics.Components.Mvc.Tests
 
         public LanguagesTests()
         {
-            languages = new Languages("en", new []
+            languages = new Languages("en", new[]
             {
                 new Language
                 {
@@ -41,7 +41,7 @@ namespace AppLogistics.Components.Mvc.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion Default
 
         #region Current
 
@@ -69,7 +69,7 @@ namespace AppLogistics.Components.Mvc.Tests
             Assert.Same(expectedCulture, actualCulture);
         }
 
-        #endregion
+        #endregion Current
 
         #region Supported
 
@@ -86,7 +86,7 @@ namespace AppLogistics.Components.Mvc.Tests
             Assert.Equal("English", actual[0].Name);
         }
 
-        #endregion
+        #endregion Supported
 
         #region this[String abbreviation]
 
@@ -100,6 +100,6 @@ namespace AppLogistics.Components.Mvc.Tests
             Assert.Equal("English", actual.Name);
         }
 
-        #endregion
+        #endregion this[String abbreviation]
     }
 }

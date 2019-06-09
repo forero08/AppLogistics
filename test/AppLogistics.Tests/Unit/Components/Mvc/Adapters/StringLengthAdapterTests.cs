@@ -48,6 +48,6 @@ namespace AppLogistics.Components.Mvc.Tests
             Assert.Equal(expected, actual);
         }
 
-        #endregion
+        #endregion GetErrorMessage(ModelValidationContextBase context)
     }
 }

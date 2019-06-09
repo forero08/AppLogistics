@@ -68,6 +68,6 @@ namespace AppLogistics.Components.Mvc.Tests
             Assert.Null(context.Result);
         }
 
-        #endregion
+        #endregion OnResourceExecuting(ResourceExecutingContext context)
     }
 }

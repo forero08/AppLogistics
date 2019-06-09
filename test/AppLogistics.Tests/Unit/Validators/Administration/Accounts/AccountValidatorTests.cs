@@ -55,7 +55,7 @@ namespace AppLogistics.Validators.Tests
             Assert.Empty(validator.Alerts);
         }
 
-        #endregion
+        #endregion CanRecover(AccountRecoveryView view)
 
         #region CanReset(AccountResetView view)
 
@@ -92,7 +92,7 @@ namespace AppLogistics.Validators.Tests
             Assert.Empty(validator.Alerts);
         }
 
-        #endregion
+        #endregion CanReset(AccountResetView view)
 
         #region CanLogin(AccountLoginView view)
 
@@ -175,7 +175,7 @@ namespace AppLogistics.Validators.Tests
             Assert.Empty(validator.Alerts);
         }
 
-        #endregion
+        #endregion CanLogin(AccountLoginView view)
 
         #region CanCreate(AccountCreateView view)
 
@@ -221,7 +221,7 @@ namespace AppLogistics.Validators.Tests
             Assert.Empty(validator.Alerts);
         }
 
-        #endregion
+        #endregion CanCreate(AccountCreateView view)
 
         #region CanEdit(AccountEditView view)
 
@@ -293,7 +293,7 @@ namespace AppLogistics.Validators.Tests
             Assert.Empty(validator.Alerts);
         }
 
-        #endregion
+        #endregion CanEdit(AccountEditView view)
 
         #region CanEdit(ProfileEditView view)
 
@@ -378,7 +378,7 @@ namespace AppLogistics.Validators.Tests
             Assert.Empty(validator.Alerts);
         }
 
-        #endregion
+        #endregion CanEdit(ProfileEditView view)
 
         #region CanDelete(ProfileDeleteView view)
 
@@ -411,6 +411,6 @@ namespace AppLogistics.Validators.Tests
             Assert.Empty(validator.Alerts);
         }
 
-        #endregion
+        #endregion CanDelete(ProfileDeleteView view)
     }
 }

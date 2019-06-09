@@ -62,7 +62,7 @@ namespace AppLogistics.Data.Logging.Tests
             Assert.True(new LoggableProperty(textProperty, "Original").IsModified);
         }
 
-        #endregion
+        #endregion LoggableProperty(PropertyEntry entry, Object newValue)
 
         #region ToString()
 
@@ -161,6 +161,6 @@ namespace AppLogistics.Data.Logging.Tests
             Assert.Equal(expected, actual);
         }
 
-        #endregion
+        #endregion ToString()
     }
 }

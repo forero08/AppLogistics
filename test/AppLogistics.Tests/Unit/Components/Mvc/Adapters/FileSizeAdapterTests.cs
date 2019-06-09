@@ -36,7 +36,7 @@ namespace AppLogistics.Components.Mvc.Tests
             Assert.Equal(Validation.For("FileSize", context.ModelMetadata.PropertyName, 12.25), attributes["data-val-filesize"]);
         }
 
-        #endregion
+        #endregion AddValidation(ClientModelValidationContext context)
 
         #region GetErrorMessage(ModelValidationContextBase context)
 
@@ -49,6 +49,6 @@ namespace AppLogistics.Components.Mvc.Tests
             Assert.Equal(expected, actual);
         }
 
-        #endregion
+        #endregion GetErrorMessage(ModelValidationContextBase context)
     }
 }

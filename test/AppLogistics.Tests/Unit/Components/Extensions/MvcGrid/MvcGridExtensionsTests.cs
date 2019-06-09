@@ -107,7 +107,7 @@ namespace AppLogistics.Components.Extensions.Tests
             Assert.Single(columns);
         }
 
-        #endregion
+        #endregion AddAction<T>(this IGridColumnsOf<T> columns, String action, String iconClass)
 
         #region AddDate<T>(this IGridColumnsOf<T> columns, Expression<Func<T, DateTime>> expression)
 
@@ -125,7 +125,7 @@ namespace AppLogistics.Components.Extensions.Tests
             Assert.Single(columns);
         }
 
-        #endregion
+        #endregion AddDate<T>(this IGridColumnsOf<T> columns, Expression<Func<T, DateTime>> expression)
 
         #region AddDate<T>(this IGridColumnsOf<T> columns, Expression<Func<T, DateTime?>> expression)
 
@@ -143,7 +143,7 @@ namespace AppLogistics.Components.Extensions.Tests
             Assert.Single(columns);
         }
 
-        #endregion
+        #endregion AddDate<T>(this IGridColumnsOf<T> columns, Expression<Func<T, DateTime?>> expression)
 
         #region AddBoolean<T>(this IGridColumnsOf<T> columns, Expression<Func<T, Boolean>> expression)
 
@@ -185,7 +185,7 @@ namespace AppLogistics.Components.Extensions.Tests
             Assert.Equal(expected, actual);
         }
 
-        #endregion
+        #endregion AddBoolean<T>(this IGridColumnsOf<T> columns, Expression<Func<T, Boolean>> expression)
 
         #region AddBoolean<T>(this IGridColumnsOf<T> columns, Expression<Func<T, Boolean?>> expression)
 
@@ -238,7 +238,7 @@ namespace AppLogistics.Components.Extensions.Tests
             Assert.Equal(expected, actual);
         }
 
-        #endregion
+        #endregion AddBoolean<T>(this IGridColumnsOf<T> columns, Expression<Func<T, Boolean?>> expression)
 
         #region AddDateTime<T>(this IGridColumnsOf<T> columns, Expression<Func<T, DateTime>> expression)
 
@@ -256,7 +256,7 @@ namespace AppLogistics.Components.Extensions.Tests
             Assert.Single(columns);
         }
 
-        #endregion
+        #endregion AddDateTime<T>(this IGridColumnsOf<T> columns, Expression<Func<T, DateTime>> expression)
 
         #region AddDateTime<T>(this IGridColumnsOf<T> columns, Expression<Func<T, DateTime?>> expression)
 
@@ -274,7 +274,7 @@ namespace AppLogistics.Components.Extensions.Tests
             Assert.Single(columns);
         }
 
-        #endregion
+        #endregion AddDateTime<T>(this IGridColumnsOf<T> columns, Expression<Func<T, DateTime?>> expression)
 
         #region AddProperty<T, TProperty>(this IGridColumnsOf<T> columns, Expression<Func<T, TProperty>> expression)
 
@@ -465,7 +465,7 @@ namespace AppLogistics.Components.Extensions.Tests
             AssertCssClassFor(model => model.StringField, "text-left");
         }
 
-        #endregion
+        #endregion AddProperty<T, TProperty>(this IGridColumnsOf<T> columns, Expression<Func<T, TProperty>> expression)
 
         #region ApplyDefaults<T>(this IHtmlGrid<T> grid)
 
@@ -493,7 +493,7 @@ namespace AppLogistics.Components.Extensions.Tests
             Assert.NotEmpty(actual.Columns);
         }
 
-        #endregion
+        #endregion ApplyDefaults<T>(this IHtmlGrid<T> grid)
 
         #region Test helpers
 
@@ -507,6 +507,6 @@ namespace AppLogistics.Components.Extensions.Tests
             Assert.Equal(expected, actual);
         }
 
-        #endregion
+        #endregion Test helpers
     }
 }

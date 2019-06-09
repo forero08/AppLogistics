@@ -44,7 +44,7 @@ namespace AppLogistics.Controllers.Configuration.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion Index()
 
         #region Create()
 
@@ -56,7 +56,7 @@ namespace AppLogistics.Controllers.Configuration.Tests
             Assert.Null(actual.Model);
         }
 
-        #endregion
+        #endregion Create()
 
         #region Create(VehicleTypeView vehicleType)
 
@@ -98,7 +98,7 @@ namespace AppLogistics.Controllers.Configuration.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion Create(VehicleTypeView vehicleType)
 
         #region Details(String id)
 
@@ -113,7 +113,7 @@ namespace AppLogistics.Controllers.Configuration.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion Details(String id)
 
         #region Edit(String id)
 
@@ -128,7 +128,7 @@ namespace AppLogistics.Controllers.Configuration.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion Edit(String id)
 
         #region Edit(VehicleTypeView vehicleType)
 
@@ -164,7 +164,7 @@ namespace AppLogistics.Controllers.Configuration.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion Edit(VehicleTypeView vehicleType)
 
         #region Delete(String id)
 
@@ -179,7 +179,7 @@ namespace AppLogistics.Controllers.Configuration.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion Delete(String id)
 
         #region DeleteConfirmed(String id)
 
@@ -200,6 +200,6 @@ namespace AppLogistics.Controllers.Configuration.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion DeleteConfirmed(String id)
     }
 }

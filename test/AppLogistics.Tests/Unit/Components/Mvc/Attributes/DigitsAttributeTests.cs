@@ -25,7 +25,7 @@ namespace AppLogistics.Components.Mvc.Tests
             Assert.Equal(expected, actual);
         }
 
-        #endregion
+        #endregion DigitsAttribute()
 
         #region IsValid(Object value)
 
@@ -50,6 +50,6 @@ namespace AppLogistics.Components.Mvc.Tests
             Assert.True(attribute.IsValid("92233720368547758074878484887777"));
         }
 
-        #endregion
+        #endregion IsValid(Object value)
     }
 }

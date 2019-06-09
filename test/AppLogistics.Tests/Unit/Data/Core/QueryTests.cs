@@ -41,7 +41,7 @@ namespace AppLogistics.Data.Core.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion ElementType
 
         #region Expression
 
@@ -61,7 +61,7 @@ namespace AppLogistics.Data.Core.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion Expression
 
         #region Provider
 
@@ -74,7 +74,7 @@ namespace AppLogistics.Data.Core.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion Provider
 
         #region Select<TResult>(Expression<Func<TModel, TResult>> selector)
 
@@ -87,7 +87,7 @@ namespace AppLogistics.Data.Core.Tests
             Assert.Equal(expected, actual);
         }
 
-        #endregion
+        #endregion Select<TResult>(Expression<Func<TModel, TResult>> selector)
 
         #region Where(Expression<Func<TModel, Boolean>> predicate)
 
@@ -102,7 +102,7 @@ namespace AppLogistics.Data.Core.Tests
             Assert.Equal(expected, actual);
         }
 
-        #endregion
+        #endregion Where(Expression<Func<TModel, Boolean>> predicate)
 
         #region To<TView>()
 
@@ -115,7 +115,7 @@ namespace AppLogistics.Data.Core.Tests
             Assert.Equal(expected, actual);
         }
 
-        #endregion
+        #endregion To<TView>()
 
         #region GetEnumerator()
 
@@ -137,6 +137,6 @@ namespace AppLogistics.Data.Core.Tests
             Assert.Equal(expected, actual);
         }
 
-        #endregion
+        #endregion GetEnumerator()
     }
 }

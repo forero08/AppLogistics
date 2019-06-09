@@ -36,7 +36,7 @@ namespace AppLogistics.Controllers.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion ValidatedController(TService service, TValidator validator)
 
         #region OnActionExecuting(ActionExecutingContext context)
 
@@ -88,7 +88,7 @@ namespace AppLogistics.Controllers.Tests
             Assert.Same(expected, actual);
         }
 
-        #endregion
+        #endregion OnActionExecuting(ActionExecutingContext context)
 
         #region Dispose()
 
@@ -115,6 +115,6 @@ namespace AppLogistics.Controllers.Tests
             controller.Dispose();
         }
 
-        #endregion
+        #endregion Dispose()
     }
 }

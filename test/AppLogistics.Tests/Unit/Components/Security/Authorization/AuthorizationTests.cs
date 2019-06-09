@@ -356,7 +356,7 @@ namespace AppLogistics.Components.Security.Tests
             Assert.True(authorization.IsGrantedFor(accountId, null, "Authorized", "Action"));
         }
 
-        #endregion
+        #endregion IsGrantedFor(Int32? accountId, String area, String controller, String action)
 
         #region Refresh()
 
@@ -373,7 +373,7 @@ namespace AppLogistics.Components.Security.Tests
             Assert.False(authorization.IsGrantedFor(accountId, "Area", "Authorized", "Action"));
         }
 
-        #endregion
+        #endregion Refresh()
 
         #region Test helpers
 
@@ -397,6 +397,6 @@ namespace AppLogistics.Components.Security.Tests
             return account.Id;
         }
 
-        #endregion
+        #endregion Test helpers
     }
 }
