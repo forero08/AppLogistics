@@ -304,6 +304,24 @@ namespace AppLogistics.Tests
             };
         }
 
+        public static EducationLevel CreateEducationLevel(int id = 0)
+        {
+            return new EducationLevel
+            {
+                Id = id,
+                Name = "Name" + id
+            };
+        }
+
+        public static EducationLevelView CreateEducationLevelView(int id = 0)
+        {
+            return new EducationLevelView
+            {
+                Id = id,
+                Name = "Name" + id
+            };
+        }
+
         public static Eps CreateEps(int id = 0)
         {
             return new Eps
@@ -437,6 +455,7 @@ namespace AppLogistics.Tests
                 Afp = CreateAfp(id),
                 BranchOffice = CreateBranchOffice(id),
                 DocumentType = CreateDocumentType(id),
+                EducationLevel = CreateEducationLevel(id),
                 Eps = CreateEps(id),
                 EthnicGroup = CreateEthnicGroup(id),
                 MaritalStatus = CreateMaritalStatus(id)

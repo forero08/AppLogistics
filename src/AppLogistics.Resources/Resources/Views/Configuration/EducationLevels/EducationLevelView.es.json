@@ -1,0 +1,8 @@
+{
+    "Titles": {
+        "Name": "Nombre"
+    },
+    "Validations": {
+        "AssociatedEmployees": "Existen empleados asociados a este Nivel educativo. Para eliminar este Nivel educativo, debe eliminar primero esos empleados o asociarles un Nivel educativo diferente."
+    }
+}

@@ -186,6 +186,17 @@
                 </div>
                 <div class="form-group">
                     <div class="control-label col-md-3 col-lg-2">
+                        <label asp-for="EducationLevelId"></label>
+                    </div>
+                    <div class="control-content col-md-9 col-lg-5">
+                        <div mvc-lookup-for="EducationLevelId" url="~/Lookup/EducationLevel" title="@Resource.ForLookup("EducationLevel")"></div>
+                    </div>
+                    <div class="control-validation col">
+                        <span asp-validation-for="EducationLevelId"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-md-3 col-lg-2">
                         <label asp-for="EmergencyContact"></label>
                     </div>
                     <div class="control-content col-md-9 col-lg-5">
