@@ -36,6 +36,8 @@ namespace AppLogistics.Objects
 
         public string EthnicGroupName { get; set; }
 
+        public string EducationLevelName { get; set; }
+
         public string EmergencyContact { get; set; }
 
         public string EmergencyContactPhone { get; set; }

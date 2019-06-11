@@ -57,6 +57,12 @@ namespace AppLogistics.Controllers
         }
 
         [AjaxOnly]
+        public JsonResult EducationLevel(LookupFilter filter)
+        {
+            return GetData(new MvcLookup<EducationLevel, EducationLevelView>(_unitOfWork), filter);
+        }
+
+        [AjaxOnly]
         public JsonResult Eps(LookupFilter filter)
         {
             return GetData(new MvcLookup<Eps, EpsView>(_unitOfWork), filter);

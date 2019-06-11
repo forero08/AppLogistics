@@ -62,6 +62,9 @@ namespace AppLogistics.Objects
         [Required]
         public int EthnicGroupId { get; set; }
 
+        [Required]
+        public int EducationLevelId { get; set; }
+
         [StringLength(32)]
         public string EmergencyContact { get; set; }
 
