@@ -6,5 +6,8 @@
         "Name": "Nombre",
         "Nit": "Nit",
         "Phone": "Teléfono"
+    },
+    "Validations": {
+        "NotUniqueNit": "Ya existe un cliente con ese NIT"
     }
 }

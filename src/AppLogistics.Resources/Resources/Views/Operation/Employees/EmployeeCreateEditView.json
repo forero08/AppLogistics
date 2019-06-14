@@ -35,5 +35,8 @@
         "ResidenceCity": "Residence city",
         "RetirementDate": "Retirement date",
         "Surname": "Surname"
+    },
+    "Validations": {
+        "NotUniqueDocumentNumber": "There is already an employee with that Document number"
     }
 }

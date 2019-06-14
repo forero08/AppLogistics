@@ -14,12 +14,12 @@ namespace AppLogistics.Validators
 
         public bool CanCreate(ClientCreateEditView view)
         {
-            return ModelState.IsValid;
+            return IsUniqueNit(view.Nit) && ModelState.IsValid;
         }
 
         public bool CanEdit(ClientCreateEditView view)
         {
-            return ModelState.IsValid;
+            return IsUniqueNit(view.Nit) && ModelState.IsValid;
         }
 
         public bool CanDelete(int id)
@@ -35,6 +35,21 @@ namespace AppLogistics.Validators
             }
 
             return ModelState.IsValid;
+        }
+
+        private bool IsUniqueNit(string nit)
+        {
+            var alreadyExists = UnitOfWork.Select<Client>()
+                .Where(c => c.Nit.Equals(nit))
+                .Any();
+
+            if (alreadyExists)
+            {
+                Alerts.AddError(Validation.For<ClientCreateEditView>("NotUniqueNit"));
+                return false;
+            }
+
+            return true;
         }
     }
 }

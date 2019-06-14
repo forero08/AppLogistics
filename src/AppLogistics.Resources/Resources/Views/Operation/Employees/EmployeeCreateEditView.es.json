@@ -35,5 +35,8 @@
         "ResidenceCity": "Ciudad de residencia",
         "RetirementDate": "Fecha de retiro",
         "Surname": "Apellido"
+    },
+    "Validations": {
+        "NotUniqueDocumentNumber": "Ya existe un empleado con ese Número de documento"
     }
 }

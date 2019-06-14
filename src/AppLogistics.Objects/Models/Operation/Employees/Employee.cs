@@ -19,6 +19,7 @@ namespace AppLogistics.Objects
 
         [Required]
         [StringLength(16)]
+        [Index(IsUnique = true)]
         public string DocumentNumber { get; set; }
 
         [Required]
