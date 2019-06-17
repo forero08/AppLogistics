@@ -22,7 +22,5 @@ namespace AppLogistics.Objects
 
         [StringLength(32)]
         public string Contact { get; set; }
-
-        public int BranchOfficeId { get; set; }
     }
 }

@@ -10,9 +10,6 @@ namespace AppLogistics.Objects
         public string InternalCode { get; set; }
 
         [Required]
-        public int BranchOfficeId { get; set; }
-
-        [Required]
         public int DocumentTypeId { get; set; }
 
         [Required]

@@ -6,8 +6,6 @@ namespace AppLogistics.Objects
     {
         public string InternalCode { get; set; }
 
-        public string BranchOfficeName { get; set; }
-
         public string DocumentTypeName { get; set; }
 
         public string DocumentNumber { get; set; }

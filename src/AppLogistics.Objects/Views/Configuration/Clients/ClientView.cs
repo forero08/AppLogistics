@@ -14,7 +14,5 @@ namespace AppLogistics.Objects
         public string Phone { get; set; }
 
         public string Contact { get; set; }
-
-        public string BranchOfficeName { get; set; }
     }
 }

@@ -54,7 +54,6 @@ namespace AppLogistics.Services.Tests
             Assert.Equal(expected.HasDocumentCopy, actual.HasDocumentCopy);
             Assert.Equal(expected.EthnicGroupName, actual.EthnicGroupName);
             Assert.Equal(expected.MaritalStatusName, actual.MaritalStatusName);
-            Assert.Equal(expected.BranchOfficeName, actual.BranchOfficeName);
             Assert.Equal(expected.DocumentNumber, actual.DocumentNumber);
             Assert.Equal(expected.DocumentTypeName, actual.DocumentTypeName);
             Assert.Equal(expected.RetirementDate, actual.RetirementDate);
@@ -108,7 +107,6 @@ namespace AppLogistics.Services.Tests
                 Assert.Equal(expected[i].HasDocumentCopy, actual[i].HasDocumentCopy);
                 Assert.Equal(expected[i].EthnicGroupName, actual[i].EthnicGroupName);
                 Assert.Equal(expected[i].MaritalStatusName, actual[i].MaritalStatusName);
-                Assert.Equal(expected[i].BranchOfficeName, actual[i].BranchOfficeName);
                 Assert.Equal(expected[i].DocumentNumber, actual[i].DocumentNumber);
                 Assert.Equal(expected[i].DocumentTypeName, actual[i].DocumentTypeName);
                 Assert.Equal(expected[i].RetirementDate, actual[i].RetirementDate);
@@ -162,7 +160,6 @@ namespace AppLogistics.Services.Tests
             Assert.Equal(expected.HasDocumentCopy, actual.HasDocumentCopy);
             Assert.Equal(expected.EthnicGroupId, actual.EthnicGroupId);
             Assert.Equal(expected.MaritalStatusId, actual.MaritalStatusId);
-            Assert.Equal(expected.BranchOfficeId, actual.BranchOfficeId);
             Assert.Equal(expected.DocumentNumber, actual.DocumentNumber);
             Assert.Equal(expected.DocumentTypeId, actual.DocumentTypeId);
             Assert.Equal(expected.RetirementDate, actual.RetirementDate);
@@ -195,7 +192,6 @@ namespace AppLogistics.Services.Tests
             view.Address = "Address0";
             view.AfpId = 1;
             view.BornDate = DateTime.Today;
-            view.BranchOfficeId = 1;
             view.Comments = "Comments0";
             view.DocumentNumber = "DocumentNumber0";
             view.DocumentTypeId = 1;
@@ -248,7 +244,6 @@ namespace AppLogistics.Services.Tests
             Assert.Equal(expected.HasDocumentCopy, actual.HasDocumentCopy);
             Assert.Equal(expected.EthnicGroupId, actual.EthnicGroupId);
             Assert.Equal(expected.MaritalStatusId, actual.MaritalStatusId);
-            Assert.Equal(expected.BranchOfficeId, actual.BranchOfficeId);
             Assert.Equal(expected.DocumentNumber, actual.DocumentNumber);
             Assert.Equal(expected.DocumentTypeId, actual.DocumentTypeId);
             Assert.Equal(expected.RetirementDate, actual.RetirementDate);
