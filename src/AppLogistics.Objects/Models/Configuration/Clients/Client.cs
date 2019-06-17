@@ -26,9 +26,6 @@ namespace AppLogistics.Objects
         [StringLength(32)]
         public string Contact { get; set; }
 
-        public int BranchOfficeId { get; set; }
-        public virtual BranchOffice BranchOffice { get; set; }
-
         public virtual ICollection<Rate> Rates { get; set; }
     }
 }

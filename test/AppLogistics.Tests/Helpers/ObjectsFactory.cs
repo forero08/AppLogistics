@@ -253,8 +253,7 @@ namespace AppLogistics.Tests
                 Nit = "Nit" + id,
                 Address = "Address" + id,
                 Phone = "Phone" + id,
-                Contact = "Contact" + id,
-                BranchOffice = CreateBranchOffice(id)
+                Contact = "Contact" + id
             };
         }
 
@@ -453,7 +452,6 @@ namespace AppLogistics.Tests
                 Surname = "Surname" + id,
 
                 Afp = CreateAfp(id),
-                BranchOffice = CreateBranchOffice(id),
                 DocumentType = CreateDocumentType(id),
                 EducationLevel = CreateEducationLevel(id),
                 Eps = CreateEps(id),
@@ -471,7 +469,6 @@ namespace AppLogistics.Tests
                 Address = "Address" + id,
                 AfpName = "AfpName" + id,
                 BornDate = DateTime.Now,
-                BranchOfficeName = "BranchOfficeName" + id,
                 Comments = "Comments" + id,
                 DocumentNumber = "DocumentNumber" + id,
                 DocumentTypeName = "DocumentTypeName" + id,
@@ -513,7 +510,6 @@ namespace AppLogistics.Tests
                 Address = "Address" + id,
                 AfpId = id,
                 BornDate = DateTime.Now,
-                BranchOfficeId = id,
                 Comments = "Comments" + id,
                 DocumentNumber = "DocumentNumber" + id,
                 DocumentTypeId = id,

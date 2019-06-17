@@ -39,7 +39,6 @@ namespace AppLogistics.Services.Tests
             ClientView actual = service.Get<ClientView>(client.Id);
             ClientView expected = Mapper.Map<ClientView>(client);
 
-            Assert.Equal(expected.BranchOfficeName, actual.BranchOfficeName);
             Assert.Equal(expected.CreationDate, actual.CreationDate);
             Assert.Equal(expected.Address, actual.Address);
             Assert.Equal(expected.Contact, actual.Contact);
@@ -65,7 +64,6 @@ namespace AppLogistics.Services.Tests
 
             for (int i = 0; i < expected.Length || i < actual.Length; i++)
             {
-                Assert.Equal(expected[i].BranchOfficeName, actual[i].BranchOfficeName);
                 Assert.Equal(expected[i].CreationDate, actual[i].CreationDate);
                 Assert.Equal(expected[i].Address, actual[i].Address);
                 Assert.Equal(expected[i].Contact, actual[i].Contact);
@@ -91,7 +89,6 @@ namespace AppLogistics.Services.Tests
             Client actual = context.Set<Client>().AsNoTracking().Single(model => model.Id != client.Id);
             ClientCreateEditView expected = view;
 
-            Assert.Equal(expected.BranchOfficeId, actual.BranchOfficeId);
             Assert.Equal(expected.CreationDate, actual.CreationDate);
             Assert.Equal(expected.Address, actual.Address);
             Assert.Equal(expected.Contact, actual.Contact);
@@ -113,14 +110,12 @@ namespace AppLogistics.Services.Tests
             view.Address = "Address0";
             view.Phone = "Phone0";
             view.Contact = "Contact0";
-            view.BranchOfficeId = 1;
 
             service.Edit(view);
 
             Client actual = context.Set<Client>().AsNoTracking().Single();
             Client expected = client;
 
-            Assert.Equal(expected.BranchOfficeId, actual.BranchOfficeId);
             Assert.Equal(expected.CreationDate, actual.CreationDate);
             Assert.Equal(expected.Address, actual.Address);
             Assert.Equal(expected.Contact, actual.Contact);

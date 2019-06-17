@@ -11,9 +11,6 @@ namespace AppLogistics.Objects
         [Index(IsUnique = true)]
         public string InternalCode { get; set; }
 
-        public int BranchOfficeId { get; set; }
-        public virtual BranchOffice BranchOffice { get; set; }
-
         public int DocumentTypeId { get; set; }
         public virtual DocumentType DocumentType { get; set; }
 

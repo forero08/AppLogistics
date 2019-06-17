@@ -3,7 +3,6 @@
         "Address": "Dirección",
         "AfpId": "Afp",
         "BornDate": "Fecha Nacimiento",
-        "BranchOfficeId": "Sucursal",
         "Comments": "Commentarios",
         "DocumentNumber": "Número de documento",
         "DocumentTypeId": "Tipo de documento",
