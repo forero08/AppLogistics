@@ -14,18 +14,18 @@ namespace AppLogistics.Validators
 
         public bool CanCreate(EmployeeCreateEditView view)
         {
-            return IsUniqueDocumentNumber(view.DocumentNumber) && ModelState.IsValid;
+            return IsUniqueDocumentNumber(view.Id, view.DocumentNumber) && ModelState.IsValid;
         }
 
         public bool CanEdit(EmployeeCreateEditView view)
         {
-            return IsUniqueDocumentNumber(view.DocumentNumber) && ModelState.IsValid;
+            return IsUniqueDocumentNumber(view.Id, view.DocumentNumber) && ModelState.IsValid;
         }
 
-        private bool IsUniqueDocumentNumber(string docNumber)
+        private bool IsUniqueDocumentNumber(int employeeId, string docNumber)
         {
             var alreadyExists = UnitOfWork.Select<Employee>()
-                .Where(c => c.DocumentNumber.Equals(docNumber))
+                .Where(c => c.DocumentNumber.Equals(docNumber) && c.Id != employeeId)
                 .Any();
 
             if (alreadyExists)

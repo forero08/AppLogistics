@@ -14,12 +14,12 @@ namespace AppLogistics.Validators
 
         public bool CanCreate(ClientCreateEditView view)
         {
-            return IsUniqueNit(view.Nit) && ModelState.IsValid;
+            return IsUniqueNit(view.Id, view.Nit) && ModelState.IsValid;
         }
 
         public bool CanEdit(ClientCreateEditView view)
         {
-            return IsUniqueNit(view.Nit) && ModelState.IsValid;
+            return IsUniqueNit(view.Id, view.Nit) && ModelState.IsValid;
         }
 
         public bool CanDelete(int id)
@@ -37,10 +37,10 @@ namespace AppLogistics.Validators
             return ModelState.IsValid;
         }
 
-        private bool IsUniqueNit(string nit)
+        private bool IsUniqueNit(int clientId, string nit)
         {
             var alreadyExists = UnitOfWork.Select<Client>()
-                .Where(c => c.Nit.Equals(nit))
+                .Where(c => c.Nit.Equals(nit) && c.Id != clientId)
                 .Any();
 
             if (alreadyExists)
