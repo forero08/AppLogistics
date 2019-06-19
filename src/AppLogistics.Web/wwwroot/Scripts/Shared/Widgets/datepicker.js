@@ -7,6 +7,10 @@ Datepicker = {
             $('.datepicker').datepicker({
                 changeMonth: true,
                 changeYear: true,
+                firstDay: 0,
+                showOtherMonths: true,
+                selectOtherMonths: true,
+                yearRange: "c-4:c+2",
                 beforeShow: function (element) {
                     return !element.readOnly;
                 },
