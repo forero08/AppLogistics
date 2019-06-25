@@ -51,6 +51,12 @@ namespace AppLogistics.Controllers
         }
 
         [AjaxOnly]
+        public JsonResult Country(LookupFilter filter)
+        {
+            return GetData(new MvcLookup<Country, CountryView>(_unitOfWork), filter);
+        }
+
+        [AjaxOnly]
         public JsonResult DocumentType(LookupFilter filter)
         {
             return GetData(new MvcLookup<DocumentType, DocumentTypeView>(_unitOfWork), filter);

@@ -24,6 +24,8 @@ namespace AppLogistics.Objects
 
         public string Address { get; set; }
 
+        public string CountryName { get; set; }
+
         public string MobilePhone { get; set; }
 
         public string HomePhone { get; set; }

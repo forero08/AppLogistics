@@ -4,6 +4,7 @@
         "AfpName": "Afp",
         "BornDate": "Born date",
         "Comments": "Comments",
+        "CountryName": "Country",
         "DocumentNumber": "Document number",
         "DocumentTypeName": "Document type",
         "EducationLevelName": "Education level",

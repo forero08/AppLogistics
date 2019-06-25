@@ -59,6 +59,7 @@ namespace AppLogistics.Services.Tests
             Assert.Equal(expected.RetirementDate, actual.RetirementDate);
             Assert.Equal(expected.ResidenceCity, actual.ResidenceCity);
             Assert.Equal(expected.CreationDate, actual.CreationDate);
+            Assert.Equal(expected.CountryName, actual.CountryName);
             Assert.Equal(expected.InternalCode, actual.InternalCode);
             Assert.Equal(expected.HasContract, actual.HasContract);
             Assert.Equal(expected.MobilePhone, actual.MobilePhone);
@@ -112,6 +113,7 @@ namespace AppLogistics.Services.Tests
                 Assert.Equal(expected[i].RetirementDate, actual[i].RetirementDate);
                 Assert.Equal(expected[i].ResidenceCity, actual[i].ResidenceCity);
                 Assert.Equal(expected[i].CreationDate, actual[i].CreationDate);
+                Assert.Equal(expected[i].CountryName, actual[i].CountryName);
                 Assert.Equal(expected[i].InternalCode, actual[i].InternalCode);
                 Assert.Equal(expected[i].HasContract, actual[i].HasContract);
                 Assert.Equal(expected[i].MobilePhone, actual[i].MobilePhone);
@@ -165,6 +167,7 @@ namespace AppLogistics.Services.Tests
             Assert.Equal(expected.RetirementDate, actual.RetirementDate);
             Assert.Equal(expected.ResidenceCity, actual.ResidenceCity);
             Assert.Equal(expected.CreationDate, actual.CreationDate);
+            Assert.Equal(expected.CountryId, actual.CountryId);
             Assert.Equal(expected.InternalCode, actual.InternalCode);
             Assert.Equal(expected.HasContract, actual.HasContract);
             Assert.Equal(expected.MobilePhone, actual.MobilePhone);
@@ -193,6 +196,7 @@ namespace AppLogistics.Services.Tests
             view.AfpId = 1;
             view.BornDate = DateTime.Today;
             view.Comments = "Comments0";
+            view.CountryId = 1;
             view.DocumentNumber = "DocumentNumber0";
             view.DocumentTypeId = 1;
             view.Email = "Email0";
@@ -249,6 +253,7 @@ namespace AppLogistics.Services.Tests
             Assert.Equal(expected.RetirementDate, actual.RetirementDate);
             Assert.Equal(expected.ResidenceCity, actual.ResidenceCity);
             Assert.Equal(expected.CreationDate, actual.CreationDate);
+            Assert.Equal(expected.CountryId, actual.CountryId);
             Assert.Equal(expected.InternalCode, actual.InternalCode);
             Assert.Equal(expected.HasContract, actual.HasContract);
             Assert.Equal(expected.MobilePhone, actual.MobilePhone);

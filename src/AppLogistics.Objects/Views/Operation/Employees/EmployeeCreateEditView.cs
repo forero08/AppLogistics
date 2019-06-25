@@ -40,6 +40,9 @@ namespace AppLogistics.Objects
         [StringLength(128)]
         public string Address { get; set; }
 
+        [Required]
+        public int CountryId { get; set; }
+
         [Phone]
         [Required]
         [StringLength(16)]

@@ -283,6 +283,24 @@ namespace AppLogistics.Tests
             };
         }
 
+        public static Country CreateCountry(int id = 0)
+        {
+            return new Country
+            {
+                Id = id,
+                Name = "Name" + id
+            };
+        }
+
+        public static CountryView CreateCountryView(int id = 0)
+        {
+            return new CountryView
+            {
+                Id = id,
+                Name = "Name" + id
+            };
+        }
+
         public static DocumentType CreateDocumentType(int id = 0)
         {
             return new DocumentType
@@ -452,6 +470,7 @@ namespace AppLogistics.Tests
                 Surname = "Surname" + id,
 
                 Afp = CreateAfp(id),
+                Country = CreateCountry(id),
                 DocumentType = CreateDocumentType(id),
                 EducationLevel = CreateEducationLevel(id),
                 Eps = CreateEps(id),
@@ -470,6 +489,7 @@ namespace AppLogistics.Tests
                 AfpName = "AfpName" + id,
                 BornDate = DateTime.Now,
                 Comments = "Comments" + id,
+                CountryName = "CountryName" + id,
                 DocumentNumber = "DocumentNumber" + id,
                 DocumentTypeName = "DocumentTypeName" + id,
                 Email = "Email" + id,
@@ -511,6 +531,7 @@ namespace AppLogistics.Tests
                 AfpId = id,
                 BornDate = DateTime.Now,
                 Comments = "Comments" + id,
+                CountryId = id,
                 DocumentNumber = "DocumentNumber" + id,
                 DocumentTypeId = id,
                 Email = "Email" + id,
