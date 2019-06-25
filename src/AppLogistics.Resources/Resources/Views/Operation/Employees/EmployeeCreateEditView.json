@@ -4,6 +4,7 @@
         "AfpId": "Afp",
         "BornDate": "Born date",
         "Comments": "Comments",
+        "CountryId": "Country",
         "DocumentNumber": "Document number",
         "DocumentTypeId": "Document type",
         "EducationLevelId": "Education level",

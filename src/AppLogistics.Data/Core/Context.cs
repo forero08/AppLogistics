@@ -26,6 +26,7 @@ namespace AppLogistics.Data.Core
         protected DbSet<BranchOffice> BranchOffice { get; set; }
         protected DbSet<Carrier> Carrier { get; set; }
         protected DbSet<Client> Client { get; set; }
+        protected DbSet<Country> Country { get; set; }
         protected DbSet<DocumentType> DocumentType { get; set; }
         protected DbSet<EducationLevel> EducationLevel { get; set; }
         protected DbSet<Eps> Eps { get; set; }
