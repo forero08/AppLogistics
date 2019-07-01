@@ -11,6 +11,7 @@
         "EthnicGroup": "Ethnic groups",
         "MaritalStatus": "Marital statuses",
         "Role": "Roles",
+        "Sex":  "Sexes",
         "VehicleType": "Vehicle types"
     }
 }

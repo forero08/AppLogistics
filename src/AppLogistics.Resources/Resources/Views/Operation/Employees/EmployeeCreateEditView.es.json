@@ -34,6 +34,7 @@
         "Name": "Nombre",
         "ResidenceCity": "Ciudad de residencia",
         "RetirementDate": "Fecha de retiro",
+        "SexId":  "Sexo",
         "Surname": "Apellido"
     },
     "Validations": {

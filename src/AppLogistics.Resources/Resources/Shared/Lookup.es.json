@@ -11,6 +11,7 @@
         "EthnicGroup": "Grupos étnicos",
         "MaritalStatus": "Estados civiles",
         "Role": "Roles",
+        "Sex": "Sexos",
         "VehicleType": "Tipos de vehículo"
     }
 }

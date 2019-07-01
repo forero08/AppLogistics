@@ -120,6 +120,11 @@ namespace AppLogistics.Data.Migrations.Tests
         [InlineData("Configuration", "Products", "Details")]
         [InlineData("Configuration", "Products", "Edit")]
         [InlineData("Configuration", "Products", "Delete")]
+        [InlineData("Configuration", "Sexes", "Index")]
+        [InlineData("Configuration", "Sexes", "Create")]
+        [InlineData("Configuration", "Sexes", "Details")]
+        [InlineData("Configuration", "Sexes", "Edit")]
+        [InlineData("Configuration", "Sexes", "Delete")]
         [InlineData("Configuration", "VehicleTypes", "Index")]
         [InlineData("Configuration", "VehicleTypes", "Create")]
         [InlineData("Configuration", "VehicleTypes", "Details")]
@@ -147,7 +152,7 @@ namespace AppLogistics.Data.Migrations.Tests
         public void PermissionsTable_HasExactNumberOfPermissions()
         {
             int actual = context.Set<Permission>().Count();
-            int expected = 84;
+            int expected = 89;
 
             Assert.Equal(expected, actual);
         }

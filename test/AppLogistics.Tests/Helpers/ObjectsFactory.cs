@@ -413,6 +413,24 @@ namespace AppLogistics.Tests
             };
         }
 
+        public static Sex CreateSex(int id = 0)
+        {
+            return new Sex
+            {
+                Id = id,
+                Name = "Name" + id
+            };
+        }
+
+        public static SexView CreateSexView(int id = 0)
+        {
+            return new SexView
+            {
+                Id = id,
+                Name = "Name" + id
+            };
+        }
+
         public static VehicleType CreateVehicleType(int id = 0)
         {
             return new VehicleType
@@ -475,7 +493,8 @@ namespace AppLogistics.Tests
                 EducationLevel = CreateEducationLevel(id),
                 Eps = CreateEps(id),
                 EthnicGroup = CreateEthnicGroup(id),
-                MaritalStatus = CreateMaritalStatus(id)
+                MaritalStatus = CreateMaritalStatus(id),
+                Sex = CreateSex(id)
             };
         }
 
@@ -517,6 +536,7 @@ namespace AppLogistics.Tests
                 MobilePhone = "MobilePhone" + id,
                 ResidenceCity = "ResidenceCity" + id,
                 RetirementDate = DateTime.Now,
+                SexName = "SexName" + id,
                 Surname = "Surname" + id
             };
         }
@@ -559,6 +579,7 @@ namespace AppLogistics.Tests
                 MobilePhone = "MobilePhone" + id,
                 ResidenceCity = "ResidenceCity" + id,
                 RetirementDate = DateTime.Now,
+                SexId = id,
                 Surname = "Surname" + id
             };
         }

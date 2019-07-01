@@ -93,6 +93,12 @@ namespace AppLogistics.Controllers
         }
 
         [AjaxOnly]
+        public JsonResult Sex(LookupFilter filter)
+        {
+            return GetData(new MvcLookup<Sex, SexView>(_unitOfWork), filter);
+        }
+
+        [AjaxOnly]
         public JsonResult VehicleType(LookupFilter filter)
         {
             return GetData(new MvcLookup<VehicleType, VehicleTypeView>(_unitOfWork), filter);
