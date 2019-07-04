@@ -8,5 +8,8 @@
         "ProductId": "Product",
         "SplitFare": "Split fare",
         "VehicleTypeId": "Vehicle type"
+    },
+    "Validations": {
+        "NotUniqueName": "There is already a rate with that Name"
     }
 }

@@ -20,9 +20,11 @@ namespace AppLogistics.Objects
         public int? ProductId { get; set; }
 
         [Required]
+        [MinValue(0)]
         public decimal Price { get; set; }
 
         [Required]
+        [MinValue(0)]
         [MaxValue(100)]
         public float EmployeePercentage { get; set; }
 

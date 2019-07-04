@@ -1,5 +1,8 @@
 using AppLogistics.Data.Core;
 using AppLogistics.Objects;
+using AppLogistics.Resources;
+using System;
+using System.Linq;
 
 namespace AppLogistics.Validators
 {
@@ -12,12 +15,27 @@ namespace AppLogistics.Validators
 
         public bool CanCreate(RateCreateEditView view)
         {
-            return ModelState.IsValid;
+            return IsUniqueName(view.Id, view.Name) && ModelState.IsValid;
         }
 
         public bool CanEdit(RateCreateEditView view)
         {
-            return ModelState.IsValid;
+            return IsUniqueName(view.Id, view.Name) && ModelState.IsValid;
+        }
+
+        private bool IsUniqueName(int rateId, string rateName)
+        {
+            var alreadyExists = UnitOfWork.Select<Rate>()
+                .Where(r => r.Name.Equals(rateName, StringComparison.OrdinalIgnoreCase) && r.Id != rateId)
+                .Any();
+
+            if (alreadyExists)
+            {
+                Alerts.AddError(Validation.For<RateCreateEditView>("NotUniqueName"));
+                return false;
+            }
+
+            return true;
         }
     }
 }

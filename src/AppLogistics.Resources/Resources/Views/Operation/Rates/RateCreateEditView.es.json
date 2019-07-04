@@ -8,5 +8,8 @@
         "ProductId": "Producto",
         "SplitFare": "Dividir tarifa",
         "VehicleTypeId": "Tipo de vehículo"
+    },
+    "Validations": {
+        "NotUniqueName": "Ya existe una tarifa con ese Nombre"
     }
 }

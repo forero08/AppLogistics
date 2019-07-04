@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Text;
 
 namespace AppLogistics.Objects.Models.Operation.Services
 {
@@ -14,8 +12,6 @@ namespace AppLogistics.Objects.Models.Operation.Services
         public virtual Rate Rate { get; set; }
 
         public int Quantity { get; set; }
-
-        // product and product quantity?
 
         [StringLength(16)]
         public string VehicleNumber { get; set; }
