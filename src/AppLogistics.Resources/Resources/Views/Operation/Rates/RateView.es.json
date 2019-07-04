@@ -5,6 +5,7 @@
         "EmployeePercentage": "Porcentaje para empleado",
         "Name": "Nombre",
         "Price": "Precio",
+        "ProductName": "Producto",
         "SplitFare": "Dividir tarifa",
         "VehicleTypeName": "Tipo de vehículo"
     }

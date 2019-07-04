@@ -17,6 +17,9 @@ namespace AppLogistics.Objects
         public int? VehicleTypeId { get; set; }
         public virtual VehicleType VehicleType { get; set; }
 
+        public int? ProductId { get; set; }
+        public virtual Product Product { get; set; }
+
         public decimal Price { get; set; }
 
         public float EmployeePercentage { get; set; }

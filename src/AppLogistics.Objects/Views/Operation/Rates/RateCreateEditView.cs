@@ -17,6 +17,8 @@ namespace AppLogistics.Objects
 
         public int? VehicleTypeId { get; set; }
 
+        public int? ProductId { get; set; }
+
         [Required]
         public decimal Price { get; set; }
 

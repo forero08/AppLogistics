@@ -87,6 +87,12 @@ namespace AppLogistics.Controllers
         }
 
         [AjaxOnly]
+        public JsonResult Product(LookupFilter filter)
+        {
+            return GetData(new MvcLookup<Product, ProductView>(_unitOfWork), filter);
+        }
+
+        [AjaxOnly]
         public JsonResult Role(LookupFilter filter)
         {
             return GetData(new MvcLookup<Role, RoleView>(_unitOfWork), filter);

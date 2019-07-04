@@ -5,6 +5,7 @@
         "EmployeePercentage": "Percentage for employee",
         "Name": "Name",
         "Price": "Price",
+        "ProductName": "Product",
         "SplitFare": "Split fare",
         "VehicleTypeName": "Vehicle type"
     }
