@@ -33,6 +33,7 @@ namespace AppLogistics.Data.Core
         protected DbSet<EthnicGroup> EthnicGroup { get; set; }
         protected DbSet<MaritalStatus> MaritalStatus { get; set; }
         protected DbSet<Product> Product { get; set; }
+        protected DbSet<Sex> Sex { get; set; }
         protected DbSet<VehicleType> VehicleType { get; set; }
 
         #endregion Configuration
@@ -41,6 +42,7 @@ namespace AppLogistics.Data.Core
 
         protected DbSet<Employee> Employee { get; set; }
         protected DbSet<Rate> Rate { get; set; }
+        protected DbSet<Service> Service { get; set; }
 
         #endregion Operation
 

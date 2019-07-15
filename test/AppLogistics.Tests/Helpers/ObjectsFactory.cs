@@ -413,6 +413,24 @@ namespace AppLogistics.Tests
             };
         }
 
+        public static Sex CreateSex(int id = 0)
+        {
+            return new Sex
+            {
+                Id = id,
+                Name = "Name" + id
+            };
+        }
+
+        public static SexView CreateSexView(int id = 0)
+        {
+            return new SexView
+            {
+                Id = id,
+                Name = "Name" + id
+            };
+        }
+
         public static VehicleType CreateVehicleType(int id = 0)
         {
             return new VehicleType
@@ -475,7 +493,8 @@ namespace AppLogistics.Tests
                 EducationLevel = CreateEducationLevel(id),
                 Eps = CreateEps(id),
                 EthnicGroup = CreateEthnicGroup(id),
-                MaritalStatus = CreateMaritalStatus(id)
+                MaritalStatus = CreateMaritalStatus(id),
+                Sex = CreateSex(id)
             };
         }
 
@@ -517,6 +536,7 @@ namespace AppLogistics.Tests
                 MobilePhone = "MobilePhone" + id,
                 ResidenceCity = "ResidenceCity" + id,
                 RetirementDate = DateTime.Now,
+                SexName = "SexName" + id,
                 Surname = "Surname" + id
             };
         }
@@ -559,6 +579,7 @@ namespace AppLogistics.Tests
                 MobilePhone = "MobilePhone" + id,
                 ResidenceCity = "ResidenceCity" + id,
                 RetirementDate = DateTime.Now,
+                SexId = id,
                 Surname = "Surname" + id
             };
         }
@@ -606,6 +627,62 @@ namespace AppLogistics.Tests
                 EmployeePercentage = 1,
                 SplitFare = true,
                 VehicleTypeId = id
+            };
+        }
+
+        public static Service CreateService(int id = 0)
+        {
+            return new Service
+            {
+                Id = id,
+                CarrierId = id,
+                Comments = "Comments" + id,
+                CustomsInformation = "CustomsInformation" + id,
+                FullPrice = 1,
+                HoldingPrice = 1,
+                Location = "Location" + id,
+                Quantity = 1,
+                RateId = id,
+                VehicleNumber = "VehicleNumber" + id,
+                
+                Carrier = CreateCarrier(id),
+                Rate = CreateRate(id)
+            };
+        }
+
+        public static ServiceView CreateServiceView(int id = 0)
+        {
+            return new ServiceView
+            {
+                Id = id,
+                CarrierName = "Name" + id,
+                Comments = "Comments" + id,
+                CustomsInformation = "CustomsInformation" + id,
+                FullPrice = 1,
+                HoldingPrice = 1,
+                Location = "Location" + id,
+                Quantity = 1,
+                RateActivityName = "RateActivityName" + id,
+                RateClientName = "RateClientName" + id,
+                RateProductName = "RateProductName" + id,
+                RateVehicleTypeName = "RateVehicleTypeName" + id,
+                VehicleNumber = "VehicleNumber" + id,
+            };
+        }
+
+        public static ServiceCreateEditView CreateServiceCreateEditView(int id = 0)
+        {
+            return new ServiceCreateEditView
+            {
+                Id = id,
+                CarrierId = id,
+                Comments = "Comments" + id,
+                CustomsInformation = "CustomsInformation" + id,
+                Location = "Location" + id,
+                Quantity = 1,
+                RateClientId = 1,
+                RateId = 1,
+                VehicleNumber = "VehicleNumber" + id
             };
         }
 

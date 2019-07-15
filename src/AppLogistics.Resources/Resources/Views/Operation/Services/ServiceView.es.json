@@ -1,0 +1,16 @@
+{
+    "Titles": {
+        "Comments": "Comentarios",
+        "CreationDate": "Fecha de creación",
+        "CustomsInformation": "Información aduanera",
+        "FullPrice": "Precio completo",
+        "HoldingPrice": "Valor para empleados",
+        "Location": "Ubicación",
+        "Quantity": "Cantidad",
+        "RateActivityName": "Actividad",
+        "RateClientName": "Cliente",
+        "RateProductName": "Producto",
+        "RateVehicleTypeName": "Tipo de vehículo",
+        "VehicleNumber": "Placas del vehículo"
+    }
+}

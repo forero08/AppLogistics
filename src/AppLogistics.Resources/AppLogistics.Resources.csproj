@@ -34,6 +34,8 @@
     <None Remove="Resources\Views\Operation\Employees\EmployeeCreateEditView.json" />
     <None Remove="Resources\Views\Operation\Rates\RateCreateEditView.es.json" />
     <None Remove="Resources\Views\Operation\Rates\RateCreateEditView.json" />
+    <None Remove="Resources\Views\Operation\Services\ServiceCreateEditView.es.json" />
+    <None Remove="Resources\Views\Operation\Services\ServiceCreateEditView.json" />
     <None Remove="Resources\Views\Profile\ProfileDeleteView.es.json" />
     <None Remove="Resources\Views\Profile\ProfileEditView.es.json" />
   </ItemGroup>

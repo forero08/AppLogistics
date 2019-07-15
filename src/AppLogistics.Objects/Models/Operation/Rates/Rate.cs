@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using AppLogistics.Components.Mvc;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace AppLogistics.Objects
 {
@@ -6,6 +8,7 @@ namespace AppLogistics.Objects
     {
         [Required]
         [StringLength(32)]
+        [Index(IsUnique = true)]
         public string Name { get; set; }
 
         public int ClientId { get; set; }
@@ -17,10 +20,15 @@ namespace AppLogistics.Objects
         public int? VehicleTypeId { get; set; }
         public virtual VehicleType VehicleType { get; set; }
 
+        public int? ProductId { get; set; }
+        public virtual Product Product { get; set; }
+
         public decimal Price { get; set; }
 
         public float EmployeePercentage { get; set; }
 
         public bool SplitFare { get; set; }
+
+        public virtual ICollection<Service> Services { get; set; }
     }
 }

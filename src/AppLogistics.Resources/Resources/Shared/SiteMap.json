@@ -77,6 +77,11 @@
         "ConfigurationProductsDetails": "Details",
         "ConfigurationProductsEdit": "Edit",
         "ConfigurationProductsIndex": "Products",
+        "ConfigurationSexesCreate": "Create",
+        "ConfigurationSexesDelete": "Delete",
+        "ConfigurationSexesDetails": "Details",
+        "ConfigurationSexesEdit": "Edit",
+        "ConfigurationSexesIndex": "Sexes",
         "ConfigurationVehicleTypesCreate": "Create",
         "ConfigurationVehicleTypesDelete": "Delete",
         "ConfigurationVehicleTypesDetails": "Details",
@@ -93,6 +98,11 @@
         "OperationRatesDelete": "Delete",
         "OperationRatesDetails": "Details",
         "OperationRatesEdit": "Edit",
-        "OperationRatesIndex": "Rates"
+        "OperationRatesIndex": "Rates",
+        "OperationServicesCreate": "Create",
+        "OperationServicesDelete": "Delete",
+        "OperationServicesDetails": "Details",
+        "OperationServicesEdit": "Edit",
+        "OperationServicesIndex": "Services"
     }
 }

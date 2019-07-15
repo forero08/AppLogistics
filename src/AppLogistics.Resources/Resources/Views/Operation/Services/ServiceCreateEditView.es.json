@@ -1,0 +1,16 @@
+{
+    "Titles": {
+        "CarrierId": "Transportadora",
+        "Comments": "Comentarios",
+        "CustomsInformation": "Información aduanera",
+        "ExecutionDate": "Fecha de ejecución",
+        "Location": "Ubicación",
+        "Quantity": "Cantidad",
+        "RateClientId": "Cliente",
+        "RateId": "Tarifa",
+        "VehicleNumber": "Placas/Número de vehículo"
+    },
+    "Validations": {
+        "RateAndClientUnrelated": "No existe una relacion entre la tarifa y el cliente seleccionados"
+    }
+}

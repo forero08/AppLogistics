@@ -6,5 +6,6 @@ namespace AppLogistics.Validators
     {
         bool CanCreate(RateCreateEditView view);
         bool CanEdit(RateCreateEditView view);
+        bool CanDelete(int id);
     }
 }

@@ -175,6 +175,17 @@
                 </div>
                 <div class="form-group">
                     <div class="control-label col-md-3 col-lg-2">
+                        <label asp-for="SexId"></label>
+                    </div>
+                    <div class="control-content col-md-9 col-lg-5">
+                        <div mvc-lookup-for="SexId" url="~/Lookup/Sex" title="@Resource.ForLookup("Sex")"></div>
+                    </div>
+                    <div class="control-validation col">
+                        <span asp-validation-for="SexId"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-md-3 col-lg-2">
                         <label asp-for="EthnicGroupId"></label>
                     </div>
                     <div class="control-content col-md-9 col-lg-5">

@@ -60,6 +60,9 @@ namespace AppLogistics.Objects
         public int MaritalStatusId { get; set; }
 
         [Required]
+        public int SexId { get; set; }
+
+        [Required]
         public int EthnicGroupId { get; set; }
 
         [Required]

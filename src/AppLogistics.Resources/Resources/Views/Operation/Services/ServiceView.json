@@ -1,0 +1,16 @@
+{
+    "Titles": {
+        "Comments": "Comments",
+        "CreationDate": "Creation date",
+        "CustomsInformation": "Customs information",
+        "FullPrice": "Full price",
+        "HoldingPrice": "Employees value",
+        "Location": "Location",
+        "Quantity": "Quantity",
+        "RateActivityName": "Activity",
+        "RateClientName": "Client",
+        "RateProductName": "Product",
+        "RateVehicleTypeName": "Vehicle type",
+        "VehicleNumber": "Vehicle number"
+    }
+}

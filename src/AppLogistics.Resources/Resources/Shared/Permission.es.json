@@ -20,10 +20,12 @@
         "ConfigurationEthnicGroups": "Grupos étnicos",
         "ConfigurationMaritalStatuses": "Estados civiles",
         "ConfigurationProducts": "Productos",
+        "ConfigurationSexes": "Sexos",
         "ConfigurationVehicleTypes": "Tipos de vehículo",
 
         "OperationEmployees": "Empleados",
-        "OperationRates": "Tarifas"
+        "OperationRates": "Tarifas",
+        "OperationServices": "Servicios"
     },
     "Actions": {
         "AdministrationAccountsCreate": "Crear",
@@ -96,6 +98,11 @@
         "ConfigurationProductsDetails": "Detalles",
         "ConfigurationProductsEdit": "Editar",
         "ConfigurationProductsIndex": "Índice",
+        "ConfigurationSexesCreate": "Crear",
+        "ConfigurationSexesDelete": "Eliminar",
+        "ConfigurationSexesDetails": "Detalles",
+        "ConfigurationSexesEdit": "Editar",
+        "ConfigurationSexesIndex": "Índice",
         "ConfigurationVehicleTypesCreate": "Crear",
         "ConfigurationVehicleTypesDelete": "Eliminar",
         "ConfigurationVehicleTypesDetails": "Detalles",
@@ -111,6 +118,11 @@
         "OperationRatesDelete": "Eliminar",
         "OperationRatesDetails": "Detalles",
         "OperationRatesEdit": "Editar",
-        "OperationRatesIndex": "Índice"
+        "OperationRatesIndex": "Índice",
+        "OperationServicesCreate": "Crear",
+        "OperationServicesDelete": "Eliminar",
+        "OperationServicesDetails": "Detalles",
+        "OperationServicesEdit": "Editar",
+        "OperationServicesIndex": "Índice"
     }
 }

@@ -1,0 +1,119 @@
+@model ServiceCreateEditView
+
+<div class="col">
+    <div class="widget-box">
+        <div class="widget-header">
+            <span class="icon fa fa-th-list"></span>
+            <h5>@Resource.ForHeader("Service")</h5>
+            <div class="widget-header-buttons">
+                <authorize action="Details">
+                    <a asp-action="Details" asp-route-id="@Model.Id" class="btn">
+                        <span class="fa fa-info"></span><span class="text">@Resource.ForAction("Details")</span>
+                    </a>
+                </authorize>
+                <authorize action="Delete">
+                    <a asp-action="Delete" asp-route-id="@Model.Id" class="btn">
+                        <span class="fa fa-times"></span><span class="text">@Resource.ForAction("Delete")</span>
+                    </a>
+                </authorize>
+            </div>
+        </div>
+        <div class="widget-content">
+            <form asp-antiforgery="true">
+                <div class="form-group">
+                    <div class="control-label col-md-3 col-lg-2">
+                        <label asp-for="RateClientId"></label>
+                    </div>
+                    <div class="control-content col-md-9 col-lg-5">
+                        <div mvc-lookup-for="RateClientId" url="~/Lookup/Client" title="@Resource.ForLookup("Client")"></div>
+                    </div>
+                    <div class="control-validation col">
+                        <span asp-validation-for="RateClientId"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-md-3 col-lg-2">
+                        <label asp-for="RateId"></label>
+                    </div>
+                    <div class="control-content col-md-9 col-lg-5">
+                        <div mvc-lookup-for="RateId" url="~/Lookup/RatePerClient" title="@Resource.ForLookup("Rate")" filters="RateClientId"></div>
+                    </div>
+                    <div class="control-validation col">
+                        <span asp-validation-for="RateId"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-md-3 col-lg-2">
+                        <label asp-for="Quantity"></label>
+                    </div>
+                    <div class="control-content col-md-9 col-lg-5">
+                        <input asp-for="Quantity" />
+                    </div>
+                    <div class="control-validation col">
+                        <span asp-validation-for="Quantity"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-md-3 col-lg-2">
+                        <label asp-for="CarrierId"></label>
+                    </div>
+                    <div class="control-content col-md-9 col-lg-5">
+                        <div mvc-lookup-for="CarrierId" url="~/Lookup/Carrier" title="@Resource.ForLookup("Carrier")"></div>
+                    </div>
+                    <div class="control-validation col">
+                        <span asp-validation-for="CarrierId"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-md-3 col-lg-2">
+                        <label asp-for="VehicleNumber"></label>
+                    </div>
+                    <div class="control-content col-md-9 col-lg-5">
+                        <input asp-for="VehicleNumber" />
+                    </div>
+                    <div class="control-validation col">
+                        <span asp-validation-for="VehicleNumber"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-md-3 col-lg-2">
+                        <label asp-for="Location"></label>
+                    </div>
+                    <div class="control-content col-md-9 col-lg-5">
+                        <input asp-for="Location" />
+                    </div>
+                    <div class="control-validation col">
+                        <span asp-validation-for="Location"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-md-3 col-lg-2">
+                        <label asp-for="CustomsInformation"></label>
+                    </div>
+                    <div class="control-content col-md-9 col-lg-5">
+                        <input asp-for="CustomsInformation" />
+                    </div>
+                    <div class="control-validation col">
+                        <span asp-validation-for="CustomsInformation"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-md-3 col-lg-2">
+                        <label asp-for="Comments"></label>
+                    </div>
+                    <div class="control-content col-md-9 col-lg-5">
+                        <input asp-for="Comments" />
+                    </div>
+                    <div class="control-validation col">
+                        <span asp-validation-for="Comments"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-actions col-lg-7">
+                        <button class="btn btn-primary">@Resource.ForAction("Submit")</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

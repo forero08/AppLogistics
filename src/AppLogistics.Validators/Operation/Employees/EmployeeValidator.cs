@@ -25,7 +25,7 @@ namespace AppLogistics.Validators
         private bool IsUniqueDocumentNumber(int employeeId, string docNumber)
         {
             var alreadyExists = UnitOfWork.Select<Employee>()
-                .Where(c => c.DocumentNumber.Equals(docNumber) && c.Id != employeeId)
+                .Where(e => e.DocumentNumber.Equals(docNumber) && e.Id != employeeId)
                 .Any();
 
             if (alreadyExists)
