@@ -63,6 +63,7 @@ namespace AppLogistics.Services.Tests
             Assert.Equal(expected.InternalCode, actual.InternalCode);
             Assert.Equal(expected.HasContract, actual.HasContract);
             Assert.Equal(expected.MobilePhone, actual.MobilePhone);
+            Assert.Equal(expected.SexName, actual.SexName);
             Assert.Equal(expected.HasPhotos, actual.HasPhotos);
             Assert.Equal(expected.HomePhone, actual.HomePhone);
             Assert.Equal(expected.BornDate, actual.BornDate);
@@ -117,6 +118,7 @@ namespace AppLogistics.Services.Tests
                 Assert.Equal(expected[i].InternalCode, actual[i].InternalCode);
                 Assert.Equal(expected[i].HasContract, actual[i].HasContract);
                 Assert.Equal(expected[i].MobilePhone, actual[i].MobilePhone);
+                Assert.Equal(expected[i].SexName, actual[i].SexName);
                 Assert.Equal(expected[i].HasPhotos, actual[i].HasPhotos);
                 Assert.Equal(expected[i].HomePhone, actual[i].HomePhone);
                 Assert.Equal(expected[i].BornDate, actual[i].BornDate);
@@ -171,6 +173,7 @@ namespace AppLogistics.Services.Tests
             Assert.Equal(expected.InternalCode, actual.InternalCode);
             Assert.Equal(expected.HasContract, actual.HasContract);
             Assert.Equal(expected.MobilePhone, actual.MobilePhone);
+            Assert.Equal(expected.SexId, actual.SexId);
             Assert.Equal(expected.HasPhotos, actual.HasPhotos);
             Assert.Equal(expected.HomePhone, actual.HomePhone);
             Assert.Equal(expected.BornDate, actual.BornDate);
@@ -226,6 +229,7 @@ namespace AppLogistics.Services.Tests
             view.MobilePhone = "MobilePhone0";
             view.ResidenceCity = "ResidenceCity0";
             view.RetirementDate = DateTime.Today;
+            view.SexId = 1;
             view.Surname = "Surname0";
 
             service.Edit(view);
@@ -257,6 +261,7 @@ namespace AppLogistics.Services.Tests
             Assert.Equal(expected.InternalCode, actual.InternalCode);
             Assert.Equal(expected.HasContract, actual.HasContract);
             Assert.Equal(expected.MobilePhone, actual.MobilePhone);
+            Assert.Equal(expected.SexId, actual.SexId);
             Assert.Equal(expected.HasPhotos, actual.HasPhotos);
             Assert.Equal(expected.HomePhone, actual.HomePhone);
             Assert.Equal(expected.BornDate, actual.BornDate);

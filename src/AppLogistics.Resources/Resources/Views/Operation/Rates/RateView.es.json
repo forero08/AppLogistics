@@ -3,8 +3,9 @@
         "ActivityName": "Actividad",
         "ClientName": "Cliente",
         "EmployeePercentage": "Porcentaje para empleado",
-        "Name": "Nombre",
+        "Name": "Código",
         "Price": "Precio",
+        "ProductName": "Producto",
         "SplitFare": "Dividir tarifa",
         "VehicleTypeName": "Tipo de vehículo"
     }

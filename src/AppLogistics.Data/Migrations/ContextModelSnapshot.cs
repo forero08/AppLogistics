@@ -347,6 +347,8 @@ namespace AppLogistics.Data.Migrations
 
                     b.Property<DateTime?>("RetirementDate");
 
+                    b.Property<int>("SexId");
+
                     b.Property<string>("Surname")
                         .IsRequired()
                         .HasMaxLength(32);
@@ -372,6 +374,8 @@ namespace AppLogistics.Data.Migrations
                         .IsUnique();
 
                     b.HasIndex("MaritalStatusId");
+
+                    b.HasIndex("SexId");
 
                     b.ToTable("Employee");
                 });
@@ -490,6 +494,8 @@ namespace AppLogistics.Data.Migrations
 
                     b.Property<decimal>("Price");
 
+                    b.Property<int?>("ProductId");
+
                     b.Property<bool>("SplitFare");
 
                     b.Property<int?>("VehicleTypeId");
@@ -499,6 +505,11 @@ namespace AppLogistics.Data.Migrations
                     b.HasIndex("ActivityId");
 
                     b.HasIndex("ClientId");
+
+                    b.HasIndex("Name")
+                        .IsUnique();
+
+                    b.HasIndex("ProductId");
 
                     b.HasIndex("VehicleTypeId");
 
@@ -544,6 +555,63 @@ namespace AppLogistics.Data.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("RolePermission");
+                });
+
+            modelBuilder.Entity("AppLogistics.Objects.Service", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int?>("CarrierId");
+
+                    b.Property<string>("Comments")
+                        .HasMaxLength(128);
+
+                    b.Property<DateTime>("CreationDate");
+
+                    b.Property<string>("CustomsInformation")
+                        .HasMaxLength(32);
+
+                    b.Property<decimal>("FullPrice");
+
+                    b.Property<decimal>("HoldingPrice");
+
+                    b.Property<string>("Location")
+                        .IsRequired()
+                        .HasMaxLength(32);
+
+                    b.Property<int>("Quantity");
+
+                    b.Property<int>("RateId");
+
+                    b.Property<string>("VehicleNumber")
+                        .HasMaxLength(16);
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CarrierId");
+
+                    b.HasIndex("RateId");
+
+                    b.ToTable("Service");
+                });
+
+            modelBuilder.Entity("AppLogistics.Objects.Sex", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("CreationDate");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(32);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Sex");
                 });
 
             modelBuilder.Entity("AppLogistics.Objects.VehicleType", b =>
@@ -607,6 +675,11 @@ namespace AppLogistics.Data.Migrations
                         .WithMany("Employees")
                         .HasForeignKey("MaritalStatusId")
                         .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("AppLogistics.Objects.Sex", "Sex")
+                        .WithMany("Employees")
+                        .HasForeignKey("SexId")
+                        .OnDelete(DeleteBehavior.Restrict);
                 });
 
             modelBuilder.Entity("AppLogistics.Objects.Rate", b =>
@@ -619,6 +692,11 @@ namespace AppLogistics.Data.Migrations
                     b.HasOne("AppLogistics.Objects.Client", "Client")
                         .WithMany("Rates")
                         .HasForeignKey("ClientId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("AppLogistics.Objects.Product", "Product")
+                        .WithMany("Rates")
+                        .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Restrict);
 
                     b.HasOne("AppLogistics.Objects.VehicleType", "VehicleType")
@@ -637,6 +715,19 @@ namespace AppLogistics.Data.Migrations
                     b.HasOne("AppLogistics.Objects.Role", "Role")
                         .WithMany("Permissions")
                         .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Restrict);
+                });
+
+            modelBuilder.Entity("AppLogistics.Objects.Service", b =>
+                {
+                    b.HasOne("AppLogistics.Objects.Carrier", "Carrier")
+                        .WithMany("Services")
+                        .HasForeignKey("CarrierId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("AppLogistics.Objects.Rate", "Rate")
+                        .WithMany("Services")
+                        .HasForeignKey("RateId")
                         .OnDelete(DeleteBehavior.Restrict);
                 });
 #pragma warning restore 612, 618

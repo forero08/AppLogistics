@@ -120,6 +120,11 @@ namespace AppLogistics.Data.Migrations.Tests
         [InlineData("Configuration", "Products", "Details")]
         [InlineData("Configuration", "Products", "Edit")]
         [InlineData("Configuration", "Products", "Delete")]
+        [InlineData("Configuration", "Sexes", "Index")]
+        [InlineData("Configuration", "Sexes", "Create")]
+        [InlineData("Configuration", "Sexes", "Details")]
+        [InlineData("Configuration", "Sexes", "Edit")]
+        [InlineData("Configuration", "Sexes", "Delete")]
         [InlineData("Configuration", "VehicleTypes", "Index")]
         [InlineData("Configuration", "VehicleTypes", "Create")]
         [InlineData("Configuration", "VehicleTypes", "Details")]
@@ -135,6 +140,11 @@ namespace AppLogistics.Data.Migrations.Tests
         [InlineData("Operation", "Rates", "Details")]
         [InlineData("Operation", "Rates", "Edit")]
         [InlineData("Operation", "Rates", "Delete")]
+        [InlineData("Operation", "Services", "Index")]
+        [InlineData("Operation", "Services", "Create")]
+        [InlineData("Operation", "Services", "Details")]
+        [InlineData("Operation", "Services", "Edit")]
+        [InlineData("Operation", "Services", "Delete")]
         public void PermissionsTable_HasPermission(string area, string controller, string action)
         {
             Assert.Single(context.Set<Permission>(), permission =>
@@ -147,7 +157,7 @@ namespace AppLogistics.Data.Migrations.Tests
         public void PermissionsTable_HasExactNumberOfPermissions()
         {
             int actual = context.Set<Permission>().Count();
-            int expected = 84;
+            int expected = 94;
 
             Assert.Equal(expected, actual);
         }

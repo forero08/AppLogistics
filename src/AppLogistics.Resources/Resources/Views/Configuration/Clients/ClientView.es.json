@@ -5,8 +5,5 @@
         "Name": "Nombre",
         "Nit": "Nit",
         "Phone": "Teléfono"
-    },
-    "Validations": {
-        "AssociatedRates": "Existen tarifas asociadas a este Cliente. Para eliminar este Cliente, debe eliminar primero esas tarifas o asociarles un Cliente diferente."
     }
 }

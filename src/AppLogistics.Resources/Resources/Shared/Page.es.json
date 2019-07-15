@@ -30,13 +30,17 @@
         "MaritalStatuses": "Estados civiles",
         "Product": "Producto",
         "Products": "Productos",
+        "Sex": "Sexo",
+        "Sexes": "Sexos",
         "VehicleType": "Tipo de vehículo",
         "VehicleTypes": "Tipos de vehículo",
 
         "Employee": "Empleado",
         "Employees": "Empleados",
         "Rate": "Tarifa",
-        "Rates": "Tarifas"
+        "Rates": "Tarifas",
+        "Service": "Servicio",
+        "Services": "Servicios"
     },
     "Titles": {
         "AdministrationAccountsCreate": "Creación de cuenta",
@@ -117,6 +121,11 @@
         "ConfigurationProductsDetails": "Detalles de Producto",
         "ConfigurationProductsEdit": "Editar Producto",
         "ConfigurationProductsIndex": "Productos",
+        "ConfigurationSexesCreate": "Creación de Sexo",
+        "ConfigurationSexesDelete": "Eliminación de Sexo",
+        "ConfigurationSexesDetails": "Detalles de Sexo",
+        "ConfigurationSexesEdit": "Editar Sexo",
+        "ConfigurationSexesIndex": "Sexos",
         "ConfigurationVehicleTypesCreate": "Creación de Tipo de vehículo",
         "ConfigurationVehicleTypesDelete": "Eliminación de Tipo de vehículo",
         "ConfigurationVehicleTypesDetails": "Detalles de Tipo de vehículo",
@@ -132,6 +141,11 @@
         "OperationRatesDelete": "Eliminación de Tarifa",
         "OperationRatesDetails": "Detalles de Tarifa",
         "OperationRatesEdit": "Editar Tarifa",
-        "OperationRatesIndex": "Tarifas"
+        "OperationRatesIndex": "Tarifas",
+        "OperationServicesCreate": "Creación de Servicio",
+        "OperationServicesDelete": "Eliminación de Servicio",
+        "OperationServicesDetails": "Detalles de Servicio",
+        "OperationServicesEdit": "Editar Servicio",
+        "OperationServicesIndex": "Servicios"
     }
 }

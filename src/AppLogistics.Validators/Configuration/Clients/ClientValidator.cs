@@ -30,7 +30,7 @@ namespace AppLogistics.Validators
 
             if (hasReferencedRates)
             {
-                Alerts.AddError(Validation.For<ClientView>("AssociatedRates"));
+                Alerts.AddError(Validation.For<ClientCreateEditView>("AssociatedRates"));
                 return false;
             }
 

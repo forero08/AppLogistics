@@ -10,7 +10,10 @@
         "Eps": "Eps's",
         "EthnicGroup": "Ethnic groups",
         "MaritalStatus": "Marital statuses",
+        "Product": "Products",
+        "Rate": "Rate",
         "Role": "Roles",
+        "Sex":  "Sexes",
         "VehicleType": "Vehicle types"
     }
 }

@@ -45,6 +45,12 @@ namespace AppLogistics.Controllers
         }
 
         [AjaxOnly]
+        public JsonResult Carrier(LookupFilter filter)
+        {
+            return GetData(new MvcLookup<Carrier, CarrierView>(_unitOfWork), filter);
+        }
+
+        [AjaxOnly]
         public JsonResult Client(LookupFilter filter)
         {
             return GetData(new MvcLookup<Client, ClientView>(_unitOfWork), filter);
@@ -87,9 +93,28 @@ namespace AppLogistics.Controllers
         }
 
         [AjaxOnly]
+        public JsonResult Product(LookupFilter filter)
+        {
+            return GetData(new MvcLookup<Product, ProductView>(_unitOfWork), filter);
+        }
+
+        [AjaxOnly]
+        public JsonResult RatePerClient(LookupFilter filter, int rateClientId)
+        {
+            filter.AdditionalFilters[nameof(Rate.ClientId)] = rateClientId;
+            return GetData(new MvcLookup<Rate, RateView>(_unitOfWork), filter);
+        }
+
+        [AjaxOnly]
         public JsonResult Role(LookupFilter filter)
         {
             return GetData(new MvcLookup<Role, RoleView>(_unitOfWork), filter);
+        }
+
+        [AjaxOnly]
+        public JsonResult Sex(LookupFilter filter)
+        {
+            return GetData(new MvcLookup<Sex, SexView>(_unitOfWork), filter);
         }
 
         [AjaxOnly]

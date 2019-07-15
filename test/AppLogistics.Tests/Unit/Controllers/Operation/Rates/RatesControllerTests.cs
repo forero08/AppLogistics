@@ -23,6 +23,7 @@ namespace AppLogistics.Controllers.Operation.Tests
         public RatesControllerTests()
         {
             validator = Substitute.For<IRateValidator>();
+            validator.CanDelete(Arg.Any<int>()).Returns(true);
             service = Substitute.For<IRateService>();
 
             rateView = ObjectsFactory.CreateRateView();

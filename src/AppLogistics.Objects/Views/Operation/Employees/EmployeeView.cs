@@ -34,6 +34,8 @@ namespace AppLogistics.Objects
 
         public string MaritalStatusName { get; set; }
 
+        public string SexName { get; set; }
+
         public string EthnicGroupName { get; set; }
 
         public string EducationLevelName { get; set; }

@@ -1,0 +1,128 @@
+@model ServiceView
+
+<div class="col">
+    <div class="widget-box readonly">
+        <div class="widget-header">
+            <span class="icon fa fa-th-list"></span>
+            <h5>@Resource.ForHeader("Service")</h5>
+            <div class="widget-header-buttons">
+                <authorize action="Edit">
+                    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn">
+                        <span class="fa fa-pencil-alt"></span><span class="text">@Resource.ForAction("Edit")</span>
+                    </a>
+                </authorize>
+                <authorize action="Delete">
+                    <a asp-action="Delete" asp-route-id="@Model.Id" class="btn">
+                        <span class="fa fa-times"></span><span class="text">@Resource.ForAction("Delete")</span>
+                    </a>
+                </authorize>
+            </div>
+        </div>
+        <div class="widget-content">
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="CreationDate"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="CreationDate" class="datepicker" type="text" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="RateClientName"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="RateClientName" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="RateActivityName"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="RateActivityName" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="RateVehicleTypeName"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="RateVehicleTypeName" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="RateProductName"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="RateProductName" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="Quantity"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="Quantity" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="CarrierName"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="CarrierName" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="VehicleNumber"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="VehicleNumber" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="Location"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="Location" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="CustomsInformation"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="CustomsInformation" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="FullPrice"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="FullPrice" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="HoldingPrice"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="HoldingPrice" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="Comments"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="Comments" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
