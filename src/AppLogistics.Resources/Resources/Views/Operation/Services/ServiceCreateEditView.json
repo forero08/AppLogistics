@@ -1,0 +1,16 @@
+{
+    "Titles": {
+        "CarrierId": "Carrier",
+        "Comments": "Comments",
+        "CustomsInformation": "Customs information",
+        "ExecutionDate": "Execution date",
+        "Location": "Location",
+        "Quantity": "Quantity",
+        "RateClientId": "Client",
+        "RateId": "Rate",
+        "VehicleNumber": "Vehicle number/plate"
+    },
+    "Validations": {
+        "RateAndClientUnrelated": "There is no relation between the Rate and Client selected"
+    }
+}

@@ -38,7 +38,9 @@
         "Employee": "Employee",
         "Employees": "Employees",
         "Rate": "Rate",
-        "Rates": "Rates"
+        "Rates": "Rates",
+        "Service": "Service",
+        "Services": "Services"
     },
     "Titles": {
         "AdministrationAccountsCreate": "Account creation",
@@ -139,6 +141,11 @@
         "OperationRatesDelete": "Rate deletion",
         "OperationRatesDetails": "Rate details",
         "OperationRatesEdit": "Rate Edit",
-        "OperationRatesIndex": "Rates"
+        "OperationRatesIndex": "Rates",
+        "OperationServicesCreate": "Service creation",
+        "OperationServicesDelete": "Service deletion",
+        "OperationServicesDetails": "Service details",
+        "OperationServicesEdit": "Service Edit",
+        "OperationServicesIndex": "Services"
     }
 }

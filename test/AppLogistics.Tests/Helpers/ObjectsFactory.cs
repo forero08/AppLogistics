@@ -630,6 +630,62 @@ namespace AppLogistics.Tests
             };
         }
 
+        public static Service CreateService(int id = 0)
+        {
+            return new Service
+            {
+                Id = id,
+                CarrierId = id,
+                Comments = "Comments" + id,
+                CustomsInformation = "CustomsInformation" + id,
+                FullPrice = 1,
+                HoldingPrice = 1,
+                Location = "Location" + id,
+                Quantity = 1,
+                RateId = id,
+                VehicleNumber = "VehicleNumber" + id,
+                
+                Carrier = CreateCarrier(id),
+                Rate = CreateRate(id)
+            };
+        }
+
+        public static ServiceView CreateServiceView(int id = 0)
+        {
+            return new ServiceView
+            {
+                Id = id,
+                CarrierName = "Name" + id,
+                Comments = "Comments" + id,
+                CustomsInformation = "CustomsInformation" + id,
+                FullPrice = 1,
+                HoldingPrice = 1,
+                Location = "Location" + id,
+                Quantity = 1,
+                RateActivityName = "RateActivityName" + id,
+                RateClientName = "RateClientName" + id,
+                RateProductName = "RateProductName" + id,
+                RateVehicleTypeName = "RateVehicleTypeName" + id,
+                VehicleNumber = "VehicleNumber" + id,
+            };
+        }
+
+        public static ServiceCreateEditView CreateServiceCreateEditView(int id = 0)
+        {
+            return new ServiceCreateEditView
+            {
+                Id = id,
+                CarrierId = id,
+                Comments = "Comments" + id,
+                CustomsInformation = "CustomsInformation" + id,
+                Location = "Location" + id,
+                Quantity = 1,
+                RateClientId = 1,
+                RateId = 1,
+                VehicleNumber = "VehicleNumber" + id
+            };
+        }
+
         #endregion Operation
 
         #region Tests

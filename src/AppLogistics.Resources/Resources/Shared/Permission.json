@@ -24,7 +24,8 @@
         "ConfigurationVehicleTypes": "Vehicle Types",
 
         "OperationEmployees": "Employees",
-        "OperationRates": "Rate"
+        "OperationRates": "Rates",
+        "OperationServices": "Services"
     },
     "Actions": {
         "AdministrationAccountsCreate": "Create",
@@ -117,6 +118,11 @@
         "OperationRatesDelete": "Delete",
         "OperationRatesDetails": "Details",
         "OperationRatesEdit": "Edit",
-        "OperationRatesIndex": "Index"
+        "OperationRatesIndex": "Index",
+        "OperationServicesCreate": "Create",
+        "OperationServicesDelete": "Delete",
+        "OperationServicesDetails": "Details",
+        "OperationServicesEdit": "Edit",
+        "OperationServicesIndex": "Index"
     }
 }

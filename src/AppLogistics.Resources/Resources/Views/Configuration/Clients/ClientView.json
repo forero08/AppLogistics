@@ -5,8 +5,5 @@
         "Name": "Name",
         "Nit": "Nit",
         "Phone": "Phone"
-    },
-    "Validations": {
-        "AssociatedRates": "There are rates associated to this Client. To delete this Client, you should delete those rates first or associate them a different Client."
     }
 }

@@ -251,6 +251,12 @@ namespace AppLogistics.Data.Migrations
                 new Permission { Id = 87, Area = "Operation", Controller = "Rates", Action = "Details" },
                 new Permission { Id = 88, Area = "Operation", Controller = "Rates", Action = "Edit" },
                 new Permission { Id = 89, Area = "Operation", Controller = "Rates", Action = "Delete" },
+
+                new Permission { Id = 90, Area = "Operation", Controller = "Services", Action = "Index" },
+                new Permission { Id = 91, Area = "Operation", Controller = "Services", Action = "Create" },
+                new Permission { Id = 92, Area = "Operation", Controller = "Services", Action = "Details" },
+                new Permission { Id = 93, Area = "Operation", Controller = "Services", Action = "Edit" },
+                new Permission { Id = 94, Area = "Operation", Controller = "Services", Action = "Delete" },
             };
         }
     }

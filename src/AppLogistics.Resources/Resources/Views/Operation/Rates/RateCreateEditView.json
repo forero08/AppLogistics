@@ -3,13 +3,14 @@
         "ActivityId": "Activity",
         "ClientId": "Client",
         "EmployeePercentage": "Percentage for employee",
-        "Name": "Name",
+        "Name": "Code",
         "Price": "Price",
         "ProductId": "Product",
         "SplitFare": "Split fare",
         "VehicleTypeId": "Vehicle type"
     },
     "Validations": {
+        "AssociatedServices": "There are services associated to this Rate. To delete this Rate, you should delete those services first or associate them a different Rate.",
         "NotUniqueName": "There is already a rate with that Name"
     }
 }

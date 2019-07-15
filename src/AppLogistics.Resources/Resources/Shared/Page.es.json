@@ -38,7 +38,9 @@
         "Employee": "Empleado",
         "Employees": "Empleados",
         "Rate": "Tarifa",
-        "Rates": "Tarifas"
+        "Rates": "Tarifas",
+        "Service": "Servicio",
+        "Services": "Servicios"
     },
     "Titles": {
         "AdministrationAccountsCreate": "Creación de cuenta",
@@ -139,6 +141,11 @@
         "OperationRatesDelete": "Eliminación de Tarifa",
         "OperationRatesDetails": "Detalles de Tarifa",
         "OperationRatesEdit": "Editar Tarifa",
-        "OperationRatesIndex": "Tarifas"
+        "OperationRatesIndex": "Tarifas",
+        "OperationServicesCreate": "Creación de Servicio",
+        "OperationServicesDelete": "Eliminación de Servicio",
+        "OperationServicesDetails": "Detalles de Servicio",
+        "OperationServicesEdit": "Editar Servicio",
+        "OperationServicesIndex": "Servicios"
     }
 }

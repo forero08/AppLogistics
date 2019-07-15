@@ -23,6 +23,21 @@ namespace AppLogistics.Validators
             return IsUniqueName(view.Id, view.Name) && ModelState.IsValid;
         }
 
+        public bool CanDelete(int id)
+        {
+            var hasReferencedServices = UnitOfWork.Select<Service>()
+                .Where(c => c.RateId.Equals(id))
+                .Any();
+
+            if (hasReferencedServices)
+            {
+                Alerts.AddError(Validation.For<RateCreateEditView>("AssociatedServices"));
+                return false;
+            }
+
+            return ModelState.IsValid;
+        }
+
         private bool IsUniqueName(int rateId, string rateName)
         {
             var alreadyExists = UnitOfWork.Select<Rate>()

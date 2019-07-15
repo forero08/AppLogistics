@@ -1,4 +1,5 @@
 ﻿using AppLogistics.Components.Mvc;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace AppLogistics.Objects
@@ -27,5 +28,7 @@ namespace AppLogistics.Objects
         public float EmployeePercentage { get; set; }
 
         public bool SplitFare { get; set; }
+
+        public virtual ICollection<Service> Services { get; set; }
     }
 }

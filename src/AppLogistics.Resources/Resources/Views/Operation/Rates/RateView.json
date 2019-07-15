@@ -3,7 +3,7 @@
         "ActivityName": "Activity",
         "ClientName": "Client",
         "EmployeePercentage": "Percentage for employee",
-        "Name": "Name",
+        "Name": "Code",
         "Price": "Price",
         "ProductName": "Product",
         "SplitFare": "Split fare",

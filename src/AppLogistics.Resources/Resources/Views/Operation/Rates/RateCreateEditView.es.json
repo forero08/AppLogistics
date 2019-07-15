@@ -3,13 +3,14 @@
         "ActivityId": "Actividad",
         "ClientId": "Cliente",
         "EmployeePercentage": "Porcentaje para empleado",
-        "Name": "Nombre",
+        "Name": "Código",
         "Price": "Precio",
         "ProductId": "Producto",
         "SplitFare": "Dividir tarifa",
         "VehicleTypeId": "Tipo de vehículo"
     },
     "Validations": {
+        "AssociatedServices": "Existen servicios asociados a esta Tarifa. Para eliminar esta Tarifa, debe eliminar primero esos servicios o asociarles una Tarifa diferente.",
         "NotUniqueName": "Ya existe una tarifa con ese Nombre"
     }
 }

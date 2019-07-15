@@ -98,6 +98,11 @@
         "OperationRatesDelete": "Eliminar",
         "OperationRatesDetails": "Detalles",
         "OperationRatesEdit": "Editar",
-        "OperationRatesIndex": "Tarifas"
+        "OperationRatesIndex": "Tarifas",
+        "OperationServicesCreate": "Crear",
+        "OperationServicesDelete": "Eliminar",
+        "OperationServicesDetails": "Detalles",
+        "OperationServicesEdit": "Editar",
+        "OperationServicesIndex": "Servicios"
     }
 }

@@ -42,6 +42,7 @@ namespace AppLogistics.Data.Core
 
         protected DbSet<Employee> Employee { get; set; }
         protected DbSet<Rate> Rate { get; set; }
+        protected DbSet<Service> Service { get; set; }
 
         #endregion Operation
 

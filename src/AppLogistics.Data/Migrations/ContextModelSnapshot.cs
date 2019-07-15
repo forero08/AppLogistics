@@ -557,6 +557,46 @@ namespace AppLogistics.Data.Migrations
                     b.ToTable("RolePermission");
                 });
 
+            modelBuilder.Entity("AppLogistics.Objects.Service", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int?>("CarrierId");
+
+                    b.Property<string>("Comments")
+                        .HasMaxLength(128);
+
+                    b.Property<DateTime>("CreationDate");
+
+                    b.Property<string>("CustomsInformation")
+                        .HasMaxLength(32);
+
+                    b.Property<decimal>("FullPrice");
+
+                    b.Property<decimal>("HoldingPrice");
+
+                    b.Property<string>("Location")
+                        .IsRequired()
+                        .HasMaxLength(32);
+
+                    b.Property<int>("Quantity");
+
+                    b.Property<int>("RateId");
+
+                    b.Property<string>("VehicleNumber")
+                        .HasMaxLength(16);
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CarrierId");
+
+                    b.HasIndex("RateId");
+
+                    b.ToTable("Service");
+                });
+
             modelBuilder.Entity("AppLogistics.Objects.Sex", b =>
                 {
                     b.Property<int>("Id")
@@ -675,6 +715,19 @@ namespace AppLogistics.Data.Migrations
                     b.HasOne("AppLogistics.Objects.Role", "Role")
                         .WithMany("Permissions")
                         .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Restrict);
+                });
+
+            modelBuilder.Entity("AppLogistics.Objects.Service", b =>
+                {
+                    b.HasOne("AppLogistics.Objects.Carrier", "Carrier")
+                        .WithMany("Services")
+                        .HasForeignKey("CarrierId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("AppLogistics.Objects.Rate", "Rate")
+                        .WithMany("Services")
+                        .HasForeignKey("RateId")
                         .OnDelete(DeleteBehavior.Restrict);
                 });
 #pragma warning restore 612, 618
