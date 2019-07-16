@@ -22,6 +22,7 @@ namespace AppLogistics.Controllers.Configuration.Tests
         public CarriersControllerTests()
         {
             validator = Substitute.For<ICarrierValidator>();
+            validator.CanDelete(Arg.Any<int>()).Returns(true);
             service = Substitute.For<ICarrierService>();
 
             carrier = ObjectsFactory.CreateCarrierView();
