@@ -1,0 +1,8 @@
+{
+    "Titles": {
+        "Name": "Nombre"
+    },
+    "Validations": {
+        "AssociatedServices": "Existen servicios asociados a esta Área. Para eliminar esta Área, debe eliminar primero esos servicios o asociarles un Área diferente."
+    }
+}

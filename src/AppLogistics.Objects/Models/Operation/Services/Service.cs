@@ -9,6 +9,9 @@ namespace AppLogistics.Objects
 
         public int Quantity { get; set; }
 
+        public int? SectorId { get; set; }
+        public virtual Sector Sector { get; set; }
+
         public int? CarrierId { get; set; }
         public virtual Carrier Carrier { get; set; }
 

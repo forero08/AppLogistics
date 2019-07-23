@@ -34,6 +34,12 @@
                 <siteMapNode icon="fa fa-pencil-alt" area="Configuration" controller="Afps" action="Edit" />
                 <siteMapNode icon="fa fa-times" area="Configuration" controller="Afps" action="Delete" />
             </siteMapNode>
+            <siteMapNode menu="true" icon="fa fa-vector-square" area="Configuration" controller="Sectors" action="Index">
+                <siteMapNode icon="far fa-file" area="Configuration" controller="Sectors" action="Create" />
+                <siteMapNode icon="fa fa-info" area="Configuration" controller="Sectors" action="Details" />
+                <siteMapNode icon="fa fa-pencil-alt" area="Configuration" controller="Sectors" action="Edit" />
+                <siteMapNode icon="fa fa-times" area="Configuration" controller="Sectors" action="Delete" />
+            </siteMapNode>
             <siteMapNode menu="true" icon="fa fa-industry" area="Configuration" controller="Clients" action="Index">
                 <siteMapNode icon="far fa-file" area="Configuration" controller="Clients" action="Create" />
                 <siteMapNode icon="fa fa-info" area="Configuration" controller="Clients" action="Details" />

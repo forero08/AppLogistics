@@ -11,6 +11,7 @@
         "RateClientName": "Cliente",
         "RateProductName": "Producto",
         "RateVehicleTypeName": "Tipo de vehículo",
+        "SectorName": "Área",
         "VehicleNumber": "Placas del vehículo"
     }
 }

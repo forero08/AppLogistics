@@ -413,6 +413,24 @@ namespace AppLogistics.Tests
             };
         }
 
+        public static Sector CreateSector(int id = 0)
+        {
+            return new Sector
+            {
+                Id = id,
+                Name = "Name" + id
+            };
+        }
+
+        public static SectorView CreateSectorView(int id = 0)
+        {
+            return new SectorView
+            {
+                Id = id,
+                Name = "Name" + id
+            };
+        }
+
         public static Sex CreateSex(int id = 0)
         {
             return new Sex

@@ -14,6 +14,8 @@ namespace AppLogistics.Objects
         [MinValue(1)]
         public int Quantity { get; set; }
 
+        public int? SectorId { get; set; }
+
         public int? CarrierId { get; set; }
 
         [StringLength(16)]
