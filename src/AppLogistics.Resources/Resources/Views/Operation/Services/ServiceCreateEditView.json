@@ -8,6 +8,7 @@
         "Quantity": "Quantity",
         "RateClientId": "Client",
         "RateId": "Rate",
+        "SectorId": "Area",
         "VehicleNumber": "Vehicle number/plate"
     },
     "Validations": {

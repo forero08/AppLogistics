@@ -11,8 +11,9 @@
         "EthnicGroup": "Grupos étnicos",
         "MaritalStatus": "Estados civiles",
         "Product": "Productos",
-        "Rate": "Tarifa",
+        "Rate": "Tarifas",
         "Role": "Roles",
+        "Sector": "Áreas",
         "Sex": "Sexos",
         "VehicleType": "Tipos de vehículo"
     }

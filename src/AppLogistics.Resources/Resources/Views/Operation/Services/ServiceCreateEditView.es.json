@@ -8,6 +8,7 @@
         "Quantity": "Cantidad",
         "RateClientId": "Cliente",
         "RateId": "Tarifa",
+        "SectorId": "Área",
         "VehicleNumber": "Placas/Número de vehículo"
     },
     "Validations": {

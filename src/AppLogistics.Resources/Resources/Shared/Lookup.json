@@ -11,9 +11,10 @@
         "EthnicGroup": "Ethnic groups",
         "MaritalStatus": "Marital statuses",
         "Product": "Products",
-        "Rate": "Rate",
+        "Rate": "Rates",
         "Role": "Roles",
-        "Sex":  "Sexes",
+        "Sector": "Areas",
+        "Sex": "Sexes",
         "VehicleType": "Vehicle types"
     }
 }
