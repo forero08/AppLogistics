@@ -20,11 +20,24 @@
         </div>
         <div class="widget-content">
             <div class="form-group">
+                <div class="control-label col-auto">
+                    <h5><label asp-for="Section_GeneralInfo"></label></h5>
+                </div>
+            </div>
+            <div class="form-group">
                 <div class="control-label col-md-3 col-lg-2">
                     <label asp-for="InternalCode"></label>
                 </div>
                 <div class="control-content col-md-9 col-lg-5">
                     <input asp-for="InternalCode" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="Active"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="Active" />
                 </div>
             </div>
             <div class="form-group">
@@ -101,10 +114,26 @@
             </div>
             <div class="form-group">
                 <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="SocialClass"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="SocialClass" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
                     <label asp-for="CountryName"></label>
                 </div>
                 <div class="control-content col-md-9 col-lg-5">
                     <input asp-for="CountryName" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="BirthPlace"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="BirthPlace" />
                 </div>
             </div>
             <div class="form-group">
@@ -196,6 +225,11 @@
                 </div>
             </div>
             <div class="form-group">
+                <div class="control-label col-auto">
+                    <h5><label asp-for="Section_Documents"></label></h5>
+                </div>
+            </div>
+            <div class="form-group">
                 <div class="control-label col-md-3 col-lg-2">
                     <label asp-for="HasCurriculumVitae"></label>
                 </div>
@@ -209,6 +243,14 @@
                 </div>
                 <div class="control-content col-md-9 col-lg-5">
                     <input asp-for="HasDocumentCopy" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="HasResidencePermit"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="HasResidencePermit" />
                 </div>
             </div>
             <div class="form-group">
@@ -289,6 +331,43 @@
                 </div>
                 <div class="control-content col-md-9 col-lg-5">
                     <input asp-for="HasEndownmentLetter" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-auto">
+                    <h5><label asp-for="Section_Trainings"></label></h5>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="TrainingBASC"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="TrainingBASC" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="TrainingSGSST"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="TrainingSGSST" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="TrainingBPM"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="TrainingBPM" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-3 col-lg-2">
+                    <label asp-for="TrainingOthers"></label>
+                </div>
+                <div class="control-content col-md-9 col-lg-5">
+                    <input asp-for="TrainingOthers" />
                 </div>
             </div>
             <div class="form-group">

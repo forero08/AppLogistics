@@ -10,6 +10,8 @@ namespace AppLogistics.Objects
 
         public string DocumentNumber { get; set; }
 
+        public bool Active { get; set; }
+
         public string Name { get; set; }
 
         public string Surname { get; set; }
@@ -24,7 +26,11 @@ namespace AppLogistics.Objects
 
         public string Address { get; set; }
 
+        public int SocialClass { get; set; }
+
         public string CountryName { get; set; }
+
+        public string BirthPlace { get; set; }
 
         public string MobilePhone { get; set; }
 
@@ -52,6 +58,8 @@ namespace AppLogistics.Objects
 
         public bool HasDocumentCopy { get; set; }
 
+        public bool HasResidencePermit { get; set; }
+
         public bool HasPhotos { get; set; }
 
         public bool HasMilitaryIdCopy { get; set; }
@@ -72,8 +80,22 @@ namespace AppLogistics.Objects
 
         public bool HasEndownmentLetter { get; set; }
 
+        public bool TrainingBASC { get; set; }
+
+        public bool TrainingSGSST { get; set; }
+
+        public bool TrainingBPM { get; set; }
+
+        public string TrainingOthers { get; set; }
+
         public bool IsCriticalPosition { get; set; }
 
         public string Comments { get; set; }
+
+        public string Section_Documents { get; set; }
+
+        public string Section_GeneralInfo { get; set; }
+
+        public string Section_Trainings { get; set; }
     }
 }
