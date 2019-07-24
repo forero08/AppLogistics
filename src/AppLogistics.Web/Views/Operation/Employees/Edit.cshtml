@@ -21,6 +21,11 @@
         <div class="widget-content">
             <form asp-antiforgery="true">
                 <div class="form-group">
+                    <div class="control-label col-auto">
+                        <h5><label asp-for="Section_GeneralInfo"></label></h5>
+                    </div>
+                </div>
+                <div class="form-group">
                     <div class="control-label col-md-3 col-lg-2">
                         <label asp-for="InternalCode"></label>
                     </div>
@@ -29,6 +34,17 @@
                     </div>
                     <div class="control-validation col">
                         <span asp-validation-for="InternalCode"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-md-3 col-lg-2">
+                        <label asp-for="Active"></label>
+                    </div>
+                    <div class="control-content col-md-9 col-lg-5">
+                        <input asp-for="Active" />
+                    </div>
+                    <div class="control-validation col">
+                        <span asp-validation-for="Active"></span>
                     </div>
                 </div>
                 <div class="form-group">
@@ -132,6 +148,17 @@
                 </div>
                 <div class="form-group">
                     <div class="control-label col-md-3 col-lg-2">
+                        <label asp-for="SocialClass"></label>
+                    </div>
+                    <div class="control-content col-md-9 col-lg-5">
+                        <input asp-for="SocialClass" />
+                    </div>
+                    <div class="control-validation col">
+                        <span asp-validation-for="SocialClass"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-md-3 col-lg-2">
                         <label asp-for="CountryId"></label>
                     </div>
                     <div class="control-content col-md-9 col-lg-5">
@@ -139,6 +166,17 @@
                     </div>
                     <div class="control-validation col">
                         <span asp-validation-for="CountryId"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-md-3 col-lg-2">
+                        <label asp-for="BirthPlace"></label>
+                    </div>
+                    <div class="control-content col-md-9 col-lg-5">
+                        <input asp-for="BirthPlace" />
+                    </div>
+                    <div class="control-validation col">
+                        <span asp-validation-for="BirthPlace"></span>
                     </div>
                 </div>
                 <div class="form-group">
@@ -263,6 +301,11 @@
                     </div>
                 </div>
                 <div class="form-group">
+                    <div class="control-label col-auto">
+                        <h5><label asp-for="Section_Documents"></label></h5>
+                    </div>
+                </div>
+                <div class="form-group">
                     <div class="control-label col-md-3 col-lg-2">
                         <label asp-for="HasCurriculumVitae"></label>
                     </div>
@@ -282,6 +325,17 @@
                     </div>
                     <div class="control-validation col">
                         <span asp-validation-for="HasDocumentCopy"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-md-3 col-lg-2">
+                        <label asp-for="HasResidencePermit"></label>
+                    </div>
+                    <div class="control-content col-md-9 col-lg-5">
+                        <input asp-for="HasResidencePermit" />
+                    </div>
+                    <div class="control-validation col">
+                        <span asp-validation-for="HasResidencePermit"></span>
                     </div>
                 </div>
                 <div class="form-group">
@@ -392,6 +446,55 @@
                     </div>
                     <div class="control-validation col">
                         <span asp-validation-for="HasEndownmentLetter"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-auto">
+                        <h5><label asp-for="Section_Trainings"></label></h5>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-md-3 col-lg-2">
+                        <label asp-for="TrainingBASC"></label>
+                    </div>
+                    <div class="control-content col-md-9 col-lg-5">
+                        <input asp-for="TrainingBASC" />
+                    </div>
+                    <div class="control-validation col">
+                        <span asp-validation-for="TrainingBASC"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-md-3 col-lg-2">
+                        <label asp-for="TrainingSGSST"></label>
+                    </div>
+                    <div class="control-content col-md-9 col-lg-5">
+                        <input asp-for="TrainingSGSST" />
+                    </div>
+                    <div class="control-validation col">
+                        <span asp-validation-for="TrainingSGSST"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-md-3 col-lg-2">
+                        <label asp-for="TrainingBPM"></label>
+                    </div>
+                    <div class="control-content col-md-9 col-lg-5">
+                        <input asp-for="TrainingBPM" />
+                    </div>
+                    <div class="control-validation col">
+                        <span asp-validation-for="TrainingBPM"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-md-3 col-lg-2">
+                        <label asp-for="TrainingOthers"></label>
+                    </div>
+                    <div class="control-content col-md-9 col-lg-5">
+                        <input asp-for="TrainingOthers" />
+                    </div>
+                    <div class="control-validation col">
+                        <span asp-validation-for="TrainingOthers"></span>
                     </div>
                 </div>
                 <div class="form-group">

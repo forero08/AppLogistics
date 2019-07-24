@@ -1,7 +1,9 @@
 ﻿{
     "Titles": {
+        "Active": "Active",
         "Address": "Address",
         "AfpId": "Afp",
+        "BirthPlace": "Birht place",
         "BornDate": "Born date",
         "Comments": "Comments",
         "CountryId": "Country",
@@ -25,6 +27,7 @@
         "HasMilitaryIdCopy": "Military id copy",
         "HasPersonalReference": "Personal reference",
         "HasPhotos": "Photos",
+        "HasResidencePermit": "Resident permit",
         "HireDate": "Hire date",
         "HomePhone": "Home phone",
         "InternalCode": "Internal code",
@@ -35,7 +38,16 @@
         "ResidenceCity": "Residence city",
         "RetirementDate": "Retirement date",
         "SexId": "Sex",
-        "Surname": "Surname"
+        "SocialClass": "Social class",
+        "Surname": "Surname",
+        "TrainingBASC": "BASC",
+        "TrainingSGSST": "SGSST",
+        "TrainingBPM": "BPM",
+        "TrainingOthers": "Other studies",
+
+        "Section_Documents": "DOCUMENTS",
+        "Section_GeneralInfo": "GENERAL INFORMATION",
+        "Section_Trainings": "TRAININGS"
     },
     "Validations": {
         "NotUniqueDocumentNumber": "There is already an employee with that Document number"

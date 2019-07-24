@@ -1,7 +1,9 @@
 ﻿{
     "Titles": {
+        "Active": "Activo",
         "Address": "Dirección",
         "AfpName": "Afp",
+        "BirthPlace": "Lugar de nacimiento",
         "BornDate": "Fecha Nacimiento",
         "Comments": "Comentarios",
         "CountryName": "País",
@@ -25,6 +27,7 @@
         "HasMilitaryIdCopy": "Copia libreta militar",
         "HasPersonalReference": "Referencia personal",
         "HasPhotos": "Fotos",
+        "HasResidencePermit": "Permiso de residencia",
         "HireDate": "Fecha Contratación",
         "HomePhone": "Teléfono fijo",
         "InternalCode": "Código interno",
@@ -34,7 +37,16 @@
         "Name": "Nombre",
         "ResidenceCity": "Ciudad de residencia",
         "RetirementDate": "Fecha de retiro",
-        "SexName":  "Sexo",
-        "Surname": "Apellido"
+        "SexName": "Sexo",
+        "SocialClass": "Estrato",
+        "Surname": "Apellido",
+        "TrainingBASC": "BASC",
+        "TrainingSGSST": "SGSST",
+        "TrainingBPM": "BPM",
+        "TrainingOthers": "Otros estudios",
+
+        "Section_Documents": "DOCUMENTOS",
+        "Section_GeneralInfo": "INFORMACIÓN GENERAL",
+        "Section_Trainings": "CAPACITACIONES"
     }
 }

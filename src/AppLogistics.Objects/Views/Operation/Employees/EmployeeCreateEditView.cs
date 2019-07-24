@@ -17,6 +17,9 @@ namespace AppLogistics.Objects
         public string DocumentNumber { get; set; }
 
         [Required]
+        public bool Active { get; set; }
+
+        [Required]
         [StringLength(32)]
         public string Name { get; set; }
 
@@ -41,7 +44,15 @@ namespace AppLogistics.Objects
         public string Address { get; set; }
 
         [Required]
+        [Range(1, 6)]
+        public int SocialClass { get; set; }
+
+        [Required]
         public int CountryId { get; set; }
+
+        [Required]
+        [StringLength(128)]
+        public string BirthPlace { get; set; }
 
         [Phone]
         [Required]
@@ -88,6 +99,9 @@ namespace AppLogistics.Objects
         public bool HasDocumentCopy { get; set; }
 
         [Required]
+        public bool HasResidencePermit { get; set; }
+
+        [Required]
         public bool HasPhotos { get; set; }
 
         [Required]
@@ -118,9 +132,27 @@ namespace AppLogistics.Objects
         public bool HasEndownmentLetter { get; set; }
 
         [Required]
+        public bool TrainingBASC { get; set; }
+
+        [Required]
+        public bool TrainingSGSST { get; set; }
+
+        [Required]
+        public bool TrainingBPM { get; set; }
+
+        [StringLength(512)]
+        public string TrainingOthers { get; set; }
+
+        [Required]
         public bool IsCriticalPosition { get; set; }
 
         [StringLength(512)]
         public string Comments { get; set; }
+
+        public string Section_Documents { get; set; }
+
+        public string Section_GeneralInfo { get; set; }
+
+        public string Section_Trainings { get; set; }
     }
 }
