@@ -75,6 +75,13 @@ namespace AppLogistics.Controllers
         }
 
         [AjaxOnly]
+        public JsonResult EmployeeActive(LookupFilter filter)
+        {
+            filter.AdditionalFilters[nameof(Employee.Active)] = true;
+            return GetData(new MvcLookup<Employee, EmployeeView>(_unitOfWork), filter);
+        }
+
+        [AjaxOnly]
         public JsonResult Eps(LookupFilter filter)
         {
             return GetData(new MvcLookup<Eps, EpsView>(_unitOfWork), filter);

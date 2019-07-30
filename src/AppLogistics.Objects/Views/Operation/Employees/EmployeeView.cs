@@ -1,9 +1,11 @@
+using NonFactors.Mvc.Lookup;
 using System;
 
 namespace AppLogistics.Objects
 {
     public class EmployeeView : BaseView
     {
+        [LookupColumn]
         public string InternalCode { get; set; }
 
         public string DocumentTypeName { get; set; }
@@ -12,8 +14,10 @@ namespace AppLogistics.Objects
 
         public bool Active { get; set; }
 
+        [LookupColumn]
         public string Name { get; set; }
 
+        [LookupColumn]
         public string Surname { get; set; }
 
         public DateTime BornDate { get; set; }

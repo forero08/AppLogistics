@@ -1,5 +1,6 @@
 ﻿using AppLogistics.Components.Mvc;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace AppLogistics.Objects
@@ -150,5 +151,7 @@ namespace AppLogistics.Objects
 
         [StringLength(512)]
         public string Comments { get; set; }
+
+        public virtual ICollection<Holding> Holdings { get; set; }
     }
 }

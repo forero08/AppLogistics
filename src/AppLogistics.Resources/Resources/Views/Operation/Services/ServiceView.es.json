@@ -12,6 +12,7 @@
         "RateProductName": "Producto",
         "RateVehicleTypeName": "Tipo de vehículo",
         "SectorName": "Área",
+        "SelectedEmployees": "Empleados",
         "VehicleNumber": "Placas del vehículo"
     }
 }

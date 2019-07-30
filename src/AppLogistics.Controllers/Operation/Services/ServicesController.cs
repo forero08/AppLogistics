@@ -48,7 +48,7 @@ namespace AppLogistics.Controllers.Operation
         [HttpGet]
         public ActionResult Edit(int id)
         {
-            return NotEmptyView(Service.Get<ServiceCreateEditView>(id));
+            return NotEmptyView(Service.GetEdit<ServiceCreateEditView>(id));
         }
 
         [HttpPost]

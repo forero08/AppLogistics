@@ -12,6 +12,8 @@ namespace AppLogistics.Objects
 
         public int Quantity { get; set; }
 
+        public int[] SelectedEmployees { get; set; }
+
         public string SectorName { get; set; }
 
         public string CarrierName { get; set; }

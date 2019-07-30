@@ -32,6 +32,11 @@ namespace AppLogistics.Data.Core
             return id == null ? null : _context.Find<TModel>(id);
         }
 
+        public TModel GetAsNoTracking<TModel>(int? id) where TModel : BaseModel
+        {
+            return id == null ? null : _context.Set<TModel>().Where(model => model.Id == id).AsNoTracking().FirstOrDefault();
+        }
+
         public TDestination To<TDestination>(object source)
         {
             return Mapper.Map<TDestination>(source);

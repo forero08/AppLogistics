@@ -14,6 +14,9 @@ namespace AppLogistics.Objects
         [MinValue(1)]
         public int Quantity { get; set; }
 
+        [Required]
+        public int[] SelectedEmployees { get; set; }
+
         public int? SectorId { get; set; }
 
         public int? CarrierId { get; set; }
