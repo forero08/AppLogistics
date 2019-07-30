@@ -10,6 +10,8 @@ namespace AppLogistics.Data.Core
 
         TModel Get<TModel>(int? id) where TModel : BaseModel;
 
+        TModel GetAsNoTracking<TModel>(int? id) where TModel : BaseModel;
+
         TDestination To<TDestination>(object source);
 
         IQuery<TModel> Select<TModel>() where TModel : BaseModel;

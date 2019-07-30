@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace AppLogistics.Objects
 {
@@ -31,5 +32,7 @@ namespace AppLogistics.Objects
 
         [StringLength(128)]
         public string Comments { get; set; }
+
+        public virtual ICollection<Holding> Holdings { get; set; }
     }
 }

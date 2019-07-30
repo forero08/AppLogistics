@@ -9,6 +9,7 @@
         "RateClientId": "Cliente",
         "RateId": "Tarifa",
         "SectorId": "Área",
+        "SelectedEmployees": "Empleados",
         "VehicleNumber": "Placas/Número de vehículo"
     },
     "Validations": {
