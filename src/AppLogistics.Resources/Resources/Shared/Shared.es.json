@@ -1,11 +1,12 @@
 ﻿{
     "Actions": {
+        "Cancel": "Cancelar",
         "Copy": "Copiar",
         "Create": "Crear",
         "Delete": "Eliminar",
         "Details": "Detalles",
         "Edit": "Editar",
-        "Home":  "Inicio",
+        "Home": "Inicio",
         "Language": "Idioma",
         "Login": "Iniciar sesión",
         "Logout": "Cerrar sesión",
