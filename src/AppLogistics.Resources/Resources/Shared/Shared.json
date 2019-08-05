@@ -1,11 +1,12 @@
 ﻿{
     "Actions": {
+        "Cancel": "Cancel",
         "Copy": "Copy",
         "Create": "Create",
         "Delete": "Delete",
         "Details": "Details",
         "Edit": "Edit",
-        "Home":  "Home",
+        "Home": "Home",
         "Language": "Language",
         "Login": "Login",
         "Logout": "Logout",
