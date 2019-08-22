@@ -50,6 +50,7 @@
         "Section_Trainings": "CAPACITACIONES"
     },
     "Validations": {
-        "NotUniqueDocumentNumber": "Ya existe un empleado con ese Número de documento"
+        "NotUniqueDocumentNumber": "Ya existe un empleado con ese Número de documento",
+        "NotUniqueInternalCode": "Ya existe un empleado con ese Código interno"
     }
 }
