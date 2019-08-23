@@ -50,6 +50,7 @@
         "Section_Trainings": "TRAININGS"
     },
     "Validations": {
-        "NotUniqueDocumentNumber": "There is already an employee with that Document number"
+        "NotUniqueDocumentNumber": "There is already an employee with that Document number",
+        "NotUniqueInternalCode": "There is already an employee with that Internal code"
     }
 }

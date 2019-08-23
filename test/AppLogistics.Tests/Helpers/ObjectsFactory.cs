@@ -676,8 +676,6 @@ namespace AppLogistics.Tests
                 CarrierName = "Name" + id,
                 Comments = "Comments" + id,
                 CustomsInformation = "CustomsInformation" + id,
-                FullPrice = 1,
-                HoldingPrice = 1,
                 Location = "Location" + id,
                 Quantity = 1,
                 RateActivityName = "RateActivityName" + id,

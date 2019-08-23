@@ -44,8 +44,6 @@ namespace AppLogistics.Services.Tests
             Assert.Equal(expected.CustomsInformation, actual.CustomsInformation);
             Assert.Equal(expected.VehicleNumber, actual.VehicleNumber);
             Assert.Equal(expected.CreationDate, actual.CreationDate);
-            Assert.Equal(expected.HoldingPrice, actual.HoldingPrice);
-            Assert.Equal(expected.FullPrice, actual.FullPrice);
             Assert.Equal(expected.Comments, actual.Comments);
             Assert.Equal(expected.Location, actual.Location);
             Assert.Equal(expected.Quantity, actual.Quantity);
@@ -75,8 +73,6 @@ namespace AppLogistics.Services.Tests
                 Assert.Equal(expected[i].CustomsInformation, actual[i].CustomsInformation);
                 Assert.Equal(expected[i].VehicleNumber, actual[i].VehicleNumber);
                 Assert.Equal(expected[i].CreationDate, actual[i].CreationDate);
-                Assert.Equal(expected[i].HoldingPrice, actual[i].HoldingPrice);
-                Assert.Equal(expected[i].FullPrice, actual[i].FullPrice);
                 Assert.Equal(expected[i].Comments, actual[i].Comments);
                 Assert.Equal(expected[i].Location, actual[i].Location);
                 Assert.Equal(expected[i].Quantity, actual[i].Quantity);

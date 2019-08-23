@@ -5,6 +5,7 @@
         "CustomsInformation": "Customs information",
         "FullPrice": "Full price",
         "HoldingPrice": "Employees value",
+        "Id": "Id",
         "Location": "Location",
         "Quantity": "Quantity",
         "RateActivityName": "Activity",
@@ -12,7 +13,7 @@
         "RateProductName": "Product",
         "RateVehicleTypeName": "Vehicle type",
         "SectorName": "Area",
-        "SelectedEmployees": "Employees",
+        "SelectedEmployees": "Operators",
         "VehicleNumber": "Vehicle number"
     }
 }

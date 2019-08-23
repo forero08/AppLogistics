@@ -14,12 +14,16 @@ namespace AppLogistics.Validators
 
         public bool CanCreate(EmployeeCreateEditView view)
         {
-            return IsUniqueDocumentNumber(view.Id, view.DocumentNumber) && ModelState.IsValid;
+            return IsUniqueDocumentNumber(view.Id, view.DocumentNumber)
+                && IsUniqueInternalCode(view.Id, view.InternalCode)
+                && ModelState.IsValid;
         }
 
         public bool CanEdit(EmployeeCreateEditView view)
         {
-            return IsUniqueDocumentNumber(view.Id, view.DocumentNumber) && ModelState.IsValid;
+            return IsUniqueDocumentNumber(view.Id, view.DocumentNumber)
+                && IsUniqueInternalCode(view.Id, view.InternalCode)
+                && ModelState.IsValid;
         }
 
         private bool IsUniqueDocumentNumber(int employeeId, string docNumber)
@@ -31,6 +35,21 @@ namespace AppLogistics.Validators
             if (alreadyExists)
             {
                 Alerts.AddError(Validation.For<EmployeeCreateEditView>("NotUniqueDocumentNumber"));
+                return false;
+            }
+
+            return true;
+        }
+
+        private bool IsUniqueInternalCode(int employeeId, string internalCode)
+        {
+            var alreadyExists = UnitOfWork.Select<Employee>()
+                .Where(e => e.InternalCode.Equals(internalCode) && e.Id != employeeId)
+                .Any();
+
+            if (alreadyExists)
+            {
+                Alerts.AddError(Validation.For<EmployeeCreateEditView>("NotUniqueInternalCode"));
                 return false;
             }
 
