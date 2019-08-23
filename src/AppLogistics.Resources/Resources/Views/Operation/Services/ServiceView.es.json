@@ -5,6 +5,7 @@
         "CustomsInformation": "Información aduanera",
         "FullPrice": "Precio completo",
         "HoldingPrice": "Valor para empleados",
+        "Id": "Id",
         "Location": "Ubicación",
         "Quantity": "Cantidad",
         "RateActivityName": "Actividad",
@@ -12,7 +13,7 @@
         "RateProductName": "Producto",
         "RateVehicleTypeName": "Tipo de vehículo",
         "SectorName": "Área",
-        "SelectedEmployees": "Empleados",
+        "SelectedEmployees": "Operarios",
         "VehicleNumber": "Placas del vehículo"
     }
 }

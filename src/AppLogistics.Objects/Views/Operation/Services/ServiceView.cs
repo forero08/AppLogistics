@@ -24,10 +24,6 @@ namespace AppLogistics.Objects
 
         public string CustomsInformation { get; set; }
 
-        public decimal FullPrice { get; set; }
-
-        public decimal HoldingPrice { get; set; }
-
         public string Comments { get; set; }
     }
 }

@@ -9,7 +9,7 @@
         "RateClientId": "Client",
         "RateId": "Rate",
         "SectorId": "Area",
-        "SelectedEmployees": "Employees",
+        "SelectedEmployees": "Operators",
         "VehicleNumber": "Vehicle number/plate"
     },
     "Validations": {

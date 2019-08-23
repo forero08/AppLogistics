@@ -22,6 +22,7 @@
                     columns.AddAction("Edit", "fa fa-pencil-alt");
                     columns.AddAction("Delete", "fa fa-times");
 
+                    columns.AddProperty(model => model.Id);
                     columns.AddProperty(model => model.CreationDate);
                     columns.AddProperty(model => model.RateClientName);
                     columns.AddProperty(model => model.RateActivityName);
