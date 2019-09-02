@@ -14,12 +14,18 @@ namespace AppLogistics.Services
 
         public TView Get<TView>(int id) where TView : ServiceView
         {
+            var service = UnitOfWork.GetAs<Service, TView>(id);
+
+            if (service == null)
+            {
+                return null;
+            }
+
             var employees = UnitOfWork.Select<Holding>()
                 .Where(h => h.ServiceId == id)
                 .Select(h => h.EmployeeId)
                 .ToList();
 
-            var service = UnitOfWork.GetAs<Service, TView>(id);
             service.SelectedEmployees = employees.ToArray();
 
             return service;
@@ -27,12 +33,18 @@ namespace AppLogistics.Services
 
         public TView GetEdit<TView>(int id) where TView : ServiceCreateEditView
         {
+            var service = UnitOfWork.GetAs<Service, TView>(id);
+
+            if (service == null)
+            {
+                return null;
+            }
+
             var employees = UnitOfWork.Select<Holding>()
                 .Where(h => h.ServiceId == id)
                 .Select(h => h.EmployeeId)
                 .ToList();
 
-            var service = UnitOfWork.GetAs<Service, TView>(id);
             service.SelectedEmployees = employees.ToArray();
 
             return service;

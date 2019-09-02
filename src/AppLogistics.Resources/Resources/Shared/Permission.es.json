@@ -2,7 +2,8 @@
     "Areas": {
         "Administration": "Administración",
         "Configuration": "Configuración",
-        "Operation":  "Operación"
+        "Operation": "Operación",
+        "Reporting": "Informes"
     },
     "Controllers": {
         "AdministrationAccounts": "Cuentas",
@@ -26,7 +27,9 @@
 
         "OperationEmployees": "Empleados",
         "OperationRates": "Tarifas",
-        "OperationServices": "Servicios"
+        "OperationServices": "Servicios",
+
+        "ReportingServiceReports": "Reporte de servicios"
     },
     "Actions": {
         "AdministrationAccountsCreate": "Crear",
@@ -129,6 +132,9 @@
         "OperationServicesDelete": "Eliminar",
         "OperationServicesDetails": "Detalles",
         "OperationServicesEdit": "Editar",
-        "OperationServicesIndex": "Índice"
+        "OperationServicesIndex": "Índice",
+
+        "ReportingServiceReportsQuery": "Consultar",
+        "ReportingServiceReportsQueryResult": "Ver resultado"
     }
 }

@@ -3,6 +3,8 @@
         "Comments": "Comments",
         "CreationDate": "Creation date",
         "CustomsInformation": "Customs information",
+        "FullPrice": "Full price",
+        "HoldingPrice": "Employees value",
         "Id": "Id",
         "Location": "Location",
         "Quantity": "Quantity",

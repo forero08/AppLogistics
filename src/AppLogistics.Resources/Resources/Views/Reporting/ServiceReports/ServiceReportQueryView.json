@@ -1,0 +1,13 @@
+{
+    "Titles": {
+        "ActivityId": "Activity",
+        "ClientId": "Client",
+        "EmployeeInternalCode": "Employee code",
+        "EndDate": "End date",
+        "ServiceId": "Service Id",
+        "StartDate": "Start date"
+    },
+    "Validations": {
+        "InvalidDatesRange": "Start date must be less than or equal to End date."
+    }
+}
