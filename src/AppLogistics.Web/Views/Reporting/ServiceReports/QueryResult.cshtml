@@ -23,10 +23,10 @@
                     columns.AddProperty(model => model.Id);
                     columns.AddProperty(model => model.CreationDate);
                     columns.AddProperty(model => model.RateClientName);
-                    columns.AddProperty(model => model.RateActivityName);
-                    columns.AddProperty(model => model.RateVehicleTypeName);
-                    columns.AddProperty(model => model.RateProductName);
                     columns.AddProperty(model => model.Quantity);
+                    columns.AddProperty(model => model.RateActivityName);
+                    columns.AddProperty(model => model.FullPrice).Formatted("{0:C}");
+                    columns.AddProperty(model => model.HoldingPrice).Formatted("{0:C}");
                 })
                 .ApplyDefaults()
             )
