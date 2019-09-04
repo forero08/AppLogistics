@@ -138,6 +138,16 @@
                     <input asp-for="Comments" />
                 </div>
             </div>
+
+        </div>
+        <div class="form-group">
+            <div class="form-actions col-12">
+                <authorize action="QueryResult">
+                    <a href="javascript:void(0);" id="backLink" class="btn btn-secondary">
+                        <span class="text">@Resource.ForAction("Back")</span>
+                    </a>
+                </authorize>
+            </div>
         </div>
     </div>
 </div>

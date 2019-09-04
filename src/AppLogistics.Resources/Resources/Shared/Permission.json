@@ -134,7 +134,8 @@
         "OperationServicesEdit": "Edit",
         "OperationServicesIndex": "Index",
 
-        "ReportingServiceReportQuery": "Query",
-        "ReportingServiceReportQueryResult": "View result"
+        "ReportingServiceReportsDetails": "Details",
+        "ReportingServiceReportsQuery": "Query",
+        "ReportingServiceReportsQueryResult": "View result"
     }
 }

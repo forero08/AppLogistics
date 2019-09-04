@@ -138,6 +138,7 @@
         <siteMapNode menu="true" icon="fa fa-poll" area="Reporting">
             <siteMapNode menu="true" icon="fa fa-dolly" area="Reporting" controller="ServiceReports" action="Query">
                 <siteMapNode icon="far fa-file" area="Reporting" controller="ServiceReports" action="QueryResult" />
+                <siteMapNode icon="far fa-file" area="Reporting" controller="ServiceReports" action="Details" />
             </siteMapNode>
         </siteMapNode>
 

@@ -112,6 +112,7 @@
 
         "Reporting": "Informes",
         "ReportingServiceReportsQuery": "Reporte de Servicios",
-        "ReportingServiceReportsQueryResult": "Resultado consulta"
+        "ReportingServiceReportsQueryResult": "Resultado consulta",
+        "ReportingServiceReportsDetails": "Detalles servicio"
     }
 }

@@ -112,6 +112,7 @@
 
         "Reporting": "Reporting",
         "ReportingServiceReportsQuery": "Services Report",
-        "ReportingServiceReportsQueryResult": "Services result"
+        "ReportingServiceReportsQueryResult": "Query result",
+        "ReportingServiceReportsDetails": "Service details"
     }
 }

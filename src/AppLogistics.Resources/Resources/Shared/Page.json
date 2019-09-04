@@ -159,6 +159,7 @@
         "OperationServicesIndex": "Services",
 
         "ReportingServiceReportsQuery": "Query report",
-        "ReportingServiceReportsQueryResult": "Report result"
+        "ReportingServiceReportsQueryResult": "Report result",
+        "ReportingServiceReportsDetails": "Service details"
     }
 }

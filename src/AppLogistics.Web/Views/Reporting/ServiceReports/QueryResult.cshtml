@@ -31,5 +31,14 @@
                 .ApplyDefaults()
             )
         </div>
+        <div class="form-group">
+            <div class="form-actions col-12">
+                <authorize action="Query">
+                    <a asp-action="Query" class="btn btn-secondary">
+                        <span class="text">@Resource.ForAction("Back")</span>
+                    </a>
+                </authorize>
+            </div>
+        </div>
     </div>
 </div>
