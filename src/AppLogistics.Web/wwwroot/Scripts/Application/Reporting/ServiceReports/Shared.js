@@ -21,4 +21,7 @@
         yearRange: "c-4:c+2"
     });
         //.datepicker("setDate", "+0d");
+
+    document.getElementById("ServiceId").focus(); 
+
 });
