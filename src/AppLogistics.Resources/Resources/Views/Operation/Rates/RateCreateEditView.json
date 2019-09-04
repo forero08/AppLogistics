@@ -2,7 +2,7 @@
     "Titles": {
         "ActivityId": "Activity",
         "ClientId": "Client",
-        "EmployeePercentage": "Percentage for employee",
+        "EmployeePercentage": "Percentage for operator",
         "Name": "Code",
         "Price": "Price",
         "ProductId": "Product",

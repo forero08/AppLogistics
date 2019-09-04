@@ -2,7 +2,7 @@
     "Titles": {
         "ActivityId": "Actividad",
         "ClientId": "Cliente",
-        "EmployeeInternalCode": "Código empleado",
+        "EmployeeInternalCode": "Código operario",
         "EndDate": "Fecha final",
         "ServiceId": "Id servicio",
         "StartDate": "Fecha inicial"
