@@ -42,7 +42,10 @@
         "Rate": "Rate",
         "Rates": "Rates",
         "Service": "Service",
-        "Services": "Services"
+        "Services": "Services",
+
+        "ServiceReport": "Service Report",
+        "ServiceReports": "Service Reports"
     },
     "Titles": {
         "AdministrationAccountsCreate": "Account creation",
@@ -153,6 +156,10 @@
         "OperationServicesDelete": "Service deletion",
         "OperationServicesDetails": "Service details",
         "OperationServicesEdit": "Service Edit",
-        "OperationServicesIndex": "Services"
+        "OperationServicesIndex": "Services",
+
+        "ReportingServiceReportsQuery": "Query report",
+        "ReportingServiceReportsQueryResult": "Report result",
+        "ReportingServiceReportsDetails": "Service details"
     }
 }

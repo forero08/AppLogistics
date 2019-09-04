@@ -108,6 +108,11 @@
         "OperationServicesDelete": "Eliminar",
         "OperationServicesDetails": "Detalles",
         "OperationServicesEdit": "Editar",
-        "OperationServicesIndex": "Servicios"
+        "OperationServicesIndex": "Servicios",
+
+        "Reporting": "Informes",
+        "ReportingServiceReportsQuery": "Reporte de Servicios",
+        "ReportingServiceReportsQueryResult": "Resultado consulta",
+        "ReportingServiceReportsDetails": "Detalles servicio"
     }
 }

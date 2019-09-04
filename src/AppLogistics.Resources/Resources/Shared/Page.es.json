@@ -42,7 +42,10 @@
         "Rate": "Tarifa",
         "Rates": "Tarifas",
         "Service": "Servicio",
-        "Services": "Servicios"
+        "Services": "Servicios",
+
+        "ServiceReport": "Reporte de servicios",
+        "ServiceReports": "Reportes de servicios"
     },
     "Titles": {
         "AdministrationAccountsCreate": "Creación de cuenta",
@@ -153,6 +156,10 @@
         "OperationServicesDelete": "Eliminación de Servicio",
         "OperationServicesDetails": "Detalles de Servicio",
         "OperationServicesEdit": "Editar Servicio",
-        "OperationServicesIndex": "Servicios"
+        "OperationServicesIndex": "Servicios",
+
+        "ReportingServiceReportsQuery": "Consultar reporte",
+        "ReportingServiceReportsQueryResult": "Resultado reporte",
+        "ReportingServiceReportsDetails": "Detalles servicio"
     }
 }

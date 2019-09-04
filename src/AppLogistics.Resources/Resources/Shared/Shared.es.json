@@ -1,11 +1,13 @@
 ﻿{
     "Actions": {
+        "Back": "Volver",
         "Cancel": "Cancelar",
         "Copy": "Copiar",
         "Create": "Crear",
         "Delete": "Eliminar",
         "Details": "Detalles",
         "Edit": "Editar",
+        "ExportCSV": "Exportar a Excel",
         "Home": "Inicio",
         "Language": "Idioma",
         "Login": "Iniciar sesión",

@@ -53,3 +53,8 @@
         }
     }
 })();
+
+// Back 1 page in history
+$(document).on('click', '#backLink', function () {
+    history.go(-1);
+});
