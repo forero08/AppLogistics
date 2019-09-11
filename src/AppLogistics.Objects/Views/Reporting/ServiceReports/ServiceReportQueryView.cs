@@ -10,10 +10,18 @@ namespace AppLogistics.Objects
 
         public DateTime? EndDate { get; set; }
 
-        public int? ClientId { get; set; }
+        public int[] ClientIds { get; set; }
 
-        public int? ActivityId { get; set; }
+        public int[] ActivityIds { get; set; }
 
-        public string EmployeeInternalCode { get; set; }
+        public int[] EmployeeIds { get; set; }
+
+        public int[] VehicleTypeIds { get; set; }
+
+        public int[] ProductIds { get; set; }
+
+        public int[] CarrierIds { get; set; }
+
+        public int[] SectorIds { get; set; }
     }
 }
