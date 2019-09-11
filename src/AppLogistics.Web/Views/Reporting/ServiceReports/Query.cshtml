@@ -46,35 +46,83 @@
                 <div class="row">
                     <div class="form-group col-4">
                         <div class="control-label col-6">
-                            <label asp-for="ClientId"></label>
+                            <label asp-for="ClientIds"></label>
                         </div>
                         <div class="control-content col-6">
-                            <div mvc-lookup-for="ClientId" url="~/Lookup/Client" title="@Resource.ForLookup("Client")"></div>
+                            <div mvc-lookup-for="ClientIds" url="~/Lookup/Client" multi="true" title="@Resource.ForLookup("Client")"></div>
                         </div>
                         <div class="control-validation col">
-                            <span asp-validation-for="ClientId"></span>
+                            <span asp-validation-for="ClientIds"></span>
                         </div>
                     </div>
                     <div class="form-group col-4">
                         <div class="control-label col-6">
-                            <label asp-for="ActivityId"></label>
+                            <label asp-for="ActivityIds"></label>
                         </div>
                         <div class="control-content col-6">
-                            <div mvc-lookup-for="ActivityId" url="~/Lookup/Activity" title="@Resource.ForLookup("Activity")"></div>
+                            <div mvc-lookup-for="ActivityIds" url="~/Lookup/Activity" multi="true" title="@Resource.ForLookup("Activity")"></div>
                         </div>
                         <div class="control-validation col">
-                            <span asp-validation-for="ActivityId"></span>
+                            <span asp-validation-for="ActivityIds"></span>
                         </div>
                     </div>
                     <div class="form-group col-4">
                         <div class="control-label col-6">
-                            <label asp-for="EmployeeInternalCode"></label>
+                            <label asp-for="EmployeeIds"></label>
                         </div>
                         <div class="control-content col-6">
-                            <input asp-for="EmployeeInternalCode" type="text" />
+                            <div mvc-lookup-for="EmployeeIds" url="~/Lookup/EmployeeActive" multi="true" title="@Resource.ForLookup("Employee")"></div>
                         </div>
                         <div class="control-validation col">
-                            <span asp-validation-for="EmployeeInternalCode"></span>
+                            <span asp-validation-for="EmployeeIds"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-4">
+                        <div class="control-label col-6">
+                            <label asp-for="VehicleTypeIds"></label>
+                        </div>
+                        <div class="control-content col-6">
+                            <div mvc-lookup-for="VehicleTypeIds" url="~/Lookup/VehicleType" multi="true" title="@Resource.ForLookup("VehicleType")"></div>
+                        </div>
+                        <div class="control-validation col">
+                            <span asp-validation-for="VehicleTypeIds"></span>
+                        </div>
+                    </div>
+                    <div class="form-group col-4">
+                        <div class="control-label col-6">
+                            <label asp-for="ProductIds"></label>
+                        </div>
+                        <div class="control-content col-6">
+                            <div mvc-lookup-for="ProductIds" url="~/Lookup/Product" multi="true" title="@Resource.ForLookup("Product")"></div>
+                        </div>
+                        <div class="control-validation col">
+                            <span asp-validation-for="ProductIds"></span>
+                        </div>
+                    </div>
+                    <div class="form-group col-4">
+                        <div class="control-label col-6">
+                            <label asp-for="CarrierIds"></label>
+                        </div>
+                        <div class="control-content col-6">
+                            <div mvc-lookup-for="CarrierIds" url="~/Lookup/Carrier" multi="true" title="@Resource.ForLookup("Carrier")"></div>
+                        </div>
+                        <div class="control-validation col">
+                            <span asp-validation-for="CarrierIds"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-4">
+                        <div class="control-label col-6">
+                            <label asp-for="SectorIds"></label>
+                        </div>
+                        <div class="control-content col-6">
+                            <div mvc-lookup-for="SectorIds" url="~/Lookup/Sector" multi="true" title="@Resource.ForLookup("Sector")"></div>
+                        </div>
+                        <div class="control-validation col">
+                            <span asp-validation-for="SectorIds"></span>
                         </div>
                     </div>
                 </div>

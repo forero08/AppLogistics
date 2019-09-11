@@ -32,37 +32,21 @@ namespace AppLogistics.Services
 
         public IQueryable<ServiceReportView> FilterByQuery(ServiceReportQueryView query)
         {
-            var services = UnitOfWork.Select<Service>();
+            var services = UnitOfWork.Select<Service>()
+                .Where(s => !query.ServiceId.HasValue || s.Id == query.ServiceId)
+                .Where(s => !query.StartDate.HasValue || s.CreationDate >= query.StartDate)
+                .Where(s => !query.EndDate.HasValue || s.CreationDate <= query.EndDate)
+                .Where(s => query.ClientIds == null || query.ClientIds.Contains(s.Rate.ClientId))
+                .Where(s => query.ActivityIds == null || query.ActivityIds.Contains(s.Rate.ActivityId))
+                .Where(s => query.VehicleTypeIds == null || query.VehicleTypeIds.Contains(s.Rate.VehicleTypeId.Value))
+                .Where(s => query.ProductIds == null || query.ProductIds.Contains(s.Rate.ProductId.Value))
+                .Where(s => query.CarrierIds == null || query.CarrierIds.Contains(s.CarrierId.Value))
+                .Where(s => query.SectorIds == null || query.SectorIds.Contains(s.SectorId.Value));
 
-            if (query.ServiceId.HasValue)
-            {
-                services = services.Where(s => s.Id == query.ServiceId);
-            }
-
-            if (query.StartDate.HasValue)
-            {
-                services = services.Where(s => s.CreationDate >= query.StartDate);
-            }
-
-            if (query.EndDate.HasValue)
-            {
-                services = services.Where(s => s.CreationDate <= query.EndDate);
-            }
-
-            if (query.ClientId.HasValue)
-            {
-                services = services.Where(s => s.Rate.ClientId == query.ClientId);
-            }
-
-            if (query.ActivityId.HasValue)
-            {
-                services = services.Where(s => s.Rate.ActivityId == query.ActivityId);
-            }
-
-            if (!string.IsNullOrWhiteSpace(query.EmployeeInternalCode))
+            if (query.EmployeeIds?.Length > 0)
             {
                 var serviceIds = UnitOfWork.Select<Holding>()
-                    .Where(h => h.Employee.InternalCode.Equals(query.EmployeeInternalCode))
+                    .Where(h => query.EmployeeIds.Contains(h.Employee.Id))
                     .Select(h => h.ServiceId);
 
                 services = services.Where(s => serviceIds.Contains(s.Id));

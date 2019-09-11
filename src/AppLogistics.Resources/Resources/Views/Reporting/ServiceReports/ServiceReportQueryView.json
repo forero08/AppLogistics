@@ -1,11 +1,15 @@
 {
     "Titles": {
-        "ActivityId": "Activity",
-        "ClientId": "Client",
-        "EmployeeInternalCode": "Operator code",
+        "ActivityIds": "Activities",
+        "CarrierIds": "Carriers",
+        "ClientIds": "Clients",
+        "EmployeeIds": "Employees",
         "EndDate": "End date",
+        "ProductIds": "Products",
+        "SectorIds": "Areas",
         "ServiceId": "Service Id",
-        "StartDate": "Start date"
+        "StartDate": "Start date",
+        "VehicleTypeIds": "Vehicle types"
     },
     "Validations": {
         "InvalidDatesRange": "Start date must be less than or equal to End date."
