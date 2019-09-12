@@ -23,5 +23,13 @@ namespace AppLogistics.Objects
         public int[] CarrierIds { get; set; }
 
         public int[] SectorIds { get; set; }
+
+        public string VehicleNumber { get; set; }
+
+        public string Location { get; set; }
+
+        public string CustomsInformation { get; set; }
+
+        public string Comments { get; set; }
     }
 }
