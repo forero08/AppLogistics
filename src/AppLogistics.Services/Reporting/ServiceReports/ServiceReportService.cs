@@ -41,7 +41,11 @@ namespace AppLogistics.Services
                 .Where(s => query.VehicleTypeIds == null || query.VehicleTypeIds.Contains(s.Rate.VehicleTypeId.Value))
                 .Where(s => query.ProductIds == null || query.ProductIds.Contains(s.Rate.ProductId.Value))
                 .Where(s => query.CarrierIds == null || query.CarrierIds.Contains(s.CarrierId.Value))
-                .Where(s => query.SectorIds == null || query.SectorIds.Contains(s.SectorId.Value));
+                .Where(s => query.SectorIds == null || query.SectorIds.Contains(s.SectorId.Value))
+                .Where(s => string.IsNullOrWhiteSpace(query.VehicleNumber) || s.VehicleNumber.Contains(query.VehicleNumber))
+                .Where(s => string.IsNullOrWhiteSpace(query.Location) || s.Location.Contains(query.Location))
+                .Where(s => string.IsNullOrWhiteSpace(query.CustomsInformation) || s.CustomsInformation.Contains(query.CustomsInformation))
+                .Where(s => string.IsNullOrWhiteSpace(query.Comments) || s.Comments.Contains(query.Comments));
 
             if (query.EmployeeIds?.Length > 0)
             {
