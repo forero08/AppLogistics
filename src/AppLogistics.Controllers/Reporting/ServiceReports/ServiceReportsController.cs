@@ -1,13 +1,18 @@
-﻿using AppLogistics.Objects;
+﻿using AppLogistics.Components.Mvc;
+using AppLogistics.Objects;
 using AppLogistics.Services;
 using AppLogistics.Validators;
 using Microsoft.AspNetCore.Mvc;
+using System;
+using System.IO;
 
 namespace AppLogistics.Controllers.Reporting
 {
     [Area("Reporting")]
     public class ServiceReportsController : ValidatedController<IServiceReportValidator, IServiceReportService>
     {
+        private string serviceReportQueryKey = "ServiceReportQuery";
+
         public ServiceReportsController(IServiceReportValidator validator, IServiceReportService service)
             : base(validator, service)
         {
@@ -27,24 +32,76 @@ namespace AppLogistics.Controllers.Reporting
                 return View(serviceReportQuery);
             }
 
-            return RedirectToAction("QueryResult", "ServiceReports", serviceReportQuery);
+            TempData.Put(serviceReportQueryKey, serviceReportQuery);
+            return RedirectToAction("QueryResult", "ServiceReports");
         }
 
         [HttpGet]
-        public ActionResult QueryResult(ServiceReportQueryView query)
+        public ActionResult QueryResult()
         {
-            if (!Validator.CanQuery(query))
+            if (TempData[serviceReportQueryKey] != null)
             {
-                return View(query);
-            }
+                try
+                {
+                    var query = TempData.Get<ServiceReportQueryView>(serviceReportQueryKey);
 
-            return NotEmptyView(Service.FilterByQuery(query));
+                    if (!Validator.CanQuery(query))
+                    {
+                        return View(query);
+                    }
+
+                    TempData.Keep(serviceReportQueryKey);
+                    return NotEmptyView(Service.FilterByQuery(query));
+                }
+                catch (Exception)
+                {
+                    // log exception
+                    return NotFoundView();
+                }
+            }
+            else
+            {
+                Alerts.AddWarning("Please do your query from here!!!");
+                return RedirectToAction("Query");
+            }
         }
 
         [HttpGet]
         public ActionResult Details(int id)
         {
             return NotEmptyView(Service.GetDetail(id));
+        }
+
+        [HttpGet]
+        public ActionResult ExportExcel()
+        {
+            ServiceReportQueryView query = null;
+
+            if (TempData["ServiceReportQuery"] != null)
+            {
+                try
+                {
+                    query = TempData.Get<ServiceReportQueryView>(serviceReportQueryKey);
+                }
+                catch (Exception)
+                {
+                    // log exception
+                    return NotFoundView();
+                }
+            }
+
+            if (query != null)
+            {
+                TempData.Keep(serviceReportQueryKey);
+
+                var csvReportBytes = Service.GetExcelReport(query);
+
+                var reportStream = new MemoryStream(csvReportBytes);
+
+                return new FileStreamResult(reportStream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
+            }
+
+            return NotFoundView();
         }
     }
 }

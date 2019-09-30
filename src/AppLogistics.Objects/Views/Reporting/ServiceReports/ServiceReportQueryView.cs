@@ -10,7 +10,7 @@ namespace AppLogistics.Objects
 
         public DateTime? EndDate { get; set; }
 
-        public int[] ClientIds { get; set; }
+        public string[] ClientIds { get; set; }
 
         public int[] ActivityIds { get; set; }
 
