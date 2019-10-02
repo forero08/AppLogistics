@@ -135,6 +135,7 @@
         "OperationServicesIndex": "Index",
 
         "ReportingServiceReportsDetails": "Details",
+        "ReportingServiceReportsExportExcel": "Export to Excel",
         "ReportingServiceReportsQuery": "Query",
         "ReportingServiceReportsQueryResult": "View result"
     }
