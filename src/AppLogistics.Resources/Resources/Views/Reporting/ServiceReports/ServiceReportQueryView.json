@@ -3,12 +3,16 @@
         "ActivityIds": "Activities",
         "CarrierIds": "Carriers",
         "ClientIds": "Clients",
+        "Comments": "Comments",
+        "CustomsInformation": "Customs information",
         "EmployeeIds": "Employees",
         "EndDate": "End date",
+        "Location": "Location",
         "ProductIds": "Products",
         "SectorIds": "Areas",
         "ServiceId": "Service Id",
         "StartDate": "Start date",
+        "VehicleNumber": "Vehicle Number",
         "VehicleTypeIds": "Vehicle types"
     },
     "Validations": {

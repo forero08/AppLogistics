@@ -1,0 +1,24 @@
+{
+    "Titles": {
+        "ActivityName": "ACTIVITY",
+        "CarrierName": "CARRIER",
+        "ClientName": "CLIENT",
+        "Comments": "COMMENTS",
+        "CreationDate": "DATE",
+        "CreationTime": "TIME",
+        "CustomsInformation": "CUSTOMS INFORMATION",
+        "EmployeeHoldingPrice": "EMPLOYEE PRICE",
+        "EmployeeInternalCode": "EMPLOYEE CODE",
+        "EmployeeName": "EMPLOYEE NAME",
+        "EmployeePercentage": "% EMPLOYEE",
+        "Location": "LOCATION",
+        "ProductName": "PRODUCT",
+        "Quantity": "QUANTITY",
+        "SectorName": "AREA",
+        "ServiceFullPrice": "TOTAL PRICE",
+        "ServiceHoldingPrice": "EMPLOYEES TOTAL VALUE",
+        "ServiceId": "SERVICE ID",
+        "VehicleNumber": "VEHICLE NUMBER",
+        "VehicleTypeName": "VEHICLE TYPE"
+    }
+}

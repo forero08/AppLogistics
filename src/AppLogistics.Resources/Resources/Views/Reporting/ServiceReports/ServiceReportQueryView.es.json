@@ -3,12 +3,16 @@
         "ActivityIds": "Actividades",
         "CarrierIds": "Transportadoras",
         "ClientIds": "Clientes",
+        "Comments": "Comentarios",
+        "CustomsInformation": "Información aduanera",
         "EmployeeIds": "Operarios",
         "EndDate": "Fecha final",
+        "Location": "Ubicación",
         "ProductIds": "Productos",
         "SectorIds": "Áreas",
         "ServiceId": "Id servicio",
         "StartDate": "Fecha inicial",
+        "VehicleNumber": "Placas de vehículo",
         "VehicleTypeIds": "Tipos de vehículo"
     },
     "Validations": {

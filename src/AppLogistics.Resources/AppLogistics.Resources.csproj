@@ -38,6 +38,8 @@
     <None Remove="Resources\Views\Operation\Services\ServiceCreateEditView.json" />
     <None Remove="Resources\Views\Profile\ProfileDeleteView.es.json" />
     <None Remove="Resources\Views\Profile\ProfileEditView.es.json" />
+    <None Remove="Resources\Views\Reporting\ServiceReports\ExcelServiceReport.es.json" />
+    <None Remove="Resources\Views\Reporting\ServiceReports\ExcelServiceReport.json" />
     <None Remove="Resources\Views\Reporting\ServiceReports\ServiceReportQueryView.es.json" />
     <None Remove="Resources\Views\Reporting\ServiceReports\ServiceReportQueryView.json" />
     <None Remove="Resources\Views\Reporting\ServiceReports\ServiceReportView.es.json" />
