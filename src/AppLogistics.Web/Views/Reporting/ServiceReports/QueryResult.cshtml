@@ -6,9 +6,9 @@
             <span class="icon fa fa-th"></span>
             <h5>@Resource.ForHeader("ServiceReport")</h5>
             <div class="widget-header-buttons">
-                <authorize action="ExportCsv">
-                    <a asp-action="ExportCsv" class="btn">
-                        <span class="far fa-file"></span><span class="text">@Resource.ForAction("ExportCSV")</span>
+                <authorize action="ExportExcel">
+                    <a asp-action="ExportExcel" class="btn">
+                        <span class="far fa-file"></span><span class="text">@Resource.ForAction("ExportExcel")</span>
                     </a>
                 </authorize>
             </div>

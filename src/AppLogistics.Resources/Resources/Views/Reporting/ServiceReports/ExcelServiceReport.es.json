@@ -1,0 +1,24 @@
+{
+    "Titles": {
+        "ActivityName": "ACTIVIDAD",
+        "CarrierName": "TRANSPORTADORA",
+        "ClientName": "CLIENTE",
+        "Comments": "COMENTARIOS",
+        "CreationDate": "FECHA",
+        "CreationTime": "HORA",
+        "CustomsInformation": "INFORMACIÓN ADUANERA",
+        "EmployeeHoldingPrice": "VALOR CADA EMPLEADO",
+        "EmployeeInternalCode": "CÓDIGO EMPLEADO",
+        "EmployeeName": "NOMBRE EMPLEADO",
+        "EmployeePercentage": "% EMPLEADO",
+        "Location": "UBICACIÓN",
+        "ProductName": "PRODUCTO",
+        "Quantity": "CANTIDAD",
+        "SectorName": "ÁREA",
+        "ServiceFullPrice": "VALOR COMPLETO",
+        "ServiceHoldingPrice": "VALOR PARA EMPLEADOS",
+        "ServiceId": "ID SERVICIO",
+        "VehicleNumber": "PLACAS",
+        "VehicleTypeName": "TIPO VEHÍCULO"
+    }
+}

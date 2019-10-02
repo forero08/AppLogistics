@@ -7,5 +7,6 @@ namespace AppLogistics.Services
     {
         IQueryable<ServiceReportView> FilterByQuery(ServiceReportQueryView query);
         ServiceReportView GetDetail(int id);
+        byte[] GetExcelReport(ServiceReportQueryView query);
     }
 }
