@@ -1,5 +1,6 @@
 ﻿using AppLogistics.Components.Mvc;
 using System;
+using System.Collections.Generic;
 
 namespace AppLogistics.Objects
 {
@@ -35,6 +36,9 @@ namespace AppLogistics.Objects
         [ExcelReportDisplayName("ExcelServiceReport", nameof(Quantity))]
         public int Quantity { get; set; }
 
+        [ExcelReportDisplayName("ExcelServiceReport", nameof(RatePrice))]
+        public decimal RatePrice { get; set; }
+
         [ExcelReportDisplayName("ExcelServiceReport", nameof(ServiceFullPrice))]
         public decimal ServiceFullPrice { get; set; }
 
@@ -43,15 +47,6 @@ namespace AppLogistics.Objects
 
         [ExcelReportDisplayName("ExcelServiceReport", nameof(ServiceHoldingPrice))]
         public decimal ServiceHoldingPrice { get; set; }
-
-        [ExcelReportDisplayName("ExcelServiceReport", nameof(EmployeeHoldingPrice))]
-        public decimal EmployeeHoldingPrice { get; set; }
-
-        [ExcelReportDisplayName("ExcelServiceReport", nameof(EmployeeInternalCode))]
-        public string EmployeeInternalCode { get; set; }
-
-        [ExcelReportDisplayName("ExcelServiceReport", nameof(EmployeeName))]
-        public string EmployeeName { get; set; }
 
         [ExcelReportDisplayName("ExcelServiceReport", nameof(SectorName))]
         public string SectorName { get; set; }
@@ -64,5 +59,10 @@ namespace AppLogistics.Objects
 
         [ExcelReportDisplayName("ExcelServiceReport", nameof(Comments))]
         public string Comments { get; set; }
+
+        [ExcelReportDisplayName("ExcelServiceReport", nameof(EmployeesInfo))]
+        public IEnumerable<ServiceReportEmployeeExcelView> EmployeesInfo { get; set; }
+
+        
     }
 }
