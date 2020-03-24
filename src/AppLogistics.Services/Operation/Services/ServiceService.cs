@@ -1,5 +1,6 @@
 using AppLogistics.Data.Core;
 using AppLogistics.Objects;
+using AppLogistics.Objects.Models.Operation.Services;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -70,13 +71,11 @@ namespace AppLogistics.Services
         {
             var rate = UnitOfWork.Get<Rate>(view.RateId);
 
-            var fullPrice = rate.Price * view.Quantity;
-            var holdingPrice = rate.Price * view.Quantity * (decimal)rate.EmployeePercentage / 100;
-            var pricePerEmployee = rate.SplitFare ? holdingPrice / view.SelectedEmployees.Length : holdingPrice;
+            var prices = CalculateServicePrices(rate, view);
 
             var service = UnitOfWork.To<Service>(view);
-            service.FullPrice = fullPrice;
-            service.HoldingPrice = holdingPrice;
+            service.FullPrice = prices.FullPrice;
+            service.HoldingPrice = prices.HoldingPrice;
 
             var holdings = new List<Holding>();
             foreach (var employeeId in view.SelectedEmployees)
@@ -84,7 +83,7 @@ namespace AppLogistics.Services
                 var holding = new Holding
                 {
                     Employee = UnitOfWork.Get<Employee>(employeeId),
-                    Price = pricePerEmployee,
+                    Price = prices.PricePerEmployee,
                     Service = service,
                 };
 
@@ -94,30 +93,45 @@ namespace AppLogistics.Services
             return holdings;
         }
 
+        private ServicePrices CalculateServicePrices(Rate rate, ServiceCreateEditView view)
+        {
+            var fullPrice = rate.Price * view.Quantity * view.SelectedEmployees.Length;
+            var holdingPrice = fullPrice * (decimal)rate.EmployeePercentage / 100;
+
+            if (rate.SplitFare)
+            {
+                fullPrice = fullPrice / view.SelectedEmployees.Length;
+                holdingPrice = fullPrice * (decimal)rate.EmployeePercentage / 100;
+            }
+
+            var pricePerEmployee = holdingPrice / view.SelectedEmployees.Length;
+
+            return new ServicePrices
+            {
+                FullPrice = fullPrice,
+                HoldingPrice = holdingPrice,
+                PricePerEmployee = pricePerEmployee
+            };
+        }
+
         public void Edit(ServiceCreateEditView view)
         {
             var existingService = UnitOfWork.GetAsNoTracking<Service>(view.Id);
+            var rate = UnitOfWork.Get<Rate>(view.RateId);
+            var prices = CalculateServicePrices(rate, view);
 
-            if (RequiresNewHoldings(view, existingService))
-            {
-                // Delete old holdings
-                var existingHoldings = UnitOfWork.Select<Holding>().Where(h => h.ServiceId == view.Id);
-                UnitOfWork.DeleteRange(existingHoldings);
+            // Delete old holdings
+            var existingHoldings = UnitOfWork.Select<Holding>().Where(h => h.ServiceId == view.Id);
+            UnitOfWork.DeleteRange(existingHoldings);
 
-                // Insert new holdings
-                var rate = UnitOfWork.Get<Rate>(view.RateId);
-                List<Holding> holdings = GenerateUpdatedHoldings(view, rate);
-                UnitOfWork.InsertRange(holdings);
-                UnitOfWork.Commit();
-
-                // Update prices
-                existingService.FullPrice = rate.Price * view.Quantity;
-                existingService.HoldingPrice = rate.Price * view.Quantity * (decimal)rate.EmployeePercentage / 100;
-            }
+            // Insert new holdings
+            List<Holding> holdings = GenerateUpdatedHoldings(view, prices.PricePerEmployee);
+            UnitOfWork.InsertRange(holdings);
+            UnitOfWork.Commit();
 
             var updatedService = UnitOfWork.To<Service>(view);
-            updatedService.FullPrice = existingService.FullPrice;
-            updatedService.HoldingPrice = existingService.HoldingPrice;
+            updatedService.FullPrice = prices.FullPrice;
+            updatedService.HoldingPrice = prices.HoldingPrice;
 
             UnitOfWork.Update(updatedService);
             UnitOfWork.Commit();
@@ -139,11 +153,8 @@ namespace AppLogistics.Services
             return employeeIds.SequenceEqual(view.SelectedEmployees.OrderBy(e => e)) ? false : true;
         }
 
-        private List<Holding> GenerateUpdatedHoldings(ServiceCreateEditView view, Rate rate)
+        private List<Holding> GenerateUpdatedHoldings(ServiceCreateEditView view, decimal pricePerEmployee)
         {
-            var holdingPrice = rate.Price * view.Quantity * (decimal)rate.EmployeePercentage / 100;
-            var pricePerEmployee = rate.SplitFare ? holdingPrice / view.SelectedEmployees.Length : holdingPrice;
-
             var holdings = new List<Holding>();
             foreach (var employeeId in view.SelectedEmployees)
             {

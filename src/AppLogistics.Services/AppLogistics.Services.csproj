@@ -10,12 +10,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="EPPlus" Version="4.5.3.2" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\AppLogistics.Data\AppLogistics.Data.csproj" />
     <ProjectReference Include="..\AppLogistics.Components\AppLogistics.Components.csproj" />
+    <ProjectReference Include="..\AppLogistics\AppLogistics.csproj" />
   </ItemGroup>
 
 </Project>
