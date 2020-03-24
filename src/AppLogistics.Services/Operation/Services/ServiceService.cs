@@ -97,14 +97,14 @@ namespace AppLogistics.Services
         {
             var fullPrice = rate.Price * view.Quantity * view.SelectedEmployees.Length;
             var holdingPrice = fullPrice * (decimal)rate.EmployeePercentage / 100;
-            var pricePerEmployee = holdingPrice;
 
             if (rate.SplitFare)
             {
                 fullPrice = fullPrice / view.SelectedEmployees.Length;
                 holdingPrice = fullPrice * (decimal)rate.EmployeePercentage / 100;
-                pricePerEmployee = holdingPrice / view.SelectedEmployees.Length;
             }
+
+            var pricePerEmployee = holdingPrice / view.SelectedEmployees.Length;
 
             return new ServicePrices
             {

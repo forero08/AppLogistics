@@ -1,6 +1,7 @@
 ﻿using AppLogistics.Objects;
 using AppLogistics.Resources;
 using OfficeOpenXml;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 
@@ -89,31 +90,80 @@ namespace AppLogistics.Components.ExcelReports
                     worksheet.Cells[rowNumber, 22].Value = employeeData.EmployeeName;
                     worksheet.Cells[rowNumber, 23].Value = employeeData.EmployeeHoldingPrice;
 
+                    // Set intercalated fill colors
+                    worksheet.Cells[rowNumber, 1, rowNumber, 23].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
                     if (i % 2 == 0)
                     {
-                        worksheet.Cells[rowNumber, 1, rowNumber, 23].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
                         worksheet.Cells[rowNumber, 1, rowNumber, 23].Style.Fill.BackgroundColor.SetColor(Color.LightGray);
+                    }
+                    else
+                    {
+                        worksheet.Cells[rowNumber, 1, rowNumber, 23].Style.Fill.BackgroundColor.SetColor(Color.White);
                     }
 
                     rowNumber++;
                 }
             }
+
+            SetTotals(worksheet, rowNumber);
+        }
+
+        private void SetTotals(ExcelWorksheet worksheet, int rowNumber)
+        {
+            // ServiceFullPrice
+            worksheet.Cells[rowNumber, 14].Formula = GetFormulaColumnSum(14, 2, rowNumber - 1);
+            worksheet.Cells[rowNumber, 14].Style.Font.Bold = true;
+
+            // ServiceHoldingPrice
+            worksheet.Cells[rowNumber, 16].Formula = GetFormulaColumnSum(16, 2, rowNumber - 1);
+            worksheet.Cells[rowNumber, 16].Style.Font.Bold = true;
+
+            // EmployeeHoldingPrice
+            worksheet.Cells[rowNumber, 23].Formula = GetFormulaColumnSum(23, 2, rowNumber - 1);
+            worksheet.Cells[rowNumber, 23].Style.Font.Bold = true;
+        }
+
+        private string GetFormulaColumnSum(int columnNumber, int initialRow, int lastRow)
+        {
+            return $"=SUM({GetExcelColumnName(columnNumber)}{initialRow}:{GetExcelColumnName(columnNumber)}{lastRow})";
+        }
+
+        private string GetExcelColumnName(int columnNumber)
+        {
+            int dividend = columnNumber;
+            string columnName = string.Empty;
+            int modulo;
+
+            while (dividend > 0)
+            {
+                modulo = (dividend - 1) % 26;
+                columnName = Convert.ToChar(65 + modulo).ToString() + columnName;
+                dividend = (dividend - modulo) / 26;
+            }
+
+            return columnName;
         }
 
         private void FormatSheet(ExcelWorksheet worksheet)
         {
             // CreationDate
             worksheet.Column(2).Style.Numberformat.Format = "yyyy-MM-dd";
+            
             // CreationTime
             worksheet.Column(3).Style.Numberformat.Format = "hh:mm";
+            
             // RatePrice 
             worksheet.Column(11).Style.Numberformat.Format = "$ #,##0.00";
+            
             // ServiceFullPrice
             worksheet.Column(14).Style.Numberformat.Format = "$ #,##0.00";
+            
             // EmployeePercentage
             worksheet.Column(15).Style.Numberformat.Format = "#0\\%";
+            
             // ServiceHoldingPrice
             worksheet.Column(16).Style.Numberformat.Format = "$ #,##0.00";
+            
             // EmployeeHoldingPrice
             worksheet.Column(23).Style.Numberformat.Format = "$ #,##0.00";
 
