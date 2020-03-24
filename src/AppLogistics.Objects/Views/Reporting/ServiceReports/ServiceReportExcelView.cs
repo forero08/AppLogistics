@@ -39,6 +39,12 @@ namespace AppLogistics.Objects
         [ExcelReportDisplayName("ExcelServiceReport", nameof(RatePrice))]
         public decimal RatePrice { get; set; }
 
+        [ExcelReportDisplayName("ExcelServiceReport", nameof(RateSplitFare))]
+        public bool RateSplitFare { get; set; }
+
+        [ExcelReportDisplayName("ExcelServiceReport", nameof(EmployeesQuantity))]
+        public int EmployeesQuantity { get; set; }
+
         [ExcelReportDisplayName("ExcelServiceReport", nameof(ServiceFullPrice))]
         public decimal ServiceFullPrice { get; set; }
 
@@ -62,7 +68,5 @@ namespace AppLogistics.Objects
 
         [ExcelReportDisplayName("ExcelServiceReport", nameof(EmployeesInfo))]
         public IEnumerable<ServiceReportEmployeeExcelView> EmployeesInfo { get; set; }
-
-        
     }
 }

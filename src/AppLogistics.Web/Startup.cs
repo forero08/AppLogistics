@@ -1,4 +1,5 @@
-﻿using AppLogistics.Components.Extensions;
+﻿using AppLogistics.Components.ExcelReports;
+using AppLogistics.Components.Extensions;
 using AppLogistics.Components.Logging;
 using AppLogistics.Components.Mail;
 using AppLogistics.Components.Mvc;
@@ -171,6 +172,8 @@ namespace AppLogistics.Web
 
             services.AddTransientImplementations<IService>();
             services.AddTransientImplementations<IValidator>();
+
+            services.AddSingleton<IExcelReportCreator, ExcelReportCreator>();
         }
 
         public void RegisterLowercaseUrls(IServiceCollection services)

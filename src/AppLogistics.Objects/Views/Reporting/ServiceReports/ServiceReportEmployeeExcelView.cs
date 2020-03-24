@@ -4,9 +4,6 @@ namespace AppLogistics.Objects
 {
     public class ServiceReportEmployeeExcelView
     {
-        [ExcelReportDisplayName("ExcelServiceReport", nameof(EmployeeId))]
-        public int EmployeeId { get; set; }
-
         [ExcelReportDisplayName("ExcelServiceReport", nameof(EmployeeInternalCode))]
         public string EmployeeInternalCode { get; set; }
 
