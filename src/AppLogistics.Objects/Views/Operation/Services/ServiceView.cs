@@ -24,6 +24,8 @@ namespace AppLogistics.Objects
 
         public string CustomsInformation { get; set; }
 
+        public int[] SelectedNovelties { get; set; }
+
         public string Comments { get; set; }
     }
 }

@@ -32,6 +32,8 @@ namespace AppLogistics.Data.Core
         protected DbSet<Eps> Eps { get; set; }
         protected DbSet<EthnicGroup> EthnicGroup { get; set; }
         protected DbSet<MaritalStatus> MaritalStatus { get; set; }
+        protected DbSet<Novelty> Novelties { get; set; }
+        protected DbSet<ServiceNovelty> ServiceNovelties { get; set; }
         protected DbSet<Product> Product { get; set; }
         protected DbSet<Sector> Sector { get; set; }
         protected DbSet<Sex> Sex { get; set; }

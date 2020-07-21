@@ -1,6 +1,7 @@
 using AppLogistics.Data.Core;
 using AppLogistics.Objects;
 using AppLogistics.Objects.Models.Operation.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -26,8 +27,14 @@ namespace AppLogistics.Services
                 .Where(h => h.ServiceId == id)
                 .Select(h => h.EmployeeId)
                 .ToList();
-
             service.SelectedEmployees = employees.ToArray();
+
+            var novelties = UnitOfWork.Select<Novelty>()
+                .Join(UnitOfWork.Select<ServiceNovelty>(), n => n.Id, sn => sn.NoveltyId, (n, sn) => new { Novelty = n, ServiceNovelty = sn })
+                .Where(result => result.ServiceNovelty.ServiceId == id)
+                .Select(result => result.ServiceNovelty.NoveltyId)
+                .ToList();
+            service.SelectedNovelties = novelties.ToArray();
 
             return service;
         }
@@ -45,8 +52,14 @@ namespace AppLogistics.Services
                 .Where(h => h.ServiceId == id)
                 .Select(h => h.EmployeeId)
                 .ToList();
-
             service.SelectedEmployees = employees.ToArray();
+
+            var novelties = UnitOfWork.Select<Novelty>()
+                .Join(UnitOfWork.Select<ServiceNovelty>(), n => n.Id, sn => sn.NoveltyId, (n, sn) => new { Novelty = n, ServiceNovelty = sn })
+                .Where(result => result.ServiceNovelty.ServiceId == id)
+                .Select(result => result.ServiceNovelty.NoveltyId)
+                .ToList();
+            service.SelectedNovelties = novelties.ToArray();
 
             return service;
         }
@@ -76,6 +89,7 @@ namespace AppLogistics.Services
             var service = UnitOfWork.To<Service>(view);
             service.FullPrice = prices.FullPrice;
             service.HoldingPrice = prices.HoldingPrice;
+            service.ServiceNovelties = GenerateServiceNovelties(view);
 
             var holdings = new List<Holding>();
             foreach (var employeeId in view.SelectedEmployees)
@@ -114,6 +128,22 @@ namespace AppLogistics.Services
             };
         }
 
+        private ICollection<ServiceNovelty> GenerateServiceNovelties(ServiceCreateEditView view)
+        {
+            var serviceNovelties = new List<ServiceNovelty>();
+
+            foreach (var noveltyId in view.SelectedNovelties)
+            {
+                var serviceNovelty = new ServiceNovelty
+                {
+                    Novelty = UnitOfWork.Get<Novelty>(noveltyId)
+                };
+                serviceNovelties.Add(serviceNovelty);
+            }
+
+            return serviceNovelties;
+        }
+
         public void Edit(ServiceCreateEditView view)
         {
             var existingService = UnitOfWork.GetAsNoTracking<Service>(view.Id);
@@ -132,6 +162,7 @@ namespace AppLogistics.Services
             var updatedService = UnitOfWork.To<Service>(view);
             updatedService.FullPrice = prices.FullPrice;
             updatedService.HoldingPrice = prices.HoldingPrice;
+            updatedService.ServiceNovelties = GetAndUpdateServiceNovelties(updatedService.ServiceNovelties, view.SelectedNovelties, view);
 
             UnitOfWork.Update(updatedService);
             UnitOfWork.Commit();
@@ -169,6 +200,18 @@ namespace AppLogistics.Services
             }
 
             return holdings;
+        }
+
+        private ICollection<ServiceNovelty> GetAndUpdateServiceNovelties(ICollection<ServiceNovelty> currentNovelties, int[] selectedNovelties, ServiceCreateEditView view)
+        {
+            if (currentNovelties.Select(n => n.NoveltyId).OrderBy(n => n).SequenceEqual(selectedNovelties.OrderBy(n => n)))
+            {
+                return currentNovelties;
+            }
+
+            UnitOfWork.DeleteRange(UnitOfWork.Select<ServiceNovelty>().Where(sn => sn.ServiceId == view.Id));
+
+            return GenerateServiceNovelties(view);
         }
 
         public void Delete(int id)

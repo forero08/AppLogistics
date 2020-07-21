@@ -10,6 +10,7 @@
         "RateId": "Tarifa",
         "SectorId": "Área",
         "SelectedEmployees": "Operarios",
+        "SelectedNovelties": "Novedades",
         "VehicleNumber": "Placas/Número de vehículo"
     },
     "Validations": {

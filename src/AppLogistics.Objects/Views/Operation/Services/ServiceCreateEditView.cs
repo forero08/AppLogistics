@@ -31,6 +31,8 @@ namespace AppLogistics.Objects
         [StringLength(32)]
         public string CustomsInformation { get; set; }
 
+        public int[] SelectedNovelties { get; set; }
+
         [StringLength(128)]
         public string Comments { get; set; }
     }

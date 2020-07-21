@@ -34,5 +34,7 @@ namespace AppLogistics.Objects
         public string Comments { get; set; }
 
         public virtual ICollection<Holding> Holdings { get; set; }
+
+        public virtual ICollection<ServiceNovelty> ServiceNovelties { get; set; }
     }
 }
