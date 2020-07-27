@@ -162,7 +162,7 @@ namespace AppLogistics.Services
             var updatedService = UnitOfWork.To<Service>(view);
             updatedService.FullPrice = prices.FullPrice;
             updatedService.HoldingPrice = prices.HoldingPrice;
-            updatedService.ServiceNovelties = GetAndUpdateServiceNovelties(updatedService.ServiceNovelties, view.SelectedNovelties, view);
+            updatedService.ServiceNovelties = GetAndUpdateServiceNovelties(existingService.ServiceNovelties, view.SelectedNovelties, view);
 
             UnitOfWork.Update(updatedService);
             UnitOfWork.Commit();

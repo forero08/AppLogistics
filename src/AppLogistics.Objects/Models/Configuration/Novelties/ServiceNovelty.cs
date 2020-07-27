@@ -8,12 +8,12 @@ namespace AppLogistics.Objects
         [Required]
         public int ServiceId { get; set; }
 
-        public Service Service { get; set; }
+        public virtual Service Service { get; set; }
 
 
         [Required]
         public int NoveltyId { get; set; }
 
-        public Novelty Novelty { get; set; }
+        public virtual Novelty Novelty { get; set; }
     }
 }
