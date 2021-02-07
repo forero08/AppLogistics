@@ -96,7 +96,7 @@ namespace AppLogistics.Services.Tests
         public void Edit_Novelty()
         {
             NoveltyView view = ObjectsFactory.CreateNoveltyView(novelty.Id);
-            Assert.True(false, "No update made");
+            view.Name = "Name0";
 
             service.Edit(view);
 

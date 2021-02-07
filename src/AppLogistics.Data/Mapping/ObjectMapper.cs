@@ -12,7 +12,7 @@ namespace AppLogistics.Data.Mapping
         {
             configuration.ValidateInlineMaps = false;
             _configuration = configuration;
-            _configuration.AddConditionalObjectMapper().Conventions.Add(pair => pair.SourceType.Namespace != "Castle.Proxies");
+            //_configuration.AddConditionalObjectMapper().Conventions.Add(pair => pair.SourceType.Namespace != "Castle.Proxies");
         }
 
         public static void MapObjects()
@@ -32,6 +32,10 @@ namespace AppLogistics.Data.Mapping
                 .ForMember(role => role.Permissions, member => member.Ignore());
             _configuration.CreateMap<RoleView, Role>()
                 .ForMember(role => role.Permissions, member => member.MapFrom(role => new List<RolePermission>()));
+
+            _configuration.CreateMap<ServiceCreateEditView, Service>()
+                .ForMember(dest => dest.Holdings, opt => opt.Ignore())
+                .ForMember(dest => dest.ServiceNovelties, opt => opt.Ignore());
         }
     }
 }

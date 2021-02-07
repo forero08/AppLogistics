@@ -14,6 +14,8 @@ namespace AppLogistics.Data.Core
 
         TDestination To<TDestination>(object source);
 
+        TDestination Map<Tsource, TDestination>(Tsource source, TDestination destination);
+
         IQuery<TModel> Select<TModel>() where TModel : BaseModel;
 
         void InsertRange<TModel>(IEnumerable<TModel> models) where TModel : BaseModel;

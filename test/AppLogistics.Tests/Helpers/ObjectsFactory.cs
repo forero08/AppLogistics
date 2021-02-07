@@ -395,6 +395,24 @@ namespace AppLogistics.Tests
             };
         }
 
+        public static Novelty CreateNovelty(int id = 0)
+        {
+            return new Novelty
+            {
+                Id = id,
+                Name = "Name" + id
+            };
+        }
+
+        public static NoveltyView CreateNoveltyView(int id = 0)
+        {
+            return new NoveltyView
+            {
+                Id = id,
+                Name = "Name" + id
+            };
+        }
+
         public static Product CreateProduct(int id = 0)
         {
             return new Product

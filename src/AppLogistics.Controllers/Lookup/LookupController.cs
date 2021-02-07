@@ -100,10 +100,9 @@ namespace AppLogistics.Controllers
         }
 
         [AjaxOnly]
-        public JsonResult NoveltiesInService(LookupFilter filter, int noveltyid)
+        public JsonResult NoveltiesInService(LookupFilter filter)
         {
-            filter.AdditionalFilters[nameof(Novelty.Id)] = noveltyid;
-            return GetData(new MvcLookup<Novelty, NoveltyView >(_unitOfWork), filter);
+            return GetData(new MvcLookup<Novelty, NoveltyView>(_unitOfWork), filter);
         }
 
         [AjaxOnly]

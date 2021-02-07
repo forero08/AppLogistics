@@ -22,6 +22,7 @@ namespace AppLogistics.Controllers.Configuration.Tests
         public NoveltiesControllerTests()
         {
             validator = Substitute.For<INoveltyValidator>();
+            validator.CanDelete(Arg.Any<int>()).Returns(true);
             service = Substitute.For<INoveltyService>();
 
             novelty = ObjectsFactory.CreateNoveltyView();
