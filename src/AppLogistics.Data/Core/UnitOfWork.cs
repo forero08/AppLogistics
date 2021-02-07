@@ -42,6 +42,11 @@ namespace AppLogistics.Data.Core
             return Mapper.Map<TDestination>(source);
         }
 
+        public TDestination Map<Tsource, TDestination>(Tsource source, TDestination destination)
+        {
+            return Mapper.Map<Tsource, TDestination>(source, destination);
+        }
+
         public IQuery<TModel> Select<TModel>() where TModel : BaseModel
         {
             return new Query<TModel>(_context.Set<TModel>());

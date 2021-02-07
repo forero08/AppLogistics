@@ -10,6 +10,7 @@
         "RateId": "Rate",
         "SectorId": "Area",
         "SelectedEmployees": "Operators",
+        "SelectedNovelties": "Novelties",
         "VehicleNumber": "Vehicle number/plate"
     },
     "Validations": {

@@ -100,6 +100,12 @@ namespace AppLogistics.Controllers
         }
 
         [AjaxOnly]
+        public JsonResult NoveltiesInService(LookupFilter filter)
+        {
+            return GetData(new MvcLookup<Novelty, NoveltyView>(_unitOfWork), filter);
+        }
+
+        [AjaxOnly]
         public JsonResult Product(LookupFilter filter)
         {
             return GetData(new MvcLookup<Product, ProductView>(_unitOfWork), filter);

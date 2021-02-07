@@ -70,6 +70,12 @@
                 <siteMapNode icon="fa fa-pencil-alt" area="Configuration" controller="EducationLevels" action="Edit" />
                 <siteMapNode icon="fa fa-times" area="Configuration" controller="EducationLevels" action="Delete" />
             </siteMapNode>
+            <siteMapNode menu="true" icon="fa fa-bell" area="Configuration" controller="Novelties" action="Index">
+                <siteMapNode icon="far fa-file" area="Configuration" controller="Novelties" action="Create" />
+                <siteMapNode icon="fa fa-info" area="Configuration" controller="Novelties" action="Details" />
+                <siteMapNode icon="fa fa-pencil-alt" area="Configuration" controller="Novelties" action="Edit" />
+                <siteMapNode icon="fa fa-times" area="Configuration" controller="Novelties" action="Delete" />
+            </siteMapNode>
             <siteMapNode menu="true" icon="fa fa-flag" area="Configuration" controller="Countries" action="Index">
                 <siteMapNode icon="far fa-file" area="Configuration" controller="Countries" action="Create" />
                 <siteMapNode icon="fa fa-info" area="Configuration" controller="Countries" action="Details" />
