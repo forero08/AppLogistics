@@ -135,6 +135,12 @@ namespace AppLogistics.Services
         private ICollection<ServiceNovelty> GenerateServiceNovelties(ServiceCreateEditView view)
         {
             var serviceNovelties = new List<ServiceNovelty>();
+
+            if (view.SelectedNovelties == null)
+            {
+                return serviceNovelties;
+            }
+
             foreach (var noveltyId in view.SelectedNovelties)
             {
                 var serviceNovelty = new ServiceNovelty

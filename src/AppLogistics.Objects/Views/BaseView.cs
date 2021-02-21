@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppLogistics.Components.Extensions.Native;
+using System;
 
 namespace AppLogistics.Objects
 {
@@ -16,7 +17,7 @@ namespace AppLogistics.Objects
             {
                 if (!IsCreationDateSet)
                 {
-                    CreationDate = DateTime.Now;
+                    CreationDate = DateTime.Now.UtcToDefaultTimeZone();
                 }
 
                 return InternalCreationDate;
