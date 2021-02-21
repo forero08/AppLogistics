@@ -1,3 +1,5 @@
+using System;
+
 namespace AppLogistics.Objects
 {
     public class ServiceView : BaseView
@@ -27,5 +29,7 @@ namespace AppLogistics.Objects
         public int[] SelectedNovelties { get; set; }
 
         public string Comments { get; set; }
+
+        public DateTime? EndDate { get; set; }
     }
 }

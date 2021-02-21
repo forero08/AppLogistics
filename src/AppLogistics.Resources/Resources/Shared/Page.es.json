@@ -163,6 +163,7 @@
         "OperationServicesDelete": "Eliminación de Servicio",
         "OperationServicesDetails": "Detalles de Servicio",
         "OperationServicesEdit": "Editar Servicio",
+        "OperationServicesFinalize": "Finalizar Servicio",
         "OperationServicesIndex": "Servicios",
 
         "ReportingServiceReportsQuery": "Consultar reporte",

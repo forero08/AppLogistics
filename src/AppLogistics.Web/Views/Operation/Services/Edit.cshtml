@@ -11,6 +11,11 @@
                         <span class="fa fa-info"></span><span class="text">@Resource.ForAction("Details")</span>
                     </a>
                 </authorize>
+                <authorize action="Finalize">
+                    <a asp-action="Finalize" asp-route-id="@Model.Id" class="btn">
+                        <span class="far fa-check-circle"></span><span class="text">@Resource.ForAction("Finalize")</span>
+                    </a>
+                </authorize>
                 <authorize action="Delete">
                     <a asp-action="Delete" asp-route-id="@Model.Id" class="btn">
                         <span class="fa fa-times"></span><span class="text">@Resource.ForAction("Delete")</span>

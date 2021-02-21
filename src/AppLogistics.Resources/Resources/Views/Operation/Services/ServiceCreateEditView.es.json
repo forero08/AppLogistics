@@ -3,6 +3,7 @@
         "CarrierId": "Transportadora",
         "Comments": "Comentarios",
         "CustomsInformation": "Información aduanera",
+        "EndDate": "Fecha de Finalización",
         "ExecutionDate": "Fecha de ejecución",
         "Location": "Ubicación",
         "Quantity": "Cantidad",
@@ -14,6 +15,7 @@
         "VehicleNumber": "Placas/Número de vehículo"
     },
     "Validations": {
-        "RateAndClientUnrelated": "No existe una relacion entre la tarifa y el cliente seleccionados"
+        "RateAndClientUnrelated": "No existe una relacion entre la tarifa y el cliente seleccionados",
+        "ServiceAlreadyFinalized": "Este servicio ya tiene una fecha de finalización"
     }
 }

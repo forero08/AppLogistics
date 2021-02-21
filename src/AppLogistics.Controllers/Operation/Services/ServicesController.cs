@@ -78,5 +78,25 @@ namespace AppLogistics.Controllers.Operation
 
             return RedirectToAction("Index");
         }
+
+        [HttpGet]
+        public ActionResult Finalize(int id)
+        {
+            return NotEmptyView(Service.Get<ServiceView>(id));
+        }
+
+        [HttpPost]
+        [ActionName("Finalize")]
+        public ActionResult FinalizeConfirmed(int id)
+        {
+            if (!Validator.CanFinalize(id))
+            {
+                return View(Service.Get<ServiceView>(id));
+            }
+
+            Service.Finalize(id);
+
+            return RedirectToAction("Index");
+        }
     }
 }

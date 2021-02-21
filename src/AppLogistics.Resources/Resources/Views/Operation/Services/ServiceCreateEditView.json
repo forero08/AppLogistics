@@ -3,6 +3,7 @@
         "CarrierId": "Carrier",
         "Comments": "Comments",
         "CustomsInformation": "Customs information",
+        "EndDate": "End date",
         "ExecutionDate": "Execution date",
         "Location": "Location",
         "Quantity": "Quantity",
@@ -14,6 +15,7 @@
         "VehicleNumber": "Vehicle number/plate"
     },
     "Validations": {
-        "RateAndClientUnrelated": "There is no relation between the Rate and Client selected"
+        "RateAndClientUnrelated": "There is no relation between the Rate and Client selected",
+        "ServiceAlreadyFinalized": "This service already has an End Date"
     }
 }
