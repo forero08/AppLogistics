@@ -12,5 +12,6 @@ namespace AppLogistics.Services
         void Create(ServiceCreateEditView view);
         void Edit(ServiceCreateEditView view);
         void Delete(int id);
+        void Finalize(int id);
     }
 }

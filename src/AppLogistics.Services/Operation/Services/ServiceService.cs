@@ -1,3 +1,4 @@
+using AppLogistics.Components.Extensions.Native;
 using AppLogistics.Data.Core;
 using AppLogistics.Objects;
 using AppLogistics.Objects.Models.Operation.Services;
@@ -209,6 +210,14 @@ namespace AppLogistics.Services
             UnitOfWork.DeleteRange(existingServiceNovelties);
 
             UnitOfWork.Delete<Service>(id);
+            UnitOfWork.Commit();
+        }
+
+        public void Finalize(int id)
+        {
+            var service = UnitOfWork.Get<Service>(id);
+            service.EndDate = DateTime.Now.UtcToDefaultTimeZone();
+            UnitOfWork.Update(service);
             UnitOfWork.Commit();
         }
     }
