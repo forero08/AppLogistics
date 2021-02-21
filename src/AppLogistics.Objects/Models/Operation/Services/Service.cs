@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace AppLogistics.Objects
@@ -32,6 +33,8 @@ namespace AppLogistics.Objects
 
         [StringLength(128)]
         public string Comments { get; set; }
+
+        public DateTime? EndDate { get; set; }
 
         public virtual ICollection<Holding> Holdings { get; set; }
 

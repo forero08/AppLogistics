@@ -21,6 +21,19 @@ namespace AppLogistics.Validators
             return AreRelatedRateAndClient(view.RateId, view.RateClientId) && ModelState.IsValid;
         }
 
+        public bool CanFinalize(int serviceId)
+        {
+            var service = UnitOfWork.Get<Service>(serviceId);
+
+            if (service.EndDate != null)
+            {
+                Alerts.AddError(Validation.For<ServiceCreateEditView>("ServiceAlreadyFinalized"));
+                return false;
+            }
+
+            return true;
+        }
+
         private bool AreRelatedRateAndClient(int rateId, int clientId)
         {
             var rate = UnitOfWork.Get<Rate>(rateId);

@@ -6,5 +6,6 @@ namespace AppLogistics.Validators
     {
         bool CanCreate(ServiceCreateEditView view);
         bool CanEdit(ServiceCreateEditView view);
+        bool CanFinalize(int serviceId);
     }
 }

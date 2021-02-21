@@ -1,4 +1,5 @@
 using AppLogistics.Components.Mvc;
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace AppLogistics.Objects

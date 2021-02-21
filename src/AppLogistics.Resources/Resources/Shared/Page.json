@@ -163,6 +163,7 @@
         "OperationServicesDelete": "Service deletion",
         "OperationServicesDetails": "Service details",
         "OperationServicesEdit": "Service Edit",
+        "OperationServicesFinalize": "Service Finalize",
         "OperationServicesIndex": "Services",
 
         "ReportingServiceReportsQuery": "Query report",

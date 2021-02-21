@@ -113,6 +113,7 @@
         "OperationServicesDelete": "Delete",
         "OperationServicesDetails": "Details",
         "OperationServicesEdit": "Edit",
+        "OperationServicesFinalize": "Finalize",
         "OperationServicesIndex": "Services",
 
         "Reporting": "Reporting",
