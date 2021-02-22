@@ -19,6 +19,9 @@ table .action-cell.edit a {
 table .action-cell.delete a {
   background-color: #d9534f;
 }
+table .action-cell.finalize a {
+  background-color: #0845a7;
+}
 table .action-cell a {
   transition-duration: 0.3s;
   display: inline-block;
