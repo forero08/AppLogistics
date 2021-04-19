@@ -1,5 +1,4 @@
 using AppLogistics.Components.Mvc;
-using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace AppLogistics.Objects
@@ -11,6 +10,10 @@ namespace AppLogistics.Objects
 
         [Required]
         public int RateId { get; set; }
+
+        public bool SpecifyVehicleType { get; set; }
+
+        public int? VehicleTypeId { get; set; }
 
         [MinValue(1)]
         public int Quantity { get; set; }

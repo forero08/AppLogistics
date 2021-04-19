@@ -10,5 +10,7 @@ namespace AppLogistics.Objects
         public string Name { get; set; }
 
         public virtual ICollection<Rate> Rates { get; set; }
+
+        public virtual ICollection<Service> Services { get; set; }
     }
 }

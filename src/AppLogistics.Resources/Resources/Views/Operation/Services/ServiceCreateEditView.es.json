@@ -12,7 +12,9 @@
         "SectorId": "Área",
         "SelectedEmployees": "Operarios",
         "SelectedNovelties": "Novedades",
-        "VehicleNumber": "Placas/Número de vehículo"
+        "SpecifyVehicleType" : "Especificar tipo de vehículo",
+        "VehicleNumber": "Placas/Número de vehículo",
+        "VehicleTypeId": "Tipo de vehículo"
     },
     "Validations": {
         "RateAndClientUnrelated": "No existe una relacion entre la tarifa y el cliente seleccionados",

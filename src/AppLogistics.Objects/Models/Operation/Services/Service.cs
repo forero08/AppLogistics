@@ -17,6 +17,9 @@ namespace AppLogistics.Objects
         public int? CarrierId { get; set; }
         public virtual Carrier Carrier { get; set; }
 
+        public int? VehicleTypeId { get; set; }
+        public virtual VehicleType VehicleType { get; set; }
+
         [StringLength(16)]
         public string VehicleNumber { get; set; }
 

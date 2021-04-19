@@ -14,6 +14,7 @@
         "SectorName": "Área",
         "SelectedEmployees": "Operarios",
         "SelectedNovelties": "Novedades",
-        "VehicleNumber": "Placas del vehículo"
+        "VehicleNumber": "Placas del vehículo",
+        "VehicleTypeId": "Tipo de vehículo"
     }
 }

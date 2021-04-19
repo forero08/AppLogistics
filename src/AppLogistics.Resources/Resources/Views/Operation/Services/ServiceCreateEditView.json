@@ -12,7 +12,9 @@
         "SectorId": "Area",
         "SelectedEmployees": "Operators",
         "SelectedNovelties": "Novelties",
-        "VehicleNumber": "Vehicle number/plate"
+        "SpecifyVehicleType" : "Specify vehicle type",
+        "VehicleNumber": "Vehicle number/plate",
+        "VehicleTypeId": "Vehicle type"
     },
     "Validations": {
         "RateAndClientUnrelated": "There is no relation between the Rate and Client selected",

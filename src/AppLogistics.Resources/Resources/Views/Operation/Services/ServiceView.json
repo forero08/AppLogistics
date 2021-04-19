@@ -14,6 +14,7 @@
         "SectorName": "Area",
         "SelectedEmployees": "Operators",
         "SelectedNovelties": "Novelties",
-        "VehicleNumber": "Vehicle number"
+        "VehicleNumber": "Vehicle number",
+        "VehicleTypeId": "Vehicle type"
     }
 }
