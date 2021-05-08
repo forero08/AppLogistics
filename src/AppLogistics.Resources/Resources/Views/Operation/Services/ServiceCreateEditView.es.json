@@ -17,7 +17,10 @@
         "VehicleTypeId": "Tipo de vehículo"
     },
     "Validations": {
+        "RateAlreadyHasVehicleId": "La tarifa seleccionada ya está asociada a un tipo de vehículo",
         "RateAndClientUnrelated": "No existe una relacion entre la tarifa y el cliente seleccionados",
-        "ServiceAlreadyFinalized": "Este servicio ya tiene una fecha de finalización"
+        "ServiceAlreadyFinalized": "Este servicio ya tiene una fecha de finalización",
+        "SpecificVehicleIdNotSelected": "Si marca la opción para especificar un tipo de vehículo, debe seleccionarlo",
+        "VehicleSelectedWithoutCheckMarked": "No puede seleccionar un vehículo sin marcar la opción para especificarlo"
     }
 }

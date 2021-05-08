@@ -49,6 +49,8 @@ namespace AppLogistics.Services
                 return null;
             }
 
+            service.SpecifyVehicleType = service.VehicleTypeId.HasValue;
+
             var employees = UnitOfWork.Select<Holding>()
                 .Where(h => h.ServiceId == id)
                 .Select(h => h.EmployeeId)
@@ -169,6 +171,7 @@ namespace AppLogistics.Services
             updatedService.HoldingPrice = prices.HoldingPrice;
             updatedService.ServiceNovelties = GetUpdatedServiceNovelties(existingService.ServiceNovelties, view);
             updatedService.Holdings = GenerateHoldings(view, prices.PricePerEmployee);
+            updatedService.VehicleTypeId = view.VehicleTypeId;
             
             UnitOfWork.Update(updatedService);
             UnitOfWork.Commit();

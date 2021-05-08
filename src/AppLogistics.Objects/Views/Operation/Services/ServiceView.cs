@@ -8,7 +8,7 @@ namespace AppLogistics.Objects
 
         public string RateActivityName { get; set; }
 
-        public string RateVehicleTypeName { get; set; }
+        public string UnifiedVehicleTypeName { get; set; }
 
         public string RateProductName { get; set; }
 

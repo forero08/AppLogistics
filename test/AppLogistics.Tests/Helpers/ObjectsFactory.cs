@@ -699,7 +699,7 @@ namespace AppLogistics.Tests
                 RateActivityName = "RateActivityName" + id,
                 RateClientName = "RateClientName" + id,
                 RateProductName = "RateProductName" + id,
-                RateVehicleTypeName = "RateVehicleTypeName" + id,
+                UnifiedVehicleTypeName = "RateVehicleTypeName" + id,
                 VehicleNumber = "VehicleNumber" + id,
             };
         }

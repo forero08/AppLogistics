@@ -3,6 +3,7 @@
         "Name": "Name"
     },
     "Validations": {
-        "AssociatedRates": "There are rates associated to this Vehicle type. To delete this Vehicle type, you should delete those rates first or associate them a different Vehicle type."
+        "AssociatedRates": "There are rates associated to this Vehicle type. To delete this Vehicle type, you should delete those rates first or associate them a different Vehicle type.",
+        "AssociatedServices": "There are services associated to this Vehicle type. To delete this Vehicle type, you should delete those services first or associate them a different Vehicle type."
     }
 }

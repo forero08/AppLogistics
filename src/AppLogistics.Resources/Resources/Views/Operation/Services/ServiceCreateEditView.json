@@ -17,7 +17,10 @@
         "VehicleTypeId": "Vehicle type"
     },
     "Validations": {
+        "RateAlreadyHasVehicleId": "The selected rate is already associated to a vehicle type",
         "RateAndClientUnrelated": "There is no relation between the Rate and Client selected",
-        "ServiceAlreadyFinalized": "This service already has an End Date"
+        "ServiceAlreadyFinalized": "This service already has an End Date",
+        "SpecificVehicleIdNotSelected": "If you mark the option to specify a vehicle type, you should select it",
+        "VehicleSelectedWithoutCheckMarked": "You cannot select a vehicle without marking the option to specify it"
     }
 }
