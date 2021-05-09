@@ -24,6 +24,11 @@ namespace AppLogistics.Validators
 
         public bool CanDelete(int id)
         {
+            if (!ModelState.IsValid)
+            {
+                return false;
+            }
+
             var hasReferencedRates = UnitOfWork.Select<Rate>()
                 .Where(c => c.VehicleTypeId.Equals(id))
                 .Any();
@@ -34,7 +39,17 @@ namespace AppLogistics.Validators
                 return false;
             }
 
-            return ModelState.IsValid;
+            var hasReferencedServices = UnitOfWork.Select<Service>()
+                .Where(c => c.VehicleTypeId.Equals(id))
+                .Any();
+
+            if (hasReferencedServices)
+            {
+                Alerts.AddError(Validation.For<VehicleTypeView>("AssociatedServices"));
+                return false;
+            }
+
+            return true;
         }
     }
 }

@@ -10,10 +10,10 @@
         "RateActivityName": "Activity",
         "RateClientName": "Client",
         "RateProductName": "Product",
-        "RateVehicleTypeName": "Vehicle type",
         "SectorName": "Area",
         "SelectedEmployees": "Operators",
         "SelectedNovelties": "Novelties",
+        "UnifiedVehicleTypeName": "Vehicle type",
         "VehicleNumber": "Vehicle number"
     }
 }

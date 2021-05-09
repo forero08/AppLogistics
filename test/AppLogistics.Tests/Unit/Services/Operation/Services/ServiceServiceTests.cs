@@ -50,7 +50,7 @@ namespace AppLogistics.Services.Tests
             Assert.Equal(expected.RateActivityName, actual.RateActivityName);
             Assert.Equal(expected.RateClientName, actual.RateClientName);
             Assert.Equal(expected.RateProductName, actual.RateProductName);
-            Assert.Equal(expected.RateVehicleTypeName, actual.RateVehicleTypeName);
+            Assert.Equal(expected.UnifiedVehicleTypeName, actual.UnifiedVehicleTypeName);
             Assert.Equal(expected.Id, actual.Id);
         }
 

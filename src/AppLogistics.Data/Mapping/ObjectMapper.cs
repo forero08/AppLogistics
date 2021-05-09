@@ -36,6 +36,9 @@ namespace AppLogistics.Data.Mapping
             _configuration.CreateMap<ServiceCreateEditView, Service>()
                 .ForMember(dest => dest.Holdings, opt => opt.Ignore())
                 .ForMember(dest => dest.ServiceNovelties, opt => opt.Ignore());
+
+            _configuration.CreateMap<Service, ServiceView>()
+                .ForMember(dest => dest.UnifiedVehicleTypeName, opt => opt.MapFrom(src => src.VehicleTypeId.HasValue ? src.VehicleType.Name : src.Rate.VehicleType.Name ?? null));
         }
     }
 }

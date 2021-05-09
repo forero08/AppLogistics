@@ -13,12 +13,16 @@ namespace AppLogistics.Validators
 
         public bool CanCreate(ServiceCreateEditView view)
         {
-            return AreRelatedRateAndClient(view.RateId, view.RateClientId) && ModelState.IsValid;
+            return ModelState.IsValid 
+                && AreRelatedRateAndClient(view.RateId, view.RateClientId) 
+                && HasValidVehicleType(view.RateId, view.SpecifyVehicleType, view.VehicleTypeId);
         }
 
         public bool CanEdit(ServiceCreateEditView view)
         {
-            return AreRelatedRateAndClient(view.RateId, view.RateClientId) && ModelState.IsValid;
+            return ModelState.IsValid
+                && AreRelatedRateAndClient(view.RateId, view.RateClientId)
+                && HasValidVehicleType(view.RateId, view.SpecifyVehicleType, view.VehicleTypeId);
         }
 
         public bool CanFinalize(int serviceId)
@@ -40,6 +44,30 @@ namespace AppLogistics.Validators
             if (rate.ClientId != clientId)
             {
                 Alerts.AddError(Validation.For<ServiceCreateEditView>("RateAndClientUnrelated"));
+                return false;
+            }
+
+            return true;
+        }
+
+        private bool HasValidVehicleType(int rateId, bool useSpecificVehicleType, int? vehicleTypeId)
+        {
+            var rate = UnitOfWork.Get<Rate>(rateId);
+            if (rate.VehicleTypeId.HasValue && useSpecificVehicleType && vehicleTypeId.HasValue)
+            {
+                Alerts.AddError(Validation.For<ServiceCreateEditView>("RateAlreadyHasVehicleId"));
+                return false;
+            }
+
+            if (useSpecificVehicleType && !vehicleTypeId.HasValue)
+            {
+                Alerts.AddError(Validation.For<ServiceCreateEditView>("SpecificVehicleIdNotSelected"));
+                return false;
+            }
+
+            if (!useSpecificVehicleType && vehicleTypeId.HasValue)
+            {
+                Alerts.AddError(Validation.For<ServiceCreateEditView>("VehicleSelectedWithoutCheckMarked"));
                 return false;
             }
 
