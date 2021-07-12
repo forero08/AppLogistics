@@ -11,7 +11,7 @@ namespace AppLogistics.Controllers.Reporting
     [Area("Reporting")]
     public class ServiceReportsController : ValidatedController<IServiceReportValidator, IServiceReportService>
     {
-        private string serviceReportQueryKey = "ServiceReportQuery";
+        private readonly string serviceReportQueryKey = "ServiceReportQuery";
 
         public ServiceReportsController(IServiceReportValidator validator, IServiceReportService service)
             : base(validator, service)

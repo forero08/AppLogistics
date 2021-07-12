@@ -24,6 +24,8 @@ namespace AppLogistics.Objects
 
         public int[] SectorIds { get; set; }
 
+        public int[] NoveltyIds { get; set; }
+
         public string VehicleNumber { get; set; }
 
         public string Location { get; set; }

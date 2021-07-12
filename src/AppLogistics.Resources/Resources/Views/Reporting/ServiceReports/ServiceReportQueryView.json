@@ -8,6 +8,7 @@
         "EmployeeIds": "Employees",
         "EndDate": "End date",
         "Location": "Location",
+        "NoveltyIds": "Novelties",
         "ProductIds": "Products",
         "SectorIds": "Areas",
         "ServiceId": "Service Id",

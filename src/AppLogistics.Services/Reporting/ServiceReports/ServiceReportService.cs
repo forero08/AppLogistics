@@ -1,4 +1,5 @@
 ﻿using AppLogistics.Components.ExcelReports;
+using AppLogistics.Components.Extensions.Native;
 using AppLogistics.Data.Core;
 using AppLogistics.Objects;
 using System;
@@ -48,10 +49,11 @@ namespace AppLogistics.Services
             var services = UnitOfWork.Select<Service>()
                             .Where(s => !query.ServiceId.HasValue || s.Id == query.ServiceId.Value)
                             .Where(s => !query.StartDate.HasValue || s.CreationDate >= query.StartDate.Value)
-                            .Where(s => !query.EndDate.HasValue || s.CreationDate < query.EndDate.Value.AddDays(1))
+                            .Where(s => !query.EndDate.HasValue || (s.EndDate.HasValue && s.EndDate.Value <= query.EndDate.Value))
                             .Where(s => query.ClientIds == null || query.ClientIds.Contains(s.Rate.ClientId.ToString()))
                             .Where(s => query.ActivityIds == null || query.ActivityIds.Contains(s.Rate.ActivityId))
-                            .Where(s => query.VehicleTypeIds == null || query.VehicleTypeIds.Contains(s.Rate.VehicleTypeId.Value))
+                            .Where(s => query.VehicleTypeIds == null
+                                || query.VehicleTypeIds.Contains(s.Rate.VehicleTypeId.Value) || query.VehicleTypeIds.Contains(s.VehicleTypeId.Value))
                             .Where(s => query.ProductIds == null || query.ProductIds.Contains(s.Rate.ProductId.Value))
                             .Where(s => query.CarrierIds == null || query.CarrierIds.Contains(s.CarrierId.Value))
                             .Where(s => query.SectorIds == null || query.SectorIds.Contains(s.SectorId.Value))
@@ -60,11 +62,20 @@ namespace AppLogistics.Services
                             .Where(s => string.IsNullOrWhiteSpace(query.CustomsInformation) || s.CustomsInformation.Contains(query.CustomsInformation))
                             .Where(s => string.IsNullOrWhiteSpace(query.Comments) || s.Comments.Contains(query.Comments));
 
-            if (query.EmployeeIds?.Length > 0)
+            if (!query.EmployeeIds.IsNullOrEmpty())
             {
                 var serviceIds = UnitOfWork.Select<Holding>()
                     .Where(h => query.EmployeeIds.Contains(h.Employee.Id))
                     .Select(h => h.ServiceId);
+
+                services = services.Where(s => serviceIds.Contains(s.Id));
+            }
+
+            if (!query.NoveltyIds.IsNullOrEmpty())
+            {
+                var serviceIds = UnitOfWork.Select<ServiceNovelty>()
+                    .Where(sn => query.NoveltyIds.Contains(sn.NoveltyId))
+                    .Select(sn => sn.ServiceId);
 
                 services = services.Where(s => serviceIds.Contains(s.Id));
             }
@@ -92,6 +103,8 @@ namespace AppLogistics.Services
                 CreationTime = s.CreationDate,
                 CustomsInformation = s.CustomsInformation,
                 EmployeePercentage = s.Rate.EmployeePercentage,
+                EndDate = s.EndDate,
+                EndTime = s.EndDate,
                 Location = s.Location,
                 Quantity = s.Quantity,
                 ProductName = s.Rate.Product.Name,
@@ -102,7 +115,7 @@ namespace AppLogistics.Services
                 ServiceHoldingPrice = s.HoldingPrice,
                 ServiceId = s.Id,
                 VehicleNumber = s.VehicleNumber,
-                VehicleTypeName = s.Rate.VehicleType.Name
+                VehicleTypeName = s.Rate.VehicleType.Name ?? s.VehicleType.Name
             })
             .Distinct()
             .OrderBy(s => s.ServiceId)
