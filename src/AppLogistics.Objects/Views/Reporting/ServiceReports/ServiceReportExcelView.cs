@@ -15,6 +15,12 @@ namespace AppLogistics.Objects
         [ExcelReportDisplayName("ExcelServiceReport", nameof(CreationTime))]
         public DateTime CreationTime { get; set; }
 
+        [ExcelReportDisplayName("ExcelServiceReport", nameof(EndDate))]
+        public DateTime? EndDate { get; set; }
+
+        [ExcelReportDisplayName("ExcelServiceReport", nameof(EndTime))]
+        public DateTime? EndTime { get; set; }
+
         [ExcelReportDisplayName("ExcelServiceReport", nameof(ClientName))]
         public string ClientName { get; set; }
 

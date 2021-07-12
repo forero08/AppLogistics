@@ -8,6 +8,7 @@
         "EmployeeIds": "Operarios",
         "EndDate": "Fecha final",
         "Location": "Ubicación",
+        "NoveltyIds": "Novedades",
         "ProductIds": "Productos",
         "SectorIds": "Áreas",
         "ServiceId": "Id servicio",
